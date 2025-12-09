@@ -35,6 +35,15 @@ body {
   filter: none !important;
 }
 
+/* White glow utilities - CSS fallback */
+.shadow-glow-white-subtle {
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15) !important;
+}
+
+.shadow-glow-white-soft {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
 .squircle svg {
   width: 48px !important; /* Increased from ~32px */
   height: 48px !important;
