@@ -15,21 +15,21 @@
     </div>
 
     <!-- Mobile Menu Button -->
-    <button class="md:hidden text-white" (click)="toggleMobileMenu()">
+    <button class="md:hidden text-white p-2" (click)="toggleMobileMenu()" [attr.aria-label]="isMobileMenuOpen() ? 'Close navigation' : 'Open navigation'">
       <app-icon [name]="isMobileMenuOpen() ? 'x' : 'menu'"></app-icon>
     </button>
   </div>
   
   @if (isMobileMenuOpen()) {
-    <div class="md:hidden bg-rpr-bg border-b border-white/10 p-6 flex flex-col gap-4">
-      <a href="#foundations" (click)="toggleMobileMenu()" class="text-gray-300 hover:text-rpr-cyan">METHODS</a>
-      <a href="#highlights" (click)="toggleMobileMenu()" class="text-gray-300 hover:text-rpr-cyan">HIGHLIGHTS</a>
-      <a href="#overwatch" (click)="toggleMobileMenu()" class="text-gray-300 hover:text-rpr-cyan">OVERWATCH</a>
-      <a href="https://verify.rprcomms.com" target="_blank" (click)="toggleMobileMenu()" class="text-gray-300 hover:text-rpr-cyan">PRODUCTS</a>
-      <div class="py-2">
+    <div class="md:hidden bg-rpr-bg border-b border-white/10 p-6 flex flex-col gap-4" role="menu" aria-label="Main navigation">
+      <a href="#foundations" (click)="toggleMobileMenu()" role="menuitem" class="block w-full text-left px-2 py-3 text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">METHODS</a>
+      <a href="#highlights" (click)="toggleMobileMenu()" role="menuitem" class="block w-full text-left px-2 py-3 text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">HIGHLIGHTS</a>
+      <a href="#overwatch" (click)="toggleMobileMenu()" role="menuitem" class="block w-full text-left px-2 py-3 text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">OVERWATCH</a>
+      <a href="https://verify.rprcomms.com" target="_blank" (click)="toggleMobileMenu()" role="menuitem" class="block w-full text-left px-2 py-3 text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">PRODUCTS</a>
+      <div class="py-2 w-full">
         <app-auth-button></app-auth-button>
       </div>
-      <button (click)="scrollToChat(); toggleMobileMenu()" class="text-left text-rpr-cyan font-bold">TALK TO AI</button>
+      <button (click)="scrollToChat(); toggleMobileMenu()" class="text-left text-rpr-cyan font-bold w-full text-sm px-2 py-3">TALK TO AI</button>
     </div>
   }
 </nav>

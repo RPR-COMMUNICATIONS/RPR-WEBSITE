@@ -79,10 +79,21 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.authSubscription?.unsubscribe();
+    // Ensure any global scroll lock added by the mobile menu is cleared
+    if (typeof document !== 'undefined') {
+      document.body.classList.remove('overflow-hidden');
+    }
   }
 
   toggleMobileMenu() {
-    this.isMobileMenuOpen.update(v => !v);
+    this.isMobileMenuOpen.update(v => {
+      const nv = !v;
+      if (typeof document !== 'undefined') {
+        if (nv) document.body.classList.add('overflow-hidden');
+        else document.body.classList.remove('overflow-hidden');
+      }
+      return nv;
+    });
   }
 
   toggleFoundation(card: 'sourceOfTruth' | 'userExperiences' | 'customerJourneys') {
