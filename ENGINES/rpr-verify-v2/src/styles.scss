@@ -1,0 +1,21 @@
+/* ENGINES/rpr-verify-v2/src/styles.scss */
+@import "ag-grid-community/styles/ag-grid.css";
+@import "ag-grid-community/styles/ag-theme-alpine.css";
+
+// RPR Forensic Overrides for Alpine Dark
+.ag-theme-alpine-dark {
+    --ag-background-color: #050505;
+    --ag-header-background-color: #111111;
+    --ag-odd-row-background-color: #080808;
+    --ag-row-hover-color: #2a0505;
+    --ag-selected-row-background-color: #440000;
+    --ag-border-color: #222222;
+    --ag-font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+}
+
+body {
+    margin: 0;
+    background-color: #050505;
+    color: white;
+    font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+}
