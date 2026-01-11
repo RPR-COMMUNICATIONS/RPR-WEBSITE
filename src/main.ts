@@ -8,6 +8,10 @@ import { getAuth } from 'firebase/auth';
 import { getAnalytics } from 'firebase/analytics';
 import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
+import { ModuleRegistry, AllCommunityModule } from 'ag-grid-community';
+
+// AG Grid Forensic Module Registration
+ModuleRegistry.registerModules([AllCommunityModule]);
 
 // Polyfill process.env for browser environments
 if (typeof process === 'undefined') {
