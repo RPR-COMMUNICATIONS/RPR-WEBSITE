@@ -7,8 +7,7 @@
       <a href="#foundations" class="text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">METHODS</a>
       <a href="#highlights" class="text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">HIGHLIGHTS</a>
       <a href="#overwatch" class="text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">OVERWATCH</a>
-      <a href="https://verify.rprcomms.com" target="_blank" class="text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">PRODUCTS</a>
-      <app-auth-button></app-auth-button>
+      <a routerLink="/products" class="text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">PRODUCTS</a>
       <button (click)="scrollToChat()" class="px-4 py-2 border border-rpr-cyan text-rpr-cyan text-sm font-bold rounded hover:bg-rpr-cyan hover:text-black transition-all">
         TALK TO AI
       </button>
@@ -25,10 +24,7 @@
       <a href="#foundations" (click)="toggleMobileMenu()" role="menuitem" class="block w-full text-left px-2 py-3 text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">METHODS</a>
       <a href="#highlights" (click)="toggleMobileMenu()" role="menuitem" class="block w-full text-left px-2 py-3 text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">HIGHLIGHTS</a>
       <a href="#overwatch" (click)="toggleMobileMenu()" role="menuitem" class="block w-full text-left px-2 py-3 text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">OVERWATCH</a>
-      <a href="https://verify.rprcomms.com" target="_blank" (click)="toggleMobileMenu()" role="menuitem" class="block w-full text-left px-2 py-3 text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">PRODUCTS</a>
-      <div class="py-2 w-full">
-        <app-auth-button></app-auth-button>
-      </div>
+      <a routerLink="/products" (click)="toggleMobileMenu()" role="menuitem" class="block w-full text-left px-2 py-3 text-sm font-medium text-gray-300 hover:text-rpr-cyan transition-colors">PRODUCTS</a>
       <button (click)="scrollToChat(); toggleMobileMenu()" class="text-left text-rpr-cyan font-bold w-full text-sm px-2 py-3">TALK TO AI</button>
     </div>
   }

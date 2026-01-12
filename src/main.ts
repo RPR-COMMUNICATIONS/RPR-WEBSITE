@@ -1,13 +1,21 @@
 import 'zone.js';
 
 import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter, Routes } from '@angular/router';
 import { provideZoneChangeDetection } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getAnalytics } from 'firebase/analytics';
+import { getFirestore } from 'firebase/firestore';
 import { AppComponent } from './app/app.component';
+import { ProductLandingComponent } from './app/components/product-landing.component';
 import { environment } from './environments/environment';
+
+const routes: Routes = [
+  { path: '', component: AppComponent },
+  { path: 'products', component: ProductLandingComponent },
+];
 
 // Polyfill process.env for browser environments
 if (typeof process === 'undefined') {
@@ -36,6 +44,7 @@ try {
   if (environment.firebase.apiKey && environment.firebase.apiKey !== 'YOUR_API_KEY') {
     firebaseApp = initializeApp(environment.firebase);
     getAuth(firebaseApp);
+    getFirestore(firebaseApp, 'rpr-verify-b');
     
     // Initialize Analytics only in browser environment and if measurementId exists
     if (typeof window !== 'undefined' && environment.firebase.measurementId) {
@@ -57,6 +66,7 @@ try {
 
 bootstrapApplication(AppComponent, {
   providers: [
+    provideRouter(routes),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient()
   ]

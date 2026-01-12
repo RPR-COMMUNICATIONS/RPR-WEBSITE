@@ -22,8 +22,7 @@ interface ChatMessage {
     BrandLogoComponent,
     IconComponent,
     SectionHeaderComponent,
-    CardComponent,
-    AuthButtonComponent
+    CardComponent
   ],
   templateUrl: './app.component.html',
   styles: [`
