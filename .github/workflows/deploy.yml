@@ -1,49 +1,48 @@
-name: Deploy to Cloud Run (Singapore)
+name: Deploy Era 2026 Mothership (Keyless WIF)
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   workflow_dispatch:
-
-env:
-  PROJECT_ID: rpr-website-main
-  REGION: asia-southeast1
-  SERVICE_NAME: rpr-kontrol
-  IMAGE_NAME: asia-southeast1-docker.pkg.dev/rpr-website-main/ollie-repo/rpr-kontrol:stable
 
 jobs:
   deploy:
+    name: Build and Deploy (Keyless)
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      id-token: write
+      contents: 'read'
+      id-token: 'write'
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Authenticate to Google Cloud
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: |
+          cd RPR-REACT-MOTHERSHIP
+          npm ci
+
+      - name: Authenticate to Google Cloud (WIF v2)
+        id: auth
         uses: google-github-actions/auth@v2
         with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          # Authority: rpr-corporate-site (859831078276)
+          workload_identity_provider: 'projects/859831078276/locations/global/workloadIdentityPools/github-pool/providers/github-provider'
+          service_account: 'github-actions-deployer@rpr-corporate-site.iam.gserviceaccount.com'
+          token_format: 'access_token'
 
-      - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v2
-
-      - name: Configure Docker for Artifact Registry
+      - name: Execute Harbor B Strike
         run: |
-          gcloud auth configure-docker asia-southeast1-docker.pkg.dev --quiet
-
-      - name: Submit build to Cloud Build
+          cd RPR-REACT-MOTHERSHIP
+          # Deploy both targets using the authoritative Project ID
+          npx firebase deploy \
+            --only hosting:corporate,hosting:verify \
+            --project rpr-corporate-site
         env:
-          RPR_FIREBASE_CONFIG: ${{ secrets.RPR_FIREBASE_CONFIG }}
-          RPR_GOOGLE_GENAI_KEY: ${{ secrets.RPR_GOOGLE_GENAI_KEY }}
-          RPR_GOOGLE_CLIENT_ID: ${{ secrets.RPR_GOOGLE_CLIENT_ID }}
-          RPR_PERPLEXITY_API_KEY: ${{ secrets.RPR_PERPLEXITY_API_KEY }}
-          RPR_NOTION_API_KEY: ${{ secrets.RPR_NOTION_API_KEY }}
-          RPR_KONTROL_NOTION_PAGE_ID: ${{ secrets.RPR_KONTROL_NOTION_PAGE_ID }}
-          RPR_MCP_SSE_ENDPOINT: ${{ secrets.RPR_MCP_SSE_ENDPOINT }}
-        run: |
-          gcloud builds submit --config cloudbuild.yaml \
-            --substitutions=_RPR_FIREBASE_CONFIG="$RPR_FIREBASE_CONFIG",_RPR_GOOGLE_GENAI_KEY="$RPR_GOOGLE_GENAI_KEY",_RPR_GOOGLE_CLIENT_ID="$RPR_GOOGLE_CLIENT_ID",_RPR_PERPLEXITY_API_KEY="$RPR_PERPLEXITY_API_KEY",_RPR_NOTION_API_KEY="$RPR_NOTION_API_KEY",_RPR_KONTROL_NOTION_PAGE_ID="$RPR_KONTROL_NOTION_PAGE_ID",_RPR_MCP_SSE_ENDPOINT="$RPR_MCP_SSE_ENDPOINT"
+          FIREBASE_TOKEN: "${{ steps.auth.outputs.access_token }}"
