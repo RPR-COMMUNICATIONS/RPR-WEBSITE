@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "rpr-corporate-site"
-  }
+  },
+  "targets": {
+    "rpr-corporate-site": {
+      "hosting": {
+        "corporate": [
+          "rpr-corporate-site"
+        ],
+        "verify": [
+          "rpr-verify-b"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
