@@ -1,0 +1,46 @@
+{
+  "name": "rpr-communications-spa",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "dev": "npx ng serve",
+    "start": "npx ng serve",
+    "build": "ng build",
+    "build:prod": "ng build --configuration production",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "config": "node configure-local.js"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^19.0.0",
+    "@angular/build": "^19.0.0",
+    "@angular/cli": "^19.0.0",
+    "@angular/common": "^19.0.0",
+    "@angular/compiler": "^19.0.0",
+    "@angular/compiler-cli": "^19.0.0",
+    "@angular/core": "^19.0.0",
+    "@angular/forms": "^19.0.0",
+    "@angular/platform-browser": "^19.0.0",
+    "@angular/router": "^19.0.0",
+    "@google/genai": "*",
+    "@modelcontextprotocol/sdk": "^1.23.0",
+    "firebase": "^11.10.0",
+    "mermaid": "^11.0.0",
+    "rxjs": "~7.8.0",
+    "tailwindcss": "latest",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^19.0.0",
+    "@angular/cli": "^19.0.0",
+    "@angular/compiler-cli": "^19.0.0",
+    "@types/node": "^18.18.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "~5.5.0"
+  },
+  "overrides": {
+    "node-domexception": "^2.0.2"
+  }
+}

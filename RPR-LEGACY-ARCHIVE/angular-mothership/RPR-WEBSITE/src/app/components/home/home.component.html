@@ -1,0 +1,930 @@
+<!-- Hero Section -->
+<main>
+  <header class="relative py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-rpr-bg/80 to-rpr-bg pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rpr-cyan/10 text-rpr-cyan text-sm font-bold mb-4">
+        <div class="w-2 h-2 rounded-full bg-rpr-cyan animate-pulse"></div>
+        EST. 2025 // EXPERIENTIAL COMMUNICATIONS
+      </div>
+
+      <h1 class="mt-4 text-5xl md:text-7xl font-bold tracking-tight text-white">
+        Global Intelligence, Experiential Activation.
+      </h1>
+      <div class="text-xl text-white mb-10 leading-relaxed space-y-4">
+        <p>
+          We're a boutique agency and experience studio that actually cares if the campaign moves the needle. We design
+          and run brand work across the region that lives in the real world—digital products, physical spaces, and all
+          the messy bits in between—without chasing whatever gimmick is trending this week.
+        </p>
+        <p>
+          We keep it simple to make the story clear, get people to show up and do something, then prove it with live
+          numbers instead of 'vibes' on a slide. If you already have a big shiny campaign, we'll plug in where we're
+          useful. If you don't, we'll build the whole thing. Either way, the goal is the same: less theatre, more
+          results.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-4 mb-8">
+        <a href="#highlights"
+          class="px-8 py-4 bg-rpr-cyan text-black font-bold rounded hover:bg-white transition-colors flex items-center gap-2">
+          HIGHLIGHTS
+          <app-icon name="chevron-right" [size]="18"></app-icon>
+        </a>
+        <a href="#chat"
+          class="px-8 py-4 border border-white/20 text-white font-bold rounded hover:bg-white/5 transition-colors">
+          ASK OLLIE
+        </a>
+      </div>
+
+      <!-- Trust Badges (Migrated from Oversight) -->
+      <div class="flex gap-6 border-t border-white/5 pt-8">
+        <div class="flex items-center gap-2 text-sm text-gray-400">
+          <div class="flex items-center justify-center w-10 h-10 bg-black rounded-lg border border-white/10">
+            <app-icon name="award" class="text-rpr-cyan"></app-icon>
+          </div>
+          <span>2016 Gold Award Winner</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-gray-400">
+          <div class="flex items-center justify-center w-10 h-10 bg-black rounded-lg border border-white/10">
+            <app-icon name="shield-check" class="text-rpr-cyan"></app-icon>
+          </div>
+          <span>20+ Years Experience</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Foundations Section -->
+  <section id="foundations" class="py-16 md:py-24">
+    <div class="container mx-auto px-6">
+      <app-section-header>THE FOUNDATIONS</app-section-header>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Core 1 - The Source of Truth (Compass Icon) - Desktop -->
+        <app-card class="hidden md:block">
+          <div class="flex flex-col">
+            <!-- Header with Icon Tile -->
+            <button (click)="toggleFoundation('sourceOfTruth')"
+              class="mb-5 flex items-center justify-between cursor-pointer group w-full">
+              <div class="flex items-center gap-4">
+                <div class="relative flex items-center justify-center">
+                  <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none">
+                  </div>
+                  <div
+                    class="relative flex items-center justify-center w-20 h-20 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)]">
+                    <!-- Icon -->
+                    <span class="material-symbols-outlined text-3xl text-white"
+                      style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">explore</span>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight text-white uppercase">THE SOURCE OF TRUTH</h3>
+              </div>
+              <span class="material-symbols-outlined text-rpr-cyan transition-transform duration-200"
+                [class.rotate-180]="foundationExpanded().sourceOfTruth">
+                expand_more
+              </span>
+            </button>
+
+            <!-- Text Content -->
+            <div class="flex flex-col gap-3 mt-2">
+
+              <!-- Overview -->
+              <div class="text-base text-slate-100 leading-relaxed">
+                <p class="m-0">A pretty story sitting on top of bad data is not a brand strategy; it is a very expensive
+                  lie we tell ourselves until the numbers don't add up and the contract gets handed to the next agency
+                  down the street.</p>
+              </div>
+
+              <!-- Details (Expandable) -->
+              @if (foundationExpanded().sourceOfTruth) {
+              <div class="border-t border-white/10 pt-6 mt-4">
+                <div class="text-base text-slate-100 leading-relaxed space-y-4">
+                  <p class="m-0">Bad data quietly bleeds budgets, derails strategy, and breaks the journeys your
+                    customers experience, manifesting as confusion, inconsistency, and distrust.</p>
+                  <p class="m-0">For most small and mid-sized businesses, the issue is not a lack of tools; it is that
+                    every tool is working from its own version of the truth. Marketing has one view of the data, finance
+                    has another, operations have a third, and your AI assistants are being trained on whatever happens
+                    to be in front of them that day. The result is noise: conflicting reports, misread signals, and
+                    "performance" that no one can tie back to reality.</p>
+                  <p class="m-0">We work differently: we identify what actually matters, where it lives, and how to
+                    measure it across every touchpoint and outcome. Then we structure every message, test and retest it
+                    until we're satisfied that it accurately reflects that truth. Your decisions are then based on
+                    reality instead of the meaningless fantasy we keep seeing each day.</p>
+                </div>
+              </div>
+              }
+            </div>
+          </div>
+        </app-card>
+
+        <!-- Core 1 - Mobile (details/summary) -->
+        <details class="md:hidden rounded-lg bg-black p-6 group">
+          <summary class="flex items-start gap-4 cursor-pointer list-none mb-5">
+            <div class="relative flex items-center justify-center flex-shrink-0">
+              <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none"></div>
+              <div
+                class="relative flex items-center justify-center w-20 h-20 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)]">
+                <!-- Icon -->
+                <span class="material-symbols-outlined text-3xl text-white"
+                  style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">explore</span>
+              </div>
+            </div>
+            <div class="flex-1 text-left">
+              <h3 class="text-2xl font-bold tracking-tight text-white uppercase mb-2">THE SOURCE OF TRUTH</h3>
+              <p class="text-base text-slate-100 m-0 leading-relaxed">A pretty story sitting on top of bad data is not a
+                brand strategy; it is a very expensive lie we tell ourselves until the numbers don't add up and the
+                contract gets handed to the next agency down the street.</p>
+            </div>
+            <span
+              class="material-symbols-outlined text-rpr-cyan group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
+              expand_more
+            </span>
+          </summary>
+          <div class="mt-4 pt-4 border-t border-white/10">
+            <div class="text-base text-slate-100 leading-relaxed space-y-4">
+              <p class="m-0">Bad data quietly bleeds budgets, derails strategy, and breaks the journeys your customers
+                experience, manifesting as confusion, inconsistency, and distrust.</p>
+              <p class="m-0">For most small and mid-sized businesses, the issue is not a lack of tools; it is that every
+                tool is working from its own version of the truth. Marketing has one view of the data, finance has
+                another, operations have a third, and your AI assistants are being trained on whatever happens to be in
+                front of them that day. The result is noise: conflicting reports, misread signals, and "performance"
+                that no one can tie back to reality.</p>
+              <p class="m-0">We work differently: we identify what actually matters, where it lives, and how to measure
+                it across every touchpoint and outcome. Then we structure every message, test and retest it until we're
+                satisfied that it accurately reflects that truth. Your decisions are then based on reality instead of
+                the meaningless fantasy we keep seeing each day.</p>
+            </div>
+          </div>
+        </details>
+
+        <!-- Core 2 - User Experiences (UI) (Light Bulb Icon) - Desktop -->
+        <app-card class="hidden md:block">
+          <div class="flex flex-col">
+            <!-- Header with Icon Tile -->
+            <button (click)="toggleFoundation('userExperiences')"
+              class="mb-5 flex items-center justify-between cursor-pointer group w-full">
+              <div class="flex items-center gap-4">
+                <div class="relative flex items-center justify-center">
+                  <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none">
+                  </div>
+                  <div
+                    class="relative flex items-center justify-center w-20 h-20 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)]">
+                    <!-- Icon -->
+                    <span class="material-symbols-outlined text-3xl text-white"
+                      style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">lightbulb</span>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight text-white uppercase">THE INSIGHT (UI)</h3>
+              </div>
+              <span class="material-symbols-outlined text-rpr-cyan transition-transform duration-200"
+                [class.rotate-180]="foundationExpanded().userExperiences">
+                expand_more
+              </span>
+            </button>
+
+            <!-- Text Content -->
+            <div class="flex flex-col gap-3 mt-2">
+
+              <!-- Overview -->
+              <div class="text-base text-slate-100 leading-relaxed">
+                <p class="m-0">Your customers are not short on information; they are exhausted, conflicted, and trying
+                  to make sense of a world where human judgment was quietly outsourced to dashboards and algorithms.</p>
+              </div>
+
+              <!-- Details (Expandable) -->
+              @if (foundationExpanded().userExperiences) {
+              <div class="border-t border-white/10 pt-6 mt-4">
+                <div class="text-base text-slate-100 leading-relaxed space-y-4">
+                  <p class="m-0">Somewhere along the way, big data and "best practice" replaced the simple act of
+                    sitting with people, listening properly, and learning what they actually need. The mismatch is
+                    simple: your customers are still human, but the systems around them now treat them as rows in a
+                    report, so they answer with guesswork, silence, or whatever they think the machine wants to hear.
+                  </p>
+                  <p class="m-0">This drift didn't come from bad intentions; it came from a culture that worships scale
+                    and efficiency, even when it quietly erases context, nuance, and basic empathy from everyday
+                    decisions. When every insight must fit a database and every feeling must become a metric, whole
+                    parts of your customers' reality simply stop being seen.</p>
+                  <p class="m-0">We want to bring the old habits back—the way we've worked all along with other
+                    associates and competitors who were once friends and remain so. We were made to believe that
+                    automated reports were cheaper, faster, more scientific. They lied—but to themselves mostly. We aim
+                    to ground consumer insight in measurable reality using the right tools. Which to us is not a slide
+                    or a chart. It's a small set of human truths your team recognizes as real, confirmed by numbers that
+                    actually reflect what's happening, not what they guaranteed would happen. Nobody can guarantee
+                    outcomes, but we can show you how we try.</p>
+                </div>
+              </div>
+              }
+            </div>
+          </div>
+        </app-card>
+
+        <!-- Core 2 - Mobile (details/summary) -->
+        <details class="md:hidden rounded-lg bg-black p-6 group">
+          <summary class="flex items-start gap-4 cursor-pointer list-none mb-5">
+            <div class="relative flex items-center justify-center flex-shrink-0">
+              <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none"></div>
+              <div
+                class="relative flex items-center justify-center w-20 h-20 bg-black squircle shadow-glow-white-subtle transition-all duration-300">
+                <!-- Icon -->
+                <span class="material-symbols-outlined text-3xl text-white transition-colors"
+                  style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">lightbulb</span>
+              </div>
+            </div>
+            <div class="flex-1 text-left">
+              <h3 class="text-2xl font-bold tracking-tight text-white uppercase mb-2">THE INSIGHT (UI)</h3>
+              <p class="text-base text-slate-100 m-0 leading-relaxed">Your customers are not short on information; they
+                are exhausted, conflicted, and trying to make sense of a world where human judgment was quietly
+                outsourced to dashboards and algorithms.</p>
+            </div>
+            <span
+              class="material-symbols-outlined text-rpr-cyan group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
+              expand_more
+            </span>
+          </summary>
+          <div class="mt-4 pt-4 border-t border-white/10">
+            <div class="text-base text-slate-100 leading-relaxed space-y-4">
+              <p class="m-0">Somewhere along the way, big data and "best practice" replaced the simple act of sitting
+                with people, listening properly, and learning what they actually need. The mismatch is simple: your
+                customers are still human, but the systems around them now treat them as rows in a report, so they
+                answer with guesswork, silence, or whatever they think the machine wants to hear.</p>
+              <p class="m-0">This drift didn't come from bad intentions; it came from a culture that worships scale and
+                efficiency, even when it quietly erases context, nuance, and basic empathy from everyday decisions. When
+                every insight must fit a database and every feeling must become a metric, whole parts of your customers'
+                reality simply stop being seen.</p>
+              <p class="m-0">We want to bring the old habits back—the way we've worked all along with other associates
+                and competitors who were once friends and remain so. We were made to believe that automated reports were
+                cheaper, faster, more scientific. They lied—but to themselves mostly. We aim to ground consumer insight
+                in measurable reality using the right tools. Which to us is not a slide or a chart. It's a small set of
+                human truths your team recognizes as real, confirmed by numbers that actually reflect what's happening,
+                not what they guaranteed would happen. Nobody can guarantee outcomes, but we can show you how we try.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- Core 3 - Customer Journeys (CX) (North Arrow Icon) - Desktop -->
+        <app-card class="hidden md:block">
+          <div class="flex flex-col">
+            <!-- Header with Icon Tile -->
+            <button (click)="toggleFoundation('customerJourneys')"
+              class="mb-5 flex items-center justify-between cursor-pointer group w-full">
+              <div class="flex items-center gap-4">
+                <div class="relative flex items-center justify-center">
+                  <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none">
+                  </div>
+                  <div
+                    class="relative flex items-center justify-center w-20 h-20 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)]">
+                    <!-- Icon -->
+                    <span class="material-symbols-outlined text-3xl text-white"
+                      style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">navigation</span>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight text-white uppercase">THE JOURNEY (CX)</h3>
+              </div>
+              <span class="material-symbols-outlined text-rpr-cyan transition-transform duration-200"
+                [class.rotate-180]="foundationExpanded().customerJourneys">
+                expand_more
+              </span>
+            </button>
+
+            <!-- Text Content -->
+            <div class="flex flex-col gap-3 mt-2">
+
+              <!-- Overview -->
+              <div class="text-base text-slate-100 leading-relaxed">
+                <p class="m-0">We try to get the moments that matter right. We use the right tools to get the job done,
+                  not the other way around.</p>
+              </div>
+
+              <!-- Details (Expandable) -->
+              @if (foundationExpanded().customerJourneys) {
+              <div class="border-t border-white/10 pt-6 mt-4">
+                <div class="text-base text-slate-100 leading-relaxed space-y-4">
+                  <p class="m-0">Your team feels this every day: the same issues repeating in every channel and across
+                    every industry, the same escalations, the same misunderstandings cycling through. You are not short
+                    on data; you are short on a way to turn what is happening on the screen and off the screen into
+                    fewer, better problems to fix.</p>
+                  <p class="m-0">At some point, the industry swapped real people for pretty funnels and vanity tools,
+                    pretending that clicks and followers were the same thing as trust. Some guy in a boardroom drew up
+                    the neat little diagram and swore it would work. He was confident. He was wrong. Your customers are
+                    influenced by a mess of horizontal factors—channels, reviews, peers, timing—none of which fit the
+                    boxes they drew. Complex flows were shipped on the promise that "the data will tell us." It never
+                    does. Meanwhile, no one took responsibility for how nerve-racking the experience felt in the moment.
+                  </p>
+                  <p class="m-0">We observe what people actually do—not what we are told—and continuously adjust the
+                    words and steps to surface where friction exists and where momentum builds. Every change has to earn
+                    its place by showing measurable progress toward clearer, more manageable problems. Over time, this
+                    reveals what actually works versus what you assumed would work, so you're building on evidence
+                    rather than on hope.</p>
+                </div>
+              </div>
+              }
+            </div>
+          </div>
+        </app-card>
+
+        <!-- Core 3 - Mobile (details/summary) -->
+        <details class="md:hidden rounded-lg bg-black p-6 group">
+          <summary class="flex items-start gap-4 cursor-pointer list-none mb-5">
+            <div class="relative flex items-center justify-center flex-shrink-0">
+              <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none"></div>
+              <div
+                class="relative flex items-center justify-center w-20 h-20 bg-black squircle shadow-glow-white-subtle transition-all duration-300">
+                <!-- Icon -->
+                <span class="material-symbols-outlined text-3xl text-white transition-colors"
+                  style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">navigation</span>
+              </div>
+            </div>
+            <div class="flex-1 text-left">
+              <h3 class="text-2xl font-bold tracking-tight text-white uppercase mb-2">THE JOURNEY (CX)</h3>
+              <p class="text-base text-slate-100 m-0 leading-relaxed">We try to get the moments that matter right. We
+                use the right tools to get the job done, not the other way around.</p>
+            </div>
+            <span
+              class="material-symbols-outlined text-rpr-cyan group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
+              expand_more
+            </span>
+          </summary>
+          <div class="mt-4 pt-4 border-t border-white/10">
+            <div class="text-base text-slate-100 leading-relaxed space-y-4">
+              <p class="m-0">Your team feels this every day: the same issues repeating in every channel and across every
+                industry, the same escalations, the same misunderstandings cycling through. You are not short on data;
+                you are short on a way to turn what is happening on the screen and off the screen into fewer, better
+                problems to fix.</p>
+              <p class="m-0">At some point, the industry swapped real people for pretty funnels and vanity tools,
+                pretending that clicks and followers were the same thing as trust. Some guy in a boardroom drew up the
+                neat little diagram and swore it would work. He was confident. He was wrong. Your customers are
+                influenced by a mess of horizontal factors—channels, reviews, peers, timing—none of which fit the boxes
+                they drew. Complex flows were shipped on the promise that "the data will tell us." It never does.
+                Meanwhile, no one took responsibility for how nerve-racking the experience felt in the moment.</p>
+              <p class="m-0">We observe what people actually do—not what we are told—and continuously adjust the words
+                and steps to surface where friction exists and where momentum builds. Every change has to earn its place
+                by showing measurable progress toward clearer, more manageable problems. Over time, this reveals what
+                actually works versus what you assumed would work, so you're building on evidence rather than on hope.
+              </p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="py-16 md:py-24">
+    <div class="container mx-auto px-6">
+      <app-section-header>THE METHODS</app-section-header>
+      <div class="text-center mb-12">
+        <p class="mt-3 text-xl md:text-2xl font-semibold text-white">
+          A continuous loop from strategy to post‑campaign insight.
+        </p>
+      </div>
+
+      <!-- How We Work Process -->
+      <div class="max-w-6xl mx-auto py-8 px-4">
+        <div class="py-10 md:py-12">
+          <!-- Desktop: horizontal timeline -->
+          <div class="hidden md:block">
+            <div class="relative grid grid-cols-5 gap-8">
+
+              <!-- Step 1 -->
+              <div class="group flex flex-col items-center gap-3 text-center bg-black rounded-lg p-6">
+                <!-- Icon -->
+                <div class="relative flex items-center justify-center overflow-visible">
+                  <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none z-0">
+                  </div>
+                  <div
+                    class="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)] z-10">
+                    <!-- Spark -->
+                    <svg
+                      class="absolute -top-3 -right-3 w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 0L61.226 38.774L100 50L61.226 61.226L50 100L38.774 61.226L0 50L38.774 38.774L50 0Z">
+                      </path>
+                    </svg>
+                    <!-- Icon -->
+                    <span
+                      class="material-symbols-outlined text-3xl sm:text-4xl text-white group-hover:text-cyan-400 group-hover:brightness-150 group-hover:scale-110 transition-all duration-300"
+                      style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">group_search</span>
+                  </div>
+                </div>
+                <!-- Verb label -->
+                <span
+                  class="text-2xl font-bold tracking-[0.3em] text-white group-hover:text-cyan-400 transition-colors duration-300">ASK</span>
+                <!-- Title -->
+                <h3 class="text-sm font-semibold text-slate-100">Strategic Planning</h3>
+                <!-- Description -->
+                <p class="mt-1 text-xs md:text-sm text-slate-400 max-w-xs">
+                  Define problem, map consumer journey, set success metrics.
+                </p>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="group flex flex-col items-center gap-3 text-center bg-black rounded-lg p-6">
+                <!-- Icon -->
+                <div class="relative flex items-center justify-center overflow-visible">
+                  <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none z-0">
+                  </div>
+                  <div
+                    class="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)] z-10">
+                    <!-- Spark -->
+                    <svg
+                      class="absolute -top-3 -right-3 w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 0L61.226 38.774L100 50L61.226 61.226L50 100L38.774 61.226L0 50L38.774 38.774L50 0Z">
+                      </path>
+                    </svg>
+                    <!-- Icon -->
+                    <span
+                      class="material-symbols-outlined text-3xl sm:text-4xl text-white group-hover:text-cyan-400 group-hover:brightness-150 group-hover:scale-110 transition-all duration-300"
+                      style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">send_money</span>
+                  </div>
+                </div>
+                <!-- Verb label -->
+                <span
+                  class="text-2xl font-bold tracking-[0.3em] text-white group-hover:text-cyan-400 transition-colors duration-300">PAY</span>
+                <!-- Title -->
+                <h3 class="text-sm font-semibold text-slate-100">Client Approval</h3>
+                <!-- Description -->
+                <p class="mt-1 text-xs md:text-sm text-slate-400 max-w-xs">
+                  Align on risks, timelines and budgets; get sign‑off.
+                </p>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="group flex flex-col items-center gap-3 text-center bg-black rounded-lg p-6">
+                <!-- Icon -->
+                <div class="relative flex items-center justify-center overflow-visible">
+                  <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none z-0">
+                  </div>
+                  <div
+                    class="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)] z-10">
+                    <!-- Spark -->
+                    <svg
+                      class="absolute -top-3 -right-3 w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 0L61.226 38.774L100 50L61.226 61.226L50 100L38.774 61.226L0 50L38.774 38.774L50 0Z">
+                      </path>
+                    </svg>
+                    <!-- Icon -->
+                    <span
+                      class="material-symbols-outlined text-3xl sm:text-4xl text-white group-hover:text-cyan-400 group-hover:brightness-150 group-hover:scale-110 transition-all duration-300"
+                      style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">smart_toy</span>
+                  </div>
+                </div>
+                <!-- Verb label -->
+                <span
+                  class="text-2xl font-bold tracking-[0.3em] text-white group-hover:text-cyan-400 transition-colors duration-300">MAKE</span>
+                <!-- Title -->
+                <h3 class="text-sm font-semibold text-slate-100">Planning</h3>
+                <!-- Description -->
+                <p class="mt-1 text-xs md:text-sm text-slate-400 max-w-xs">
+                  Develop concepts, plan channels, build the roadmap.
+                </p>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="group flex flex-col items-center gap-3 text-center bg-black rounded-lg p-6">
+                <!-- Icon -->
+                <div class="relative flex items-center justify-center overflow-visible">
+                  <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none z-0">
+                  </div>
+                  <div
+                    class="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)] z-10">
+                    <!-- Spark -->
+                    <svg
+                      class="absolute -top-3 -right-3 w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 0L61.226 38.774L100 50L61.226 61.226L50 100L38.774 61.226L0 50L38.774 38.774L50 0Z">
+                      </path>
+                    </svg>
+                    <!-- Icon -->
+                    <span
+                      class="material-symbols-outlined text-3xl sm:text-4xl text-white group-hover:text-cyan-400 group-hover:brightness-150 group-hover:scale-110 transition-all duration-300"
+                      style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">rocket_launch</span>
+                  </div>
+                </div>
+                <!-- Verb label -->
+                <span
+                  class="text-2xl font-bold tracking-[0.3em] text-white group-hover:text-cyan-400 transition-colors duration-300">PLAY</span>
+                <!-- Title -->
+                <h3 class="text-sm font-semibold text-slate-100">Execution</h3>
+                <!-- Description -->
+                <p class="mt-1 text-xs md:text-sm text-slate-400 max-w-xs">
+                  Produce assets, launch and monitor performance in market.
+                </p>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="group flex flex-col items-center gap-3 text-center bg-black rounded-lg p-6">
+                <!-- Icon -->
+                <div class="relative flex items-center justify-center overflow-visible">
+                  <div class="absolute inset-x-4 bottom-0 h-3 rounded-full bg-white/12 blur-xl pointer-events-none z-0">
+                  </div>
+                  <div
+                    class="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)] z-10">
+                    <!-- Spark -->
+                    <svg
+                      class="absolute -top-3 -right-3 w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      fill="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 0L61.226 38.774L100 50L61.226 61.226L50 100L38.774 61.226L0 50L38.774 38.774L50 0Z">
+                      </path>
+                    </svg>
+                    <!-- Icon -->
+                    <span
+                      class="material-symbols-outlined text-3xl sm:text-4xl text-white group-hover:text-cyan-400 group-hover:brightness-150 group-hover:scale-110 transition-all duration-300"
+                      style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48">self_improvement</span>
+                  </div>
+                </div>
+                <!-- Verb label -->
+                <span
+                  class="text-2xl font-bold tracking-[0.3em] text-white group-hover:text-cyan-400 transition-colors duration-300">REPEAT</span>
+                <!-- Title -->
+                <h3 class="text-sm font-semibold text-slate-100">Post Analysis</h3>
+                <!-- Description -->
+                <p class="mt-1 text-xs md:text-sm text-slate-400 max-w-xs">
+                  Review results, capture insights, improve the journey.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative mt-8 flex justify-end items-center">
+              <p class="text-xs text-white/50 mr-2">
+                This then refines the next cycle.
+              </p>
+              <svg class="text-white/50" width="60" height="48" viewBox="0 0 60 48" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M59 24C59 11.3323 48.6677 1 36 1C23.3323 1 13 11.3323 13 24C13 36.6677 23.3323 47 36 47H52.5"
+                  stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2" />
+                <path d="M50 43L53 47L57 43" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Mobile: accordion -->
+          <div class="md:hidden mt-6">
+            <div class="flex flex-col gap-3">
+              <details class="rounded-2xl bg-black px-4 py-2 group" open>
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2"
+                  aria-label="How We Work - ASK - Strategic Planning">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)]">
+                      <span
+                        class="material-symbols-outlined text-white text-2xl group-hover:text-cyan-400 group-hover:brightness-150 group-hover:scale-110 transition-all duration-300">group_search</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span
+                        class="text-2xl font-bold tracking-[0.3em] text-white group-hover:text-cyan-400 transition-colors duration-300">ASK</span>
+                      <p class="text-sm font-semibold text-white m-0">Strategic Planning</p>
+                    </div>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-white/60 group-open:rotate-180 transition-transform duration-300">
+                    expand_more
+                  </span>
+                </summary>
+                <p class="mt-2 pb-3 ml-10 text-sm text-white/70">
+                  Define problem, map consumer journey, set success metrics.
+                </p>
+              </details>
+
+              <details class="rounded-2xl bg-black px-4 py-2 group">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2"
+                  aria-label="How We Work - PAY - Client Approval">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)]">
+                      <span
+                        class="material-symbols-outlined text-white text-2xl group-hover:text-cyan-400 group-hover:brightness-150 group-hover:scale-110 transition-all duration-300">send_money</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span
+                        class="text-2xl font-bold tracking-[0.3em] text-white group-hover:text-cyan-400 transition-colors duration-300">PAY</span>
+                      <p class="text-sm font-semibold text-white m-0">Client Approval</p>
+                    </div>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-white/60 group-open:rotate-180 transition-transform duration-300">
+                    expand_more
+                  </span>
+                </summary>
+                <p class="mt-2 pb-3 ml-10 text-sm text-white/70">
+                  Align on risks, timelines and budgets; get sign‑off.
+                </p>
+              </details>
+
+              <details class="rounded-2xl bg-black px-4 py-2 group">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2"
+                  aria-label="How We Work - MAKE - Planning">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)]">
+                      <span
+                        class="material-symbols-outlined text-white text-2xl group-hover:text-cyan-400 group-hover:brightness-150 group-hover:scale-110 transition-all duration-300">smart_toy</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span
+                        class="text-2xl font-bold tracking-[0.3em] text-white group-hover:text-cyan-400 transition-colors duration-300">MAKE</span>
+                      <p class="text-sm font-semibold text-white m-0">Planning</p>
+                    </div>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-white/60 group-open:rotate-180 transition-transform duration-300">
+                    expand_more
+                  </span>
+                </summary>
+                <p class="mt-2 pb-3 ml-10 text-sm text-white/70">
+                  Develop concepts, plan channels, build the roadmap.
+                </p>
+              </details>
+
+              <details class="rounded-2xl bg-black px-4 py-2 group">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2"
+                  aria-label="How We Work - PLAY - Execution">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)]">
+                      <span
+                        class="material-symbols-outlined text-white text-2xl group-hover:text-cyan-400 group-hover:brightness-150 group-hover:scale-110 transition-all duration-300">rocket_launch</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span
+                        class="text-2xl font-bold tracking-[0.3em] text-white group-hover:text-cyan-400 transition-colors duration-300">PLAY</span>
+                      <p class="text-sm font-semibold text-white m-0">Execution</p>
+                    </div>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-white/60 group-open:rotate-180 transition-transform duration-300">
+                    expand_more
+                  </span>
+                </summary>
+                <p class="mt-2 pb-3 ml-10 text-sm text-white/70">
+                  Produce assets, launch and monitor performance in market.
+                </p>
+              </details>
+
+              <details class="rounded-2xl bg-black px-4 py-2 group">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2"
+                  aria-label="How We Work - REPEAT - Post Analysis">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 bg-black rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.35)]">
+                      <span
+                        class="material-symbols-outlined text-white text-2xl group-hover:text-cyan-400 group-hover:brightness-150 group-hover:scale-110 transition-all duration-300">self_improvement</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <span
+                        class="text-2xl font-bold tracking-[0.3em] text-white group-hover:text-cyan-400 transition-colors duration-300">REPEAT</span>
+                      <p class="text-sm font-semibold text-white m-0">Post Analysis</p>
+                    </div>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-white/60 group-open:rotate-180 transition-transform duration-300">
+                    expand_more
+                  </span>
+                </summary>
+                <p class="mt-2 pb-3 ml-10 text-sm text-white/70">
+                  Review results, capture insights, improve the journey.
+                </p>
+              </details>
+            </div>
+
+            <div class="mt-6 flex items-center justify-center gap-3 px-4 text-center">
+              <span class="material-symbols-outlined text-white/60 text-2xl">cycle</span>
+              <p class="text-sm text-white/60">
+                This then refines the next cycle.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights / Case Studies -->
+  <section id="highlights" class="py-16 md:py-24 border-y border-white/5">
+    <div class="container mx-auto px-6">
+      <app-section-header>HIGHLIGHTS</app-section-header>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Case Study 1 -->
+        <div
+          class="group relative overflow-hidden rounded-lg bg-[#020617] border border-rpr-cyan/20 shadow-lg shadow-rpr-cyan/5">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" type="image/jpeg">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+              alt="Starlight Pty Ltd creative services and brand activation strategy" loading="lazy"
+              class="w-full h-80 object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 project-image">
+          </picture>
+          <div class="absolute bottom-0 left-0 p-8 z-20">
+            <div class="text-rpr-cyan font-bold text-sm mb-2 tracking-wider">CREATIVE SERVICES</div>
+            <h3 class="text-2xl font-bold text-white mb-2">Starlight Pty Ltd</h3>
+            <p class="text-white">First Australian bound client for creative services and brand activation, establishing
+              a new benchmark for cross-regional creative partnerships.</p>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div
+          class="group relative overflow-hidden rounded-lg bg-[#020617] border border-rpr-cyan/20 shadow-lg shadow-rpr-cyan/5">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" type="image/jpeg">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+              alt="Bosch Global centennial campaign and industrial innovation" loading="lazy"
+              class="w-full h-80 object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 project-image">
+          </picture>
+          <div class="absolute bottom-0 left-0 p-8 z-20">
+            <div class="text-rpr-cyan font-bold text-sm mb-2 tracking-wider">CENTENNIAL CAMPAIGN</div>
+            <h3 class="text-2xl font-bold text-white mb-2">Bosch Global</h3>
+            <p class="text-white">"100 years Malaysia 2023". Executed a comprehensive centennial celebration campaign
+              honoring a century of innovation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Oversight -->
+  <section id="overwatch" class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="rounded-lg border border-rpr-cyan/20 shadow-lg shadow-rpr-cyan/5 p-8 md:p-12">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+          <div class="w-full md:w-1/3">
+            <div class="relative">
+              <div class="relative rounded-lg w-full aspect-[4/5] bg-[#0a0d14] border border-white/5 p-6 shadow-2xl">
+                <svg viewBox="0 0 400 400" class="w-full h-full"
+                  aria-label="Chessboard sketch showing strategic planning moves" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Chessboard grid - hand-drawn style -->
+                  <g stroke="rgba(255,255,255,0.7)" stroke-width="1.5" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <!-- Vertical lines -->
+                    <path d="M50 50 Q52 50, 50 100 T50 150 T50 200 T50 250 T50 300 T50 350" opacity="0.6" />
+                    <path d="M100 50 Q102 50, 100 100 T100 150 T100 200 T100 250 T100 300 T100 350" opacity="0.6" />
+                    <path d="M150 50 Q152 50, 150 100 T150 150 T150 200 T150 250 T150 300 T150 350" opacity="0.6" />
+                    <path d="M200 50 Q202 50, 200 100 T200 150 T200 200 T200 250 T200 300 T200 350" opacity="0.6" />
+                    <path d="M250 50 Q252 50, 250 100 T250 150 T250 200 T250 250 T250 300 T250 350" opacity="0.6" />
+                    <path d="M300 50 Q302 50, 300 100 T300 150 T300 200 T300 250 T300 300 T300 350" opacity="0.6" />
+                    <path d="M350 50 Q352 50, 350 100 T350 150 T350 200 T350 250 T350 300 T350 350" opacity="0.6" />
+                    <!-- Horizontal lines -->
+                    <path d="M50 50 Q50 52, 100 50 T150 50 T200 50 T250 50 T300 50 T350 50" opacity="0.6" />
+                    <path d="M50 100 Q50 102, 100 100 T150 100 T200 100 T250 100 T300 100 T350 100" opacity="0.6" />
+                    <path d="M50 150 Q50 152, 100 150 T150 150 T200 150 T250 150 T300 150 T350 150" opacity="0.6" />
+                    <path d="M50 200 Q50 202, 100 200 T150 200 T200 200 T250 200 T300 200 T350 200" opacity="0.6" />
+                    <path d="M50 250 Q50 252, 100 250 T150 250 T200 250 T250 250 T300 250 T350 250" opacity="0.6" />
+                    <path d="M50 300 Q50 302, 100 300 T150 300 T200 300 T250 300 T300 300 T350 300" opacity="0.6" />
+                    <path d="M50 350 Q50 352, 100 350 T150 350 T200 350 T250 350 T300 350 T350 350" opacity="0.6" />
+                  </g>
+
+                  <!-- Chess pieces - simplified line art style -->
+                  <!-- King (top center) -->
+                  <g stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none">
+                    <circle cx="200" cy="120" r="12" opacity="0.7" />
+                    <path d="M200 108 L200 100 M195 105 L205 105" stroke-width="1.5" />
+                  </g>
+
+                  <!-- Queen (left side) -->
+                  <g stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none">
+                    <circle cx="120" cy="180" r="10" opacity="0.7" />
+                    <path d="M120 170 L120 160 M115 165 L125 165" stroke-width="1.5" />
+                  </g>
+
+                  <!-- Rook (right side) -->
+                  <g stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none">
+                    <rect x="270" y="170" width="16" height="16" rx="2" opacity="0.7" />
+                    <path d="M273 170 L273 160 M285 170 L285 160" stroke-width="1.5" />
+                  </g>
+
+                  <!-- Pawn (bottom left) -->
+                  <g stroke="rgba(255,255,255,0.6)" stroke-width="1.5" fill="none">
+                    <circle cx="150" cy="280" r="8" opacity="0.6" />
+                    <path d="M150 272 L150 260" stroke-width="1" />
+                  </g>
+
+                  <!-- Pawn (bottom right) -->
+                  <g stroke="rgba(255,255,255,0.6)" stroke-width="1.5" fill="none">
+                    <circle cx="280" cy="300" r="8" opacity="0.6" />
+                    <path d="M280 292 L280 280" stroke-width="1" />
+                  </g>
+
+                  <!-- Teal accent highlights on key squares -->
+                  <rect x="95" y="145" width="50" height="50" fill="rgba(34,211,238,0.15)" stroke="rgba(34,211,238,0.4)"
+                    stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6" />
+                  <rect x="245" y="195" width="50" height="50" fill="rgba(34,211,238,0.15)"
+                    stroke="rgba(34,211,238,0.4)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6" />
+
+                  <!-- Strategic arrows/movement indicators -->
+                  <g stroke="rgba(34,211,238,0.5)" stroke-width="2" fill="none" opacity="0.5">
+                    <path d="M120 180 Q160 200, 200 220" marker-end="url(#arrowhead)" />
+                    <path d="M200 120 Q220 160, 245 195" marker-end="url(#arrowhead)" />
+                  </g>
+                  <defs>
+                    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                      <polygon points="0 0, 6 3, 0 6" fill="rgba(34,211,238,0.5)" />
+                    </marker>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-2/3">
+            <app-section-header>THE OVERWATCH</app-section-header>
+            <h3 class="text-2xl font-bold text-white mb-2">Puvan Sivanasan</h3>
+            <div class="text-rpr-cyan font-medium mb-6">Founder & Principal Strategist</div>
+            <div class="text-white mb-6 leading-relaxed space-y-4">
+              <p>
+                Having spent 20 years in corporate communications and brand activation—from local event firms to
+                international creative agencies—he has worked on everything from on‑ground activations to award‑winning
+                campaigns for global corporations. What began as a fascination with human behaviour and systems, and a
+                belief that technology should be used to improve people's lives rather than just generate TikTok likes,
+                has evolved into a multidisciplinary approach to customer experience.
+              </p>
+              <p>
+                While experimenting with AI for his own personal writings and ideas, a pattern he noticed in a client
+                problem raised a different question: how can a sentient being leverage an artificial construct to apply
+                its capabilities in knowledge discovery, systems thinking, and polymathic research—within the same human
+                framework of systems and silos—to create something better?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Chat Interface -->
+  <section id="chat" class="py-16 md:py-24 border-t border-white/10">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="text-center mb-10">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rpr-cyan/10 text-rpr-cyan text-sm font-bold mb-4">
+          <div class="w-2 h-2 rounded-full bg-rpr-cyan animate-pulse"></div>
+          POWERED BY GEMINI
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Ask Ollie</h2>
+        <p class="text-lg md:text-xl text-slate-300 font-medium mb-4">He works to add balance to your life</p>
+        <p class="text-base text-slate-300 mb-6 max-w-2xl mx-auto">Ask him what's wrong with the world. If he gets it
+          right, buy him a beer. If he gets it wrong... still buy him a beer. He tried.</p>
+      </div>
+
+      <div class="bg-black/50 border border-white/10 rounded-2xl overflow-hidden shadow-2xl flex flex-col h-[600px]">
+        <!-- Chat Area -->
+        <div class="flex-1 p-6 overflow-y-auto space-y-4" #chatContainer>
+          <!-- Welcome Message -->
+          <div class="flex gap-4">
+            <div
+              class="w-8 h-8 rounded-full bg-rpr-cyan/20 flex items-center justify-center flex-shrink-0 text-rpr-cyan text-xs font-bold shadow-[0_0_15px_rgba(34,211,238,0.35)]">
+              OL</div>
+            <div class="bg-white/5 p-4 rounded-2xl rounded-tl-none max-w-[80%]">
+              <p class="text-gray-200 text-sm">{{ getOllieGreeting() }}</p>
+            </div>
+          </div>
+
+          @for (msg of chatMessages(); track msg) {
+          <div class="flex gap-4" [class.flex-row-reverse]="msg.role === 'user'">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold"
+              [class.bg-rpr-cyan-20]="msg.role === 'ai'" [class.text-rpr-cyan]="msg.role === 'ai'"
+              [class.bg-white]="msg.role === 'user'" [class.text-black]="msg.role === 'user'">
+              {{ msg.role === 'ai' ? 'OL' : 'U' }}
+            </div>
+            <div class="p-4 rounded-2xl max-w-[80%] text-sm leading-relaxed" [class.bg-white-5]="msg.role === 'ai'"
+              [class.rounded-tl-none]="msg.role === 'ai'" [class.bg-rpr-cyan]="msg.role === 'user'"
+              [class.text-black]="msg.role === 'user'" [class.rounded-tr-none]="msg.role === 'user'">
+              {{ msg.content }}
+            </div>
+          </div>
+          }
+
+          @if (isLoading()) {
+          <div class="flex gap-4">
+            <div
+              class="w-8 h-8 rounded-full bg-rpr-cyan/20 flex items-center justify-center flex-shrink-0 text-rpr-cyan text-xs font-bold shadow-[0_0_15px_rgba(34,211,238,0.35)]">
+              OL</div>
+            <div class="bg-white/5 p-4 rounded-2xl rounded-tl-none flex gap-2 items-center">
+              <div class="w-2 h-2 bg-rpr-cyan rounded-full animate-bounce"></div>
+              <div class="w-2 h-2 bg-rpr-cyan rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+              <div class="w-2 h-2 bg-rpr-cyan rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+            </div>
+          </div>
+          }
+        </div>
+
+        <!-- Input Area -->
+        <div class="p-4 border-t border-white/10 bg-black/30">
+          <form (submit)="sendMessage($event)" class="flex gap-2">
+            <input [formControl]="chatInput" type="text" placeholder="Type your inquiry here..."
+              class="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-rpr-cyan transition-colors">
+            <button type="submit" [disabled]="isLoading() || !chatInput.value"
+              class="bg-rpr-cyan text-black px-6 py-3 rounded-lg font-bold hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
+              <span>SEND</span>
+              <app-icon name="send" [size]="16"></app-icon>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

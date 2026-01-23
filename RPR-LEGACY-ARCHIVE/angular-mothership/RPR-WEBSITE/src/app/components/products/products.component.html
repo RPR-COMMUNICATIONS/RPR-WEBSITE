@@ -1,0 +1,33 @@
+<div class="min-h-screen bg-black text-white p-8 pt-32">
+    <div class="max-w-6xl mx-auto">
+        <div class="border-l-4 border-red-600 pl-6 mb-16">
+            <h1 class="text-5xl font-mono uppercase tracking-tighter">Products Hub</h1>
+            <p class="text-zinc-500 font-mono mt-2 uppercase tracking-widest text-sm italic">Sovereign Switchboard v1.0
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+            <div *ngFor="let app of apps"
+                class="group border border-zinc-800 p-8 hover:border-red-600 transition-all duration-300 bg-zinc-950 flex flex-col justify-between">
+                <div>
+                    <h2
+                        class="text-2xl font-bold mb-4 uppercase tracking-tight group-hover:text-red-500 transition-colors">
+                        {{ app.name }}</h2>
+                    <p class="text-zinc-400 mb-10 leading-relaxed font-light">{{ app.description }}</p>
+                </div>
+
+                <div class="mt-auto">
+                    <a *ngIf="app.type === 'internal'" [routerLink]="app.path"
+                        class="block w-full text-center bg-white text-black py-4 font-bold uppercase tracking-widest hover:bg-zinc-200 transition-all">
+                        {{ app.cta }}
+                    </a>
+
+                    <a *ngIf="app.type === 'external'" [href]="app.url" target="_blank"
+                        class="block w-full text-center border border-zinc-700 text-white py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+                        {{ app.cta }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
