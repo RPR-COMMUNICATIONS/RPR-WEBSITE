@@ -1,46 +1,34 @@
-name: Deploy Era 2026 Mothership (Keyless WIF)
+name: Deploy Era 2026 Mothership (Sovereign Sync)
 
 # Job ID: 2026-001-RPR-WEBSITE
 # Path: .github/workflows/deploy.yml
-# Standard: RPR-SECRET-MODEL-V2 (Unprefixed)
-# Authority: SENTINEL-v1.4.12
+# Harbor: B (Corporate)
 
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
-    inputs:
-      target:
-        description: 'Deployment target (corporate or verify)'
-        required: true
-        default: 'corporate'
-        type: choice
-        options: [corporate, verify]
 
 jobs:
   deploy:
-    name: Build and Deploy (Keyless)
+    name: Build and Deploy to Harbor B
     runs-on: ubuntu-latest
     permissions:
       contents: 'read'
       id-token: 'write'
 
     env:
-      TARGET: "${{ github.event.inputs.target || 'corporate' }}"
-      PROJECT_ID: "rpr-corporate-site"
-      # Mapping directly to GitHub Organization Secrets (Unprefixed)
-      PERPLEXITY_API_KEY: "${{ secrets.PERPLEXITY_API_KEY }}"
-      NOTION_API_KEY: "${{ secrets.NOTION_API_KEY }}"
-      GEMINI_API_KEY: "${{ secrets.GEMINI_API_KEY }}"
-      GOOGLE_CLIENT_ID_GOV: "${{ secrets.GOOGLE_CLIENT_ID_GOV }}"
-      NOTION_PAGE_ID: "${{ secrets.NOTION_PAGE_ID }}"
-      FIREBASE_API_KEY: "${{ secrets.FIREBASE_API_KEY }}"
-      FIREBASE_APP_ID: "${{ secrets.FIREBASE_APP_ID }}"
-      FIREBASE_AUTH_DOMAIN: "${{ secrets.FIREBASE_AUTH_DOMAIN }}"
-      FIREBASE_MESSAGING_SENDER_ID: "${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}"
+      # Canonical Harbor B Secrets
+      PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+      NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+      FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
+      # Architecture Anchors
+      PROJECT_ID: rpr-corporate-site # CORRECTED: Unified Harbor B Project
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout Substrate
         uses: actions/checkout@v4
 
       - name: Setup Node.js 20
@@ -52,54 +40,25 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Authenticate to Google Cloud (WIF v2)
+      - name: Inject Sovereign Secrets
+        run: node Scripts/configure-secrets.js
+
+      - name: Build Production Bundle
+        run: npm run build
+
+      - name: Auth to Google Cloud (WIF v2)
         id: auth
         uses: google-github-actions/auth@v2
         with:
-          # Authority: rpr-corporate-site (859831078276)
+          # Project 859831078276 = rpr-corporate-site
           workload_identity_provider: 'projects/859831078276/locations/global/workloadIdentityPools/github-pool/providers/github-provider'
           service_account: 'github-actions-deployer@rpr-corporate-site.iam.gserviceaccount.com'
           token_format: 'access_token'
 
-      - name: Harbor B Deployment Strike (Singapore)
+      - name: Execute Firebase Strike
         run: |
-          echo "--- INITIATING HARBOR B DEPLOYMENT ---"
-          
-          # 1. Environment Configuration (Standardized Naming)
-          if [ -f "Scripts/configure-secrets.js" ]; then
-            echo "[INFO] Injecting environment variables..."
-            node Scripts/configure-secrets.js
-          fi
-
-          # 2. Pre-Deployment Verification
-          if [ -f "Scripts/ci-firebase-preflight.sh" ]; then
-            chmod +x Scripts/ci-firebase-preflight.sh
-            ./Scripts/ci-firebase-preflight.sh corporate
-          else
-            echo "❌ ERROR: Scripts/ci-firebase-preflight.sh not found."
-            exit 1
-          fi
-
-          # 3. Production Build
-          echo "[INFO] Commencing build..."
-          npm run build
-
-          # 4. Target Mapping (Singapore Lock)
-          echo "[INFO] Latching hosting targets..."
-          npx firebase target:apply hosting corporate rpr-corporate-site --project rpr-corporate-site
-          npx firebase target:apply hosting verify rpr-verify-b --project rpr-corporate-site
-
-          # 5. Deployment Strike (Singapore Canonical)
-          echo "--- DEPLOYING TO SINGAPORE (asia-southeast1) ---"
-          npx firebase deploy \
+          npx firebase-tools deploy \
             --only hosting:corporate,hosting:verify \
-            --project rpr-corporate-site
-          
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "DEPLOYMENT COMPLETE: HARBOR B LATCHED"
-          echo "Mothership: https://rprcomms.com"
-          echo "Verify Node: https://verify.rprcomms.com"
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            --project ${{ env.PROJECT_ID }}
         env:
-          # This bridge ensures the WIF token is used by the Firebase CLI
-          FIREBASE_TOKEN: "${{ steps.auth.outputs.access_token }}"
+          FIREBASE_TOKEN: ${{ steps.auth.outputs.access_token }}
