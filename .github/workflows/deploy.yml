@@ -1,0 +1,49 @@
+name: Deploy to Cloud Run (Singapore)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  PROJECT_ID: rpr-website-main
+  REGION: asia-southeast1
+  SERVICE_NAME: rpr-kontrol
+  IMAGE_NAME: asia-southeast1-docker.pkg.dev/rpr-website-main/ollie-repo/rpr-kontrol:stable
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker for Artifact Registry
+        run: |
+          gcloud auth configure-docker asia-southeast1-docker.pkg.dev --quiet
+
+      - name: Submit build to Cloud Build
+        env:
+          RPR_FIREBASE_CONFIG: ${{ secrets.RPR_FIREBASE_CONFIG }}
+          RPR_GOOGLE_GENAI_KEY: ${{ secrets.RPR_GOOGLE_GENAI_KEY }}
+          RPR_GOOGLE_CLIENT_ID: ${{ secrets.RPR_GOOGLE_CLIENT_ID }}
+          RPR_PERPLEXITY_API_KEY: ${{ secrets.RPR_PERPLEXITY_API_KEY }}
+          RPR_NOTION_API_KEY: ${{ secrets.RPR_NOTION_API_KEY }}
+          RPR_KONTROL_NOTION_PAGE_ID: ${{ secrets.RPR_KONTROL_NOTION_PAGE_ID }}
+          RPR_MCP_SSE_ENDPOINT: ${{ secrets.RPR_MCP_SSE_ENDPOINT }}
+        run: |
+          gcloud builds submit --config cloudbuild.yaml \
+            --substitutions=_RPR_FIREBASE_CONFIG="$RPR_FIREBASE_CONFIG",_RPR_GOOGLE_GENAI_KEY="$RPR_GOOGLE_GENAI_KEY",_RPR_GOOGLE_CLIENT_ID="$RPR_GOOGLE_CLIENT_ID",_RPR_PERPLEXITY_API_KEY="$RPR_PERPLEXITY_API_KEY",_RPR_NOTION_API_KEY="$RPR_NOTION_API_KEY",_RPR_KONTROL_NOTION_PAGE_ID="$RPR_KONTROL_NOTION_PAGE_ID",_RPR_MCP_SSE_ENDPOINT="$RPR_MCP_SSE_ENDPOINT"

@@ -1,0 +1,34 @@
+{
+    "hosting": [
+      {
+        "target": "corporate",
+        "public": "dist",
+        "ignore": [
+          "firebase.json",
+          "**/.*",
+          "**/node_modules/**"
+        ],
+        "rewrites": [
+          {
+            "source": "**",
+            "destination": "/index.html"
+          }
+        ]
+      },
+      {
+        "target": "verify",
+        "public": "dist",
+        "ignore": [
+          "firebase.json",
+          "**/.*",
+          "**/node_modules/**"
+        ],
+        "rewrites": [
+          {
+            "source": "**",
+            "destination": "/index.html"
+          }
+        ]
+      }
+    ]
+  }
