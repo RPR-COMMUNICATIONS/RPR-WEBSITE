@@ -1,23 +1,12 @@
 {
   "projects": {
-    "default": "rpr-verify-b",
-    "production": "rpr-corporate-site"
+    "default": "rpr-corporate-site"
   },
   "targets": {
     "rpr-corporate-site": {
       "hosting": {
-        "verify": [
-          "rpr-verify-site"
-        ],
-        "corporate": [
+        "main": [
           "rpr-corporate-site"
-        ]
-      }
-    },
-    "rpr-verify-b": {
-      "hosting": {
-        "verify": [
-          "rpr-verify-b"
         ]
       }
     }
