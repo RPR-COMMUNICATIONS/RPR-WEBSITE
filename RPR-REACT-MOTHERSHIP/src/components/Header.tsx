@@ -31,9 +31,6 @@ export const Header: React.FC = () => {
           
           {/* Strategic Navigation (Center) */}
           <nav className="hidden md:flex items-center gap-12 text-[10px] font-black tracking-[0.2em] uppercase text-slate-400">
-            <a className="hover:text-primary transition-colors" href="#foundations">Methods</a>
-            <a className="hover:text-primary transition-colors" href="#products">Products</a>
-            <a className="hover:text-primary transition-colors" href="#overwatch">Overwatch</a>
           </nav>
           
           {/* KONTROL LATCH (Right) */}
@@ -66,27 +63,6 @@ export const Header: React.FC = () => {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[99] bg-black/95 backdrop-blur-md md:hidden pt-[108px]">
           <nav className="flex flex-col gap-8 p-8 text-center">
-            <a 
-              href="#foundations" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-2xl font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors"
-            >
-              Methods
-            </a>
-            <a 
-              href="#products" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-2xl font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors"
-            >
-              Products
-            </a>
-            <a 
-              href="#overwatch" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-2xl font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors"
-            >
-              Overwatch
-            </a>
             <a 
               href="https://kontrol.rprcomms.com" 
               onClick={() => setMobileMenuOpen(false)}
