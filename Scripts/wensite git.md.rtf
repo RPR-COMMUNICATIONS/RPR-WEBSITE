@@ -1,0 +1,837 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+The default interactive shell is now zsh.\
+To update your account to use zsh, please run `chsh -s /bin/zsh`.\
+For more details, please visit https://support.apple.com/kb/HT208050.\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ # Step 1: Navigate to workspace\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ cd /Users/puvansivanasan/PERPLEXITY-NEW/JOBS/2026-001-RPR-WEBSITE\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ \
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ # Step 2: Final review (you've already seen these, but confirm no surprises)\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ git status --short\
+ M .DS_Store\
+ M .firebaserc\
+ D DOCS/CODE_CHANGES_SUMMARY.md\
+ D DOCS/FIREBASE_SETUP.md\
+ D DOCS/INDEX.md\
+ D ENGINES/rpr-verify-v2/.editorconfig\
+ D ENGINES/rpr-verify-v2/.gitignore\
+ D ENGINES/rpr-verify-v2/.vscode/extensions.json\
+ D ENGINES/rpr-verify-v2/.vscode/launch.json\
+ D ENGINES/rpr-verify-v2/.vscode/tasks.json\
+ D ENGINES/rpr-verify-v2/README.md\
+ D ENGINES/rpr-verify-v2/angular.json\
+ D ENGINES/rpr-verify-v2/package-lock.json\
+ D ENGINES/rpr-verify-v2/package.json\
+ D ENGINES/rpr-verify-v2/public/favicon.ico\
+ D ENGINES/rpr-verify-v2/src/app/app.config.ts\
+ D ENGINES/rpr-verify-v2/src/app/app.html\
+ D ENGINES/rpr-verify-v2/src/app/app.routes.ts\
+ D ENGINES/rpr-verify-v2/src/app/app.scss\
+ D ENGINES/rpr-verify-v2/src/app/app.spec.ts\
+ D ENGINES/rpr-verify-v2/src/app/app.ts\
+ D ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.component.html\
+ D ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.component.ts\
+ D ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.html\
+ D ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.scss\
+ D ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.ts\
+ D ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.component.html\
+ D ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.component.ts\
+ D ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.html\
+ D ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.scss\
+ D ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.ts\
+ D ENGINES/rpr-verify-v2/src/index.html\
+ D ENGINES/rpr-verify-v2/src/main.ts\
+ D ENGINES/rpr-verify-v2/src/styles.scss\
+ D ENGINES/rpr-verify-v2/tsconfig.app.json\
+ D ENGINES/rpr-verify-v2/tsconfig.json\
+ D ENGINES/rpr-verify-v2/tsconfig.spec.json\
+ D README.md\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.cursorignore\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.firebase/hosting.ZGlzdC9ycHItY29tbXVuaWNhdGlvbnMtc3BhL2Jyb3dzZXI.cache\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.firebase/hosting.ZGlzdC9ycHItd2Vic2l0ZS9icm93c2Vy.cache\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.firebaserc\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.github/workflows/firebase-hosting-merge.yml\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.github/workflows/firebase-hosting-pull-request.yml\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.gitignore\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/DOCS/CODE_CHANGES_SUMMARY.md\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/DOCS/FIREBASE_SETUP.md\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/DOCS/INDEX.md\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/README.md\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/angular.json\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/configure-local.js\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/external-customer-journey-seo-outline-black-m-oki-orlando.png\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/firebase.json\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/lib/index.js\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/lib/index.js.map\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/package-lock.json\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/package.json\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/src/index.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/tsconfig.json\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/index.html\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/index.tsx\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/metadata.json\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/package-lock.json\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/package.json\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/app.component.html\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/app.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/app.routes.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/auth-button.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/brand-logo.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/case-detail.component.html\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/case-detail.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/footer/footer.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/header/header.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/home/home.component.html\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/home/home.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/mobile-nav.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ollie/ollie.component.css\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ollie/ollie.component.html\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ollie/ollie.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/products/products.component.css\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/products/products.component.html\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/products/products.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ui-components.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/workflow-chart/workflow-chart.component.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/models/cdd-report.model.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/auth.service.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/document-quality.service.spec.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/document-quality.service.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/ocr.service.spec.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/ocr.service.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/ollie.service.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/environments/environment.prod.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/environments/environment.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/index.html\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/main.ts\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/styles.css\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tailwind.config.js\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tests/assets/README.md\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tsconfig.app.json\
+ D RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tsconfig.json\
+ D RPR-REACT-MOTHERSHIP/.firebaserc\
+ D RPR-REACT-MOTHERSHIP/.github/workflows/deploy.yml\
+ D RPR-REACT-MOTHERSHIP/.gitignore\
+ D RPR-REACT-MOTHERSHIP/0\
+ D RPR-REACT-MOTHERSHIP/Scripts/ci-firebase-preflight.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/ci-firebase-sa-verify.ts\
+ D RPR-REACT-MOTHERSHIP/Scripts/cleanse-substrate.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/configure-secrets.js\
+ D RPR-REACT-MOTHERSHIP/Scripts/generate-rpr-branding.js\
+ D RPR-REACT-MOTHERSHIP/Scripts/purge-terraform-from-git.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/secret_sanitization\
+ D RPR-REACT-MOTHERSHIP/Scripts/sentinel-full-strike.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/sentinel-multi-harbor-strike.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/sovereign-audit.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/sovereign-cleanse.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/sovereign-git-latch.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/sovereign-health-probe-angular.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/sovereign-health-probe.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/sovereign-seed.ts\
+ D RPR-REACT-MOTHERSHIP/Scripts/sovereign-seeding-strike.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/sovereign-telemetry-check.ts\
+ D RPR-REACT-MOTHERSHIP/Scripts/wif-diagnostic-strike.sh\
+ D RPR-REACT-MOTHERSHIP/Scripts/wif-repair-strike.sh\
+ D RPR-REACT-MOTHERSHIP/deploy.yml\
+ D RPR-REACT-MOTHERSHIP/deploy_strike.sh\
+ D RPR-REACT-MOTHERSHIP/firebase.json\
+ D RPR-REACT-MOTHERSHIP/index.html\
+ D RPR-REACT-MOTHERSHIP/package-lock.json\
+ D RPR-REACT-MOTHERSHIP/package.json\
+ D RPR-REACT-MOTHERSHIP/postcss.config.js\
+ D RPR-REACT-MOTHERSHIP/src/App.tsx\
+ D RPR-REACT-MOTHERSHIP/src/assets/branding/google-auth-black.svg\
+ D RPR-REACT-MOTHERSHIP/src/assets/branding/rpr-communications-white.svg\
+ D RPR-REACT-MOTHERSHIP/src/components/App.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/AskOllie.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/ExtractionResults.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/Footer.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/Foundations.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/Header.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/Hero.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/Icon.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/InsightIcon.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/Methods.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/Overwatch.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/Process.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/Products.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/SentinelBadge.tsx\
+ D RPR-REACT-MOTHERSHIP/src/components/brand/RprMasterLogo.tsx\
+ D RPR-REACT-MOTHERSHIP/src/contexts/WorkflowContext.tsx\
+ D RPR-REACT-MOTHERSHIP/src/hooks/useRuleRegistry.ts\
+ D RPR-REACT-MOTHERSHIP/src/main.tsx\
+ D RPR-REACT-MOTHERSHIP/src/styles/index.css\
+ D RPR-REACT-MOTHERSHIP/src/types/index.ts\
+ D RPR-REACT-MOTHERSHIP/src/types/viewModels.ts\
+ D RPR-REACT-MOTHERSHIP/src/vite-env.d.ts\
+ D RPR-REACT-MOTHERSHIP/tailwind.config.js\
+ D RPR-REACT-MOTHERSHIP/tsconfig.json\
+ D RPR-REACT-MOTHERSHIP/tsconfig.node.json\
+ D RPR-REACT-MOTHERSHIP/vite.config.ts\
+ D RPR-WEBSITE\
+ D angular.json\
+ D configure-local.js\
+ D dist/rpr-verify/3rdpartylicenses.txt\
+ D dist/rpr-verify/browser/favicon.ico\
+ D dist/rpr-verify/browser/index.html\
+ D dist/rpr-verify/browser/main-4UZJGOFQ.js\
+ D dist/rpr-verify/browser/main-6J4ANWDY.js\
+ D dist/rpr-verify/browser/main-DVG64APM.js\
+ D dist/rpr-verify/browser/styles-47XERLDT.css\
+ D dist/rpr-verify/prerendered-routes.json\
+ D dist/rpr-website/3rdpartylicenses.txt\
+ D dist/rpr-website/browser/index.html\
+ D dist/rpr-website/browser/main-U7EPZ3JL.js\
+ D dist/rpr-website/browser/styles-E76SJBSW.css\
+ D dist/rpr-website/prerendered-routes.json\
+ D external-customer-journey-seo-outline-black-m-oki-orlando.png\
+ M firebase.json\
+ M index.html\
+ D index.tsx\
+ D metadata.json\
+ M package-lock.json\
+ M package.json\
+ D src/app/app.component.html\
+ D src/app/app.component.ts\
+ D src/app/components/auth-button.component.ts\
+ D src/app/components/brand-logo.component.ts\
+ D src/app/components/case-detail.component.html\
+ D src/app/components/case-detail.component.ts\
+ D src/app/components/ui-components.ts\
+ D src/app/components/workflow-chart/workflow-chart.component.ts\
+ D src/app/models/cdd-report.model.ts\
+ D src/app/services/auth.service.ts\
+ D src/app/services/document-quality.service.spec.ts\
+ D src/app/services/document-quality.service.ts\
+ D src/app/services/gemini.service.ts\
+ D src/app/services/ocr.service.spec.ts\
+ D src/app/services/ocr.service.ts\
+ D src/environments/environment.prod.ts\
+ D src/environments/environment.ts\
+ D src/index.html\
+ D src/main.ts\
+ D src/styles.css\
+ M tailwind.config.js\
+ D tests/assets/README.md\
+ D tsconfig.app.json\
+ M tsconfig.json\
+ D vercel.json\
+?? .firebase/hosting.ZGlzdA.cache\
+?? AUDIT.md\
+?? RPR-REACT-MOTHERSHIP.code-workspace\
+?? Scripts/ci-firebase-preflight.sh\
+?? Scripts/ci-firebase-sa-verify.ts\
+?? Scripts/cleanse-substrate.sh\
+?? Scripts/configure-secrets.js\
+?? Scripts/latch-targets.sh\
+?? Scripts/purge-terraform-from-git.sh\
+?? Scripts/secret_sanitization\
+?? Scripts/sentinel-full-strike.sh\
+?? Scripts/sovereign-audit.sh\
+?? Scripts/sovereign-health-probe-angular.sh\
+?? Scripts/sovereign-health-probe.sh\
+?? Scripts/sovereign-seed.ts\
+?? Scripts/sovereign-seeding-strike.sh\
+?? Scripts/sovereign-telemetry-check.ts\
+?? Scripts/wif-diagnostic-strike.sh\
+?? Scripts/wif-repair-strike.sh\
+?? deploy_strike.sh\
+?? postcss.config.js\
+?? src/App.tsx\
+?? src/assets/\
+?? src/components/\
+?? src/contexts/\
+?? src/hooks/\
+?? src/main.tsx\
+?? src/styles/\
+?? src/types/\
+?? src/vite-env.d.ts\
+?? tsconfig.node.json\
+?? vite.config.ts\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ \
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ # Step 3: Stage all changes\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ git add -A\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ \
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ # Step 4: Verify staging\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ git status\
+On branch main\
+Changes to be committed:\
+  (use "git restore --staged <file>..." to unstage)\
+        modified:   .DS_Store\
+        new file:   .firebase/hosting.ZGlzdA.cache\
+        modified:   .firebaserc\
+        new file:   AUDIT.md\
+        deleted:    DOCS/CODE_CHANGES_SUMMARY.md\
+        deleted:    DOCS/FIREBASE_SETUP.md\
+        deleted:    DOCS/INDEX.md\
+        deleted:    ENGINES/rpr-verify-v2/.editorconfig\
+        deleted:    ENGINES/rpr-verify-v2/.gitignore\
+        deleted:    ENGINES/rpr-verify-v2/.vscode/extensions.json\
+        deleted:    ENGINES/rpr-verify-v2/.vscode/launch.json\
+        deleted:    ENGINES/rpr-verify-v2/.vscode/tasks.json\
+        deleted:    ENGINES/rpr-verify-v2/README.md\
+        deleted:    ENGINES/rpr-verify-v2/angular.json\
+        deleted:    ENGINES/rpr-verify-v2/package-lock.json\
+        deleted:    ENGINES/rpr-verify-v2/package.json\
+        deleted:    ENGINES/rpr-verify-v2/public/favicon.ico\
+        deleted:    ENGINES/rpr-verify-v2/src/app/app.config.ts\
+        deleted:    ENGINES/rpr-verify-v2/src/app/app.html\
+        deleted:    ENGINES/rpr-verify-v2/src/app/app.routes.ts\
+        deleted:    ENGINES/rpr-verify-v2/src/app/app.scss\
+        deleted:    ENGINES/rpr-verify-v2/src/app/app.spec.ts\
+        deleted:    ENGINES/rpr-verify-v2/src/app/app.ts\
+        deleted:    ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.component.html\
+        deleted:    ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.component.ts\
+        deleted:    ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.html\
+        deleted:    ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.scss\
+        deleted:    ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.ts\
+        deleted:    ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.component.html\
+        deleted:    ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.component.ts\
+        deleted:    ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.html\
+        deleted:    ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.scss\
+        deleted:    ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.ts\
+        deleted:    ENGINES/rpr-verify-v2/src/index.html\
+        deleted:    ENGINES/rpr-verify-v2/src/main.ts\
+        deleted:    ENGINES/rpr-verify-v2/src/styles.scss\
+        deleted:    ENGINES/rpr-verify-v2/tsconfig.app.json\
+        deleted:    ENGINES/rpr-verify-v2/tsconfig.json\
+        deleted:    ENGINES/rpr-verify-v2/tsconfig.spec.json\
+        deleted:    README.md\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.cursorignore\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.firebase/hosting.ZGlzdC9ycHItY29tbXVuaWNhdGlvbnMtc3BhL2Jyb3dzZXI.cache\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.firebase/hosting.ZGlzdC9ycHItd2Vic2l0ZS9icm93c2Vy.cache\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.firebaserc\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.github/workflows/firebase-hosting-merge.yml\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.github/workflows/firebase-hosting-pull-request.yml\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.gitignore\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/DOCS/CODE_CHANGES_SUMMARY.md\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/DOCS/FIREBASE_SETUP.md\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/DOCS/INDEX.md\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/README.md\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/angular.json\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/configure-local.js\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/external-customer-journey-seo-outline-black-m-oki-orlando.png\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/firebase.json\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/lib/index.js\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/lib/index.js.map\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/package-lock.json\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/package.json\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/src/index.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/tsconfig.json\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/index.html\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/index.tsx\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/metadata.json\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/package-lock.json\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/package.json\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/app.component.html\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/app.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/app.routes.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/auth-button.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/brand-logo.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/case-detail.component.html\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/case-detail.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/footer/footer.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/header/header.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/home/home.component.html\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/home/home.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/mobile-nav.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ollie/ollie.component.css\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ollie/ollie.component.html\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ollie/ollie.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/products/products.component.css\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/products/products.component.html\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/products/products.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ui-components.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/workflow-chart/workflow-chart.component.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/models/cdd-report.model.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/auth.service.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/document-quality.service.spec.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/document-quality.service.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/ocr.service.spec.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/ocr.service.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/ollie.service.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/environments/environment.prod.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/environments/environment.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/index.html\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/main.ts\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/styles.css\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tailwind.config.js\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tests/assets/README.md\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tsconfig.app.json\
+        deleted:    RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tsconfig.json\
+        new file:   RPR-REACT-MOTHERSHIP.code-workspace\
+        deleted:    RPR-REACT-MOTHERSHIP/.firebaserc\
+        deleted:    RPR-REACT-MOTHERSHIP/.github/workflows/deploy.yml\
+        deleted:    RPR-REACT-MOTHERSHIP/.gitignore\
+        deleted:    RPR-REACT-MOTHERSHIP/0\
+        deleted:    RPR-REACT-MOTHERSHIP/Scripts/generate-rpr-branding.js\
+        deleted:    RPR-REACT-MOTHERSHIP/Scripts/sentinel-multi-harbor-strike.sh\
+        deleted:    RPR-REACT-MOTHERSHIP/Scripts/sovereign-cleanse.sh\
+        deleted:    RPR-REACT-MOTHERSHIP/Scripts/sovereign-git-latch.sh\
+        deleted:    RPR-REACT-MOTHERSHIP/deploy.yml\
+        deleted:    RPR-REACT-MOTHERSHIP/deploy_strike.sh\
+        deleted:    RPR-REACT-MOTHERSHIP/firebase.json\
+        deleted:    RPR-REACT-MOTHERSHIP/index.html\
+        deleted:    RPR-REACT-MOTHERSHIP/package-lock.json\
+        deleted:    RPR-REACT-MOTHERSHIP/package.json\
+        deleted:    RPR-REACT-MOTHERSHIP/tailwind.config.js\
+        deleted:    RPR-REACT-MOTHERSHIP/tsconfig.json\
+        deleted:    RPR-WEBSITE\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/ci-firebase-preflight.sh -> Scripts/ci-firebase-preflight.sh\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/ci-firebase-sa-verify.ts -> Scripts/ci-firebase-sa-verify.ts\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/cleanse-substrate.sh -> Scripts/cleanse-substrate.sh\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/configure-secrets.js -> Scripts/configure-secrets.js\
+        new file:   Scripts/latch-targets.sh\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/purge-terraform-from-git.sh -> Scripts/purge-terraform-from-git.sh\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/secret_sanitization -> Scripts/secret_sanitization\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/sentinel-full-strike.sh -> Scripts/sentinel-full-strike.sh\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/sovereign-audit.sh -> Scripts/sovereign-audit.sh\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/sovereign-health-probe-angular.sh -> Scripts/sovereign-health-probe-angular.sh\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/sovereign-health-probe.sh -> Scripts/sovereign-health-probe.sh\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/sovereign-seed.ts -> Scripts/sovereign-seed.ts\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/sovereign-seeding-strike.sh -> Scripts/sovereign-seeding-strike.sh\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/sovereign-telemetry-check.ts -> Scripts/sovereign-telemetry-check.ts\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/wif-diagnostic-strike.sh -> Scripts/wif-diagnostic-strike.sh\
+        renamed:    RPR-REACT-MOTHERSHIP/Scripts/wif-repair-strike.sh -> Scripts/wif-repair-strike.sh\
+        deleted:    angular.json\
+        deleted:    configure-local.js\
+        new file:   deploy_strike.sh\
+        deleted:    dist/rpr-verify/3rdpartylicenses.txt\
+        deleted:    dist/rpr-verify/browser/favicon.ico\
+        deleted:    dist/rpr-verify/browser/index.html\
+        deleted:    dist/rpr-verify/browser/main-4UZJGOFQ.js\
+        deleted:    dist/rpr-verify/browser/main-6J4ANWDY.js\
+        deleted:    dist/rpr-verify/browser/main-DVG64APM.js\
+        deleted:    dist/rpr-verify/browser/styles-47XERLDT.css\
+        deleted:    dist/rpr-verify/prerendered-routes.json\
+        deleted:    dist/rpr-website/3rdpartylicenses.txt\
+        deleted:    dist/rpr-website/browser/index.html\
+        deleted:    dist/rpr-website/browser/main-U7EPZ3JL.js\
+        deleted:    dist/rpr-website/browser/styles-E76SJBSW.css\
+        deleted:    dist/rpr-website/prerendered-routes.json\
+        deleted:    external-customer-journey-seo-outline-black-m-oki-orlando.png\
+        modified:   firebase.json\
+        modified:   index.html\
+        deleted:    index.tsx\
+        deleted:    metadata.json\
+        modified:   package-lock.json\
+        modified:   package.json\
+        renamed:    RPR-REACT-MOTHERSHIP/postcss.config.js -> postcss.config.js\
+        renamed:    RPR-REACT-MOTHERSHIP/src/App.tsx -> src/App.tsx\
+        deleted:    src/app/app.component.html\
+        deleted:    src/app/app.component.ts\
+        deleted:    src/app/components/auth-button.component.ts\
+        deleted:    src/app/components/brand-logo.component.ts\
+        deleted:    src/app/components/case-detail.component.html\
+        deleted:    src/app/components/case-detail.component.ts\
+        deleted:    src/app/components/ui-components.ts\
+        deleted:    src/app/components/workflow-chart/workflow-chart.component.ts\
+        deleted:    src/app/models/cdd-report.model.ts\
+        deleted:    src/app/services/auth.service.ts\
+        deleted:    src/app/services/document-quality.service.spec.ts\
+        deleted:    src/app/services/document-quality.service.ts\
+        deleted:    src/app/services/gemini.service.ts\
+        deleted:    src/app/services/ocr.service.spec.ts\
+        deleted:    src/app/services/ocr.service.ts\
+        renamed:    RPR-REACT-MOTHERSHIP/src/assets/branding/google-auth-black.svg -> src/assets/branding/google-auth-black.svg\
+        renamed:    RPR-REACT-MOTHERSHIP/src/assets/branding/rpr-communications-white.svg -> src/assets/branding/rpr-communications-white.svg\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/App.tsx -> src/components/App.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/AskOllie.tsx -> src/components/AskOllie.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/ExtractionResults.tsx -> src/components/ExtractionResults.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/Footer.tsx -> src/components/Footer.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/Foundations.tsx -> src/components/Foundations.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/Header.tsx -> src/components/Header.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/Hero.tsx -> src/components/Hero.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/Icon.tsx -> src/components/Icon.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/InsightIcon.tsx -> src/components/InsightIcon.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/Methods.tsx -> src/components/Methods.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/Overwatch.tsx -> src/components/Overwatch.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/Process.tsx -> src/components/Process.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/Products.tsx -> src/components/Products.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/SentinelBadge.tsx -> src/components/SentinelBadge.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/components/brand/RprMasterLogo.tsx -> src/components/brand/RprMasterLogo.tsx\
+        renamed:    RPR-REACT-MOTHERSHIP/src/contexts/WorkflowContext.tsx -> src/contexts/WorkflowContext.tsx\
+        deleted:    src/environments/environment.prod.ts\
+        deleted:    src/environments/environment.ts\
+        renamed:    RPR-REACT-MOTHERSHIP/src/hooks/useRuleRegistry.ts -> src/hooks/useRuleRegistry.ts\
+        deleted:    src/index.html\
+        deleted:    src/main.ts\
+        renamed:    RPR-REACT-MOTHERSHIP/src/main.tsx -> src/main.tsx\
+        deleted:    src/styles.css\
+        renamed:    RPR-REACT-MOTHERSHIP/src/styles/index.css -> src/styles/index.css\
+        renamed:    RPR-REACT-MOTHERSHIP/src/types/index.ts -> src/types/index.ts\
+        renamed:    RPR-REACT-MOTHERSHIP/src/types/viewModels.ts -> src/types/viewModels.ts\
+        renamed:    RPR-REACT-MOTHERSHIP/src/vite-env.d.ts -> src/vite-env.d.ts\
+        modified:   tailwind.config.js\
+        deleted:    tests/assets/README.md\
+        deleted:    tsconfig.app.json\
+        modified:   tsconfig.json\
+        renamed:    RPR-REACT-MOTHERSHIP/tsconfig.node.json -> tsconfig.node.json\
+        deleted:    vercel.json\
+        renamed:    RPR-REACT-MOTHERSHIP/vite.config.ts -> vite.config.ts\
+\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ \
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ # Step 5: Create the refactor commit\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ git commit -m "refactor: migrate from Angular to React/Vite architecture\
+> \
+> - Remove legacy Angular mothership and archive structures\
+> - Implement new React + TypeScript + Vite stack\
+> - Update Firebase and build configurations to single main target\
+> - Reorganize Scripts/ for current deployment workflow\
+> - Consolidate from dual-app (corporate + verify) to unified site\
+> - Update public path from dist/rpr-website/browser to dist (Vite convention)\
+> - Add /products -> /labs redirect for SEO continuity"\
+[main e70e62d] refactor: migrate from Angular to React/Vite architecture\
+ 212 files changed, 6247 insertions(+), 68753 deletions(-)\
+ create mode 100644 .firebase/hosting.ZGlzdA.cache\
+ create mode 100644 AUDIT.md\
+ delete mode 100644 DOCS/CODE_CHANGES_SUMMARY.md\
+ delete mode 100644 DOCS/FIREBASE_SETUP.md\
+ delete mode 100644 DOCS/INDEX.md\
+ delete mode 100644 ENGINES/rpr-verify-v2/.editorconfig\
+ delete mode 100644 ENGINES/rpr-verify-v2/.gitignore\
+ delete mode 100644 ENGINES/rpr-verify-v2/.vscode/extensions.json\
+ delete mode 100644 ENGINES/rpr-verify-v2/.vscode/launch.json\
+ delete mode 100644 ENGINES/rpr-verify-v2/.vscode/tasks.json\
+ delete mode 100644 ENGINES/rpr-verify-v2/README.md\
+ delete mode 100644 ENGINES/rpr-verify-v2/angular.json\
+ delete mode 100644 ENGINES/rpr-verify-v2/package-lock.json\
+ delete mode 100644 ENGINES/rpr-verify-v2/package.json\
+ delete mode 100644 ENGINES/rpr-verify-v2/public/favicon.ico\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/app.config.ts\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/app.html\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/app.routes.ts\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/app.scss\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/app.spec.ts\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/app.ts\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.component.html\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.component.ts\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.html\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.scss\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/components/dashboard/dashboard.ts\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.component.html\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.component.ts\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.html\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.scss\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/app/components/file-upload/file-upload.ts\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/index.html\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/main.ts\
+ delete mode 100644 ENGINES/rpr-verify-v2/src/styles.scss\
+ delete mode 100644 ENGINES/rpr-verify-v2/tsconfig.app.json\
+ delete mode 100644 ENGINES/rpr-verify-v2/tsconfig.json\
+ delete mode 100644 ENGINES/rpr-verify-v2/tsconfig.spec.json\
+ delete mode 100644 README.md\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.cursorignore\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.firebase/hosting.ZGlzdC9ycHItY29tbXVuaWNhdGlvbnMtc3BhL2Jyb3dzZXI.cache\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.firebase/hosting.ZGlzdC9ycHItd2Vic2l0ZS9icm93c2Vy.cache\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.firebaserc\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.github/workflows/firebase-hosting-merge.yml\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.github/workflows/firebase-hosting-pull-request.yml\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/.gitignore\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/DOCS/CODE_CHANGES_SUMMARY.md\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/DOCS/FIREBASE_SETUP.md\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/DOCS/INDEX.md\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/README.md\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/angular.json\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/configure-local.js\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/external-customer-journey-seo-outline-black-m-oki-orlando.png\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/firebase.json\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/lib/index.js\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/lib/index.js.map\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/package-lock.json\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/package.json\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/src/index.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/functions/tsconfig.json\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/index.html\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/index.tsx\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/metadata.json\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/package-lock.json\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/package.json\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/app.component.html\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/app.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/app.routes.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/auth-button.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/brand-logo.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/case-detail.component.html\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/case-detail.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/footer/footer.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/header/header.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/home/home.component.html\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/home/home.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/mobile-nav.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ollie/ollie.component.css\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ollie/ollie.component.html\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ollie/ollie.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/products/products.component.css\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/products/products.component.html\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/products/products.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/ui-components.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/components/workflow-chart/workflow-chart.component.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/models/cdd-report.model.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/auth.service.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/document-quality.service.spec.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/document-quality.service.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/ocr.service.spec.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/ocr.service.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/app/services/ollie.service.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/environments/environment.prod.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/environments/environment.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/index.html\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/main.ts\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/src/styles.css\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tailwind.config.js\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tests/assets/README.md\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tsconfig.app.json\
+ delete mode 100644 RPR-LEGACY-ARCHIVE/angular-mothership/RPR-WEBSITE/tsconfig.json\
+ create mode 100644 RPR-REACT-MOTHERSHIP.code-workspace\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/.firebaserc\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/.github/workflows/deploy.yml\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/.gitignore\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/0\
+ delete mode 100755 RPR-REACT-MOTHERSHIP/Scripts/generate-rpr-branding.js\
+ delete mode 100755 RPR-REACT-MOTHERSHIP/Scripts/sentinel-multi-harbor-strike.sh\
+ delete mode 100755 RPR-REACT-MOTHERSHIP/Scripts/sovereign-cleanse.sh\
+ delete mode 100755 RPR-REACT-MOTHERSHIP/Scripts/sovereign-git-latch.sh\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/deploy.yml\
+ delete mode 100755 RPR-REACT-MOTHERSHIP/deploy_strike.sh\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/firebase.json\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/index.html\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/package-lock.json\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/package.json\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/tailwind.config.js\
+ delete mode 100644 RPR-REACT-MOTHERSHIP/tsconfig.json\
+ delete mode 160000 RPR-WEBSITE\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/ci-firebase-preflight.sh (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/ci-firebase-sa-verify.ts (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/cleanse-substrate.sh (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/configure-secrets.js (100%)\
+ create mode 100755 Scripts/latch-targets.sh\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/purge-terraform-from-git.sh (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/secret_sanitization (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/sentinel-full-strike.sh (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/sovereign-audit.sh (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/sovereign-health-probe-angular.sh (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/sovereign-health-probe.sh (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/sovereign-seed.ts (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/sovereign-seeding-strike.sh (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/sovereign-telemetry-check.ts (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/wif-diagnostic-strike.sh (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/Scripts => Scripts\}/wif-repair-strike.sh (100%)\
+ delete mode 100644 angular.json\
+ delete mode 100644 configure-local.js\
+ create mode 100755 deploy_strike.sh\
+ delete mode 100644 dist/rpr-verify/3rdpartylicenses.txt\
+ delete mode 100644 dist/rpr-verify/browser/favicon.ico\
+ delete mode 100644 dist/rpr-verify/browser/index.html\
+ delete mode 100644 dist/rpr-verify/browser/main-4UZJGOFQ.js\
+ delete mode 100644 dist/rpr-verify/browser/main-6J4ANWDY.js\
+ delete mode 100644 dist/rpr-verify/browser/main-DVG64APM.js\
+ delete mode 100644 dist/rpr-verify/browser/styles-47XERLDT.css\
+ delete mode 100644 dist/rpr-verify/prerendered-routes.json\
+ delete mode 100644 dist/rpr-website/3rdpartylicenses.txt\
+ delete mode 100644 dist/rpr-website/browser/index.html\
+ delete mode 100644 dist/rpr-website/browser/main-U7EPZ3JL.js\
+ delete mode 100644 dist/rpr-website/browser/styles-E76SJBSW.css\
+ delete mode 100644 dist/rpr-website/prerendered-routes.json\
+ delete mode 100644 external-customer-journey-seo-outline-black-m-oki-orlando.png\
+ delete mode 100644 index.tsx\
+ delete mode 100644 metadata.json\
+ rename RPR-REACT-MOTHERSHIP/postcss.config.js => postcss.config.js (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/App.tsx (100%)\
+ delete mode 100644 src/app/app.component.html\
+ delete mode 100644 src/app/app.component.ts\
+ delete mode 100644 src/app/components/auth-button.component.ts\
+ delete mode 100644 src/app/components/brand-logo.component.ts\
+ delete mode 100644 src/app/components/case-detail.component.html\
+ delete mode 100644 src/app/components/case-detail.component.ts\
+ delete mode 100644 src/app/components/ui-components.ts\
+ delete mode 100644 src/app/components/workflow-chart/workflow-chart.component.ts\
+ delete mode 100644 src/app/models/cdd-report.model.ts\
+ delete mode 100644 src/app/services/auth.service.ts\
+ delete mode 100644 src/app/services/document-quality.service.spec.ts\
+ delete mode 100644 src/app/services/document-quality.service.ts\
+ delete mode 100644 src/app/services/gemini.service.ts\
+ delete mode 100644 src/app/services/ocr.service.spec.ts\
+ delete mode 100644 src/app/services/ocr.service.ts\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/assets/branding/google-auth-black.svg (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/assets/branding/rpr-communications-white.svg (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/App.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/AskOllie.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/ExtractionResults.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/Footer.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/Foundations.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/Header.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/Hero.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/Icon.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/InsightIcon.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/Methods.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/Overwatch.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/Process.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/Products.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/SentinelBadge.tsx (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/components/brand/RprMasterLogo.tsx (92%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/contexts/WorkflowContext.tsx (100%)\
+ delete mode 100644 src/environments/environment.prod.ts\
+ delete mode 100644 src/environments/environment.ts\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/hooks/useRuleRegistry.ts (100%)\
+ delete mode 100644 src/index.html\
+ delete mode 100644 src/main.ts\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/main.tsx (100%)\
+ delete mode 100644 src/styles.css\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/styles/index.css (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/types/index.ts (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/types/viewModels.ts (100%)\
+ rename \{RPR-REACT-MOTHERSHIP/src => src\}/vite-env.d.ts (100%)\
+ delete mode 100644 tests/assets/README.md\
+ delete mode 100644 tsconfig.app.json\
+ rename RPR-REACT-MOTHERSHIP/tsconfig.node.json => tsconfig.node.json (100%)\
+ delete mode 100644 vercel.json\
+ rename RPR-REACT-MOTHERSHIP/vite.config.ts => vite.config.ts (100%)\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ \
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ # Step 6: Verify commit succeeded\
+Mac-Studio:2026-001-RPR-WEBSITE puvansivanasan$ git log -1 --stat\
+commit e70e62dfad9d81f815cdf5d1110376f1d48726ae (HEAD -> main)\
+Author: Butterdime <Butterdime@users.noreply.github.com>\
+Date:   Sat Jan 24 18:28:17 2026 +0800\
+\
+    refactor: migrate from Angular to React/Vite architecture\
+    \
+    - Remove legacy Angular mothership and archive structures\
+    - Implement new React + TypeScript + Vite stack\
+    - Update Firebase and build configurations to single main target\
+    - Reorganize Scripts/ for current deployment workflow\
+    - Consolidate from dual-app (corporate + verify) to unified site\
+    - Update public path from dist/rpr-website/browser to dist (Vite convention)\
+    - Add /products -> /labs redirect for SEO continuity\
+\
+ .DS_Store                                                      |   Bin 6148 -> 6148 bytes\
+ .firebase/hosting.ZGlzdA.cache                                 |     3 +\
+ .firebaserc                                                    |    17 +-\
+ AUDIT.md                                                       |    36 +\
+ DOCS/CODE_CHANGES_SUMMARY.md                                   |   480 -\
+ DOCS/FIREBASE_SETUP.md                                         |   198 -\
+ DOCS/INDEX.md                                                  |    32 -\
+ ENGINES/rpr-verify-v2/.editorconfig                            |    17 -\
+! Step 7\
+zsh:1: command not found: Step\
+#done  (press RETURN)\
+...skipping...\
+commit e70e62dfad9d81f815cdf5d1110376f1d48726ae (HEAD -> main)\
+commit e70e62dfad9d81f815cdf5d1110376f1d48726ae (HEAD -> main)\
+Author: Butterdime <Butterdime@users.noreply.github.com>\
+Date:   Sat Jan 24 18:28:17 2026 +0800\
+\
+    refactor: migrate from Angular to React/Vite architecture\
+    \
+    - Remove legacy Angular mothership and archive structures\
+    - Implement new React + TypeScript + Vite stack\
+    - Update Firebase and build configurations to single main target\
+    - Reorganize Scripts/ for current deployment workflow\
+    - Consolidate from dual-app (corporate + verify) to unified site\
+    - Update public path from dist/rpr-website/browser to dist (Vite convention)\
+    - Add /products -> /labs redirect for SEO continuity\
+\
+ .DS_Store                                                      |   Bin 6148 -> 6148 bytes\
+ .firebase/hosting.ZGlzdA.cache                                 |     3 +\
+ .firebaserc                                                    |    17 +-\
+ AUDIT.md                                                       |    36 +\
+ DOCS/CODE_CHANGES_SUMMARY.md                                   |   480 -\
+ DOCS/FIREBASE_SETUP.md                                         |   198 -\
+ DOCS/INDEX.md                                                  |    32 -\
+ ENGINES/rpr-verify-v2/.editorconfig                            |    17 -\
+ ENGINES/rpr-verify-v2/.gitignore                               |    43 -\
+ ENGINES/rpr-verify-v2/.vscode/extensions.json                  |     4 -\
+! Step 8\
+zsh:1: command not found: Step\
+#done  (press RETURN)\
+...skipping...\
+commit e70e62dfad9d81f815cdf5d1110376f1d48726ae (HEAD -> main)\
+Author: Butterdime <Butterdime@users.noreply.github.com>\
+Date:   Sat Jan 24 18:28:17 2026 +0800\
+\
+    refactor: migrate from Angular to React/Vite architecture\
+    \
+    - Remove legacy Angular mothership and archive structures\
+    - Implement new React + TypeScript + Vite stack\
+    - Update Firebase and build configurations to single main target\
+    - Reorganize Scripts/ for current deployment workflow\
+    - Consolidate from dual-app (corporate + verify) to unified site\
+    - Update public path from dist/rpr-website/browser to dist (Vite convention)\
+    - Add /products -> /labs redirect for SEO continuity\
+\
+ .DS_Store                                                      |   Bin 6148 -> 6148 bytes\
+ .firebase/hosting.ZGlzdA.cache                                 |     3 +\
+ .firebaserc                                                    |    17 +-\
+ AUDIT.md                                                       |    36 +\
+ DOCS/CODE_CHANGES_SUMMARY.md                                   |   480 -\
+ DOCS/FIREBASE_SETUP.md                                         |   198 -\
+ DOCS/INDEX.md                                                  |    32 -\
+ ENGINES/rpr-verify-v2/.editorconfig                            |    17 -\
+ ENGINES/rpr-verify-v2/.gitignore                               |    43 -\
+ ENGINES/rpr-verify-v2/.vscode/extensions.json                  |     4 -\
+ ENGINES/rpr-verify-v2/.vscode/launch.json                      |    20 -\
+ ENGINES/rpr-verify-v2/.vscode/tasks.json                       |    42 -\
+ ENGINES/rpr-verify-v2/README.md                                |    59 -\
+ ENGINES/rpr-verify-v2/angular.json                             |    79 -\
+ ENGINES/rpr-verify-v2/package-lock.json                        |  9420 -----------\
+ ENGINES/rpr-verify-v2/package.json                             |    45 -\
+ ENGINES/rpr-verify-v2/public/favicon.ico                       |   Bin 15086 -> 0 bytes\
+ ENGINES/rpr-verify-v2/src/app/app.config.ts                    |    11 -\
+ ENGINES/rpr-verify-v2/src/app/app.html                         |     1 -\
+ ENGINES/rpr-verify-v2/src/app/app.routes.ts                    |     7 -\
+ ENGINES/rpr-verify-v2/src/app/app.scss                         |     0\
+ ENGINES/rpr-verify-v2/src/app/app.spec.ts                      |    23 -\
+ ENGINES/rpr-verify-v2/src/app/app.ts                           |    12 -\
+ .../src/app/components/dashboard/dashboard.component.html      |    27 -\
+ .../src/app/components/dashboard/dashboard.component.ts        |    35 -\
+ .../rpr-verify-v2/src/app/components/dashboard/dashboard.html  |     1 -\
+ .../rpr-verify-v2/src/app/components/dashboard/dashboard.scss  |     0\
+ .../rpr-verify-v2/src/app/components/dashboard/dashboard.ts    |    11 -\
+ .../src/app/components/file-upload/file-upload.component.html  |    11 -\
+ .../src/app/components/file-upload/file-upload.component.ts    |    56 -\
+ .../src/app/components/file-upload/file-upload.html            |     1 -\
+ .../src/app/components/file-upload/file-upload.scss            |     0\
+ .../src/app/components/file-upload/file-upload.ts              |    11 -\
+ ENGINES/rpr-verify-v2/src/index.html                           |    17 -\
+ ENGINES/rpr-verify-v2/src/main.ts                              |    10 -\
+ ENGINES/rpr-verify-v2/src/styles.scss                          |    21 -\
+ ENGINES/rpr-verify-v2/tsconfig.app.json                        |    15 -\
+ ENGINES/rpr-verify-v2/tsconfig.json                            |    33 -\
+ ENGINES/rpr-verify-v2/tsconfig.spec.json                       |    15 -\
+ README.md                                                      |   396 -\
+ .../angular-mothership/RPR-WEBSITE/.cursorignore               |    79 -\
+ ...sting.ZGlzdC9ycHItY29tbXVuaWNhdGlvbnMtc3BhL2Jyb3dzZXI.cache |     3 -\
+! Step 9\
+zsh:1: command not found: Step\
+#done  (press RETURN)\
+...skipping...\
+commit e70e62dfad9d81f815cdf5d1110376f1d48726ae (HEAD -> main)\
+commit e70e62dfad9d81f815cdf5d1110376f1d48726ae (HEAD -> main)\
+Author: Butterdime <Butterdime@users.noreply.github.com>\
+Date:   Sat Jan 24 18:28:17 2026 +0800\
+\
+    refactor: migrate from Angular to React/Vite architecture\
+    \
+    - Remove legacy Angular mothership and archive structures\
+    - Implement new React + TypeScript + Vite stack\
+    - Update Firebase and build configurations to single main target\
+    - Reorganize Scripts/ for current deployment workflow\
+    - Consolidate from dual-app (corporate + verify) to unified site\
+    - Update public path from dist/rpr-website/browser to dist (Vite convention)\
+    - Add /products -> /labs redirect for SEO continuity\
+\
+ .DS_Store                                                      |   Bin 6148 -> 6148 bytes\
+ .firebase/hosting.ZGlzdA.cache                                 |     3 +\
+ .firebaserc                                                    |    17 +-\
+ AUDIT.md                                                       |    36 +\
+ DOCS/CODE_CHANGES_SUMMARY.md                                   |   480 -\
+ DOCS/FIREBASE_SETUP.md                                         |   198 -\
+ DOCS/INDEX.md                                                  |    32 -\
+ ENGINES/rpr-verify-v2/.editorconfig                            |    17 -\
+ ENGINES/rpr-verify-v2/.gitignore                               |    43 -\
+:}
