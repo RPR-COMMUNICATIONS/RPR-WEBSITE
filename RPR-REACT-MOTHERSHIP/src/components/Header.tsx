@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import logo from '../assets/branding/rpr-communications-white.svg';
+import { Link } from 'react-router-dom';
+import { RprMasterLogo } from './RprMasterLogo';
 import googleAuth from '../assets/branding/google-auth-black.svg';
 import { Icon } from './Icon';
 
@@ -25,19 +26,14 @@ export const Header: React.FC = () => {
 
         <div className="max-w-7xl mx-auto w-full flex justify-between items-center relative z-10">
           {/* Brand Latch (Left) */}
-          <div className="flex items-center gap-4">
-            <div className="relative group h-10 w-10 flex items-center justify-center">
-              <div className="absolute inset-0 bg-primary/20 blur-lg group-hover:bg-primary/40 transition-all duration-700"></div>
-              <img src={logo} alt="RPR Communications" className="h-10 w-10 relative z-10" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="font-black text-xl tracking-tighter uppercase text-white">RPR</span>
-              <span className="text-[9px] font-bold text-primary tracking-[0.3em] uppercase mt-1">Communications</span>
-            </div>
-          </div>
+          <RprMasterLogo />
           
           {/* Strategic Navigation (Center) */}
           <nav className="hidden md:flex items-center gap-12 text-[10px] font-black tracking-[0.2em] uppercase text-slate-400">
+            <Link className="hover:text-primary transition-colors" to="/#foundations">Methods</Link>
+            <Link className="hover:text-primary transition-colors" to="/about">About</Link>
+            <Link className="hover:text-primary transition-colors" to="/contact">Contact</Link>
+            <a className="hover:text-primary transition-colors" href="https://status.rprcomms.com" target="_blank" rel="noopener noreferrer">Status</a>
           </nav>
           
           {/* KONTROL LATCH (Right) */}
@@ -70,6 +66,29 @@ export const Header: React.FC = () => {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[99] bg-black/95 backdrop-blur-md md:hidden pt-[108px]">
           <nav className="flex flex-col gap-8 p-8 text-center">
+            <Link
+              to="/about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors"
+            >
+              Contact
+            </Link>
+            <a
+              href="https://status.rprcomms.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-black uppercase tracking-widest text-slate-400 hover:text-primary transition-colors"
+            >
+              Status
+            </a>
             <a 
               href="https://kontrol.rprcomms.com" 
               onClick={() => setMobileMenuOpen(false)}

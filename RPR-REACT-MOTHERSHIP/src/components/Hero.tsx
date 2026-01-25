@@ -18,10 +18,6 @@ export const Hero: React.FC = () => {
           Boutique agency and experience studio. Designing brand work that lives in the real world—digital products and forensic substrates.
         </p>
         
-        <p className="text-lg md:text-2xl text-slate-400 leading-relaxed font-light max-w-2xl uppercase tracking-tight mt-6">
-          "We keep it simple to make the story clear, get people to show up and do something, then prove it with live numbers instead of 'vibes' on a slide. If you already have a big shiny campaign, we'll plug in where we're useful. If you don't, we'll build the whole thing. Either way, the goal is the same: less theatre, more results."
-        </p>
-
         <div className="flex flex-col md:flex-row items-stretch md:items-start gap-4 mt-8">
           <a href="#products" className="bg-primary text-black px-12 py-5 font-bold uppercase tracking-widest text-xs flex items-center gap-4 group justify-center">
             View Products 

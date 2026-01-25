@@ -2,18 +2,11 @@
   "hosting": [
     {
       "target": "corporate",
-      "public": "dist",
+      "public": "dist/rpr-website/browser",
       "ignore": [
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
-      ],
-      "redirects": [
-        {
-          "source": "/products",
-          "destination": "/labs",
-          "type": 301
-        }
       ],
       "rewrites": [
         {
@@ -24,7 +17,7 @@
     },
     {
       "target": "verify",
-      "public": "engines/verify/dist",
+      "public": "dist/rpr-verify/browser",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -35,6 +28,18 @@
           "source": "**",
           "destination": "/index.html"
         }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "source": "RPR-WEBSITE/functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-analytics-debug.log"
       ]
     }
   ]

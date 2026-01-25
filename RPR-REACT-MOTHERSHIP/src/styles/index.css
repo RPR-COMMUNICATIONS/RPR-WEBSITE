@@ -13,6 +13,41 @@
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
 
+.grid-bg {
+  --s: 100px; /* size */
+  --c1: #0A0A0A;
+  --c2: #1A1A1A;
+
+  --_g:
+    var(--c2) 0 119deg,
+    #0000 121deg 179deg,
+    var(--c2) 181deg 239deg,
+    #0000 241deg;
+  background:
+    conic-gradient(from 60deg at calc(var(--s)/2)     calc(var(--s)*0.577),var(--_g)),
+    conic-gradient(from 60deg at calc(var(--s)/2)     calc(var(--s)*0.577),var(--_g)),
+    conic-gradient(from 180deg at calc(var(--s)/2*1.5) calc(var(--s)/2*0.866),var(--_g)),
+    conic-gradient(from 180deg at calc(var(--s)/2*1.5) calc(var(--s)/2*0.866),var(--_g)),
+    conic-gradient(from -60deg at calc(var(--s)/2*0.5) calc(var(--s)/2*0.866),var(--_g)),
+    conic-gradient(from -60deg at calc(var(--s)/2*0.5) calc(var(--s)/2*0.866),var(--_g)),
+    var(--c1);
+  background-size:
+    var(--s) calc(var(--s)*1.154) ,
+    var(--s) calc(var(--s)*1.154) ,
+    var(--s) calc(var(--s)*1.154) ,
+    var(--s) calc(var(--s)*1.154) ,
+    var(--s) calc(var(--s)*1.154) ,
+    var(--s) calc(var(--s)*1.154) ,
+    auto;
+  background-position:
+    0 0,
+    calc(var(--s)/-2) calc(var(--s)/2*0.577),
+    0 0,
+    calc(var(--s)/-2) calc(var(--s)/2*0.577),
+    0 0,
+    calc(var(--s)/-2) calc(var(--s)/2*0.577);
+}
+
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
 }
