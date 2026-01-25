@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
         </h1>
         
         <p className="text-lg md:text-2xl text-slate-400 leading-relaxed font-light max-w-2xl uppercase tracking-tight">
-          Boutique agency and experience studio. Designing brand work that lives in the real world—digital products and forensic substrates.
+          We're a boutique agency and experience studio that actually cares if the campaign moves the needle. We plan campaigns based on real world results through digital, virtual and the physical spaces..with the messy bits in between.
         </p>
         
         <p className="text-lg md:text-2xl text-slate-400 leading-relaxed font-light max-w-2xl uppercase tracking-tight mt-6">
@@ -23,8 +23,8 @@ export const Hero: React.FC = () => {
         </p>
 
         <div className="flex flex-col md:flex-row items-stretch md:items-start gap-4 mt-8">
-          <a href="#products" className="bg-primary text-black px-12 py-5 font-bold uppercase tracking-widest text-xs flex items-center gap-4 group justify-center">
-            View Products 
+          <a href="/labs" className="bg-primary text-black px-12 py-5 font-bold uppercase tracking-widest text-xs flex items-center gap-4 group justify-center">
+            View Labs 
             <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
           <a href="#ask-ollie" className="border border-slate-700 px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-zinc-900 transition-colors text-center">
