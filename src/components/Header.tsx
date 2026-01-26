@@ -6,7 +6,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { Link } from 'react-router-dom';
-import { GoogleIcon } from './icons/GoogleIcon';
 import RprMasterLogo from './brand/RprMasterLogo';
 
 export const Header: React.FC = () => {
@@ -40,7 +39,7 @@ export const Header: React.FC = () => {
           ))}
         </nav>
 
-        {/* Right: G Identity Latch Only */}
+        {/* Right: Identity Latch Only */}
         <div className="flex items-center gap-x-3 md:gap-4">
 
           {user ? (
@@ -48,8 +47,10 @@ export const Header: React.FC = () => {
               <img src={user.photoURL || ''} alt={user.displayName || 'User'} className="w-full h-full object-cover" />
             </div>
           ) : (
-            <button onClick={signIn} className="flex-shrink-0 transition-all hover:opacity-80" aria-label="Sign in with Google">
-              <GoogleIcon size={40} />
+            <button onClick={signIn} className="flex-shrink-0 transition-all hover:opacity-80" aria-label="Sign in">
+              <span className="material-symbols-outlined text-white text-3xl">
+                account_circle
+              </span>
             </button>
           )}
 
