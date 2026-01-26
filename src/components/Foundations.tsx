@@ -14,19 +14,19 @@ const foundations = [
     id: "01",
     title: "Source of Truth",
     content: "A pretty story sitting on top of bad data is not a brand strategy; it is a very expensive lie we tell ourselves until the numbers don't add up. We verify the underlying substrate before constructing the narrative.",
-    icon: "align_horizontal_center"
+    materialIcon: "align_horizontal_center"
   },
   {
     id: "02",
     title: "The Insight (UI)",
     content: "Your customers are not short on information; they are exhausted, conflicted, and trying to make sense of a world where human judgment was quietly outsourced to bots. We restore clarity via high-fidelity interface logic.",
-    icon: "lightbulb"
+    materialIcon: "lightbulb"
   },
   {
     id: "03",
     title: "The Journey (CX)",
     content: "We try to get the moments that matter right. We use the right tools to get the job done, not the other way around. Our focus remains on the human experience in a bot-saturated theater.",
-    icon: "assistant_navigation"
+    materialIcon: "assistant_navigation"
   }
 ];
 
@@ -50,10 +50,10 @@ export const Foundations: React.FC = () => {
                 onClick={() => setOpenId(openId === item.id ? null : item.id)}
                 className="w-full flex items-center gap-6 text-left py-4"
               >
-                {/* UNIFIED CONTAINER SPECIFICATION */}
+                {/* METHODS-STYLE ICON CONTAINER */}
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-[#0A0A0A] border border-zinc-800 rounded-xl flex items-center justify-center group-hover:border-cyan-500/50 transition-all">
                   <span className="material-symbols-outlined text-cyan-400 text-2xl md:text-3xl">
-                    {item.icon}
+                    {item.materialIcon}
                   </span>
                 </div>
 
@@ -66,8 +66,9 @@ export const Foundations: React.FC = () => {
                 </span>
               </button>
 
+              {/* EXPANSION LOGIC */}
               <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openId === item.id
-                ? 'max-h-[1000px] opacity-100 mt-4'
+                ? 'max-h-[1200px] opacity-100 mt-4'
                 : 'max-h-0 opacity-0'
                 }`}>
                 <p className="text-zinc-400 text-lg md:text-xl max-w-3xl ml-16 md:ml-20 leading-relaxed tracking-tight">
