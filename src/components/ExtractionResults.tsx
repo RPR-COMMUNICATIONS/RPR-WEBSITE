@@ -7,7 +7,7 @@ import type { UILedgerEntry } from '../types/viewModels';
  * Patch: Added defensive checks for 'entries' substrate to prevent undefined filter crashes.
  */
 
-// Placeholder/Internal LedgerTable to ensure compilation stability in Harbor B
+// Placeholder/Internal LedgerTable to ensure compilation stability in Harbor A
 interface LedgerTableProps {
   rows: UILedgerEntry[];
   onRowClick?: (entry: UILedgerEntry) => void;

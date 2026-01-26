@@ -1,5 +1,5 @@
 /**
- * HARBOR B (Corporate) – Rule Registry Hook Stub
+ * HARBOR A (Corporate) – Rule Registry Hook Stub
  * MYA-GOV-009A | TypeScript Remediation | Era 2026
  * Authority: TS-Λ3
  */

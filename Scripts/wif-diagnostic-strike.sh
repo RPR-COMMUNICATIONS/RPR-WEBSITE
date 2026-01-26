@@ -1,6 +1,6 @@
 #!/bin/bash
 # TS-Λ3 | WIF Diagnostic Strike v1.1.2
-# Objective: Verify Harbor B (rpr-corporate-site) Identity Handshake
+# Objective: Verify Harbor A (rpr-corporate-site) Identity Handshake
 # Authority: SENTINEL-v1.4.12
 
 PROJECT_ID="rpr-corporate-site"

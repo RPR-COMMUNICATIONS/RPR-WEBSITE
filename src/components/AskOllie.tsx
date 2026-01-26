@@ -14,7 +14,7 @@ export const AskOllie: React.FC = () => {
   };
 
   return (
-    <section className="px-[20px] md:px-12 py-32 bg-[#030303]" id="ask-ollie">
+    <section className="px-[20px] md:px-12 py-32 bg-[#030303]" id="chat">
       <div className="max-w-4xl mx-auto text-center mb-16">
         <div className="relative w-24 h-24 mx-auto mb-8">
           <div className="absolute inset-0 bg-primary/10 rounded-full ollie-pulse" style={{ animationDelay: '-1s' }}></div>

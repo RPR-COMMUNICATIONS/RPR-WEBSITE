@@ -6,7 +6,7 @@
  * =============================================================================
  * PLATFORM RUNTIME SPECIFICATIONS
  * =============================================================================
- * Context:          Harbor B (RPR-WEBSITE)
+ * Context:          Harbor A (RPR-WEBSITE)
  * Local Root:       /Users/puvansivanasan/PERPLEXITY-NEW/JOBS/2026-001-RPR-WEBSITE/RPR-REACT-MOTHERSHIP/
  * Script Path:      Scripts/ci-firebase-sa-verify.ts
  * OS Standard:      macOS (Local) / ubuntu-24.04 (CI)
@@ -22,7 +22,7 @@ interface FirebaseSiteConfig {
   projectId: string;
 }
 
-// Authoritative Mapping for Harbor B
+// Authoritative Mapping for Harbor A
 const FIREBASE_SITES: Record<string, FirebaseSiteConfig> = {
   'corporate': { site: 'rpr-corporate-site', projectId: 'rpr-corporate-site' },
   'verify': { site: 'rpr-verify-site', projectId: 'rpr-corporate-site' }

@@ -153,9 +153,9 @@ echo ""
 echo "--- [SENTINEL] PHASE 4: MULTI-HARBOR DEPLOYMENT ---"
 cd "$ROOT_PATH"
 
-# Harbor B: Corporate (MOTHERSHIP)
+# Harbor A: Corporate (MOTHERSHIP)
 echo ""
-echo "Deploying Harbor B: Corporate (MOTHERSHIP)..."
+echo "Deploying Harbor A: Corporate (MOTHERSHIP)..."
 firebase use "$PROJ_CORPORATE"
 firebase target:apply hosting corporate "$SITE_CORPORATE"
 firebase target:apply hosting verify "$SITE_VERIFY"

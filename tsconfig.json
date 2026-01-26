@@ -26,13 +26,11 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src",
-    "tailwind.config.js",
-    "postcss.config.js"
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "Scripts/**/*",
+    "vite.config.ts"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "exclude": ["node_modules", "dist"]
 }

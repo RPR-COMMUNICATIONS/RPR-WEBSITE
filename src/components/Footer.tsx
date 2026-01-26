@@ -1,51 +1,55 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 /**
- * TS-Λ3 // GLOBAL FOOTER [v1.1.1]
- * Updates: Linked "Sovereign Terms" to /sovereign_terms.md
+ * TS-Λ3 // GLOBAL FOOTER [v5.0.0]
+ * IMPLEMENTATION: Three-row governance layout.
+ * ALIGNMENT: Harbor A Mothership (rprcomms.com).
  */
 export const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="h-[70px] fixed bottom-0 w-full z-[100] bg-black border-t border-white/10 flex items-center px-[20px] md:px-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto w-full flex justify-between items-center relative">
+    <footer className="w-full bg-[#050505] border-t border-white/5 pt-16 pb-8 px-6 md:px-12 mt-20">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12">
         
-        {/* Brand & Temporal Marker */}
-        <div className="flex items-center gap-3 text-[10px] font-bold tracking-widest text-slate-500 uppercase">
-          <span className="material-symbols-outlined text-cyan-500 text-xl">radar</span>
-          <span>RPR COMMUNICATIONS LLC</span>
-          <span className="text-white/20 font-mono text-[8px] tracking-[0.15em] uppercase ml-2">
-            EST. 2025
-          </span>
+        {/* Row 1: Primary Navigation */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <nav className="flex flex-wrap gap-x-8 gap-y-4 text-[10px] font-bold tracking-[0.2em] uppercase text-zinc-500">
+            <a href="/#foundations" className="hover:text-white transition-colors">Methods</a>
+            <a href="/#labs" className="hover:text-white transition-colors">Labs</a>
+            <a href="https://kontrol.rprcomms.com" className="hover:text-cyan-500 transition-colors">KONTROL</a>
+            <a href="/#foundations" className="hover:text-white transition-colors">About</a>
+            <a href="/#methods" className="hover:text-white transition-colors">Contact</a>
+          </nav>
         </div>
 
-        {/* ENGINEER LAYER: LOGIC OXO (Centered Decorator) */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center h-full pointer-events-none">
-          <div className="grid grid-cols-3 grid-rows-3 gap-1 opacity-20">
-            <div className="w-3 h-3 border border-cyan-500/20 flex items-center justify-center text-[8px] font-mono text-cyan-500">X</div>
-            <div className="w-3 h-3 border border-cyan-500/20"></div>
-            <div className="w-3 h-3 border border-cyan-500/20 flex items-center justify-center text-[8px] font-mono text-cyan-500">X</div>
-            <div className="w-3 h-3 border border-cyan-500/20"></div>
-            <div className="w-3 h-3 border border-cyan-500/20 flex items-center justify-center text-[8px] font-mono text-cyan-500">O</div>
-            <div className="w-3 h-3 border border-cyan-500/20"></div>
-            <div className="w-3 h-3 border border-cyan-500/20"></div>
-            <div className="w-3 h-3 border border-cyan-500/20"></div>
-            <div className="w-3 h-3 border border-cyan-500/20"></div>
+        {/* Row 2: Legal & Trust */}
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8 border-y border-white/5 py-8">
+          <div className="flex flex-wrap gap-x-8 gap-y-4 text-[9px] font-bold uppercase text-zinc-600">
+            <Link to="/legal/privacy" className="hover:text-zinc-400 transition-colors">Privacy Policy</Link>
+            <Link to="/legal/terms" className="hover:text-zinc-400 transition-colors">Terms of Use</Link>
+            <Link to="/legal/cookies" className="hover:text-zinc-400 transition-colors">Cookie Settings</Link>
+          </div>
+          <div className="flex flex-wrap gap-x-8 gap-y-4 text-[9px] font-bold uppercase text-zinc-700">
+            <Link to="/legal/security" className="hover:text-zinc-500 transition-colors">Security & Compliance</Link>
+            <Link to="/legal/governance" className="hover:text-zinc-500 transition-colors">Responsible AI & Governance</Link>
           </div>
         </div>
 
-        {/* Governance & Links */}
-        <div className="flex gap-8 text-[10px] font-bold uppercase text-slate-600">
-          <a 
-            className="hover:text-cyan-500 transition-colors" 
-            href="/sovereign_terms.md" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            Sovereign Terms
-          </a>
-          <span className="text-white/5 font-mono">TS-Λ3</span>
+        {/* Row 3: Identity & Copyright */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+          <div className="text-[10px] font-medium text-zinc-600 tracking-tight">
+            © {currentYear} RPR Communications, LLC. All rights reserved.
+          </div>
+          
+          <div className="flex items-center gap-4 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+            {/* TS-Λ3 Authority Marker - Sanitized */}
+            <div className="text-[8px] font-mono tracking-[0.3em] text-zinc-500 uppercase">
+              Substrate Unified // Harbor A
+            </div>
+          </div>
         </div>
-
       </div>
     </footer>
   );

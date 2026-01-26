@@ -1,5 +1,5 @@
 /**
- * HARBOR B (Corporate) – View Models
+ * HARBOR A (Corporate) – View Models
  * MYA-GOV-009A | TypeScript Remediation | Era 2026
  * Authority: TS-Λ3
  */

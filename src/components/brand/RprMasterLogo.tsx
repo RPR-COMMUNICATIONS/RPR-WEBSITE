@@ -1,53 +1,22 @@
+/**
+ * TS-Λ3 // LOGO RECTIFICATION // v3.0.0 (TIGHT-HEAVY)
+ * SPEC: Horizontal, Single-Line, 0.15em tracking
+ */
 import React from 'react';
 
-/**
- * RPR Master Logo
- * Authority: TS-Λ3 | BRANDING LATCH [v1.5.0]
- * Lockup: Authoritative RprIcon SVG + RPR COMMUNICATIONS LLC Wordmark
- */
-interface RprMasterLogoProps {
-  height?: number;
-}
-
-const RprMasterLogo: React.FC<RprMasterLogoProps> = ({ height = 32 }) => {
+export const RprMasterLogo: React.FC = () => {
   return (
-    <div 
-      className="flex items-center gap-3 group cursor-pointer select-none" 
-      style={{ height: `${height}px` }}
-    >
-      {/* CANONICAL RPR ICON SVG */}
-      <svg
-        height="100%"
-        viewBox="0 0 512 512"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        className="fill-white transition-transform duration-300 group-hover:scale-110 shrink-0"
-      >
-        <path d="M366.26,256L256,56L145.74,256L35.48,456H256h220.52L366.26,256z M462.43,448.02H327.14
-          c-52.29-17.46-99.26-47.08-123.05-72.78c12.09,3.24,29.59,6.3,53.32,6.78c43.69,0.87,71.69-14.09,71.69-14.09s-0.04-0.49-0.13-1.36
-          l0.44,1.33c10.53-38.31,14.66-76.67,9.8-143.39l20.22,36.67L462.43,448.02z M255.21,246.4c0,0,17.34,12.57,41.66,53.19
-          c15.5,25.89,23.07,61.65,23.07,61.65s-27.12,11.27-63.76,11.1c-37.52-0.53-63.59-9.51-63.59-9.51s5.81-34.7,21.66-61.82
-          C230.29,270.35,255.21,246.4,255.21,246.4z M153.41,261.17L256.42,74.33l70.68,128.2c8.42,51.22,5.65,107.88-2.38,140.27
-          c-3.5-14.36-9.64-32.72-20.28-49.2c-28.27-43.79-47.74-58.99-47.74-58.99s-0.36,0.2-1.01,0.63
-          c-42.74,11.66-77.73,28.09-123.62,64.64L153.41,261.17z M50.4,448.02l69.84-126.68c39.4-37.4,94.72-65.51,118.02-70.6
-          c-9.71,10.52-22.24,27.08-35.09,52.2c-18.12,35.42-20.61,64.11-20.61,64.11s0.59,0.37,1.78,0.99l-1.55-0.36
-          c29.53,30.52,56.36,49.88,116.46,80.35h-42.83H50.4z" />
+    <div className="flex items-center gap-2">
+      {/* AUTHORITATIVE LOGO ICON */}
+      <svg className="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M50 5L95 82.5H5L50 5Z" stroke="white" strokeWidth="4" />
+         <circle cx="50" cy="55" r="15" stroke="white" strokeWidth="4" />
       </svg>
-
-      {/* RPR COMMUNICATIONS LLC WORDMARK */}
-      <div className="flex flex-col justify-center">
-        <span 
-          className="text-white font-[700] tracking-[-0.05em] text-xl leading-none uppercase"
-          style={{ fontFamily: "'Inter', sans-serif" }}
-        >
-          RPR
-        </span>
-        <span 
-          className="text-white/40 font-mono text-[7px] tracking-[0.15em] leading-none uppercase mt-1 whitespace-nowrap"
-        >
-          Communications LLC
-        </span>
-      </div>
+      
+      {/* RECTIFIED TYPOGRAPHY */}
+      <span className="text-white font-black uppercase tracking-[0.15em] text-lg leading-none">
+        RPR COMMUNICATIONS
+      </span>
     </div>
   );
 };

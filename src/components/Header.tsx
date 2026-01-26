@@ -1,54 +1,111 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
 import RprMasterLogo from './brand/RprMasterLogo';
+import { useAuth } from '../contexts/AuthContext';
+import { Link } from 'react-router-dom';
+import { GoogleIcon } from './icons/GoogleIcon';
 
 /**
- * TS-Λ3 // HARBOR A HEADER [v1.2.0]
- * NAVIGATION: Flattened per Registry v1.2.2
+ * TS-Λ3 // HARBOR A HEADER [v5.0.0]
+ * PATTERN: KONTROL + Google Sign In (Side-by-Side)
+ * SOVEREIGN NAVIGATION: METHODS, LABS, OVERWATCH
  */
 export const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { user, signIn } = useAuth();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: 'METHODS', href: '/#methods' },
+    { name: 'LABS', href: '/#labs' },
+    { name: 'OVERWATCH', href: '/#overwatch' },
+  ];
 
   return (
-    <header className="fixed top-0 w-full z-[100] bg-black/80 backdrop-blur-md border-b border-white/10 flex items-center px-6 md:px-12 h-[108px]">
-      <div className="max-w-7xl mx-auto w-full flex items-center justify-between relative z-10">
-        
+    <header className="fixed top-0 w-full z-[100] bg-black/80 backdrop-blur-md border-b border-white/10 h-[108px]">
+      <div className="max-w-7xl mx-auto h-full w-full flex items-center justify-between px-4 md:px-12 relative z-10">
+
+        {/* Left: Branding Lockup */}
         <div className="flex items-center gap-4 py-2">
-          {/* Branding Lock: 0.15em tracking enforced inside RprMasterLogo */}
-          <RprMasterLogo height={32} />
+          <Link to="/">
+            <RprMasterLogo />
+          </Link>
         </div>
 
-        {/* Primary Nav: METHODS | LABS | OVERWATCH */}
-        <nav className="hidden lg:flex items-center gap-10 text-[10px] font-black tracking-[0.2em] uppercase text-zinc-500">
-          <a href="#foundations" className="hover:text-white transition-colors">METHODS</a>
-          {/* Corrected: Internal route for Labs per Task 1 Audit */}
-          <a href="/labs" className="hover:text-white transition-colors">LABS</a>
-          <a href="#overwatch" className="hover:text-white transition-colors">OVERWATCH</a>
-          <a href="#ask-ollie" className="text-cyan-500 border border-cyan-500/30 px-4 py-2 rounded hover:bg-cyan-500 hover:text-black transition-all">ASK OLLIE</a>
+        {/* Center: Primary Navigation (Desktop Only) */}
+        <nav className="hidden lg:flex items-center gap-8 text-[10px] font-black tracking-[0.2em] uppercase text-zinc-500">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="hover:text-white transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <a 
+        {/* Right: Dual CTA Latch + Mobile Toggle */}
+        <div className="flex items-center gap-x-3 md:gap-4">
+
+          {/* Primary Action: KONTROL [G] */}
+          <a
             href="https://kontrol.rprcomms.com"
-            className="flex items-center gap-3 bg-zinc-900 border border-white/10 hover:border-cyan-500/50 px-5 py-2.5 rounded transition-all group"
+            className="flex items-center gap-2 md:gap-3 bg-zinc-900 border border-white/10 hover:border-cyan-500/50 px-3 md:px-5 py-2 md:py-2.5 rounded transition-all group shadow-xl"
           >
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse shadow-[0_0_10px_#00E0FF]" />
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white">KONTROL</span>
+            <div className="w-1.5 md:w-2 h-1.5 md:h-2 bg-cyan-500 rounded-full animate-pulse shadow-[0_0_10px_#00E0FF]" />
+            <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.15em] md:tracking-[0.2em] text-white">
+              KONTROL [G]
+            </span>
           </a>
-          
-          <button className="lg:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X /> : <Menu />}
+
+          {/* Secondary Action: Identity Latch with Google Icon */}
+          {user ? (
+            <div className="w-10 h-10 rounded-full border border-cyan-500/50 overflow-hidden shadow-[0_0_15px_rgba(0,224,255,0.3)]">
+              <img
+                src={user.photoURL || ''}
+                alt={user.displayName || 'User'}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ) : (
+            <button
+              onClick={signIn}
+              className="flex-shrink-0 transition-all hover:border-cyan-500/50 hover:shadow-[0_0_15px_rgba(0,224,255,0.3)]"
+              aria-label="Sign in with Google"
+            >
+              <GoogleIcon size={40} />
+            </button>
+          )}
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="lg:hidden w-10 h-10 flex items-center justify-center text-zinc-500 hover:text-white"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span className="material-symbols-outlined">{isMenuOpen ? 'close' : 'menu'}</span>
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="absolute top-[108px] left-0 w-full bg-black border-b border-white/10 p-6 flex flex-col gap-6 lg:hidden animate-in fade-in slide-in-from-top-4">
-          <a href="#foundations" className="text-zinc-400 font-black uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Methods</a>
-          <a href="/labs" className="text-zinc-400 font-black uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Labs</a>
-          <a href="#overwatch" className="text-zinc-400 font-black uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Overwatch</a>
-          <a href="#ask-ollie" className="text-cyan-500 font-black uppercase tracking-widest text-sm" onClick={() => setIsOpen(false)}>Ask Ollie</a>
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="lg:hidden fixed inset-0 top-[108px] bg-black z-50 p-6 flex flex-col gap-8 animate-in fade-in slide-in-from-top-4">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-2xl font-black tracking-widest text-zinc-500 hover:text-cyan-500 uppercase transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+          <a
+            href="https://kontrol.rprcomms.com"
+            className="text-2xl font-black tracking-widest text-cyan-500 hover:text-cyan-400 uppercase transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            KONTROL [G]
+          </a>
         </div>
       )}
     </header>

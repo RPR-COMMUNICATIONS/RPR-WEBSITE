@@ -1,3 +1,4 @@
+@import './hex-grid.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,8 +10,45 @@
 }
 
 @layer utilities {
-  .no-scrollbar::-webkit-scrollbar { display: none; }
-  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Houdini-powered Squircle Latch */
+  .squircle {
+    mask-image: paint(squircle);
+    -webkit-mask-image: paint(squircle);
+    --squircle-radius: 22.5%;
+    --squircle-smooth: 1;
+  }
+
+  /* Fallback for browsers without Houdini support */
+  @supports not (mask-image: paint(squircle)) {
+    .squircle {
+      border-radius: 22.5%;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  /* Alias for consistency */
+  .rpr-squircle {
+    mask-image: paint(squircle);
+    -webkit-mask-image: paint(squircle);
+    --squircle-radius: 22.5%;
+    --squircle-smooth: 1;
+  }
+
+  @supports not (mask-image: paint(squircle)) {
+    .rpr-squircle {
+      border-radius: 22.5%;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
 }
 
 .material-symbols-outlined {
@@ -24,25 +62,80 @@
 
 /* ARCHITECT SCAN ANIMATION (108px Header) */
 @keyframes architectScan {
-  0%, 100% { background: transparent; opacity: 0.1; }
-  5% { background: rgba(0, 224, 255, 0.4); box-shadow: inset 0 0 15px #00E0FF; opacity: 1; }
-  10% { background: transparent; opacity: 0.1; }
+
+  0%,
+  100% {
+    background: transparent;
+    opacity: 0.1;
+  }
+
+  5% {
+    background: rgba(0, 224, 255, 0.4);
+    box-shadow: inset 0 0 15px #00E0FF;
+    opacity: 1;
+  }
+
+  10% {
+    background: transparent;
+    opacity: 0.1;
+  }
 }
+
 .grid-square-anim {
   animation: architectScan 10s infinite ease-in-out;
 }
 
 /* ENGINEER PROCESSOR ANIMATION (70px Footer) */
-@keyframes drawX { 0%, 80% { opacity: 0; } 20%, 70% { opacity: 1; } }
-@keyframes drawO { 0%, 80% { opacity: 0; } 20%, 70% { opacity: 1; } }
-.oxo-anim-x { animation: drawX 6s infinite; }
-.oxo-anim-o { animation: drawO 6s infinite 1s; }
+@keyframes drawX {
+
+  0%,
+  80% {
+    opacity: 0;
+  }
+
+  20%,
+  70% {
+    opacity: 1;
+  }
+}
+
+@keyframes drawO {
+
+  0%,
+  80% {
+    opacity: 0;
+  }
+
+  20%,
+  70% {
+    opacity: 1;
+  }
+}
+
+.oxo-anim-x {
+  animation: drawX 6s infinite;
+}
+
+.oxo-anim-o {
+  animation: drawO 6s infinite 1s;
+}
 
 @keyframes pulse-ring {
-  0% { transform: scale(0.33); opacity: 0; }
-  50% { opacity: 0.5; }
-  100% { transform: scale(1); opacity: 0; }
+  0% {
+    transform: scale(0.33);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
+
 .ollie-pulse {
   animation: pulse-ring 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
 }

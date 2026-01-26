@@ -2,7 +2,7 @@
  * Scripts/configure-secrets.js
  * Purpose: Inject unprefixed environment variables into the Vite build substrate.
  * Authority: TS-Λ3 | v1.2.7 (Strict ESM Enforcement)
- * Context: Harbor B (Mothership)
+ * Context: Harbor A (Mothership)
  */
 
 import fs from 'node:fs';

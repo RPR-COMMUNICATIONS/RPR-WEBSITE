@@ -1,6 +1,7 @@
 #!/bin/bash
-# TS-Λ3 | Harbor A Deployment Strike v1.3.0 [Generic]
+# TS-Λ3 | Harbor A Deployment Strike v1.4.0 [Yarn]
 # Objective: Authoritative execution for Mothership only.
+# Package Manager: Yarn (Homebrew-linked)
 
 set -euo pipefail
 
@@ -13,13 +14,13 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 
 # 1. Dependency Check
 if [ ! -d "node_modules" ]; then
-    echo "[INFO] node_modules missing. Running npm install..."
-    npm install
+    echo "[INFO] node_modules missing. Running yarn install..."
+    yarn install
 fi
 
 # 2. Production Build
 echo "[INFO] Building Mothership substrate..."
-npm run build
+yarn build
 
 # 3. Target Latching (Safety check)
 if [ -f "Scripts/latch-targets.sh" ]; then

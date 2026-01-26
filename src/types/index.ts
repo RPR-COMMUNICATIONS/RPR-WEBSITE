@@ -1,5 +1,5 @@
 /**
- * HARBOR B (Corporate) – Type Definitions
+ * HARBOR A (Corporate) – Type Definitions
  * MYA-GOV-009A | TypeScript Remediation | Era 2026
  * Authority: TS-Λ3
  */
