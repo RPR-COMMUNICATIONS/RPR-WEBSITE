@@ -15,7 +15,6 @@ export const Header: React.FC = () => {
 
   const navLinks = [
     { name: 'METHODS', href: '/#methods' },
-    { name: 'LABS', href: '/#labs' },
     { name: 'OVERWATCH', href: '/#overwatch' },
   ];
 
