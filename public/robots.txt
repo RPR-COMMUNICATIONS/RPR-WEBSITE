@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /labs
+Disallow: /scripts/
+Disallow: /LEGACY_STAGING/
+Sitemap: https://rprcomms.com/sitemap.xml

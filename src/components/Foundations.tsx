@@ -1,93 +1,79 @@
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
 import { MermaidViewer } from './MermaidViewer';
 import { THE_MOTHERSHIP } from '../data/theMothership';
 
 /**
- * TS-Λ3 // THE FOUNDATIONS // DNA PILLARS + THE MOTHERSHIP [v7.6.0]
- * STYLE: Inter Bold 700, -0.05em tracking, Black Substrate, Squircle Latch Icons
+ * TS-Λ3 // FOUNDATIONS [v2.2.0]
+ * Classic accordion: identical rows, collapsed on load,
+ * only one open at a time.
  */
-
 const foundations = [
-  // THE DNA PILLARS (01-03)
   {
-    id: "01",
-    title: "Source of Truth",
-    content: "A pretty story sitting on top of bad data is not a brand strategy; it is a very expensive lie we tell ourselves until the numbers don't add up. We verify the underlying substrate before constructing the narrative.",
-    glyph: (
-      <svg fill="none" viewBox="0 0 100 100" stroke="white" strokeWidth="6">
-        <path d="M50 15L80 50L50 85L20 50L50 15Z" strokeLinejoin="round" />
-        <circle cx="50" cy="50" r="4" fill="white" />
-        <path d="M50 70V85" strokeLinecap="round" />
-      </svg>
-    )
+    id: '01',
+    title: 'Source of Truth',
+    content: `A pretty story sitting on top of bad data is not a brand strategy; it is a very expensive lie we tell ourselves until the numbers don't add up and the contract gets handed to the next agency down the street. Bad data quietly bleeds budgets, derails strategy, and breaks the journeys your customers experience, manifesting as confusion, inconsistency, and distrust. For most small and mid-sized businesses, the issue is not a lack of tools; it is that every tool is working from its own version of the truth. Marketing has one view of the data, finance has another, operations have a third, and your AI assistants are being trained on whatever happens to be in front of them that day. The result is noise: conflicting reports, misread signals, and "performance" that no one can tie back to reality. We work to identify what actually matters, where it lives, and how to measure it across every touchpoint and outcome. Then we structure every message, test and retest it until we're satisfied that it accurately reflects that truth. Your decisions are then based on reality instead of the meaningless fantasy we keep seeing each day.`,
+    materialIcon: 'align_horizontal_center',
   },
   {
-    id: "02",
-    title: "The Insight (UI)",
-    content: "Your customers are not short on information; they are exhausted, conflicted, and trying to make sense of a world where human judgment was quietly outsourced to bots. We restore clarity via high-fidelity interface logic.",
-    glyph: (
-      <svg fill="none" viewBox="0 0 100 100" stroke="white" strokeWidth="6">
-        <path d="M50 48.5C64.6325 48.5 76.5 36.6325 76.5 22C76.5 7.3675 64.6325 -4.5 50 -4.5C35.3675 -4.5 23.5 7.3675 23.5 22C23.5 36.6325 35.3675 48.5 50 48.5Z" transform="translate(0 10)" />
-        <path d="M37 55V68C37 69.1046 37.8954 70 39 70H61C62.1046 70 63 69.1046 63 68V55" strokeLinecap="round" strokeLinejoin="round" />
-        <rect fill="white" height="8" rx="2" width="34" x="33" y="70" />
-        <rect fill="white" height="6" rx="2" width="24" x="38" y="78" />
-      </svg>
-    )
+    id: '02',
+    title: 'The Insight (UI)',
+    content: `Your customers are not short on information; they are exhausted, conflicted, and trying to make sense of a world where human judgment was quietly outsourced to dashboards and algorithms. Somewhere along the way, big data and "best practice" replaced the simple act of sitting with people, listening properly, and learning what they actually need. The mismatch is simple: your customers are still human, but the systems around them now treat them as rows in a report, so they answer with guesswork, silence, or whatever they think the machine wants to hear. This drift didn't come from bad intentions; it came from a culture that worships scale and efficiency, even when it quietly erases context, nuance, and basic empathy from everyday decisions. When every insight must fit a database and every feeling must become a metric, whole parts of your customers' reality simply stop being seen. We aim to ground consumer insight in measurable reality using the right tools. Which to us is not a slide or a chart. It's a small set of human truths your team recognizes as real, confirmed by numbers that actually reflect what's happening, not what they guaranteed would happen. Nobody can guarantee outcomes, but we can show you how we try.`,
+    materialIcon: 'lightbulb',
   },
   {
-    id: "03",
-    title: "The Journey (CX)",
-    content: "We try to get the moments that matter right. We use the right tools to get the job done, not the other way around. Our focus remains on the human experience in a bot-saturated theater.",
-    glyph: (
-      <svg fill="none" viewBox="0 0 100 100" stroke="white" strokeWidth="6">
-        <path d="M15 65C30 65 35 35 50 35C65 35 70 65 85 65" strokeLinecap="round" />
-        <circle cx="15" cy="65" r="5" fill="black" stroke="white" strokeWidth="4" />
-        <circle cx="50" cy="35" r="5" fill="black" stroke="white" strokeWidth="4" />
-        <circle cx="85" cy="65" r="5" fill="black" stroke="white" strokeWidth="4" />
-      </svg>
-    )
-  }
+    id: '03',
+    title: 'The Experience (UX)',
+    content: `We try to get the moments that matter right. We use the right tools to get the job done, not the other way around. We hear our clients facing the same issues repeating in every channel and across every industry, the same escalations, the same misunderstandings cycling through. You are not short on data; you are short on a way to turn what is happening on the screen and off the screen into fewer, better problems to fix. We observe what people actually do—not what we are told—and continuously adjust the words and steps to surface where friction exists and where momentum builds. Every change has to earn its place by showing measurable progress toward clearer, more manageable problems. Over time, this reveals what actually works versus what you assumed would work, so you're building on evidence rather than on hope.`,
+    materialIcon: 'assistant_navigation',
+  },
 ];
 
 export const Foundations: React.FC = () => {
-  const [openId, setOpenId] = useState<string | null>("01");
+  const [openId, setOpenId] = useState<string | null>(null);
 
   return (
-    <section id="foundations" className="bg-[#050505] py-24 px-6 md:px-12">
+    <section id="foundations" className="bg-[#050505] border-b border-white/5 py-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="space-y-4">
           <h2 className="text-white text-4xl md:text-6xl font-bold uppercase tracking-[-0.05em] font-sans">
             THE FOUNDATIONS
           </h2>
-          <p className="text-cyan-400 font-mono tracking-[0.2em] text-sm uppercase">The DNA Pillars</p>
+          <p className="text-primary font-mono tracking-[0.2em] text-sm uppercase">The DNA Pillars</p>
         </div>
 
         <div className="grid gap-6">
           {foundations.map((item) => (
             <div key={item.id} className="border-b border-zinc-800 pb-6 group">
-              <button 
+              <button
                 onClick={() => setOpenId(openId === item.id ? null : item.id)}
                 className="w-full flex items-center gap-6 text-left py-4"
+                aria-expanded={openId === item.id}
               >
-                {/* SQUIRCLE LATCH ICON */}
-                <div className="squircle flex-shrink-0 w-12 h-12 md:w-16 md:h-16 bg-black flex items-center justify-center border border-zinc-800 group-hover:border-cyan-500/50 transition-all">
-                  <div className="w-2/3 h-2/3">{item.glyph}</div>
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-[#0A0A0A] border border-zinc-800 rounded-xl flex items-center justify-center group-hover:border-white/20 transition-all">
+                  <span className="material-symbols-outlined text-white text-2xl md:text-3xl">
+                    {item.materialIcon}
+                  </span>
                 </div>
-                
+
                 <span className="flex-grow text-white text-xl md:text-3xl font-bold uppercase tracking-[-0.05em] font-sans">
-                  {item.id} {item.title}
+                  {item.title}
                 </span>
-                
-                <ChevronDown className={`text-zinc-500 transition-transform ${openId === item.id ? 'rotate-180' : ''}`} />
+
+                <span
+                  className={`material-symbols-outlined text-zinc-500 transition-transform ${openId === item.id ? 'rotate-180' : ''}`}
+                  style={{ fontSize: '32px' }}
+                >
+                  expand_more
+                </span>
               </button>
-              
-              <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                openId === item.id 
-                  ? 'max-h-[1000px] opacity-100 mt-4' 
+
+              <div
+                className={`overflow-hidden transition-all duration-700 ease-in-out ${openId === item.id
+                  ? 'max-h-[1500px] opacity-100 mt-6'
                   : 'max-h-0 opacity-0'
-              }`}>
-                <p className="text-zinc-400 text-lg md:text-xl max-w-3xl ml-16 md:ml-20 leading-relaxed tracking-tight">
+                  }`}
+              >
+                <p className="text-zinc-400 text-lg md:text-xl max-w-3xl ml-16 md:ml-20 leading-relaxed tracking-tight pb-12">
                   {item.content}
                 </p>
               </div>
@@ -95,18 +81,20 @@ export const Foundations: React.FC = () => {
           ))}
         </div>
 
-        {/* THE MOTHERSHIP Section */}
-        <div className="mt-16 space-y-6 border-t border-zinc-800 pt-16">
-          <div className="space-y-2">
-            <h3 className="text-sm font-mono tracking-[0.25em] uppercase text-zinc-500">
+        <div className="mt-24 pt-24 border-t border-white/5">
+          <div className="space-y-6 mb-12">
+            <h3 className="text-white text-3xl md:text-5xl font-bold uppercase tracking-[-0.05em] font-sans">
               THE MOTHERSHIP
             </h3>
-            <p className="text-sm text-zinc-400 tracking-[-0.01em] max-w-3xl">
-              Command flow from The Overwatch through THE ELDERS to the Product Platform Layer, visualizing the sovereign structure.
+            <p className="text-primary text-xs font-bold uppercase tracking-widest">
+              System Architecture
+            </p>
+            <p className="text-white/50 text-lg max-w-2xl leading-relaxed">
+              The foundational pillars sit atop this sovereign governance structure.
             </p>
           </div>
-          
-          <div className="rounded-2xl border border-zinc-800 bg-[#0A0A0A] p-6 overflow-x-auto">
+
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 overflow-x-auto">
             <MermaidViewer definition={THE_MOTHERSHIP} />
           </div>
         </div>

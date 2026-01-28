@@ -6,13 +6,15 @@ import { Footer } from "./components/Footer";
 import { Home } from "./components/Home";
 import { LegalStub } from "./components/LegalStub";
 import { HashRedirect } from "./components/HashRedirect";
+import { BackToTop } from "./components/BackToTop";
 import { Suspense, lazy } from "react";
 
 const HexGrid = lazy(() => import("./components/background/HexGrid"));
 
 /**
- * TS-Λ3 // ROUTING SUBSTRATE [v5.0.0]
+ * TS-Λ3 // ROUTING SUBSTRATE [v5.1.0]
  * SPA routing with redirects for /about and /contact
+ * Navigation: BackToTop node added for mobile UX enhancement
  */
 export default function App() {
   return (
@@ -39,6 +41,7 @@ export default function App() {
                 </Routes>
               </main>
               <Footer />
+              <BackToTop />
             </div>
           </div>
         </WorkflowProvider>

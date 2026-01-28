@@ -1,36 +1,30 @@
-/**
- * TS-Λ3 // THE PROCESS // STRATEGIC CYCLE [v4.28.0]
- * RECTIFIED: Purged Foundations accordion fragments (openId, item).
- * ALIGNMENT: Explicit named export for Home.tsx.
- */
 import React from 'react';
-import { Search, Zap, BarChart3, RefreshCcw } from 'lucide-react';
 
 export const Process: React.FC = () => {
   const steps = [
-    { 
-      label: 'DISCOVER', 
-      icon: Search, 
-      description: 'Mapping patterns and forensic gaps in the existing substrate.', 
-      output: 'Discovery Report // Gap Analysis' 
+    {
+      label: 'DISCOVER',
+      icon: 'search',
+      description: 'Mapping patterns and forensic gaps in the existing substrate.',
+      output: 'Discovery Report // Gap Analysis'
     },
-    { 
-      label: 'DELIVER', 
-      icon: Zap, 
-      description: 'Execution with high-fidelity accuracy across the Singapore harbor.', 
-      output: 'Production Artifacts // Live Revised Node' 
+    {
+      label: 'DELIVER',
+      icon: 'bolt',
+      description: 'Execution with high-fidelity accuracy across the Singapore harbor.',
+      output: 'Production Artifacts // Live Revised Node'
     },
-    { 
-      label: 'MEASURE', 
-      icon: BarChart3, 
-      description: 'Compare results to the agreed metrics: what moved and what signals came from users.', 
-      output: 'Forensic Performance Audit' 
+    {
+      label: 'MEASURE',
+      icon: 'bar_chart',
+      description: 'Compare results to the agreed metrics: what moved and what signals came from users.',
+      output: 'Forensic Performance Audit'
     },
-    { 
-      label: 'IMPROVE', 
-      icon: RefreshCcw, 
-      description: 'Refining the loop for next cycle based on forensic telemetry.', 
-      output: 'Refined Substrate // Optimized Workflow' 
+    {
+      label: 'REPEAT',
+      icon: 'autorenew',
+      description: 'Refining the loop for next cycle based on forensic telemetry.',
+      output: 'Refined Substrate // Optimized Workflow'
     }
   ];
 
@@ -45,15 +39,18 @@ export const Process: React.FC = () => {
             Closing the loop on brand experience
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {steps.map((step, i) => (
-            <article 
-              key={i} 
-              className="flex flex-col gap-6 p-8 bg-[#0A0A0A] border border-zinc-800 rounded-xl group hover:border-cyan-500/50 transition-all"
+            <article
+              key={i}
+              className="flex flex-col gap-6 p-8 bg-[#0A0A0A] border border-zinc-800 rounded-xl group hover:border-white/20 transition-all"
             >
-              <div className="w-16 h-16 bg-black border border-zinc-800 flex items-center justify-center transition-all group-hover:border-cyan-500/50">
-                <step.icon size={24} className="text-cyan-400" />
+              {/* UNIFIED CONTAINER SPECIFICATION */}
+              <div className="w-16 h-16 bg-black border border-zinc-800 rounded-xl flex items-center justify-center transition-all group-hover:border-white/20">
+                <span className="material-symbols-outlined text-white text-2xl md:text-3xl">
+                  {step.icon}
+                </span>
               </div>
 
               <div className="space-y-4">

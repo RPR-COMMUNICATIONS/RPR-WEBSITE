@@ -1,106 +1,82 @@
 import React from 'react';
-import { SentinelBadge } from './SentinelBadge';
+import { CheckmateBoard } from './CheckmateBoard';
+import { LabyrinthVariantBoard } from './LabyrinthVariantBoard';
 
 /**
- * TS-Λ3 // THE OVERWATCH [v7.0.0]
- * Founder narrative with animated strategic game visuals
+ * TS-Λ3 // THE OVERWATCH [v2.1.0]
+ * Sovereign governance split card with identity binding and social linkage
+ * Anchor: id="overwatch" for navigation compliance
  */
 export const Overwatch: React.FC = () => {
   return (
-    <section className="px-[20px] md:px-12 py-32 max-w-7xl mx-auto" id="overwatch">
-      <div className="border border-border-dark p-10 md:p-20 relative overflow-hidden rounded-3xl bg-white/[0.01]">
-        <div className="flex flex-col md:flex-row gap-20 items-start relative z-10">
-          
-          {/* Left Pane: Narrative Substrate */}
-          <div className="flex-1 flex flex-col gap-8">
-            <div className="flex items-center gap-4">
-              <h2 className="text-primary font-bold tracking-[0.4em] text-[10px] flex items-center gap-4 uppercase">
-                // THE OVERWATCH
-              </h2>
-              <SentinelBadge />
-            </div>
-            <div>
-              <h3 className="text-4xl md:text-5xl font-black text-white mb-2 tracking-tighter uppercase">Puvan Sivanasan</h3>
-              <p className="text-primary font-bold text-xs tracking-[0.3em] uppercase">Founder & Principal Strategist</p>
-            </div>
-            <p className="text-slate-400 leading-relaxed text-lg md:text-xl max-w-3xl">
-              Strategy is not a document; it is an act of sovereign observation. Much like a blindfold chess match, we do not react to what is visible on the board—we anticipate the substrate of the game itself. My role is to maintain the Sentinel Protocol, ensuring every move from Discovery to Improvement is executed with high-fidelity forensic accuracy.
-            </p>
-          </div>
-
-          {/* Right Pane: Animated Visual Latches */}
-          <div className="w-full md:w-[342px] space-y-6">
+    <section id="overwatch" className="bg-[#050505] border-b border-white/5">
+      <div className="flex flex-col lg:flex-row min-h-screen">
+        
+        {/* Left Column: Biography & Identity (60%) */}
+        <div className="flex flex-col w-full lg:w-[60%] p-12 lg:p-24 border-r border-white/5 justify-center">
+          <div className="max-w-2xl">
             
-            {/* Top Visual: Blindfold Chess Match (Top-View) */}
-            <div className="aspect-square bg-black border border-white/10 relative rounded-xl overflow-hidden p-1">
-              <div className="grid grid-cols-8 grid-rows-8 h-full w-full opacity-40">
-                {Array.from({ length: 8 }).map((_, row) => (
-                  <React.Fragment key={row}>
-                    {Array.from({ length: 8 }).map((_, col) => (
-                      <div 
-                        key={col} 
-                        className={row % 2 === col % 2 ? 'bg-zinc-900/40' : 'bg-transparent'}
-                      />
-                    ))}
-                  </React.Fragment>
-                ))}
+            {/* Main Heading */}
+            <h1 className="text-white tracking-tighter text-[56px] lg:text-[72px] font-bold leading-none mb-6">
+              THE <br /><span className="text-primary">OVERWATCH</span>
+            </h1>
+
+            {/* Identity & Social Links */}
+            <div className="flex flex-col gap-4 mb-12">
+              <div className="flex items-center gap-4">
+                <span className="text-sm text-white font-mono font-bold">Puvan Sivanasan</span>
               </div>
-              {/* Ghost Move Highlights - Animated */}
-              <div className="absolute top-[25%] left-[37.5%] w-[12.5%] h-[12.5%] bg-purple-500/40 border border-purple-500 shadow-[0_0_20px_#8B5CFF] animate-pulse"></div>
-              <div className="absolute bottom-[12.5%] right-[25%] w-[12.5%] h-[12.5%] bg-cyan-500/20 border border-cyan-500/40 animate-pulse" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute top-[50%] left-[12.5%] w-[12.5%] h-[12.5%] bg-cyan-500/30 border border-cyan-500/50 animate-pulse" style={{ animationDelay: '2s' }}></div>
+              <div className="flex items-center gap-4">
+                <a 
+                  href="https://www.linkedin.com/in/puvan-sivanasan-29707726/?originalSubdomain=my" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 text-xs font-bold uppercase tracking-widest transition-colors"
+                >
+                  LinkedIn
+                </a>
+                <span className="text-white/20">•</span>
+                <a 
+                  href="https://substack.com/@butterdime/posts" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 text-xs font-bold uppercase tracking-widest transition-colors"
+                >
+                  Substack
+                </a>
+              </div>
             </div>
 
-            {/* Bottom Visual: Noughts and Crosses (Solved Game) */}
-            <div className="aspect-square bg-black border border-white/10 relative rounded-xl overflow-hidden p-4">
-              <div className="grid grid-cols-3 grid-rows-3 h-full w-full gap-1">
-                {/* Top row */}
-                <div className="border border-zinc-800 flex items-center justify-center">
-                  <div className="w-3/4 h-3/4 border-2 border-cyan-500 rounded-full"></div>
-                </div>
-                <div className="border border-zinc-800 flex items-center justify-center">
-                  <svg className="w-3/4 h-3/4" viewBox="0 0 100 100" stroke="#00E0FF" strokeWidth="8" fill="none">
-                    <line x1="20" y1="20" x2="80" y2="80" strokeLinecap="round" />
-                    <line x1="80" y1="20" x2="20" y2="80" strokeLinecap="round" />
-                  </svg>
-                </div>
-                <div className="border border-zinc-800 flex items-center justify-center">
-                  <div className="w-3/4 h-3/4 border-2 border-cyan-500 rounded-full"></div>
-                </div>
-                {/* Middle row */}
-                <div className="border border-zinc-800 flex items-center justify-center">
-                  <svg className="w-3/4 h-3/4" viewBox="0 0 100 100" stroke="#00E0FF" strokeWidth="8" fill="none">
-                    <line x1="20" y1="20" x2="80" y2="80" strokeLinecap="round" />
-                    <line x1="80" y1="20" x2="20" y2="80" strokeLinecap="round" />
-                  </svg>
-                </div>
-                <div className="border border-zinc-800 flex items-center justify-center">
-                  <div className="w-3/4 h-3/4 border-2 border-cyan-500 rounded-full"></div>
-                </div>
-                <div className="border border-zinc-800 flex items-center justify-center">
-                  <svg className="w-3/4 h-3/4" viewBox="0 0 100 100" stroke="#00E0FF" strokeWidth="8" fill="none">
-                    <line x1="20" y1="20" x2="80" y2="80" strokeLinecap="round" />
-                    <line x1="80" y1="20" x2="20" y2="80" strokeLinecap="round" />
-                  </svg>
-                </div>
-                {/* Bottom row */}
-                <div className="border border-zinc-800 flex items-center justify-center">
-                  <div className="w-3/4 h-3/4 border-2 border-cyan-500 rounded-full"></div>
-                </div>
-                <div className="border border-zinc-800 flex items-center justify-center">
-                  <svg className="w-3/4 h-3/4" viewBox="0 0 100 100" stroke="#00E0FF" strokeWidth="8" fill="none">
-                    <line x1="20" y1="20" x2="80" y2="80" strokeLinecap="round" />
-                    <line x1="80" y1="20" x2="20" y2="80" strokeLinecap="round" />
-                  </svg>
-                </div>
-                <div className="border border-zinc-800 flex items-center justify-center">
-                  <div className="w-3/4 h-3/4 border-2 border-cyan-500 rounded-full"></div>
-                </div>
-              </div>
-              {/* Solved indicator */}
-              <div className="absolute bottom-2 right-2 text-[8px] font-mono text-cyan-500 uppercase tracking-wider">
-                SOLVED
-              </div>
+            {/* Biography Body Copy — Enlarged */}
+            <div className="space-y-6 text-gradient">
+              <p className="text-lg lg:text-xl font-normal leading-relaxed">
+                Having spent 20 years in corporate communications and brand activation—from local event firms to international creative agencies—he has worked on everything from on-ground activations to award-winning campaigns for global corporations. What began as a fascination with human behaviour and systems, and a belief that technology should be used to improve people's lives rather than just generate TikTok likes, has evolved into a multidisciplinary approach to customer experience.
+              </p>
+
+              <p className="text-lg lg:text-xl font-normal leading-relaxed text-white/70">
+                While experimenting with AI for his own personal writings and ideas, a pattern he noticed in a client problem raised a different question: how can a sentient being leverage an artificial construct to apply its knowledge in knowledge discovery, systems thinking, and polymathic research—within the same human framework of systems and silos—to create something better?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column: stacked boards – chess on top, labyrinth below */}
+        <div className="flex flex-col w-full lg:w-[40%] bg-white/[0.02] justify-center">
+          <div className="flex flex-col items-center gap-10 p-8 lg:p-12">
+            {/* Top: Geometric checkmate board */}
+            <div className="w-full max-w-md space-y-3">
+              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-cyan-500/70">
+                Geometric Primitive // Checkmate Endgame
+              </p>
+              <CheckmateBoard />
+            </div>
+
+            {/* Bottom: Labyrinth variant */}
+            <div className="w-full max-w-md space-y-3">
+              <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-cyan-500/70">
+                Geometric Primitive // Planescape Labyrinth
+              </p>
+              <LabyrinthVariantBoard />
             </div>
           </div>
         </div>

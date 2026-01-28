@@ -9,8 +9,8 @@ export const RprMasterLogo: React.FC = () => {
     <div className="flex items-center gap-2">
       {/* AUTHORITATIVE LOGO ICON */}
       <svg className="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <path d="M50 5L95 82.5H5L50 5Z" stroke="white" strokeWidth="4" />
-         <circle cx="50" cy="55" r="15" stroke="white" strokeWidth="4" />
+         <path d="M50 5L95 82.5H5L50 5Z" stroke="var(--rpr-brand-white)" strokeWidth="4" />
+         <circle cx="50" cy="55" r="15" stroke="var(--rpr-brand-white)" strokeWidth="4" />
       </svg>
       
       {/* RECTIFIED TYPOGRAPHY */}

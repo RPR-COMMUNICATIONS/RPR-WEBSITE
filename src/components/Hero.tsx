@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
         </div>
         
         <h1 className="text-5xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-white uppercase">
-          Global Intelligence,<br/>
+          Global Intelligence<br/>
           <span className="text-primary">Experiential Activation.</span>
         </h1>
         
@@ -23,22 +23,21 @@ export const Hero: React.FC = () => {
           We're a boutique agency and experience studio that actually cares if the campaign moves the needle. We plan campaigns based on real world results through digital, virtual and the physical spaces..with the messy bits in between.
         </p>
 
-        {/* Operational Latch: LABS + ASK OLLIE */}
-        <div className="flex flex-col md:flex-row items-stretch md:items-start gap-4 mt-8">
-          <a 
-            href="/#labs" 
-            className="bg-primary text-black px-12 py-5 font-bold uppercase tracking-widest text-xs flex items-center gap-4 group justify-center transition-all hover:bg-primary/90"
+        {/* CTA Buttons with Icons */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <a
+            href="/#labs"
+            className="flex items-center justify-center gap-2 px-8 py-3 bg-primary text-[#050505] font-bold uppercase text-sm rounded-lg hover:brightness-110 transition-all"
           >
-            LABS
-            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <span className="material-symbols-outlined text-base">science</span>
+            Labs
           </a>
-          
-          <a 
-            href="/#chat" 
-            className="bg-zinc-900 border border-zinc-800 text-white px-12 py-5 font-bold uppercase tracking-widest text-xs flex items-center gap-4 group justify-center transition-all hover:border-cyan-500/50 hover:bg-zinc-800"
+          <a
+            href="/#chat"
+            className="flex items-center justify-center gap-2 px-8 py-3 border border-white/20 text-white font-bold uppercase text-sm rounded-lg hover:border-primary hover:text-primary transition-all"
           >
-            ASK OLLIE
-            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">chat</span>
+            <span className="material-symbols-outlined text-base">chat</span>
+            Ask Ollie
           </a>
         </div>
       </div>
