@@ -14,8 +14,9 @@ export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
+    { name: 'FOUNDATIONS', href: '/#foundations' },
     { name: 'METHODS', href: '/#methods' },
-    { name: 'LABS', href: '/#labs' },
+    { name: 'PROCESS', href: '/#process' },
     { name: 'OVERWATCH', href: '/#overwatch' },
   ];
 
