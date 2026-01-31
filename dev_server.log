@@ -3,7 +3,8 @@
 > vite
 
 
-  VITE v5.4.21  ready in 276 ms
+  VITE v5.4.21  ready in 360 ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
+11:10:35 PM [vite] hmr update /src/components/MermaidViewer.tsx, /src/styles/index.css

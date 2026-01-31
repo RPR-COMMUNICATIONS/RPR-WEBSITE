@@ -77,18 +77,14 @@ export const MermaidViewer: React.FC<MermaidViewerProps> = ({
         }
 
         // Generate unique ID for this diagram
-        const id = `mermaid-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-        containerRef.current.id = id;
+        const id = `mermaid-svg-${Date.now()}`;
         
-        // Mermaid requires the content to be in a pre.mermaid or div.mermaid element
-        containerRef.current.className = 'mermaid';
-        containerRef.current.textContent = definition;
+        // Render the diagram to an SVG string
+        const { svg } = await mermaid.default.render(id, definition);
 
-        // Render the diagram
-        await mermaid.default.run({
-          nodes: [containerRef.current],
-          suppressErrors: false,
-        });
+        if (containerRef.current) {
+          containerRef.current.innerHTML = svg;
+        }
 
         setIsLoading(false);
       } catch (err) {
