@@ -8,8 +8,8 @@ import { Menu, X } from 'lucide-react';
  */
 
 const NAV_ITEMS = [
+  { id: 'foundations', label: 'FOUNDATIONS' },
   { id: 'methods', label: 'METHODS' },
-  { id: 'labs', label: 'LABS' },
   { id: 'overwatch', label: 'OVERWATCH' }
 ];
 
