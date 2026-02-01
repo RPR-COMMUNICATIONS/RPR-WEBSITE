@@ -1,80 +1,86 @@
-import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import React from 'react';
 import { SentinelVisualizer } from './SentinelVisualizer';
 
 /**
- * TS-Λ3 // FOUNDATIONS SUBSTRATE [v1.8.7]
- * Resolution: DNA Pillars Accordion + Integrated SentinelVisualizer.
+ * TS-Λ3 // FOUNDATIONS SUBSTRATE [v1.8.8 FREEZE]
+ * Spec: 3-Pillar Metrics Grid + Integrated SentinelVisualizer.
  * Authority: hello@butterdime.com
  */
 
-const dnaPillars = [
+const metrics = [
   {
-    id: "truth",
-    title: "Source of Truth",
-    content: "Data is the only single source of truth. We reject the 'pretty story' sitting on top of bad data. Our governance mandates that every strategic message is seated in reality."
+    id: 'metric_01',
+    title: 'THE SOURCE OF TRUTH',
+    icon: 'flag',
+    content: (
+      <>
+        <p className="mb-4">A pretty story sitting on top of bad data is not a brand strategy; it is a very expensive lie we tell ourselves until the numbers don't add up and the contract gets handed to the next agency down the street.</p>
+        <p className="mb-4">Bad data quietly bleeds budgets, derails strategy, and breaks the journeys your customers experience, manifesting as confusion, inconsistency, and distrust.</p>
+        <p className="mb-4">For most small and mid-sized businesses, the issue is not a lack of tools; it is that every tool is working from its own version of the truth. Marketing has one view of the data, finance has another, operations have a third, and your AI assistants are being trained on whatever happens to be in front of them that day. The result is noise.</p>
+        <p>We work to identify what actually matters, where it lives, and how to measure it across every touchpoint and outcome. Then we structure every message, test and retest it until we're satisfied that it accurately reflects that truth.</p>
+      </>
+    )
   },
   {
-    id: "insight",
-    title: "The Insight (UI)",
-    content: "Customer insight is the bridge between data and intent. High-fidelity substrates for Agencies and SMEs require forensic clarity."
+    id: 'metric_02',
+    title: 'THE INSIGHT (UI)',
+    icon: 'insights',
+    content: (
+      <>
+        <p className="mb-4">Your customers are not short on information; they are exhausted, conflicted, and trying to make sense of a world where human judgment was quietly outsourced to dashboards and algorithms.</p>
+        <p className="mb-4">Somewhere along the way, big data and "best practice" replaced the simple act of sitting with people, listening properly, and learning what they actually need. The mismatch is simple: your customers are still human, but the systems around them now treat them as rows in a report.</p>
+        <p className="mb-4">This drift didn't come from bad intentions; it came from a culture that worships scale and efficiency, even when it quietly erases context, nuance, and basic empathy from everyday decisions. When every insight must fit a database, whole parts of your customers' reality simply stop being seen.</p>
+        <p>We aim to ground consumer insight in measurable reality using the right tools.</p>
+      </>
+    )
   },
   {
-    id: "experience",
-    title: "The Experience (UX)",
-    content: "Getting moments right means choosing evidence over hope. We fix fewer, better problems by auditing the friction within the creative lifecycle."
+    id: 'metric_03',
+    title: 'THE JOURNEY (CX)',
+    icon: 'near_me',
+    content: (
+      <>
+        <p className="mb-4">We try to get the moments that matter right. We use the right tools to get the job done, not the other way around.</p>
+        <p className="mb-4">Your team feels this every day: the same issues repeating in every channel and across every industry, the same escalations, the same misunderstandings cycling through. You are not short on data; you are short on a way to turn what is happening into fewer, better problems to fix.</p>
+        <p className="mb-4">We observe what people actually do—not what we are told—and continuously adjust the words and steps to surface where friction exists and where momentum builds. Every change has to earn its place by showing measurable progress toward clearer, more manageable problems. Over time, this reveals what actually works.</p>
+      </>
+    )
   }
 ];
 
 export const Foundations: React.FC = () => {
-  const [openPillar, setOpenPillar] = useState<string | null>("truth");
-
   return (
-    <section id="foundations" className="py-24 relative overflow-hidden bg-[#050505] border-t border-white/5">
+    <section id="foundations" className="py-24 bg-black border-t border-white/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <header className="mb-16 border-l-2 border-sky-500 pl-8">
-          <span className="text-sky-500 font-mono text-[10px] uppercase tracking-[0.5em] block mb-4">
-            Phase 1 // The Foundations
+        <header className="mb-20">
+          <span className="text-cyan-500 font-mono text-[10px] uppercase tracking-[0.5em] block mb-4">
+            Phase 01 // Foundations
           </span>
-          <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-none">
-            THE <span className="text-sky-500 font-black">MOTHERSHIP</span> SUBSTRATE
+          <h2 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter italic leading-none">
+            THE <span className="text-cyan-400">FOUNDATIONS</span>
           </h2>
         </header>
 
-        {/* DNA PILLARS ACCORDION */}
-        <div className="space-y-4 mb-24">
-          {dnaPillars.map((p) => (
-            <div
-              key={p.id}
-              className={`border border-slate-800/60 rounded-[2rem] overflow-hidden transition-all duration-500 ${
-                openPillar === p.id ? 'bg-slate-900/20 border-sky-500/30' : 'bg-transparent'
-              }`}
-            >
-              <button
-                onClick={() => setOpenPillar(openPillar === p.id ? null : p.id)}
-                className="w-full flex items-center justify-between p-8 text-left group"
-              >
-                <span className={`text-xl font-bold uppercase tracking-tight ${
-                  openPillar === p.id ? 'text-white' : 'text-slate-500'
-                }`}>
-                  {p.title}
-                </span>
-                <ChevronDown className={`w-5 h-5 transition-transform ${
-                  openPillar === p.id ? 'rotate-180 text-sky-500' : 'text-slate-700'
-                }`} />
-              </button>
-              {openPillar === p.id && (
-                <div className="px-8 pb-8 text-slate-400 text-sm leading-relaxed max-w-3xl animate-in fade-in slide-in-from-top-2">
-                  {p.content}
+        {/* METRICS GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-32">
+          {metrics.map((m) => (
+            <div key={m.id} className="flex flex-col">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-cyan-400 text-2xl">{m.icon}</span>
                 </div>
-              )}
+                <h3 className="text-xl font-bold text-white uppercase tracking-tight">{m.title}</h3>
+              </div>
+              <div className="text-white/60 text-sm leading-relaxed font-medium">
+                {m.content}
+              </div>
             </div>
           ))}
         </div>
 
-        {/* INTEGRATED VISUALIZER SUBSTRATE */}
-        <div className="border-t border-slate-800/40 pt-20">
-          <SentinelVisualizer />
+        {/* SENTINEL VISUALIZER SEATING */}
+        <div className="pt-24 border-t border-white/5">
+           <SentinelVisualizer />
         </div>
       </div>
     </section>

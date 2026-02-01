@@ -1,43 +1,49 @@
 import React from 'react';
 
 /**
- * TS-Λ3 // HARBOR A HERO SECTION [v6.2.0]
- * PRIMARY ACTIVATION: Global Intelligence, Experiential Activation
- * OPERATIONAL LATCH: LABS + ASK OLLIE dual navigation
+ * TS-Λ3 // HERO SUBSTRATE [v1.8.8 FREEZE]
+ * Spec: Vercel Frozen Baseline - White/Cyan-400 Title.
+ * Authority: hello@butterdime.com
  */
 export const Hero: React.FC = () => {
   return (
-    <section className="px-[20px] md:px-32 py-24 md:py-40 max-w-7xl mx-auto grid-bg">
-      <div className="flex flex-col gap-10 max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold tracking-widest uppercase w-fit">
-          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-          EST. 2025 // Experiential Communications
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+      {/* Background Pulse */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-900/20 via-black to-black" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 flex flex-col items-center text-center">
+        {/* Badge */}
+        <div className="mb-10 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+          <span className="text-white/40 text-[10px] font-mono uppercase tracking-[0.3em]">
+            EST. 2025 // EXPERIENTIAL COMMUNICATIONS
+          </span>
         </div>
-        
-        <h1 className="text-5xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-white uppercase">
-          Global Intelligence<br/>
-          <span className="text-primary">Experiential Activation.</span>
+
+        {/* Headline */}
+        <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter italic leading-[0.9] uppercase mb-10">
+          <span className="text-white block">GLOBAL INTELLIGENCE,</span>
+          <span className="text-cyan-400 block">EXPERIENTIAL ACTIVATION.</span>
         </h1>
-        
-        <p className="text-lg md:text-2xl text-slate-400 leading-relaxed font-light max-w-2xl uppercase tracking-tight">
+
+        {/* Body */}
+        <p className="text-white/60 text-lg md:text-xl leading-relaxed max-w-3xl mb-12 font-medium">
           We're a boutique agency and experience studio that actually cares if the campaign moves the needle. We plan campaigns based on real world results through digital, virtual and the physical spaces..with the messy bits in between.
         </p>
 
-        {/* CTA Buttons with Icons */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+        {/* CTAs */}
+        <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="/#labs"
-            className="flex items-center justify-center gap-2 px-8 py-3 bg-primary text-[#050505] font-bold uppercase text-sm rounded-lg hover:brightness-110 transition-all"
+            href="#foundations"
+            className="px-8 py-4 bg-cyan-500 text-black rounded-xl font-black text-xs uppercase tracking-widest hover:bg-cyan-400 transition-colors shadow-[0_0_20px_rgba(6,182,212,0.3)]"
           >
-            <span className="material-symbols-outlined text-base">science</span>
-            Labs
+            HIGHLIGHTS
           </a>
           <a
-            href="/#chat"
-            className="flex items-center justify-center gap-2 px-8 py-3 border border-white/20 text-white font-bold uppercase text-sm rounded-lg hover:border-primary hover:text-primary transition-all"
+            href="#labs"
+            className="px-8 py-4 border border-white/20 text-white/80 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-white/5 transition-colors flex items-center gap-2 group"
           >
-            <span className="material-symbols-outlined text-base">chat</span>
-            Ask Ollie
+            <span className="material-symbols-outlined text-[18px] text-cyan-400 group-hover:scale-110 transition-transform">smart_toy</span>
+            ASK OLLIE
           </a>
         </div>
       </div>

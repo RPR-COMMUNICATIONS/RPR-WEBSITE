@@ -35,13 +35,13 @@ export const Labs: React.FC = () => {
   ];
 
   return (
-    <section id="labs" className="py-24 bg-[#050505] border-t border-white/5">
+    <section id="labs" className="py-24 bg-black border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         <header className="mb-20 text-center">
           <h2 className="text-5xl font-black text-white uppercase tracking-tighter italic mb-4">
-            PROTOTYPE <span className="text-sky-500">ENCLAVE</span>
+            PROTOTYPE <span className="text-cyan-400">ENCLAVE</span>
           </h2>
-          <p className="text-slate-500 font-mono text-[10px] uppercase tracking-[0.4em]">
+          <p className="text-white/40 font-mono text-[10px] uppercase tracking-[0.4em]">
             Sovereign Evolution // Product Graduation Path
           </p>
         </header>
@@ -49,11 +49,11 @@ export const Labs: React.FC = () => {
           {tiers.map((t) => (
             <div
               key={t.id}
-              className="group bg-slate-900/10 border border-slate-800/50 p-8 rounded-[2.5rem] hover:border-sky-500/30 transition-all duration-700"
+              className="group bg-white/5 border border-white/10 p-8 rounded-[2.5rem] hover:border-cyan-500/30 transition-all duration-700"
             >
-              <t.icon className="w-6 h-6 text-sky-500 mb-6 group-hover:scale-110 transition-transform" />
+              <t.icon className="w-6 h-6 text-cyan-400 mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="text-lg font-bold uppercase mb-4 text-white">{t.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{t.desc}</p>
+              <p className="text-white/60 text-sm leading-relaxed">{t.desc}</p>
             </div>
           ))}
         </div>
