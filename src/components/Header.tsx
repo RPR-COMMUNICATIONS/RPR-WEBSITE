@@ -1,93 +1,78 @@
-/**
- * TS-Λ3 // GLOBAL HEADER // MINIMAL G IDENTITY [v6.1.0]
- * RECTIFIED: Purged KONTROL [G]. Only G Login (Identity Latch) remains.
- * RESPONSIVE: Hamburger menu locked to mobile viewports only.
- */
 import React, { useState } from 'react';
-import { useAuth } from '../contexts/AuthContext';
-import { Link } from 'react-router-dom';
-import RprMasterLogo from './brand/RprMasterLogo';
+import { Menu, X, Globe } from 'lucide-react';
 
+/**
+ * TS-Λ3 // HEADER SUBSTRATE [v1.8.2]
+ * Mission: Mobile Logo Alignment & 60% Transparency Overlay.
+ * Authority: hello@butterdime.com
+ */
 export const Header: React.FC = () => {
-  const { user, signIn } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
-    { name: 'FOUNDATIONS', href: '/#foundations' },
-    { name: 'METHODS', href: '/#methods' },
-    { name: 'PROCESS', href: '/#process' },
-    { name: 'OVERWATCH', href: '/#overwatch' },
-  ];
-
   return (
-    <header className="fixed top-0 w-full z-[100] bg-black/80 backdrop-blur-md border-b border-white/10 h-[108px]">
-      <div className="max-w-7xl mx-auto h-full w-full flex items-center justify-between px-4 md:px-12 relative z-10">
+    <header className="fixed top-0 left-0 right-0 z-[100] bg-black/40 backdrop-blur-md border-b border-white/5">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-        {/* Left: Branding */}
-        <div className="flex items-center gap-4 py-2">
-          <Link to="/">
-            <RprMasterLogo />
-          </Link>
+        {/* 1. LOGO SUBSTRATE (MISSION: Mobile size & alignment) */}
+        <div className="flex items-center gap-3 h-full">
+          <div className="flex items-center justify-center p-1.5 bg-slate-900 border border-slate-800 rounded-lg">
+            {/* Logo size reduced to h-6 on mobile, restored to h-10 on sm breakpoint */}
+            <img
+              src="/rpr-logo-icon.svg"
+              alt="RPR LOGO"
+              className="w-6 h-6 sm:w-10 sm:h-10 transition-all duration-500"
+            />
+          </div>
+          <div className="hidden sm:flex flex-col">
+            <span className="text-lg font-black text-white italic tracking-tighter uppercase leading-none">
+              RPR<span className="text-sky-500">COMMS</span>
+            </span>
+            <span className="text-[7px] font-mono text-slate-500 uppercase tracking-widest mt-1">
+              Sovereign Identity // v1.8.2
+            </span>
+          </div>
         </div>
 
-        {/* Center: Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8 text-[10px] font-black tracking-[0.2em] uppercase text-zinc-500">
-          {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="hover:text-white transition-colors font-sans">
-              {link.name}
-            </a>
+        {/* 2. DESKTOP NAV */}
+        <nav className="hidden md:flex items-center gap-8">
+          {["THE FOUNDATIONS", "THE METHODS", "THE OVERWATCH", "LABS"].map((label) => (
+            <button key={label} className="text-[9px] font-black text-slate-400 hover:text-sky-400 tracking-[0.2em] transition-colors uppercase">
+              {label}
+            </button>
           ))}
+          <div className="w-px h-4 bg-white/10 mx-2" />
+          <Globe className="w-4 h-4 text-sky-500" />
         </nav>
 
-        {/* Right: Identity Latch */}
-        <div className="flex items-center gap-x-3 md:gap-4">
-          {/* G-Button: Active only when user is unauthenticated */}
-          {!user && (
-            <button 
-              onClick={signIn} 
-              className="flex-shrink-0 transition-all hover:opacity-80 p-2 group" 
-              aria-label="Identity Latch"
-            >
-              <span className="material-symbols-outlined text-white text-3xl group-hover:text-cyan-400 transition-colors">
-                account_circle
-              </span>
-            </button>
-          )}
-
-          {/* Identity Avatar: Active when session is live */}
-          {user && (
-            <div className="w-10 h-10 rounded-full border border-cyan-500/50 overflow-hidden shadow-[0_0_15px_rgba(0,224,255,0.3)]">
-              <img 
-                src={user.photoURL || ''} 
-                alt={user.displayName || 'User'} 
-                className="w-full h-full object-cover" 
-              />
-            </div>
-          )}
-
-          {/* Mobile Menu Toggle (Locked to lg:hidden) */}
-          <button
-            className="lg:hidden w-10 h-10 flex items-center justify-center text-zinc-500 hover:text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <span className="material-symbols-outlined">{isMenuOpen ? 'close' : 'menu'}</span>
-          </button>
-        </div>
+        {/* 3. MOBILE TRIGGER */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden p-2 text-slate-400 hover:text-white transition-colors"
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* 4. MOBILE OVERLAY (MISSION: 60% Transparency Adjustment) */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[108px] bg-black z-50 p-6 flex flex-col gap-8 animate-in fade-in slide-in-from-top-4">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-2xl font-black tracking-widest text-zinc-500 hover:text-cyan-500 uppercase transition-colors font-sans"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
+        <div className="fixed inset-0 z-40 md:hidden flex flex-col items-center justify-center animate-in fade-in duration-300">
+          {/* Background adjusted to 60% transparency (bg-slate-950/60) per Mission Brief */}
+          <div
+            className="absolute inset-0 bg-slate-950/60 backdrop-blur-xl"
+            onClick={() => setIsMenuOpen(false)}
+          />
+
+          <nav className="relative z-50 flex flex-col items-center gap-10">
+            {["THE FOUNDATIONS", "THE METHODS", "THE OVERWATCH", "LABS"].map((label) => (
+              <button
+                key={label}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-2xl font-black text-white italic tracking-tighter hover:text-sky-500 transition-all uppercase"
+              >
+                {label}
+              </button>
+            ))}
+          </nav>
         </div>
       )}
     </header>
