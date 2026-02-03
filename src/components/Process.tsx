@@ -10,7 +10,7 @@ export const Process: React.FC = () => {
     },
     {
       label: 'DELIVER',
-      icon: 'bolt',
+      icon: 'send',
       description: 'Execution with high-fidelity accuracy across the Singapore harbor.',
       output: 'Production Artifacts // Live Revised Node'
     },
@@ -22,7 +22,7 @@ export const Process: React.FC = () => {
     },
     {
       label: 'IMPROVE',
-      icon: 'autorenew',
+      icon: 'build',
       description: 'Refining the loop for next cycle based on forensic telemetry.',
       output: 'Refined Substrate // Optimized Workflow'
     }
@@ -47,12 +47,13 @@ export const Process: React.FC = () => {
             >
               {/* UNIFIED CONTAINER SPECIFICATION */}
               <div className="rounded-2xl bg-black/80 shadow-[0_0_40px_rgba(0,0,0,0.6)] p-3 mb-2">
-                <div className="w-16 h-16 rounded-2xl bg-neutral-900 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-cyan-400 text-3xl">
+                <div className="w-10 h-10 rounded-2xl bg-neutral-900 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-cyan-400 text-2xl">
                     {step.icon}
                   </span>
                 </div>
               </div>
+
 
               <div className="space-y-4">
                 <h4 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tight font-sans">

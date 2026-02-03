@@ -85,11 +85,14 @@ export const Foundations: React.FC = () => {
               >
                 <header className="mb-4 text-left">
                   <div className="mb-4">
-                    <div className="w-16 h-16 rounded-2xl bg-black/80 shadow-[0_0_40px_rgba(0,0,0,0.6)] p-3 flex items-center justify-center">
-                      <span className="material-symbols-outlined text-cyan-400 text-3xl">
-                        {metric.icon}
-                      </span>
+                    <div className="rounded-2xl bg-black/80 shadow-[0_0_40px_rgba(0,0,0,0.6)] p-3">
+                      <div className="w-10 h-10 rounded-2xl bg-neutral-900 flex items-center justify-center">
+                        <span className="material-symbols-outlined text-cyan-400 text-2xl">
+                          {metric.icon}
+                        </span>
+                      </div>
                     </div>
+
                   </div>
                   <h3 className="text-xl font-bold text-white tracking-tight">
                     {metric.title}
@@ -106,9 +109,8 @@ export const Foundations: React.FC = () => {
 
                 {/* COLLAPSIBLE DETAILS */}
                 <div
-                  className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-                    isOpen ? 'max-h-[1500px] mt-4' : 'max-h-0'
-                  }`}
+                  className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${isOpen ? 'max-h-[1500px] mt-4' : 'max-h-0'
+                    }`}
                 >
                   <div className="text-sm text-white/60 leading-relaxed space-y-4 whitespace-pre-line">
                     {metric.details}

@@ -65,13 +65,14 @@ export const Methods: React.FC = () => {
               className="bg-black rounded-3xl py-10 px-8 flex flex-col items-center text-center"
             >
               {/* Icon tile with glow */}
-              <div className="mb-6 rounded-2xl bg-black/80 shadow-[0_0_40px_rgba(0,0,0,0.6)] p-6">
-                <div className="w-16 h-16 rounded-2xl bg-neutral-900 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-white text-3xl">
+              <div className="mb-6 rounded-2xl bg-black/80 shadow-[0_0_40px_rgba(0,0,0,0.6)] p-3">
+                <div className="w-10 h-10 rounded-2xl bg-neutral-900 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-white text-2xl">
                     {m.icon}
                   </span>
                 </div>
               </div>
+
 
               <h3 className="text-lg font-semibold tracking-[0.5em] text-white mb-2">
                 {m.title}

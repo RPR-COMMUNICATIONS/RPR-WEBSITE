@@ -14,16 +14,30 @@ interface MermaidViewerProps {
 export const MermaidViewer: React.FC<MermaidViewerProps> = ({
   definition,
   className = '',
-  id = `mermaid-${Math.random().toString(36).substr(2, 9)}`
+  id: propId
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Create a stable ID if none provided to prevent re-render loops
+  const [id] = useState(() => propId || `mermaid-${Math.random().toString(36).substr(2, 9)}`);
 
   useEffect(() => {
+    let isMounted = true;
+    const timeout = setTimeout(() => {
+      if (isMounted && isLoading) {
+        setIsLoading(false);
+        setError('Diagram render timeout');
+      }
+    }, 5000); // 5s timeout
+
     const render = async () => {
       if (!containerRef.current || !definition.trim()) return;
       try {
         setIsLoading(true);
+        setError(null);
+
         mermaid.initialize({
           startOnLoad: false,
           theme: 'dark',
@@ -39,15 +53,27 @@ export const MermaidViewer: React.FC<MermaidViewerProps> = ({
             useMaxWidth: true
           }
         });
+
         const { svg } = await mermaid.render(id, definition);
-        if (containerRef.current) containerRef.current.innerHTML = svg;
+        if (isMounted && containerRef.current) {
+          containerRef.current.innerHTML = svg;
+        }
       } catch (err) {
         console.error('Mermaid Render Error:', err);
+        if (isMounted) setError('Diagram render error - check console');
       } finally {
-        setIsLoading(false);
+        if (isMounted) {
+          setIsLoading(false);
+          clearTimeout(timeout);
+        }
       }
     };
+
     render();
+    return () => {
+      isMounted = false;
+      clearTimeout(timeout);
+    };
   }, [definition, id]);
 
   return (
@@ -60,10 +86,17 @@ export const MermaidViewer: React.FC<MermaidViewerProps> = ({
           </p>
         </div>
       )}
+      {error && !isLoading && (
+        <div className="h-80 flex flex-col items-center justify-center bg-red-950/20 border border-red-900/50 rounded-3xl p-6 text-center">
+          <span className="material-symbols-outlined text-red-500 text-3xl mb-4">error</span>
+          <p className="text-red-400 font-mono text-xs uppercase tracking-widest">{error}</p>
+        </div>
+      )}
       <div
         ref={containerRef}
-        className={isLoading ? 'hidden' : 'block transition-all duration-1000'}
+        className={(isLoading || error) ? 'hidden' : 'block transition-all duration-1000'}
       />
     </div>
   );
 };
+

@@ -50,11 +50,14 @@ export const Labs: React.FC = () => {
               className="group bg-slate-900/10 border border-slate-800/50 p-8 rounded-[2.5rem] hover:border-sky-500/30 transition-all duration-700"
             >
               <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-black/80 shadow-[0_0_40px_rgba(0,0,0,0.6)] p-3 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-cyan-400 text-4xl">
-                    {t.icon}
-                  </span>
+                <div className="rounded-2xl bg-black/80 shadow-[0_0_40px_rgba(0,0,0,0.6)] p-3">
+                  <div className="w-10 h-10 rounded-2xl bg-neutral-900 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-cyan-400 text-2xl">
+                      {t.icon}
+                    </span>
+                  </div>
                 </div>
+
               </div>
               <h3 className="text-lg font-bold uppercase mb-4 text-white">{t.title}</h3>
               <p className="text-slate-400 text-sm leading-relaxed">{t.desc}</p>

@@ -60,6 +60,13 @@ export const Header: React.FC = () => {
           ))}
         </nav>
 
+        {/* TASK 1: DESKTOP CONTROLS */}
+        <div className="hidden lg:flex items-center gap-4">
+          <span className="text-xs font-mono uppercase tracking-wider text-white/60">KONTROL</span>
+          <span className="material-symbols-outlined text-white text-xl hidden lg:block">account_circle</span>
+        </div>
+
+
         {/* 3. MOBILE TRIGGER */}
         <div className="flex items-center gap-3 lg:hidden">
           {/* G icon (no auth wiring yet) */}
