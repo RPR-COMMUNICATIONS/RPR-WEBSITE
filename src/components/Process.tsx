@@ -21,7 +21,7 @@ export const Process: React.FC = () => {
       output: 'Forensic Performance Audit'
     },
     {
-      label: 'REPEAT',
+      label: 'IMPROVE',
       icon: 'autorenew',
       description: 'Refining the loop for next cycle based on forensic telemetry.',
       output: 'Refined Substrate // Optimized Workflow'

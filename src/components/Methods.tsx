@@ -18,35 +18,28 @@ export interface IkonMeta {
 export const Methods: React.FC = () => {
   const primaryIkons: IkonMeta[] = [
     {
-      name: 'ASK',
+      name: 'DISCOVER',
       subtitle: 'Strategic Planning',
       description: 'Define problem, map consumer journey, set success metrics.',
       icon: 'lightbulb'
     },
     {
-      name: 'PAY',
+      name: 'DELIVER',
       subtitle: 'Client Approval',
       description: 'Align on risks, timelines and budgets; get sign-off.',
       icon: 'heart_check'
     },
     {
-      name: 'PLAN',
+      name: 'MEASURE',
       subtitle: 'Planning',
       description: 'Develop concepts, plan channels, build the roadmap.',
       icon: 'layers'
     },
     {
-      name: 'PLAY',
+      name: 'IMPROVE',
       subtitle: 'Execution',
       description: 'Produce assets, launch and monitor performance in market.',
       icon: 'play_for_work'
-    },
-    {
-      name: 'REPEAT',
-      subtitle: 'Post Analysis',
-      description: 'Refining the loop for next cycle based on forensic telemetry.',
-      icon: 'cycle',
-      isRefiner: true // Visual distinction for the loop refiner node
     }
   ];
 

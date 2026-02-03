@@ -7,38 +7,35 @@ import React from 'react';
  */
 export const Hero: React.FC = () => {
   return (
-    <section className="px-[20px] md:px-32 py-24 md:py-40 max-w-7xl mx-auto grid-bg">
-      <div className="flex flex-col gap-10 max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold tracking-widest uppercase w-fit">
-          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-          EST. 2025 // Experiential Communications
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+      <div className="max-w-5xl mx-auto text-center space-y-8">
+        <div className="inline-block border border-white/10 rounded-full px-4 py-1.5 font-mono text-[10px] tracking-[0.15em] uppercase font-medium text-white/70">
+          EST. 2025 // EXPERIENTIAL COMMUNICATIONS
         </div>
-        
-        <h1 className="text-5xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-white uppercase">
-          Global Intelligence<br/>
-          <span className="text-primary">Experiential Activation.</span>
+
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-tight">
+          <span className="text-white">GLOBAL INTELLIGENCE,</span>
+          <br />
+          <span className="text-cyan-400">EXPERIENTIAL ACTIVATION.</span>
         </h1>
-        
-        <p className="text-lg md:text-2xl text-slate-400 leading-relaxed font-light max-w-2xl uppercase tracking-tight">
-          We're a boutique agency and experience studio that actually cares if the campaign moves the needle. We plan campaigns based on real world results through digital, virtual and the physical spaces..with the messy bits in between.
+
+        <p className="max-w-3xl mx-auto text-base lg:text-lg text-white/60 leading-relaxed">
+          WE'RE A BOUTIQUE AGENCY AND EXPERIENCE STUDIO THAT ACTUALLY CARES IF THE CAMPAIGN MOVES THE NEEDLE. WE PLAN CAMPAIGNS BASED ON REAL WORLD RESULTS THROUGH DIGITAL, VIRTUAL AND THE PHYSICAL SPACES..WITH THE MESSY BITS IN BETWEEN.
         </p>
 
-        {/* CTA Buttons with Icons */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+        <div className="flex items-center justify-center gap-4">
           <a
-            href="/#labs"
-            className="flex items-center justify-center gap-2 px-8 py-3 bg-primary text-[#050505] font-bold uppercase text-sm rounded-lg hover:brightness-110 transition-all"
+            href="https://rprcomms.com/labs"
+            className="inline-flex items-center gap-2 bg-cyan-500 text-black px-6 py-3 rounded hover:bg-cyan-400 transition-colors text-sm font-semibold tracking-wider uppercase"
           >
-            <span className="material-symbols-outlined text-base">science</span>
-            Labs
+            HIGHLIGHTS
           </a>
-          <a
-            href="/#chat"
-            className="flex items-center justify-center gap-2 px-8 py-3 border border-white/20 text-white font-bold uppercase text-sm rounded-lg hover:border-primary hover:text-primary transition-all"
+          <button
+            className="inline-flex items-center gap-2 bg-transparent border border-white/20 text-white/80 px-6 py-3 rounded hover:border-white/40 hover:text-white transition-colors text-sm font-semibold tracking-wider uppercase"
           >
-            <span className="material-symbols-outlined text-base">chat</span>
-            Ask Ollie
-          </a>
+            <span className="material-symbols-outlined text-sky-500">smart_toy</span>
+            ASK OLLIE
+          </button>
         </div>
       </div>
     </section>
