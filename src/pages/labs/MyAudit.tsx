@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  ShieldCheck, 
   BarChart3, 
   Activity, 
   ArrowLeft, 
-  Fingerprint, 
   Database, 
   AlertCircle,
   Clock
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SentinelIcon from '../../components/icons/the_sentinel_protocol.svg';
+import OverwatchIcon from '../../components/icons/overwatch.svg';
+import KnightIcon from '../../components/icons/rpr-icon-chess_knight.svg';
 
 /**
- * TS-Λ3 // MYAUDIT CLIENT INSTANCE [v1.0.0]
+ * TS-Λ3 // MYAUDIT CLIENT INSTANCE [v2.1.0]
  * Path: /labs/myaudit
  * Identity: Standalone Forensic reporting for Malaysian SMEs.
+ * Bauhaus Icon Alignment: Unified img-based rendering.
  */
 
 export const MyAudit: React.FC = () => {
@@ -27,10 +29,10 @@ export const MyAudit: React.FC = () => {
   }, []);
 
   const metrics = [
-    { label: "Compliance Health", value: "99.8%", status: "OPTIMAL", icon: ShieldCheck },
-    { label: "Anomaly Detection", value: "0.02%", status: "LOW", icon: AlertCircle },
-    { label: "Ledger Mirroring", value: "SYNCED", status: "STABLE", icon: Database },
-    { label: "Audit Readiness", value: "TIER 1", status: "CERTIFIED", icon: Fingerprint }
+    { label: "Compliance Health", value: "99.8%", status: "OPTIMAL", icon: SentinelIcon },
+    { label: "Anomaly Detection", value: "0.02%", status: "LOW", lucide: AlertCircle },
+    { label: "Ledger Mirroring", value: "SYNCED", status: "STABLE", lucide: Database },
+    { label: "Audit Readiness", value: "TIER 1", status: "CERTIFIED", icon: KnightIcon }
   ];
 
   return (
@@ -84,7 +86,16 @@ export const MyAudit: React.FC = () => {
             {metrics.map((m) => (
               <div key={m.label} className="bg-slate-900/20 border border-slate-800/60 p-6 rounded-[2rem] hover:border-sky-500/30 transition-all duration-500 group">
                 <div className="flex items-center justify-between mb-6">
-                  <m.icon className="w-5 h-5 text-sky-500 opacity-50 group-hover:opacity-100 transition-opacity" />
+                  {m.icon ? (
+                    <img
+                      src={m.icon}
+                      className="w-5 h-5 object-contain opacity-50 group-hover:opacity-100 transition-opacity invert brightness-200"
+                      alt={m.label}
+                    />
+                  ) : m.lucide ? (() => {
+                    const Icon = m.lucide;
+                    return <Icon className="w-5 h-5 text-sky-500 opacity-50 group-hover:opacity-100 transition-opacity" />;
+                  })() : null}
                   <span className="text-[8px] font-black text-slate-500 tracking-[0.2em]">{m.status}</span>
                 </div>
                 <h3 className="text-slate-500 text-[10px] font-mono uppercase tracking-[0.2em] mb-1">{m.label}</h3>
@@ -120,17 +131,35 @@ export const MyAudit: React.FC = () => {
                 <div className="p-6 rounded-2xl border border-slate-800/40 bg-slate-900/5 hover:border-sky-500/20 transition-all">
                   <h4 className="text-[10px] font-black text-sky-400 uppercase tracking-widest mb-3">Regional Compliance</h4>
                   <ul className="text-slate-500 text-[10px] font-mono space-y-2 uppercase">
-                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-sky-500" /> LHDN Integration Active</li>
-                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-sky-500" /> SST Audit-Ready</li>
-                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-sky-500" /> Digital Ledger Sovereignty</li>
+                    <li className="flex items-center gap-2">
+                      <img src={OverwatchIcon} className="w-2 h-2 object-contain invert brightness-200" alt="compliance" />
+                      LHDN Integration Active
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <img src={OverwatchIcon} className="w-2 h-2 object-contain invert brightness-200" alt="compliance" />
+                      SST Audit-Ready
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <img src={OverwatchIcon} className="w-2 h-2 object-contain invert brightness-200" alt="compliance" />
+                      Digital Ledger Sovereignty
+                    </li>
                   </ul>
                 </div>
                 <div className="p-6 rounded-2xl border border-slate-800/40 bg-slate-900/5 hover:border-sky-500/20 transition-all">
                   <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Forensic Security</h4>
                   <ul className="text-slate-500 text-[10px] font-mono space-y-2 uppercase">
-                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-700" /> SG-CANONICAL-2026 Tagged</li>
-                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-700" /> End-to-End Encryption</li>
-                    <li className="flex items-center gap-2"><div className="w-1 h-1 rounded-full bg-slate-700" /> Harbor-C Isolation Active</li>
+                    <li className="flex items-center gap-2">
+                      <img src={SentinelIcon} className="w-2 h-2 object-contain invert brightness-200" alt="security" />
+                      SG-CANONICAL-2026 Tagged
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <img src={SentinelIcon} className="w-2 h-2 object-contain invert brightness-200" alt="security" />
+                      End-to-End Encryption
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <img src={SentinelIcon} className="w-2 h-2 object-contain invert brightness-200" alt="security" />
+                      Harbor-C Isolation Active
+                    </li>
                   </ul>
                 </div>
               </div>

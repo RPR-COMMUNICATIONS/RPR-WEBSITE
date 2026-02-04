@@ -1,6 +1,6 @@
 /**
- * TS-Λ3 // C4 ARCHITECTURE DEFINITIONS [v1.8.2]
- * Seating: Agency Divisions & Prototype graduation paths.
+ * TS-Λ3 // C4 ARCHITECTURE DEFINITIONS [v2.1.0]
+ * Platform: RPR KONTROL | System: THE MOTHERSHIP
  */
 
 export interface C4Diagram {
@@ -13,96 +13,94 @@ export interface C4Diagram {
 export const sentinelDiagrams: Record<string, C4Diagram> = {
   l1_overwatch: {
     id: 'l1-overwatch',
-    title: 'L1: The Apex - OVERWATCH Command',
-    description: 'Apex Authority & Strategic Intent mapping.',
+    title: 'L1: OVERWATCH COMMAND',
+    description: 'Sovereign Governance: The Sentinel Protocol',
     definition: `flowchart TD
-    subgraph L1_Apex ["🛡️ THE APEX"]
-        OW["🛡️ THE OVERWATCH<br/>(Founder Authority)<br/>System 5"]
+    OW["🛡️ OVERWATCH COMMAND<br/>(Founder Authority + Advisor Interface)"]
+    subgraph L2_Network ["THE QUANTUM NETWORK"]
+        Brain["⚙️ RPR KONTROL"]
     end
-    subgraph L2_Operational ["Operational Substrate"]
-        Brain["⚙️ RPR KONTROL BRAIN<br/>(SENTINEL Engine)<br/>System 3-4 Bridge"]
-    end
-    OW -- "Strategic Intent" --> Brain
-    Brain -- "State Sync" --> Notion["📋 Notion"]
-    Brain -- "Code Gates" --> GitHub["🔒 GitHub"]
-    Brain -- "Persistence" --> Firestore["🗄️ Firestore"]
-    classDef authority fill:#8B0000,stroke:#dc2626,color:#fff,stroke-width:3px
-    classDef core fill:#1a4d7a,stroke:#3b82f6,color:#fff
-    class OW authority
-    class Brain core`
+    OW -- "Inquiry & Approval" --> Brain
+    Brain -- "Governed Options" --> OW
+
+    classDef default font-family:Inter,font-weight:700,color:#121212,fill:#dcd7c9,stroke:#708090,stroke-width:2px;
+    classDef cmd fill:#e6b319,stroke:#121212,color:#121212,stroke-width:4px;
+    class OW cmd;
+    linkStyle default stroke:#708090,stroke-width:2px;`
   },
   l2_elders: {
-    id: 'l2-elders-divisions',
-    title: 'L2: Elders, Divisions & Brain',
-    description: 'Operational seating of System 3 units and advisory triad.',
+    id: 'l2-quantum-network',
+    title: 'L2: THE QUANTUM NETWORK',
+    description: 'Shared State: Architect, Engineer, Sentinel',
     definition: `graph TB
-    subgraph Elders ["The Elders (Advisory Layer)"]
+    subgraph Matrix ["SHARED_STATE_DECISION_MATRIX"]
         direction LR
-        PERP["🐎 Perplexity<br/>Architect"]
-        GEM["♟️ Gemini<br/>Engineer"]
-        SENT_E["🏰 Sentinel<br/>Governor"]
+        ARCH["🐎 ARCHITECT"]
+        ENG["♟️ ENGINEER"]
+        SENT["🏰 SENTINEL"]
     end
-    subgraph Agency_Divisions ["Agency Divisions (System 3)"]
+    subgraph L3_SubTier ["THE AGENCY & THE FORGE"]
         direction TB
-        subgraph Strategic_Creative ["Strategic & Creative"]
-            STRAT["♟️ Strategy"]
-            CREATIVE["🎨 Creative"]
-            ART["🖼️ Art"]
-        end
-        subgraph Technical_Ops ["Technical & Operations"]
-            DEV["💻 Development"]
-            VIDEO["🎬 Video Lab"]
-            DESIGN["📐 Design"]
-        end
+        AGENCY["THE AGENCY"]
+        FORGE["THE FORGE"]
     end
-    Elders --> Agency_Divisions
-    Agency_Divisions --> Brain["⚙️ KONTROL Brain"]
-    classDef elderStyle fill:#4a0080,stroke:#7c3aed,color:#fff
-    classDef divisionStyle fill:#1a5490,stroke:#3b82f6,color:#fff
-    class PERP,GEM,SENT_E elderStyle
-    class STRAT,CREATIVE,ART,VIDEO,DESIGN,DEV divisionStyle`
+    Matrix === L3_SubTier
+
+    classDef default font-family:Inter,font-weight:700,color:#121212,fill:#dcd7c9,stroke:#708090,stroke-width:2px;
+    classDef triad fill:#e6b319,stroke:#121212,color:#121212,stroke-width:2px;
+    class ARCH,ENG,SENT triad;
+    style Matrix fill:none,stroke:#708090,stroke-dasharray: 5 5;
+    linkStyle default stroke:#708090,stroke-width:2px;`
   },
   l3_forge: {
-    id: 'l3-forge',
-    title: 'L3: The Forge - Internal Orchestration',
-    description: 'Intelligence Labs (Jules) and logic building.',
+    id: 'l3-agency-forge',
+    title: 'L3: THE AGENCY & THE FORGE',
+    description: 'Working Departments & Internal Orchestration',
     definition: `flowchart TD
     subgraph Forge ["⚒️ THE FORGE"]
         direction TB
-        subgraph Intelligence ["🧪 Intelligence Labs"]
-            Jules["🤖 Jules<br/>Orchestration Engine"]
-            Cursor["⌨️ Cursor IDE"]
+        Jules["🤖 JULES"]
+        Cursor["⌨️ CURSOR"]
+    end
+    subgraph Agency ["THE AGENCY"]
+        direction TB
+        subgraph Creative_Cluster ["Creative Cluster"]
+            STRAT["♟️ Strategy"]
+            CREAT["🎨 Creative"]
+            ART["🖼️ Art"]
+            DES["📐 Design"]
         end
-        subgraph Prototyping ["⚡ Module Staging"]
-            AIStudio["🎨 Google AI Studio"]
-            FireStudio["🔥 Firebase Studio"]
+        subgraph Delivery_Cluster ["Delivery Cluster"]
+            DEV["💻 Development"]
+            VID["🎬 Video Lab"]
         end
     end
-    Jules -- "Orchestrates" --> Cursor
-    Jules -- "Stages" --> FireStudio
-    AIStudio -- "Prototypes" --> FireStudio
-    classDef labStyle fill:#4a90a4,stroke:#0ea5e9,color:#fff,stroke-width:2px
-    classDef protoStyle fill:#7c2d12,stroke:#f97316,color:#fff,stroke-width:2px
-    class Jules,Cursor labStyle
-    class AIStudio,FireStudio protoStyle`
+    Forge -- "Orchestration" --> Agency
+
+    classDef default font-family:Inter,font-weight:700,color:#121212,fill:#dcd7c9,stroke:#708090,stroke-width:2px;
+    classDef forgeTools fill:#e6b319,stroke:#121212,color:#121212;
+    class Jules,Cursor forgeTools;
+    linkStyle default stroke:#708090,stroke-width:2px;`
   },
   l4_instances: {
-    id: 'l4-instances',
-    title: 'L4: Instances & Migration',
-    description: 'Standalone child instances and product graduation.',
+    id: 'l4-solutions',
+    title: 'L4: SOLUTIONS & INSTANCES',
+    description: 'Specialist Agents & Sovereign Solutions',
     definition: `flowchart TD
-    subgraph Client_Instances ["Client Instances"]
-        Labyrinth["🌀 Labyrinth"]
-        MyAudit["📊 MYAUDIT"]
+    subgraph Solutions ["SOVEREIGN SOLUTIONS"]
+        direction LR
+        subgraph Standalone ["Standalone"]
+            MyAudit["📊 MYAUDIT"]
+            Lab["🌀 LABYRINTH"]
+        end
+        subgraph InHouse ["In-House"]
+            Verify["🛡️ RPR VERIFY"]
+        end
     end
-    subgraph InHouse ["In-House Operations"]
-        Verify["🛡️ RPR VERIFY"]
-        Creative["🎬 Creative Suite<br/>(Logo/IKON/Video)"]
-    end
-    Brain["⚙️ KONTROL Brain"] -- "Graduate" --> Creative
-    classDef clientStyle fill:#1a4d7a,stroke:#3b82f6,color:#fff
-    classDef inhouseStyle fill:#450a0a,stroke:#ef4444,color:#fff
-    class Labyrinth,MyAudit clientStyle
-    class Creative,Verify inhouseStyle`
+
+    classDef default font-family:Inter,font-weight:700,color:#121212,fill:#dcd7c9,stroke:#708090,stroke-width:2px;
+    classDef active fill:#e6b319,stroke:#121212,color:#121212;
+    class MyAudit,Lab,Verify active;
+    linkStyle default stroke:#708090,stroke-width:2px;`
   }
 };

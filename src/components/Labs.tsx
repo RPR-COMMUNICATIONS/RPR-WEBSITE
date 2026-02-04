@@ -1,9 +1,9 @@
 import React from 'react';
 
 /**
- * TS-Λ3 // LABS SUBSTRATE [v1.8.7]
- * Resolution: Aligned with 4-Tier graduation narrative and Foundations styling.
- * Alternating: bg-[#050505]
+ * TS-Λ3 // LABS SUBSTRATE [v2.1.0]
+ * Resolution: Aligned with 4-Tier graduation narrative and Bauhaus icon contract.
+ * Authority: hello@butterdime.com
  */
 export const Labs: React.FC = () => {
   const tiers = [

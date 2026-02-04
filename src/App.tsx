@@ -4,6 +4,7 @@ import { WorkflowProvider } from "./contexts/WorkflowContext";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Home } from "./components/Home";
+import { MyAudit } from "./pages/labs/MyAudit";
 import { LegalStub } from "./components/LegalStub";
 import { HashRedirect } from "./components/HashRedirect";
 import { BackToTop } from "./components/BackToTop";
@@ -36,6 +37,7 @@ export default function App() {
                   <Route path="/contact" element={<HashRedirect to="/#methods" />} />
                   {/* Dynamic legal document routing */}
                   <Route path="/legal/:docId" element={<LegalStub />} />
+                  <Route path="/labs/myaudit" element={<MyAudit />} />
                   {/* Catch-all redirect to home */}
                   <Route path="*" element={<HashRedirect to="/" />} />
                 </Routes>

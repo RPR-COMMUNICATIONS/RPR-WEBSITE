@@ -1,9 +1,9 @@
 import React from 'react';
 
 /**
- * TS-Λ3 // OVERWATCH SUBSTRATE [v1.8.7]
- * Mission: Align style tokens with THE FOUNDATIONS and LABS.
- * Style: py-24, bg-[#050505], font-black italic headers, rounded-[2.5rem].
+ * TS-Λ3 // OVERWATCH SUBSTRATE [v2.1.0]
+ * Mission: Strategic Authority & Founder Interface.
+ * Authority: hello@butterdime.com
  */
 export const Overwatch: React.FC = () => {
   return (
@@ -22,10 +22,10 @@ export const Overwatch: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-8">
-            <p className="text-slate-400 text-sm leading-relaxed max-w-xl font-sans">
-              The Overwatch substrate represents the final sovereign decision authority.
-              It governs the graduation path from The Forge into production tools, ensuring
-              strategic intent remains seated in forensic reality.
+            <p className="text-slate-400 text-sm leading-relaxed max-w-xl font-sans uppercase tracking-tight">
+              The Overwatch substrate is the final sovereign decision authority.
+              It serves as the interface between Founder Authority and the Advisor loop,
+              governing the graduation of prototypes from The Forge into production-ready sovereign solutions.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -50,8 +50,9 @@ export const Overwatch: React.FC = () => {
                 monitor_heart
               </span>
               <div>
-                <span className="text-[9px] font-mono text-red-400 uppercase tracking-widest block mb-2">Authority Status // Active</span>
+                <span className="text-[9px] font-mono text-red-400 uppercase tracking-widest block mb-2">Operational Status // LATCHED</span>
                 <p className="text-2xl font-bold text-white uppercase italic tracking-tight leading-none">Sovereign Gatekeeper</p>
+                <p className="text-slate-600 text-[10px] mt-4 font-mono uppercase">Audit ID: CLEANUP-STRIKE-v2.1.0-COMPLETE</p>
               </div>
             </div>
           </div>
