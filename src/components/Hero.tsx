@@ -1,42 +1,54 @@
 import React from 'react';
 
 /**
- * TS-Λ3 // HARBOR A HERO SECTION [v6.2.0]
- * PRIMARY ACTIVATION: Global Intelligence, Experiential Activation
- * OPERATIONAL LATCH: LABS + ASK OLLIE dual navigation
+ * TS-Λ3 // HERO SUBSTRATE [v1.8.9 HYBRID - RECOVERY]
+ * Layout: Left Aligned Content (v1.8.8 Spec)
+ * Headline: White / Cyan-400 Italic (v1.8.8 Spec)
+ * Copy: The "Needle Mandate" (Authoritative Content)
+ * CTA: LABS (Linked to #labs)
+ * Authority: [hello@butterdime.com](mailto:hello@butterdime.com)
  */
+
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-      <div className="max-w-5xl mx-auto text-center space-y-8">
-        <div className="inline-block border border-white/10 rounded-full px-4 py-1.5 font-mono text-[10px] tracking-[0.15em] uppercase font-medium text-white/70">
-          EST. 2025 // EXPERIENTIAL COMMUNICATIONS
+    <section className="relative min-h-screen flex items-center justify-start bg-black overflow-hidden pt-20 px-6 lg:px-24 text-left">
+      {/* Background Gradient Pulse */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black pointer-events-none opacity-50" />
+
+      <div className="max-w-5xl relative z-10 flex flex-col items-start">
+        {/* BADGE */}
+        <div className="inline-block border border-white/10 rounded-full px-4 py-1.5 mb-10">
+          <span className="text-[10px] font-mono font-medium text-white/40 uppercase tracking-[0.2em]">
+            EST. 2025 // EXPERIENTIAL COMMUNICATIONS
+          </span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-tight">
-          <span className="text-white">GLOBAL INTELLIGENCE,</span>
-          <br />
-          <span className="text-cyan-400">EXPERIENTIAL ACTIVATION.</span>
+        {/* HEADLINE */}
+        <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-[1.1] mb-8 uppercase italic font-sans">
+          <span className="text-white block">GLOBAL INTELLIGENCE,</span>
+          <span className="text-cyan-400 block mt-2">EXPERIENTIAL ACTIVATION.</span>
         </h1>
 
-        <p className="max-w-3xl mx-auto text-base lg:text-lg text-white/60 leading-relaxed">
-          WE'RE A BOUTIQUE AGENCY AND EXPERIENCE STUDIO THAT ACTUALLY CARES IF THE CAMPAIGN MOVES THE NEEDLE. WE PLAN CAMPAIGNS BASED ON REAL WORLD RESULTS THROUGH DIGITAL, VIRTUAL AND THE PHYSICAL SPACES..WITH THE MESSY BITS IN BETWEEN.
+        {/* BODY (The Needle Mandate) */}
+        <p className="max-w-2xl text-base lg:text-lg text-white/60 leading-relaxed font-normal mb-12 uppercase font-mono tracking-tight">
+          WE'RE A BOUTIQUE AGENCY AND EXPERIENCE STUDIO THAT ACTUALLY CARES IF THE CAMPAIGN MOVES THE NEEDLE.
+          WE PLAN CAMPAIGNS BASED ON REAL WORLD RESULTS THROUGH DIGITAL, VIRTUAL AND THE PHYSICAL SPACES..WITH THE MESSY BITS IN BETWEEN.
         </p>
 
-        <div className="flex items-center justify-center gap-4">
+        {/* CTA GROUP */}
+        <div className="flex flex-col sm:flex-row items-center gap-5">
           <a
-            href="https://rprcomms.com/labs"
-            className="inline-flex items-center gap-2 bg-cyan-500 text-black px-6 py-3 rounded hover:bg-cyan-400 transition-colors text-sm font-semibold tracking-wider uppercase"
+            href="#labs"
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-cyan-500 text-black px-10 py-4 rounded-xl hover:bg-cyan-400 transition-colors text-xs font-black tracking-widest uppercase font-mono shadow-[0_0_20px_rgba(6,182,212,0.2)]"
           >
-            <span className="material-symbols-outlined text-[18px]">
-              auto_awesome_motion
-            </span>
             LABS
           </a>
           <button
-            className="inline-flex items-center gap-2 bg-transparent border border-white/20 text-white/80 px-6 py-3 rounded hover:border-white/40 hover:text-white transition-colors text-sm font-semibold tracking-wider uppercase"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-transparent border border-white/20 text-white/80 px-10 py-4 rounded-xl hover:border-white/40 hover:text-white transition-all text-xs font-black tracking-widest uppercase font-mono group"
           >
-            <span className="material-symbols-outlined text-sky-500">smart_toy</span>
+            <span className="material-symbols-outlined text-cyan-400 text-[22px]">
+              smart_toy
+            </span>
             ASK OLLIE
           </button>
         </div>
