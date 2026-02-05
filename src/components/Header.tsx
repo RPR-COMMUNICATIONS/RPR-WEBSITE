@@ -83,13 +83,13 @@ export const Header: React.FC = () => {
         </a>
 
         <nav className="hidden lg:flex items-center gap-10">
-          {NAV_ITEMS.map((item) => (
+          {['FOUNDATIONS', 'METHODS', 'OVERWATCH'].map((item) => (
             <a
-              key={item.id}
-              href={`#${item.id}`}
+              key={item}
+              href={`#${item.toLowerCase()}`}
               className="text-[11px] font-bold text-white/60 hover:text-white transition-colors uppercase tracking-[0.25em] font-mono"
             >
-              {item.label}
+              {item}
             </a>
           ))}
         </nav>
