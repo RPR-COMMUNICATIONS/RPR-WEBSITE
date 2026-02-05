@@ -1,21 +1,21 @@
 import React from 'react';
-import { Hero } from './Hero';
+import { HomeHero } from './HomeHero';
 import { Foundations } from './Foundations';
-import { Methods } from './Methods';
-import { Process } from './Process';
 import { Labs } from './Labs';
+import { Methods } from './Methods';
 import { Overwatch } from './Overwatch';
 
 /**
- * TS-Λ3 // HOME SUBSTRATE [v2.1.0]
- * Seating: Hero -> Foundations -> Methods -> Labs -> Overwatch.
- * Authority: hello@butterdime.com
+ * TS-Λ3 // HOME SUBSTRATE [v2.2.2]
+ * Mission: Narrative Seating & Build Stability
+ * Fix: Process import purged (Superseded by Methods).
+ * Status: LATCHED // SG-CANONICAL-2026
  */
 export const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
-      {/* 🚀 HERO SUBSTRATE (v6.2.0 LATCHED) */}
-      <Hero />
+      {/* 🚀 HERO SUBSTRATE (v1.8.8 LATCHED) */}
+      <HomeHero />
 
       <section id="foundations">
         <Foundations />
@@ -25,12 +25,15 @@ export const Home: React.FC = () => {
         <Methods />
       </section>
 
-      <section id="process">
-        <Process />
+      {/* LABS: Product Graduation Tier */}
+      <section id="labs">
+        <Labs />
       </section>
 
       {/* 🛡️ STRATEGIC COMMAND */}
-      <Overwatch />
+      <section id="overwatch">
+        <Overwatch />
+      </section>
     </div>
   );
 };
