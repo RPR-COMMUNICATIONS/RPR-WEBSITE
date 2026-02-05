@@ -11,7 +11,7 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-start bg-black overflow-hidden pt-20 px-6 lg:px-24 text-left">
+    <section id="hero" className="relative min-h-screen flex items-center justify-start bg-black overflow-hidden pt-20 px-6 lg:px-24 text-left">
       {/* Background Gradient Pulse */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black pointer-events-none opacity-50" />
 
