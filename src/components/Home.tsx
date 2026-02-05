@@ -1,5 +1,5 @@
 import React from 'react';
-import { HomeHero } from './HomeHero';
+import { Hero } from './Hero';
 import { Foundations } from './Foundations';
 import { Labs } from './Labs';
 import { Methods } from './Methods';
@@ -14,8 +14,8 @@ import { Overwatch } from './Overwatch';
 export const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
-      {/* 🚀 HERO SUBSTRATE (v1.8.8 LATCHED) */}
-      <HomeHero />
+      {/* HERO SUBSTRATE (v2.4.2 clinical — Hero not HomeHero) */}
+      <Hero />
 
       <section id="foundations">
         <Foundations />

@@ -45,7 +45,7 @@ export const Foundations: React.FC = () => {
   return (
     <section id="foundations" className="px-6 py-24 bg-black border-t border-white/5">
       <div className="max-w-screen-2xl mx-auto">
-        <h2 className="text-xs tracking-[0.4em] uppercase text-cyan-400 mb-16 font-mono font-bold">// THE FOUNDATIONS</h2>
+        <h2 className="text-xs tracking-[0.4em] uppercase text-cyan-400 mb-16 font-mono font-bold">THE FOUNDATIONS</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-24">
           {metrics.map((m) => {
@@ -81,7 +81,7 @@ export const Foundations: React.FC = () => {
         <div className="border-t border-white/10 pt-24">
           <div className="space-y-4 mb-16 text-left border-l-2 border-cyan-400 pl-8">
             <h2 className="text-cyan-400 font-mono text-xl md:text-2xl font-bold uppercase tracking-widest">
-              // THE MOTHERSHIP
+              THE MOTHERSHIP
             </h2>
             <p className="text-white/40 font-mono tracking-[0.1em] text-xs md:text-sm uppercase leading-relaxed max-w-2xl">
               Crafting a virtual clone of your physical business entity.
