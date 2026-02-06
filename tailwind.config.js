@@ -14,6 +14,13 @@ export default {
           "card-dark": "#0A0A0A",
           "border-dark": "#1A1A1A",
           "governance": "#8B5CFF",
+          elders: {
+            primary: "#e6b319",
+            bg: "#181611",
+            charcoal: "#121212",
+            sand: "#dcd7c9",
+            slate: "#708090",
+          }
         },
         fontFamily: {
           sans: ["Inter", "sans-serif"],

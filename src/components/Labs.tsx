@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SentinelIcon from './icons/the_sentinel_protocol.svg';
 import BishopIcon from './icons/rpr-icon-chess_bishop.svg';
 import AssistantDeviceIcon from './icons/perplexity_command-icon-assistant_device.svg';
@@ -48,22 +49,40 @@ export const Labs: React.FC = () => {
           Our product creation process. From a unified governance to in-house agency run solutions to stand-alone client run products for their own business needs.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {tiers.map((t) => (
-            <div
-              key={t.id}
-              className="group bg-slate-900/10 border border-slate-800/50 p-8 rounded-[2.5rem] hover:border-sky-500/30 transition-all duration-700"
-            >
-              <div className="mb-6 w-8 h-8 flex items-center justify-center">
-                <img
-                  src={t.icon}
-                  alt={t.title}
-                  className="w-full h-full object-contain group-hover:scale-110 transition-transform invert brightness-200"
-                />
+          {tiers.map((t) => {
+            const isElders = t.id === "t2";
+            const CardContent = (
+              <div
+                className={`h-full group bg-slate-900/10 border border-slate-800/50 p-8 rounded-[2.5rem] hover:border-sky-500/30 transition-all duration-700 ${isElders ? 'cursor-pointer hover:bg-sky-500/5' : ''}`}
+              >
+                <div className="mb-6 w-8 h-8 flex items-center justify-center">
+                  <img
+                    src={t.icon}
+                    alt={t.title}
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform invert brightness-200"
+                  />
+                </div>
+                <h3 className="text-lg font-bold uppercase mb-4 text-white">{t.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{t.desc}</p>
+                {isElders && (
+                  <div className="mt-6 flex items-center gap-2 text-sky-400 text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                    View Schematic
+                    <span className="material-symbols-outlined text-xs">arrow_forward</span>
+                  </div>
+                )}
               </div>
-              <h3 className="text-lg font-bold uppercase mb-4 text-white">{t.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{t.desc}</p>
-            </div>
-          ))}
+            );
+
+            return isElders ? (
+              <Link key={t.id} to="/labs/elders">
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={t.id}>
+                {CardContent}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
