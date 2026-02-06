@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from './Icon';
 
 /**
  * TS-Λ3 // THE METHODS [v2.4.2 ALIGNED]
@@ -35,9 +36,7 @@ export const Methods: React.FC = () => {
               className="flex flex-col gap-6 p-8 bg-white/5 border border-white/10 rounded-[2.5rem] group hover:border-cyan-500/30 transition-all duration-700 no-underline"
             >
               <div className="mb-2">
-                <span className="material-symbols-outlined text-cyan-400" style={{ fontSize: '48px' }}>
-                  {step.icon}
-                </span>
+                <Icon name={step.icon} className="text-cyan-400" size="48px" />
               </div>
               <div className="space-y-4">
                 <h4 className="text-xl font-bold text-white uppercase tracking-tight">{step.label}</h4>

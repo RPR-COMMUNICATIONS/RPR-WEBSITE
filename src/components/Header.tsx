@@ -15,9 +15,36 @@ const useAuth = () => ({
 });
 
 const UserAuthIcon = () => (
-  <span className="material-symbols-outlined text-white" style={{ fontSize: '24px' }}>
-    g_mobiledata
-  </span>
+  <svg width="40" height="40" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+    <defs>
+      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#008B8B" />
+        <stop offset="100%" stop-color="#00D9FF" />
+      </linearGradient>
+
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feFlood flood-color="white" flood-opacity="0.8" result="flood" />
+        <feComposite in="flood" in2="SourceAlpha" operator="in" result="mask" />
+        <feGaussianBlur in="mask" stdDeviation="4" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+    <rect width="100%" height="100%" rx="8px" fill="#000000" filter="url(#glow)" />
+    <text
+      x="50%" y="50%"
+      dominantBaseline="central"
+      textAnchor="middle"
+      fontFamily="Material Symbols Outlined"
+      fontSize="64"
+      fill="#FFFFFF"
+      stroke="none"
+      strokeWidth="0"
+      style={{ fontVariationSettings: "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48", maxWidth: '100%', maxHeight: '100%' }}
+    >g_mobiledata</text>
+  </svg>
 );
 
 const JSAvatar = () => (
@@ -60,7 +87,7 @@ export const Header: React.FC = () => {
 
         <div className="flex items-center gap-4">
           <button
-            className={`hidden lg:block transition-all hover:scale-105 ${!user ? 'w-10 h-10 rounded-md border border-white/10 flex items-center justify-center bg-white/5' : ''}`}
+            className={`hidden lg:block transition-all hover:scale-105 ${!user ? 'w-10 h-10 rounded-md overflow-hidden' : ''}`}
           >
             {user ? <JSAvatar /> : <UserAuthIcon />}
           </button>
@@ -97,7 +124,7 @@ export const Header: React.FC = () => {
             <span className="text-xs font-black text-slate-400 tracking-widest uppercase italic">
               {user ? "Identity Latched" : "Identity Latch"}
             </span>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 w-10 h-10 shrink-0">
                {user ? <JSAvatar /> : <UserAuthIcon />}
             </div>
           </button>

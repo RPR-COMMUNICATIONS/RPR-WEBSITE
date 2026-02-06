@@ -58,6 +58,7 @@ APPROVED=(
   "SentinelVisualizer.tsx"
   "Footer.tsx"
   "LogoIcon.tsx"
+  "Icon.tsx"
 )
 
 QUARANTINE_COUNT=0
@@ -99,7 +100,7 @@ echo "" >> "$REPORT_FILE"
 # 3. VERIFICATION PHASE
 echo "🔍 Phase 3: Approved Component Audit"
 echo "## Phase 3: Audit" >> "$REPORT_FILE"
-echo "Expected components (7 core surfaces):" >> "$REPORT_FILE"
+echo "Expected components (8 core surfaces):" >> "$REPORT_FILE"
 for app in "${APPROVED[@]}"; do
   echo "  - $app" >> "$REPORT_FILE"
 done

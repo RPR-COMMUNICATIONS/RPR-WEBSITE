@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from './Icon';
 
 /**
  * TS-Λ3 // HERO SUBSTRATE [v1.8.9 HYBRID - RECOVERY]
@@ -46,9 +47,7 @@ export const Hero: React.FC = () => {
           <button
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-transparent border border-white/20 text-white/80 px-10 py-4 rounded-xl hover:border-white/40 hover:text-white transition-all text-xs font-black tracking-widest uppercase font-mono group"
           >
-            <span className="material-symbols-outlined text-cyan-400 text-[22px]">
-              smart_toy
-            </span>
+            <Icon name="smart_toy" className="text-cyan-400" size="22px" />
             ASK OLLIE
           </button>
         </div>
