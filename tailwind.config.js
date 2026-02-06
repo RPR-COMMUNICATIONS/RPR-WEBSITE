@@ -17,9 +17,11 @@ export default {
           elders: {
             primary: "#e6b319",
             bg: "#181611",
+            "background-light": "#f8f7f6",
             charcoal: "#121212",
             sand: "#dcd7c9",
             slate: "#708090",
+            "slate-grey": "#708090",
           },
           background: "var(--background)",
           foreground: "var(--foreground)",
@@ -65,11 +67,16 @@ export default {
         fontFamily: {
           sans: ["Inter", "sans-serif"],
           mono: ["JetBrains Mono", "monospace"],
+          display: ["Inter", "sans-serif"],
         },
         borderRadius: {
+          DEFAULT: "0.125rem",
           lg: "var(--radius)",
           md: "calc(var(--radius) - 2px)",
           sm: "calc(var(--radius) - 4px)",
+          "elders-lg": "0.25rem",
+          "elders-xl": "0.5rem",
+          "elders-full": "0.75rem",
         },
       },
     },
