@@ -24,8 +24,13 @@ export const sentinelDiagrams: Record<string, C4Diagram> = {
     Brain -- "Governed Options" --> OW
 
     classDef default font-family:Inter,font-weight:700,color:#121212,fill:#dcd7c9,stroke:#708090,stroke-width:2px;
-    classDef cmd fill:#e6b319,stroke:#121212,color:#121212,stroke-width:4px;
-    class OW cmd;
+    classDef founder fill:#9b4dca,stroke:#ffffff,color:#ffffff;
+    classDef elder fill:#4db8e8,stroke:#0a0a0a,color:#0a0a0a;
+    classDef executor fill:#e67e22,stroke:#0a0a0a,color:#0a0a0a;
+    classDef safety fill:#e74c3c,stroke:#ffffff,color:#ffffff;
+
+    class OW founder;
+    class Brain elder;
     linkStyle default stroke:#708090,stroke-width:2px;`
   },
   l2_elders: {
@@ -47,8 +52,13 @@ export const sentinelDiagrams: Record<string, C4Diagram> = {
     Matrix === L3_SubTier
 
     classDef default font-family:Inter,font-weight:700,color:#121212,fill:#dcd7c9,stroke:#708090,stroke-width:2px;
-    classDef triad fill:#e6b319,stroke:#121212,color:#121212,stroke-width:2px;
-    class ARCH,ENG,SENT triad;
+    classDef founder fill:#9b4dca,stroke:#ffffff,color:#ffffff;
+    classDef elder fill:#4db8e8,stroke:#0a0a0a,color:#0a0a0a;
+    classDef executor fill:#e67e22,stroke:#0a0a0a,color:#0a0a0a;
+    classDef safety fill:#e74c3c,stroke:#ffffff,color:#ffffff;
+
+    class ARCH,ENG elder;
+    class SENT safety;
     style Matrix fill:none,stroke:#708090,stroke-dasharray: 5 5;
     linkStyle default stroke:#708090,stroke-width:2px;`
   },
@@ -78,8 +88,12 @@ export const sentinelDiagrams: Record<string, C4Diagram> = {
     Forge -- "Orchestration" --> Agency
 
     classDef default font-family:Inter,font-weight:700,color:#121212,fill:#dcd7c9,stroke:#708090,stroke-width:2px;
-    classDef forgeTools fill:#e6b319,stroke:#121212,color:#121212;
-    class Jules,Cursor forgeTools;
+    classDef founder fill:#9b4dca,stroke:#ffffff,color:#ffffff;
+    classDef elder fill:#4db8e8,stroke:#0a0a0a,color:#0a0a0a;
+    classDef executor fill:#e67e22,stroke:#0a0a0a,color:#0a0a0a;
+    classDef safety fill:#e74c3c,stroke:#ffffff,color:#ffffff;
+
+    class Jules,Cursor executor;
     linkStyle default stroke:#708090,stroke-width:2px;`
   },
   l4_instances: {
@@ -99,8 +113,12 @@ export const sentinelDiagrams: Record<string, C4Diagram> = {
     end
 
     classDef default font-family:Inter,font-weight:700,color:#121212,fill:#dcd7c9,stroke:#708090,stroke-width:2px;
-    classDef active fill:#e6b319,stroke:#121212,color:#121212;
-    class MyAudit,Lab,Verify active;
+    classDef founder fill:#9b4dca,stroke:#ffffff,color:#ffffff;
+    classDef elder fill:#4db8e8,stroke:#0a0a0a,color:#0a0a0a;
+    classDef executor fill:#e67e22,stroke:#0a0a0a,color:#0a0a0a;
+    classDef safety fill:#e74c3c,stroke:#ffffff,color:#ffffff;
+
+    class MyAudit,Lab,Verify elder;
     linkStyle default stroke:#708090,stroke-width:2px;`
   }
 };
