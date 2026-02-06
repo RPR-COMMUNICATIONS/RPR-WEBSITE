@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /**
  * TS-Λ3 // HERO SUBSTRATE [v1.8.9 HYBRID - RECOVERY]
@@ -11,7 +11,10 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-start bg-black overflow-hidden pt-20 px-6 lg:px-24 text-left">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-start bg-black overflow-hidden pt-20 px-6 lg:px-24 text-left"
+    >
       {/* Background Gradient Pulse */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black pointer-events-none opacity-50" />
 
@@ -31,8 +34,9 @@ export const Hero: React.FC = () => {
 
         {/* BODY (The Needle Mandate) */}
         <p className="max-w-2xl text-base lg:text-lg text-white/60 leading-relaxed font-normal mb-12 uppercase font-mono tracking-tight">
-          WE'RE A BOUTIQUE AGENCY AND EXPERIENCE STUDIO THAT ACTUALLY CARES IF THE CAMPAIGN MOVES THE NEEDLE.
-          WE PLAN CAMPAIGNS BASED ON REAL WORLD RESULTS THROUGH DIGITAL, VIRTUAL AND THE PHYSICAL SPACES..WITH THE MESSY BITS IN BETWEEN.
+          WE'RE A BOUTIQUE AGENCY AND EXPERIENCE STUDIO THAT ACTUALLY CARES IF THE CAMPAIGN MOVES THE NEEDLE. WE
+          PLAN CAMPAIGNS BASED ON REAL WORLD RESULTS THROUGH DIGITAL, VIRTUAL AND THE PHYSICAL SPACES..WITH THE
+          MESSY BITS IN BETWEEN.
         </p>
 
         {/* CTA GROUP */}
