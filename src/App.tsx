@@ -18,6 +18,19 @@ import { Footer } from "./components/Footer";
  * MISSION: ENVIRONMENT HARDENING (Phase 1)
  */
 
+export interface NodeData {
+  id: string;
+  name: string;
+  type: string;
+  description: string;
+  auditTrail: {
+    timestamp: string;
+    user: string;
+    action: string;
+    details: string;
+  }[];
+}
+
 export default function App() {
   return (
     <BrowserRouter>

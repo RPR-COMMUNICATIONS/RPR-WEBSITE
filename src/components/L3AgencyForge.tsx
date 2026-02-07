@@ -1,0 +1,180 @@
+import { SystemBox } from './c4-elements';
+import type { NodeData } from '../App';
+
+interface L3AgencyForgeProps {
+  onNodeClick: (node: NodeData) => void;
+}
+
+export function L3AgencyForge({ onNodeClick }: L3AgencyForgeProps) {
+  const agencyNode: NodeData = {
+    id: 'advertising-agency',
+    name: 'ADVERTISING AGENCY',
+    type: 'Strategic Waterfall',
+    description: 'The strategic layer handling client identification, market analysis, and project conceptualization. Revenue model: Project Fees.',
+    auditTrail: [
+      {
+        timestamp: '2026-02-05 10:00:00',
+        user: 'Business Development',
+        action: 'Client Acquisition',
+        details: 'New enterprise client onboarded. Project value: $125,000.',
+      },
+      {
+        timestamp: '2026-02-04 14:15:00',
+        user: 'Strategy Team',
+        action: 'Market Analysis',
+        details: 'Completed competitive landscape analysis for retail sector.',
+      },
+      {
+        timestamp: '2026-02-03 09:30:00',
+        user: 'Creative Director',
+        action: 'Campaign Design',
+        details: 'Approved Q1 2026 campaign strategy for 3 active clients.',
+      },
+    ],
+  };
+
+  const businessDeptsNode: NodeData = {
+    id: 'business-departments',
+    name: 'BUSINESS DEPARTMENTS',
+    type: 'Strategic Waterfall',
+    description: 'Cross-functional business units supporting the agency operations including sales, marketing, and client success.',
+    auditTrail: [
+      {
+        timestamp: '2026-02-05 11:45:00',
+        user: 'Sales Team',
+        action: 'Pipeline Review',
+        details: 'Q1 pipeline at $450K. 7 active opportunities in negotiation.',
+      },
+      {
+        timestamp: '2026-02-04 16:00:00',
+        user: 'Client Success',
+        action: 'Satisfaction Survey',
+        details: 'Average client satisfaction score: 9.2/10. NPS: +73.',
+      },
+    ],
+  };
+
+  const forgeNode: NodeData = {
+    id: 'the-forge',
+    name: 'THE FORGE',
+    type: 'Execution Substrate',
+    description: 'The technical execution layer powered by Cursor and GitHub. Handles documentation, build processes, and deployment. Revenue model: Subscription Services.',
+    auditTrail: [
+      {
+        timestamp: '2026-02-05 12:30:00',
+        user: 'The Forge',
+        action: 'Build Complete',
+        details: 'Deployed 5 client projects. All build pipelines green.',
+      },
+      {
+        timestamp: '2026-02-05 08:45:00',
+        user: 'The Forge',
+        action: 'Documentation Update',
+        details: 'Generated technical documentation for 3 new features.',
+      },
+      {
+        timestamp: '2026-02-04 17:20:00',
+        user: 'The Forge',
+        action: 'Code Review',
+        details: 'Automated review completed. 23 PRs merged, 0 critical issues.',
+      },
+    ],
+  };
+
+  return (
+    <div className="h-full overflow-auto p-12 bg-[var(--sovereign-bg-primary)]">
+      <div className="max-w-7xl mx-auto">
+        {/* Title */}
+        <div className="mb-12">
+          <h2 className="text-xl font-semibold mb-1 text-foreground">
+            L3: Agency & Forge Components
+          </h2>
+          <p className="text-sm text-gray-400">The Component Layer • Revenue Streams & Role Separation</p>
+        </div>
+
+        {/* Strategic Waterfall Section */}
+        <div className="mb-16">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="h-px flex-1 bg-gray-700" />
+            <span className="text-xs text-gray-400 font-mono px-3">STRATEGIC WATERFALL</span>
+            <div className="h-px flex-1 bg-gray-700" />
+          </div>
+
+          <div className="grid grid-cols-2 gap-6 mb-8">
+            <SystemBox
+              title="ADVERTISING AGENCY"
+              description="Strategic layer handling client identification, market analysis, and project conceptualization. Revenue: Project Fees"
+              color="cyan"
+              onClick={() => onNodeClick(agencyNode)}
+            />
+
+            <SystemBox
+              title="BUSINESS DEPARTMENTS"
+              description="Cross-functional units: Sales, Marketing, Client Success. Revenue: Project Fees"
+              color="cyan"
+              onClick={() => onNodeClick(businessDeptsNode)}
+            />
+          </div>
+
+          <div className="flex justify-center">
+            <div className="px-4 py-2 bg-[#1e3a2f] border border-green-600/30 rounded text-xs text-green-400 font-mono">
+              ROLE: IDENTIFY & ANALYZE
+            </div>
+          </div>
+        </div>
+
+        {/* Authority Separator */}
+        <div className="flex items-center gap-3 mb-16">
+          <div className="h-px flex-1 bg-gray-700" />
+          <div className="flex flex-col items-center gap-2">
+            <svg width="24" height="40" className="text-gray-500">
+              <line x1="12" y1="0" x2="12" y2="30" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4" />
+              <polygon points="12,40 7,30 17,30" fill="currentColor" />
+            </svg>
+            <span className="text-xs text-gray-400 font-mono">AUTHORITY AXIS</span>
+          </div>
+          <div className="h-px flex-1 bg-gray-700" />
+        </div>
+
+        {/* Execution Substrate Section */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="h-px flex-1 bg-gray-700" />
+            <span className="text-xs text-gray-400 font-mono px-3">EXECUTION SUBSTRATE</span>
+            <div className="h-px flex-1 bg-gray-700" />
+          </div>
+
+          <div className="max-w-2xl mx-auto mb-8">
+            <SystemBox
+              title="THE FORGE"
+              description="Technical execution layer powered by Cursor and GitHub. Handles documentation, build processes, and deployment. Revenue: Subscription Services"
+              color="orange"
+              onClick={() => onNodeClick(forgeNode)}
+            />
+          </div>
+
+          <div className="flex justify-center mb-8">
+            <div className="px-4 py-2 bg-[#2f2619] border border-orange-600/30 rounded text-xs text-orange-400 font-mono">
+              ROLE: DOCUMENT & BUILD
+            </div>
+          </div>
+
+          {/* Forge Tools */}
+          <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto">
+            <div className="p-4 bg-[var(--sovereign-bg-secondary)] border border-[var(--sovereign-border)] rounded-lg">
+              <div className="text-xs text-gray-400 mb-1">Tool</div>
+              <div className="text-sm font-semibold text-[var(--sovereign-system-orange)]">CURSOR</div>
+              <div className="text-xs text-gray-500 mt-1">AI-powered code editor</div>
+            </div>
+
+            <div className="p-4 bg-[var(--sovereign-bg-secondary)] border border-[var(--sovereign-border)] rounded-lg">
+              <div className="text-xs text-gray-400 mb-1">Tool</div>
+              <div className="text-sm font-semibold text-[var(--sovereign-system-orange)]">GITHUB</div>
+              <div className="text-xs text-gray-500 mt-1">Version control system</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

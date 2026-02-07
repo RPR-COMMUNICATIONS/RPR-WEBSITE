@@ -42,9 +42,15 @@ const UserAuthIcon = () => (
   </svg>
 );
 
-const JSAvatar = () => (
-  <div className="w-8 h-8 rounded-md bg-black border border-cyan-400 flex items-center justify-center shadow-[0_0_15px_#22D3EE99] transition-all">
-    <span className="text-[10px] font-black text-cyan-400">JS</span>
+const UserAvatar = ({ user }: { user: any }) => (
+  <div className="w-8 h-8 rounded-md bg-black border border-cyan-400 flex items-center justify-center shadow-[0_0_15px_#22D3EE99] transition-all overflow-hidden">
+    {user?.photoURL ? (
+      <img src={user.photoURL} alt={user.displayName || 'User'} className="w-full h-full object-cover" />
+    ) : (
+      <span className="text-[10px] font-black text-cyan-400">
+        {user?.displayName ? user.displayName.split(' ').map((n: string) => n[0]).join('').toUpperCase() : '??'}
+      </span>
+    )}
   </div>
 );
 
@@ -116,7 +122,7 @@ export const Header: React.FC = () => {
             onClick={user ? undefined : signIn}
             className={`hidden lg:block transition-all hover:scale-105 ${!user ? 'w-10 h-10 rounded-md overflow-hidden' : ''}`}
           >
-            {user ? <JSAvatar /> : <UserAuthIcon />}
+            {user ? <UserAvatar user={user} /> : <UserAuthIcon />}
           </button>
 
           <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 text-white/60 hover:text-white transition-colors">
@@ -144,7 +150,7 @@ export const Header: React.FC = () => {
               onClick={user ? undefined : signIn}
               className={`transition-all hover:scale-105 ${!user ? 'w-10 h-10 rounded-md overflow-hidden' : ''}`}
             >
-              {user ? <JSAvatar /> : <UserAuthIcon />}
+              {user ? <UserAvatar user={user} /> : <UserAuthIcon />}
             </button>
           </nav>
         </div>
