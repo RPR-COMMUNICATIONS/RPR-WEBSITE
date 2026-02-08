@@ -123,14 +123,6 @@ export function L2TheElders({ onNodeClick }: L2TheEldersProps) {
   return (
     <div className="h-full overflow-auto p-12 bg-[var(--sovereign-bg-primary)]">
       <div className="max-w-7xl mx-auto">
-        {/* Title */}
-        <div className="mb-12">
-          <h2 className="text-xl font-black mb-1 text-white uppercase tracking-tight">
-            {t('mothership.l2.title')}
-          </h2>
-          <p className="text-xs text-slate-400 font-mono uppercase tracking-widest">{t('mothership.l2.subtitle')}</p>
-        </div>
-
         {/* The Elders Container - NO DASHED BORDER PER GOVERNANCE OVERRIDE */}
         <div className="bg-slate-900/20 rounded-2xl p-8 border border-slate-800/50">
           <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] mb-8">

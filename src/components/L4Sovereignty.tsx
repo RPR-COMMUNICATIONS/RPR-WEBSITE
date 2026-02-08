@@ -144,14 +144,6 @@ export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
   return (
     <div className="h-full overflow-auto p-12 bg-[var(--sovereign-bg-primary)]">
       <div className="max-w-7xl mx-auto">
-        {/* Title */}
-        <div className="mb-12">
-          <h2 className="text-xl font-semibold mb-1 text-foreground">
-            {t('mothership.l4.title')}
-          </h2>
-          <p className="text-sm text-gray-400">{t('mothership.l4.subtitle')}</p>
-        </div>
-
         {/* Canonical Archives */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
