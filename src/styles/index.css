@@ -4,7 +4,61 @@
 @tailwind utilities;
 
 :root {
-  --primary: #0df2f2;
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Sovereign Command Theme Colors */
+  --sovereign-founder: #9b4dca;
+  --sovereign-elders: #4db8e8;
+  --sovereign-executive: #4db8e8;
+  --sovereign-sovereignty: #e85d4d;
+  --sovereign-gold: #f39c12;
+  --sovereign-deep-purple: #1a0f2e;
+  --sovereign-bg-primary: #1a1a1a;
+  --sovereign-bg-secondary: #252525;
+  --sovereign-border: rgba(255, 255, 255, 0.15);
+  --sovereign-system-cyan: #4db8e8;
+  --sovereign-system-purple: #9b4dca;
+  --sovereign-system-orange: #e67e22;
+  --sovereign-system-red: #e74c3c;
+
+  /* Legacy Compat */
   --background-dark: #050505;
   --background-light: #f5f8f8;
   --rpr-brand-purple: #8B5CFF;
@@ -39,6 +93,99 @@
   --radius-lg: 1.5rem;
 }
 
+.dark {
+  --background: #1a1a1a;
+  --foreground: #e0e0e0;
+  --card: #252525;
+  --card-foreground: #e0e0e0;
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: #00E0FF;
+  --primary-foreground: #0a0614;
+  --secondary: #2d1e3a;
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: #1e2d3a;
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: #FF6B6B;
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: rgba(0, 224, 255, 0.2);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
 /* Glow and animation classes for tactical visuals */
 .grid-glow {
   box-shadow: 0 0 15px rgba(13, 242, 242, 0.15);
@@ -57,12 +204,6 @@
 .winning-line {
   background: #0df2f2;
   box-shadow: 0 0 20px #0df2f2;
-}
-
-@layer base {
-  body {
-    @apply bg-background-dark text-slate-100 font-sans selection:bg-primary/30 antialiased overflow-x-hidden;
-  }
 }
 
 @layer utilities {

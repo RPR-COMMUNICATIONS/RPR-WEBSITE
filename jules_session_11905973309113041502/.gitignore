@@ -1,0 +1,48 @@
+# Dependency Directories
+node_modules/
+dist/
+
+# Logs & Debris
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dev_server.log
+
+# Environment & OS
+.env
+.env.local
+.DS_Store
+
+# IDE / System Metadata
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.rtf
+
+# TypeScript Build Telemetry
+*.tsbuildinfo
+
+# Build Engine Cache
+.vite/
+
+# Firebase Telemetry and Cache
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Forensic Artifacts
+backups/
+quarantine/

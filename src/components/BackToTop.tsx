@@ -25,12 +25,12 @@ export const BackToTop: React.FC = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-50 p-3 bg-[#0A0A0A] border border-zinc-800 rounded-xl text-white shadow-2xl transition-all duration-300 hover:border-white/40 ${
+      className={`fixed bottom-6 right-4 z-50 rounded-full bg-black/80 border border-white/20 p-2 text-white shadow-lg transition-all duration-300 hover:border-white/40 lg:hidden ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
       }`}
-      aria-label="Back to Top"
+      aria-label="Scroll to top"
     >
-      <span className="material-symbols-outlined text-white text-2xl flex">north</span>
+      <span className="material-symbols-outlined text-2xl">arrow_upward</span>
     </button>
   );
 };

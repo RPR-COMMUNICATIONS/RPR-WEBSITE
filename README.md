@@ -56,3 +56,13 @@ The codebase follows the unified Harbor A architecture, with KONTROL governance 
 - **Terms of Use:** `/legal/terms`
 - **Security & Compliance:** `/legal/security`
 - **Responsible AI:** `/legal/governance`
+
+## 06. DEPRECATED ASSETS
+
+### Google Identity PNG
+
+- **File:** `/src/assets/branding/web_dark_sq_na@1x.png`
+- **Status:** DEPRECATED
+- **Replacement:** Material Symbols "G" icon (`g_mobiledata`) in Header component
+- **Reason:** Superseded by Material Symbols G icon as the canonical Google identity mark in the header mobile navigation
+- **Date Deprecated:** 2026-02-01
