@@ -5,7 +5,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Home } from "./components/Home";
 import { MyAudit } from "./pages/labs/MyAudit";
-import { Elders } from "./pages/labs/Elders";
+import { Labs } from "./components/Labs";
 import { LegalStub } from "./components/LegalStub";
 import { HashRedirect } from "./components/HashRedirect";
 import { BackToTop } from "./components/BackToTop";
@@ -54,8 +54,8 @@ function AppContent() {
             <Route path="/contact" element={<HashRedirect to="/#methods" />} />
             {/* Dynamic legal document routing */}
             <Route path="/legal/:docId" element={<LegalStub />} />
+            <Route path="/labs" element={<Labs />} />
             <Route path="/labs/myaudit" element={<MyAudit />} />
-            <Route path="/labs/elders" element={<Elders />} />
             {/* Catch-all redirect to home */}
             <Route path="*" element={<HashRedirect to="/" />} />
           </Routes>

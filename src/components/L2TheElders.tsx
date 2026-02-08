@@ -1,16 +1,19 @@
 import { SystemBox, ConnectionLine } from './c4-elements';
 import type { NodeData } from '../App';
+import { useTranslation } from 'react-i18next';
 
 interface L2TheEldersProps {
   onNodeClick: (node: NodeData) => void;
 }
 
 export function L2TheElders({ onNodeClick }: L2TheEldersProps) {
+  const { t } = useTranslation();
+
   const architectNode: NodeData = {
     id: 'architect',
-    name: 'THE ARCHITECT',
-    type: 'Elder • Reasoning Engine',
-    description: 'Powered by Perplexity AI. Specializes in research, strategic planning, and knowledge synthesis across the entire Mothership ecosystem.',
+    name: t('mothership.nodes.architect.name'),
+    type: t('mothership.nodes.architect.type'),
+    description: t('mothership.nodes.architect.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 10:45:00',
@@ -35,9 +38,9 @@ export function L2TheElders({ onNodeClick }: L2TheEldersProps) {
 
   const engineerNode: NodeData = {
     id: 'engineer',
-    name: 'THE ENGINEER',
-    type: 'Elder • Execution Engine',
-    description: 'Powered by Google Gemini. Handles technical implementation, code generation, and system architecture. Directly interfaces with Mothership enforcement layer.',
+    name: t('mothership.nodes.engineer.name'),
+    type: t('mothership.nodes.engineer.type'),
+    description: t('mothership.nodes.engineer.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 11:15:00',
@@ -62,9 +65,9 @@ export function L2TheElders({ onNodeClick }: L2TheEldersProps) {
 
   const sentinelNode: NodeData = {
     id: 'sentinel',
-    name: 'THE SENTINEL',
-    type: 'Elder • Guardian & Router',
-    description: 'The Sentinel Protocol manages task routing, ensuring each request reaches the optimal Elder based on complexity and domain expertise.',
+    name: t('mothership.nodes.sentinel.name'),
+    type: t('mothership.nodes.sentinel.type'),
+    description: t('mothership.nodes.sentinel.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 11:30:00',
@@ -89,9 +92,9 @@ export function L2TheElders({ onNodeClick }: L2TheEldersProps) {
 
   const firestoreNode: NodeData = {
     id: 'firestore',
-    name: 'FIRESTORE',
-    type: 'Database System',
-    description: 'Cloud-native NoSQL database providing data persistence for all Mothership operations.',
+    name: t('mothership.nodes.firestore.name'),
+    type: t('mothership.nodes.firestore.type'),
+    description: t('mothership.nodes.firestore.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 09:00:00',
@@ -104,9 +107,9 @@ export function L2TheElders({ onNodeClick }: L2TheEldersProps) {
 
   const cicdNode: NodeData = {
     id: 'cicd',
-    name: 'CI/CD PIPELINE',
-    type: 'Deployment System',
-    description: 'Automated continuous integration and deployment infrastructure.',
+    name: t('mothership.nodes.cicd.name'),
+    type: t('mothership.nodes.cicd.type'),
+    description: t('mothership.nodes.cicd.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 10:30:00',
@@ -122,122 +125,79 @@ export function L2TheElders({ onNodeClick }: L2TheEldersProps) {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="mb-12">
-          <h2 className="text-xl font-semibold mb-1 text-foreground">
-            L2: The Elders Container
+          <h2 className="text-xl font-black mb-1 text-white uppercase tracking-tight">
+            {t('mothership.l2.title')}
           </h2>
-          <p className="text-sm text-gray-400">The Quantum Network • Shared-State Decision Making</p>
+          <p className="text-xs text-slate-400 font-mono uppercase tracking-widest">{t('mothership.l2.subtitle')}</p>
         </div>
 
-        {/* Dotted container box for The Elders */}
-        <div className="border-2 border-dashed border-gray-600 rounded-xl p-8">
-          <div className="text-sm text-gray-400 mb-6">
-            <span className="font-semibold">THE ELDERS</span> [Container]
+        {/* The Elders Container - NO DASHED BORDER PER GOVERNANCE OVERRIDE */}
+        <div className="bg-slate-900/20 rounded-2xl p-8 border border-slate-800/50">
+          <div className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] mb-8">
+            <span className="text-cyan-500/70">{t('mothership.nodes.sentinel.name')}</span> // LOGIC_CORE
           </div>
 
           {/* Sentinel at top */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-12">
             <SystemBox
-              title="THE SENTINEL"
-              description="Guardian & Router - Manages task routing to optimal Elder based on complexity and domain expertise"
+              title={sentinelNode.name}
+              description={sentinelNode.description}
               color="red"
               onClick={() => onNodeClick(sentinelNode)}
-              className="w-80"
+              className="w-full max-w-md"
             />
           </div>
 
-          {/* Routing indicators */}
-          <div className="grid grid-cols-3 gap-4 mb-6">
-            <div className="flex flex-col items-center">
-              <svg width="100%" height="40" className="overflow-visible">
-                <line
-                  x1="50%"
-                  y1="0"
-                  x2="50%"
-                  y2="40"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeDasharray="4 4"
-                  className="text-gray-500"
-                />
-              </svg>
-              <span className="text-xs text-gray-400">Routes research tasks</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <svg width="100%" height="40" className="overflow-visible">
-                <line
-                  x1="50%"
-                  y1="0"
-                  x2="50%"
-                  y2="40"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeDasharray="4 4"
-                  className="text-gray-500"
-                />
-              </svg>
-              <span className="text-xs text-gray-400">Routes execution tasks</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <svg width="100%" height="40" className="overflow-visible">
-                <line
-                  x1="50%"
-                  y1="0"
-                  x2="50%"
-                  y2="40"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeDasharray="4 4"
-                  className="text-gray-500"
-                />
-              </svg>
-              <span className="text-xs text-gray-400">Routes monitoring tasks</span>
-            </div>
-          </div>
-
           {/* The Triumvirate */}
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <SystemBox
-              title="THE ARCHITECT"
-              description="Powered by Perplexity AI - Research, strategic planning, and knowledge synthesis"
+              title={architectNode.name}
+              description={architectNode.description}
               color="purple"
               onClick={() => onNodeClick(architectNode)}
             />
 
             <SystemBox
-              title="THE ENGINEER"
-              description="Powered by Google Gemini - Technical implementation, code generation, and system architecture"
+              title={engineerNode.name}
+              description={engineerNode.description}
               color="purple"
               onClick={() => onNodeClick(engineerNode)}
             />
 
-            <SystemBox
-              title="THE GUARDIAN"
-              description="Security monitoring, compliance verification, and system health checks"
-              color="purple"
-              onClick={() => onNodeClick(sentinelNode)}
-            />
+            <div className="opacity-50 grayscale select-none">
+              <SystemBox
+                title="RESERVED"
+                description="Expansion slot for future reasoning engines."
+                color="purple"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Infrastructure Connections */}
-        <div className="mt-12">
-          <div className="text-sm text-gray-400 mb-6">Infrastructure Layer</div>
-          <div className="grid grid-cols-2 gap-6 max-w-2xl">
-            <div>
-              <ConnectionLine label="Stores and retrieves data" />
+        {/* Infrastructure Layer */}
+        <div className="mt-16">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="h-px w-8 bg-slate-800" />
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">Infrastructure Layer</span>
+            <div className="h-px flex-1 bg-slate-800" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl">
+            <div className="space-y-4">
+              <ConnectionLine label="DATA_PERSISTENCE" />
               <SystemBox
-                title="FIRESTORE"
-                description="Cloud NoSQL database providing persistent storage for all operations"
+                title={firestoreNode.name}
+                description={firestoreNode.description}
                 color="cyan"
                 onClick={() => onNodeClick(firestoreNode)}
               />
             </div>
 
-            <div>
-              <ConnectionLine label="Deploys code and services" />
+            <div className="space-y-4">
+              <ConnectionLine label="RELEASE_ORCHESTRATION" />
               <SystemBox
-                title="CI/CD PIPELINE"
-                description="Automated deployment system ensuring continuous delivery"
+                title={cicdNode.name}
+                description={cicdNode.description}
                 color="cyan"
                 onClick={() => onNodeClick(cicdNode)}
               />

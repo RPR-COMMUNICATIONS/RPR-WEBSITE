@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  BarChart3, 
-  Activity, 
-  ArrowLeft, 
-  Database, 
-  AlertCircle,
-  Clock
-} from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { C4Icon } from '../../components/c4-elements';
 import SentinelIcon from '../../components/icons/the_sentinel_protocol.svg';
 import OverwatchIcon from '../../components/icons/overwatch.svg';
 import KnightIcon from '../../components/icons/rpr-icon-chess_knight.svg';
@@ -30,8 +23,8 @@ export const MyAudit: React.FC = () => {
 
   const metrics = [
     { label: "Compliance Health", value: "99.8%", status: "OPTIMAL", icon: SentinelIcon },
-    { label: "Anomaly Detection", value: "0.02%", status: "LOW", lucide: AlertCircle },
-    { label: "Ledger Mirroring", value: "SYNCED", status: "STABLE", lucide: Database },
+    { label: "Anomaly Detection", value: "0.02%", status: "LOW", iconName: "error" },
+    { label: "Ledger Mirroring", value: "SYNCED", status: "STABLE", iconName: "database" },
     { label: "Audit Readiness", value: "TIER 1", status: "CERTIFIED", icon: KnightIcon }
   ];
 
@@ -42,7 +35,7 @@ export const MyAudit: React.FC = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3 group transition-all">
             <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 group-hover:border-sky-500/50">
-              <ArrowLeft className="w-4 h-4 text-slate-400 group-hover:text-sky-400" />
+              <C4Icon iconName="arrow_back" className="text-sm text-slate-400 group-hover:text-sky-400" />
             </div>
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 group-hover:text-slate-200">
               Return to Overwatch
@@ -51,7 +44,7 @@ export const MyAudit: React.FC = () => {
           
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2 px-3 py-1 bg-sky-500/10 rounded-full border border-sky-500/20">
-              <Activity className="w-3 h-3 text-sky-500 animate-pulse" />
+              <C4Icon iconName="monitoring" className="text-xs text-sky-500 animate-pulse" />
               <span className="text-[8px] font-black text-sky-400 tracking-widest uppercase">
                 Live Substrate
               </span>
@@ -92,10 +85,9 @@ export const MyAudit: React.FC = () => {
                       className="w-5 h-5 object-contain opacity-50 group-hover:opacity-100 transition-opacity invert brightness-200"
                       alt={m.label}
                     />
-                  ) : m.lucide ? (() => {
-                    const Icon = m.lucide;
-                    return <Icon className="w-5 h-5 text-sky-500 opacity-50 group-hover:opacity-100 transition-opacity" />;
-                  })() : null}
+                  ) : m.iconName ? (
+                    <C4Icon iconName={m.iconName} className="text-xl text-sky-500 opacity-50 group-hover:opacity-100 transition-opacity" />
+                  ) : null}
                   <span className="text-[8px] font-black text-slate-500 tracking-[0.2em]">{m.status}</span>
                 </div>
                 <h3 className="text-slate-500 text-[10px] font-mono uppercase tracking-[0.2em] mb-1">{m.label}</h3>
@@ -109,14 +101,14 @@ export const MyAudit: React.FC = () => {
             <div className="p-8 border-b border-slate-800/40 flex justify-between items-center bg-slate-900/20">
               <h2 className="text-xl font-bold uppercase tracking-tight text-white italic">Governance Ledger</h2>
               <div className="flex items-center gap-2 text-slate-500 font-mono text-[9px]">
-                <Clock className="w-3 h-3" />
+                <C4Icon iconName="schedule" className="text-xs" />
                 {timestamp}
               </div>
             </div>
             
             <div className="p-8 space-y-6">
               <div className="flex items-start gap-4 p-6 bg-[#050505] rounded-2xl border border-slate-800/60">
-                <BarChart3 className="w-5 h-5 text-sky-500 mt-1" />
+                <C4Icon iconName="bar_chart" className="text-xl text-sky-500 mt-1" />
                 <div>
                   <h4 className="text-white text-sm font-bold uppercase mb-2 tracking-wide">Financial Intent Orchestration</h4>
                   <p className="text-slate-400 text-xs leading-relaxed max-w-3xl">

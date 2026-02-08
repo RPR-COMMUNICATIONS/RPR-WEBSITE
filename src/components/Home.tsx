@@ -1,39 +1,33 @@
 import React from 'react';
 import { Hero } from './Hero';
 import { Foundations } from './Foundations';
-import { Labs } from './Labs';
+import { MothershipSection } from './MothershipSection';
 import { Methods } from './Methods';
 import { Overwatch } from './Overwatch';
+import { Architecture } from './Architecture';
+import { AskOllie } from './AskOllie';
 
 /**
- * TS-Λ3 // HOME SUBSTRATE [v2.2.2]
+ * TS-Λ3 // HOME SUBSTRATE [v2.4.2]
  * Mission: Narrative Seating & Build Stability
- * Fix: Process import purged (Superseded by Methods).
  * Status: LATCHED // SG-CANONICAL-2026
  */
 export const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
-      {/* HERO SUBSTRATE (v2.4.2 clinical — Hero not HomeHero) */}
       <Hero />
 
-      <section id="foundations">
-        <Foundations />
-      </section>
+      <Architecture />
 
-      <section id="methods">
-        <Methods />
-      </section>
+      <Foundations />
 
-      {/* LABS: Product Graduation Tier */}
-      <section id="labs">
-        <Labs />
-      </section>
+      <MothershipSection />
 
-      {/* 🛡️ STRATEGIC COMMAND */}
-      <section id="overwatch">
-        <Overwatch />
-      </section>
+      <Overwatch />
+
+      <AskOllie />
+
+      <Methods />
     </div>
   );
 };

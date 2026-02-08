@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import { sentinelDiagrams } from '../c4-diagrams/C4DiagramDefinitions-Final';
-import { MermaidViewer } from './MermaidViewer';
 import { NodeData } from '../App';
+import { useTranslation } from 'react-i18next';
+import { L1OverwatchCommand } from './L1OverwatchCommand';
 import { L2TheElders } from './L2TheElders';
 import { L3AgencyForge } from './L3AgencyForge';
 import { L4Sovereignty } from './L4Sovereignty';
+import { C4Icon } from './c4-elements';
 
-export const SentinelVisualizer: React.FC = () => {
+export const MothershipVisualizer: React.FC = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<keyof typeof sentinelDiagrams>('l1_overwatch');
   const [selectedNode, setSelectedNode] = useState<NodeData | null>(null);
 
   const tabs = [
-    { id: 'l1_overwatch', label: 'L1: Overwatch', icon: 'shield' },
-    { id: 'l2_elders', label: 'L2: Elders', icon: 'group' },
-    { id: 'l3_forge', label: 'L3: Forge', icon: 'build' },
-    { id: 'l4_instances', label: 'L4: Instances', icon: 'grid_view' }
+    { id: 'l1_overwatch', label: t('mothership.l1.title'), icon: 'shield' },
+    { id: 'l2_elders', label: t('mothership.l2.title'), icon: 'group' },
+    { id: 'l3_forge', label: t('mothership.l3.title'), icon: 'build' },
+    { id: 'l4_instances', label: t('mothership.l4.title'), icon: 'grid_view' }
   ];
 
   return (
@@ -31,26 +34,19 @@ export const SentinelVisualizer: React.FC = () => {
               activeTab === tab.id ? 'bg-sky-600 text-white shadow-lg' : 'text-slate-500 hover:bg-slate-800/30'
             }`}
           >
-            <span className="material-symbols-outlined text-base">
-              {tab.icon}
-            </span>
+            <C4Icon iconName={tab.icon} className="text-base" />
             <span className="text-[10px] font-black uppercase tracking-widest">{tab.label}</span>
           </button>
         ))}
       </nav>
 
       <div className="flex flex-col gap-2 mb-6 ml-2">
-          <h3 className="text-xl font-bold text-white uppercase">{sentinelDiagrams[activeTab].title}</h3>
-          <p className="text-slate-400 text-xs font-mono uppercase tracking-widest">{sentinelDiagrams[activeTab].description}</p>
+          <h3 className="text-xl font-bold text-white uppercase">{t(`mothership.${activeTab.split('_')[0]}.title`)}</h3>
+          <p className="text-slate-400 text-xs font-mono uppercase tracking-widest">{t(`mothership.${activeTab.split('_')[0]}.subtitle`)}</p>
       </div>
 
       <div className="relative min-h-[500px] border border-sovereign-border rounded-xl overflow-hidden bg-slate-950/50">
-        {activeTab === 'l1_overwatch' && (
-          <MermaidViewer
-            definition={sentinelDiagrams[activeTab].definition}
-            className="h-full"
-          />
-        )}
+        {activeTab === 'l1_overwatch' && <L1OverwatchCommand onNodeClick={setSelectedNode} />}
         {activeTab === 'l2_elders' && <L2TheElders onNodeClick={setSelectedNode} />}
         {activeTab === 'l3_forge' && <L3AgencyForge onNodeClick={setSelectedNode} />}
         {activeTab === 'l4_instances' && <L4Sovereignty onNodeClick={setSelectedNode} />}
@@ -68,7 +64,7 @@ export const SentinelVisualizer: React.FC = () => {
                 onClick={() => setSelectedNode(null)}
                 className="p-2 hover:bg-slate-800 rounded-full transition-colors text-slate-400 hover:text-white"
               >
-                <span className="material-symbols-outlined">close</span>
+                <C4Icon iconName="close" />
               </button>
             </div>
             <div className="p-6 overflow-y-auto space-y-6 custom-scrollbar">
@@ -93,7 +89,9 @@ export const SentinelVisualizer: React.FC = () => {
               </div>
             </div>
             <div className="p-4 bg-slate-900/20 border-t border-sovereign-border text-center">
-              <p className="text-[9px] text-slate-600 uppercase tracking-[0.3em]">Sentinel Governance Protocol // Verified Archive</p>
+              <p className="text-[9px] text-slate-600 uppercase tracking-[0.3em]">
+                {t('mothership.grok_footer')} // Sentinel Governance Protocol // Verified Archive
+              </p>
             </div>
           </div>
         </div>

@@ -44,7 +44,24 @@ export function OverwatchIcon({ className = "w-16 h-16" }: { className?: string 
 // Placeholder for other primitives mentioned in the brief
 // These will be populated once snippets are provided
 
-export const PersonIcon = () => <span className="material-symbols-outlined">person</span>;
+export const PersonIcon = () => <C4Icon iconName="person" />;
+
+export interface C4IconProps {
+  iconName: string;
+  className?: string;
+  size?: string;
+}
+
+export const C4Icon: React.FC<C4IconProps> = ({ iconName, className = '', size }) => {
+  return (
+    <span
+      className={`material-symbols-outlined ${className}`}
+      style={size ? { fontSize: size } : {}}
+    >
+      {iconName}
+    </span>
+  );
+};
 
 interface ConnectionLineProps {
   label?: string;

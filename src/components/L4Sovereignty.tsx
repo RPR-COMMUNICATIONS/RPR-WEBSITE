@@ -1,17 +1,19 @@
-import { SystemBox } from './c4-elements';
+import { SystemBox, C4Icon } from './c4-elements';
 import type { NodeData } from '../App';
-import { Lock, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface L4SovereigntyProps {
   onNodeClick: (node: NodeData) => void;
 }
 
 export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
+  const { t } = useTranslation();
+
   const sovereignRootNode: NodeData = {
     id: 'sovereign-root',
-    name: 'SOVEREIGN_ROOT',
-    type: 'Canonical Archive',
-    description: 'The master archive containing all governance protocols, legal frameworks, and strategic directives.',
+    name: t('mothership.nodes.sovereign_root.name'),
+    type: t('mothership.nodes.sovereign_root.type'),
+    description: t('mothership.nodes.sovereign_root.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 07:00:00',
@@ -36,9 +38,9 @@ export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
 
   const commsRootNode: NodeData = {
     id: 'comms-root',
-    name: 'COMMS_ROOT',
-    type: 'Canonical Archive',
-    description: 'Communication protocols, client interaction frameworks, and messaging standards repository.',
+    name: t('mothership.nodes.comms_root.name'),
+    type: t('mothership.nodes.comms_root.type'),
+    description: t('mothership.nodes.comms_root.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 09:30:00',
@@ -57,9 +59,9 @@ export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
 
   const uddNode: NodeData = {
     id: 'udd-instance',
-    name: 'UDD',
-    type: 'Specialist Instance',
-    description: 'User-Driven Design specialist. Focuses on UX research, interface design, and user experience optimization.',
+    name: t('mothership.nodes.udd.name'),
+    type: t('mothership.nodes.udd.type'),
+    description: t('mothership.nodes.udd.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 13:00:00',
@@ -78,9 +80,9 @@ export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
 
   const ifsNode: NodeData = {
     id: 'ifs-instance',
-    name: 'IFS',
-    type: 'Specialist Instance',
-    description: 'Integrated Finance Solutions. Handles financial modeling, budgeting, and economic analysis.',
+    name: t('mothership.nodes.ifs.name'),
+    type: t('mothership.nodes.ifs.type'),
+    description: t('mothership.nodes.ifs.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 11:00:00',
@@ -99,9 +101,9 @@ export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
 
   const pbasNode: NodeData = {
     id: 'pbas-instance',
-    name: 'PBAS',
-    type: 'Specialist Instance',
-    description: 'Performance-Based Analytics System. Monitors KPIs, generates reports, and tracks operational metrics.',
+    name: t('mothership.nodes.pbas.name'),
+    type: t('mothership.nodes.pbas.type'),
+    description: t('mothership.nodes.pbas.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 08:00:00',
@@ -120,9 +122,9 @@ export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
 
   const wardenNode: NodeData = {
     id: 'the-warden',
-    name: 'THE WARDEN',
-    type: 'Regional Lock System',
-    description: 'Enforces geographic sovereignty and regional compliance. Primary jurisdiction: Singapore.',
+    name: t('mothership.nodes.warden.name'),
+    type: t('mothership.nodes.warden.type'),
+    description: t('mothership.nodes.warden.description'),
     auditTrail: [
       {
         timestamp: '2026-02-05 06:00:00',
@@ -145,39 +147,39 @@ export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
         {/* Title */}
         <div className="mb-12">
           <h2 className="text-xl font-semibold mb-1 text-foreground">
-            L4: Sovereignty & Instances
+            {t('mothership.l4.title')}
           </h2>
-          <p className="text-sm text-gray-400">The Deployment Layer • Canonical Archives & Specialist Units</p>
+          <p className="text-sm text-gray-400">{t('mothership.l4.subtitle')}</p>
         </div>
 
         {/* Canonical Archives */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <div className="h-px flex-1 bg-gray-700" />
-            <span className="text-xs text-gray-400 font-mono px-3">CANONICAL ARCHIVES</span>
+            <span className="text-xs text-gray-400 font-mono px-3 uppercase">{t('mothership.axis_archives')}</span>
             <div className="h-px flex-1 bg-gray-700" />
           </div>
 
-          <div className="grid grid-cols-2 gap-6 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
             <SystemBox
-              title="SOVEREIGN_ROOT"
-              description="Master archive containing governance protocols, legal frameworks, and strategic directives. Encrypted at rest."
+              title={sovereignRootNode.name}
+              description={sovereignRootNode.description}
               color="orange"
               onClick={() => onNodeClick(sovereignRootNode)}
             />
 
             <SystemBox
-              title="COMMS_ROOT"
-              description="Communication protocols, client interaction frameworks, and messaging standards. Multi-language support."
+              title={commsRootNode.name}
+              description={commsRootNode.description}
               color="orange"
               onClick={() => onNodeClick(commsRootNode)}
             />
           </div>
 
           <div className="flex justify-center">
-            <div className="flex items-center gap-2 px-4 py-2 bg-[#2f2019] border border-orange-600/30 rounded text-xs text-orange-400">
-              <Lock className="size-3" />
-              <span className="font-mono">ENCRYPTED • VERSIONED</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#2f2019] border border-orange-600/30 rounded text-xs text-orange-400 uppercase">
+              <C4Icon iconName="lock" className="text-sm" />
+              <span className="font-mono">{t('mothership.notice_encrypted')}</span>
             </div>
           </div>
         </div>
@@ -186,15 +188,15 @@ export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
         <div className="mb-16">
           <div className="max-w-xl mx-auto">
             <SystemBox
-              title="THE WARDEN"
-              description="Regional lock system enforcing geographic sovereignty and compliance. Monitors all cross-border data transfers."
+              title={wardenNode.name}
+              description={wardenNode.description}
               color="red"
               onClick={() => onNodeClick(wardenNode)}
             />
             <div className="flex justify-center mt-4">
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#2f1919] border border-red-600/30 rounded text-xs text-red-400">
-                <MapPin className="size-3" />
-                <span className="font-mono">PRIMARY JURISDICTION: SINGAPORE</span>
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#2f1919] border border-red-600/30 rounded text-xs text-red-400 uppercase">
+                <C4Icon iconName="location_on" className="text-sm" />
+                <span className="font-mono">{t('mothership.notice_jurisdiction')}</span>
               </div>
             </div>
           </div>
@@ -204,32 +206,32 @@ export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
         <div>
           <div className="flex items-center gap-3 mb-6">
             <div className="h-px flex-1 bg-gray-700" />
-            <span className="text-xs text-gray-400 font-mono px-3">SPECIALIST INSTANCES</span>
+            <span className="text-xs text-gray-400 font-mono px-3 uppercase">{t('mothership.axis_instances')}</span>
             <div className="h-px flex-1 bg-gray-700" />
           </div>
 
           <div className="text-center mb-6">
-            <span className="text-xs text-gray-500">Boots on the Ground • Graduated from Mothership</span>
+            <span className="text-xs text-gray-500 uppercase">{t('mothership.notice_graduated')}</span>
           </div>
 
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <SystemBox
-              title="UDD"
-              description="User-Driven Design - UX research, interface design, and user experience optimization"
+              title={uddNode.name}
+              description={uddNode.description}
               color="cyan"
               onClick={() => onNodeClick(uddNode)}
             />
 
             <SystemBox
-              title="IFS"
-              description="Integrated Finance Solutions - Financial modeling, budgeting, and economic analysis"
+              title={ifsNode.name}
+              description={ifsNode.description}
               color="cyan"
               onClick={() => onNodeClick(ifsNode)}
             />
 
             <SystemBox
-              title="PBAS"
-              description="Performance-Based Analytics - KPI monitoring, reporting, and operational metrics tracking"
+              title={pbasNode.name}
+              description={pbasNode.description}
               color="cyan"
               onClick={() => onNodeClick(pbasNode)}
             />
@@ -239,10 +241,9 @@ export function L4Sovereignty({ onNodeClick }: L4SovereigntyProps) {
         {/* Data Law Notice */}
         <div className="mt-12 max-w-3xl mx-auto">
           <div className="p-4 bg-[var(--sovereign-bg-secondary)] border border-[var(--sovereign-border)] rounded-lg">
-            <div className="text-xs text-gray-400 mb-1">Data Law Compliance</div>
+            <div className="text-xs text-gray-400 mb-1 uppercase">Data Law Compliance</div>
             <div className="text-sm text-gray-300">
-              All instances operate under Singapore PDPA regulations. Data residency enforced by The Warden.
-              Cross-border transfers require explicit authorization from The Overwatch.
+              {t('mothership.notice_data_law')}
             </div>
           </div>
         </div>
