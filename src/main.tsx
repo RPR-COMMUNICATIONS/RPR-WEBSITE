@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './styles/index.css'
+import './i18n'
 
 // Add dark class to html element
 document.documentElement.classList.add('dark');

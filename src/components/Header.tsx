@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 import { useAuth } from '../contexts/AuthContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 /**
  * TS-Λ3 // HEADER SUBSTRATE [v2.5.0]
@@ -33,7 +34,7 @@ const UserAuthIcon = () => (
       dominantBaseline="central"
       textAnchor="middle"
       fontFamily="Material Symbols Outlined"
-      fontSize="64"
+      fontSize="80"
       fill="#FFFFFF"
       stroke="none"
       strokeWidth="0"
@@ -118,6 +119,7 @@ export const Header: React.FC = () => {
         </nav>
 
         <div className="flex items-center gap-4">
+          <LanguageSwitcher />
           <button
             onClick={user ? undefined : signIn}
             className={`hidden lg:block transition-all hover:scale-105 ${!user ? 'w-10 h-10 rounded-md overflow-hidden' : ''}`}
@@ -146,6 +148,7 @@ export const Header: React.FC = () => {
                 {item.label}
               </a>
             ))}
+            <LanguageSwitcher />
             <button
               onClick={user ? undefined : signIn}
               className={`transition-all hover:scale-105 ${!user ? 'w-10 h-10 rounded-md overflow-hidden' : ''}`}
