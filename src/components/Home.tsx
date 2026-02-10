@@ -3,6 +3,7 @@ import Hero from './Hero';
 import Foundations from './Foundations';
 import Methods from './Methods';
 import { MothershipSection } from './MothershipSection';
+import { MothershipVisualizer } from './MothershipVisualizer';
 import Labs from './Labs';
 import Overwatch from './Overwatch';
 import AskOllie from './AskOllie';
@@ -22,6 +23,7 @@ const Home = () => {
         <Foundations />
         <Methods />
         <MothershipSection />
+        <MothershipVisualizer />
         <Labs />
         <Overwatch />
 
