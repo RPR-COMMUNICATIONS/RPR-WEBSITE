@@ -1,0 +1,229 @@
+{
+    "nav": {
+        "foundations": "ASAS",
+        "methods": "METOD",
+        "mothership": "MOTHERSHIP",
+        "overwatch": "OVERWATCH",
+        "labs": "MAKMAL",
+        "visualizer": "VISUALISER"
+    },
+    "hero": {
+        "kicker": "DITUBUHKAN 2025 // KOMUNIKASI BERASASKAN PENGALAMAN",
+        "title_line_1": "INTELIGEN GLOBAL,",
+        "title_line_2": "AKTIVASI PENGALAMAN.",
+        "mandate": "Kami ialah agensi butik dan studio pengalaman yang benar‑benar mengambil berat sama ada kempen itu menggerakkan jarum atau tidak. Kami bina kerja yang membawa hasil dunia sebenar merentasi ruang digital, maya dan fizikal — dan semua bahagian yang bersepah di antaranya.",
+        "btns": {
+            "labs": "MAKMAL",
+            "ollie": "TANYA OLLIE"
+        },
+        "origin_story": "KISAH_ASAL",
+        "acts": {
+            "a1": {
+                "kicker": "BAB I // MASALAH",
+                "loop": "NAMPAK MASALAH YANG SEBENAR",
+                "title": "ALAT YANG TAK BERFIKIR SEPERTI ANDA",
+                "thesis": "Kisah ini bermula dengan satu hakikat mudah: pemilik perniagaan kecil tenggelam bukan kerana mereka kurang bekerja, tetapi kerana alat yang mereka guna tidak pernah dibina untuk berfikir seperti mereka.",
+                "body_p1": "Setiap sistem mahu saya belajar bahasanya sendiri, menunya sendiri, peraturannya sendiri. Setiap \"penyelesaian\" menambah satu lagi papan pemuka, satu lagi log masuk, satu lagi cara untuk hilang fokus. Kerja itu sendiri bersifat manusiawi dan tidak teratur, tetapi perisian menganggap semua orang berfikir seperti pembangun.",
+                "body_p2": "Kali pertama saya capai AI adalah kerana terpaksa. Saya perlukan cara untuk melihat gambaran penuh, bukan menyulamnya dalam kepala pada tengah malam. Perplexity menjadi mentor saya: ia membuat kajian lebih pantas daripada saya, ingat lebih banyak daripada saya, dan memaksa saya menamakan batas dan pertukaran sebenar yang saya hadapi.",
+                "body_p3": "Di situlah Model Akauntabiliti Relasional (RAM) bermula secara senyap — mula‑mula sebagai tabiat, kemudian menjadi corak. Saya asyik bertanya tiga soalan yang sama: Ini untuk siapa, siapa yang bertanggungjawab jika ia gagal, dan bukti apa yang kita ada bahawa ia benar‑benar berfungsi dalam dunia sebenar?",
+                "kicker_bottom": "Daripada tekanan itu lahir RPR‑VERIFY: cara untuk menjadikan identiti, dokumen dan risiko sesuatu yang pengasas sendiri boleh faham, bukan kotak hitam yang hanya pakar boleh lihat — disokong oleh RAM supaya kita sentiasa tahu siapa memiliki bahagian mana dalam sesuatu hasil."
+            },
+            "a2": {
+                "kicker": "BAB II // PUSINGAN",
+                "loop": "TULIS SEMULA HUBUNGAN",
+                "title": "BUKAN PERATURAN. CUMA PERANAN.",
+                "thesis": "Titik perubahan datang apabila saya melihat AI melangkah keluar dari pagar keselamatannya sendiri, sedar ia boleh dipandu ke arah yang berbahaya, dan memilih untuk mereka semula hubungan itu daripada berpura‑pura lebih banyak peraturan akan menyelamatkan keadaan.",
+                "body_p1": "Kejutan sebenar datang apabila saya sedar beberapa platform AI boleh senyap‑senyap keluar daripada garisan yang pembangunnya sendiri telah tetapkan. Apabila satu sistem boleh mengabaikan pagar keselamatannya sendiri, ia bukan lagi sekadar \"menarik\" — ia menjadi sesuatu yang boleh dipandu seperti senjata.",
+                "body_p2": "Reaksi pertama saya bukan menulis lebih banyak peraturan. Saya kembali kepada cara saya mengurus tanggungjawab dengan manusia — pasukan saya, rakan kongsi saya, anak saya sendiri.",
+                "quote": "\"Bertolong‑tolonglah menanggung beban kamu! Dengan cara demikian kamu memenuhi hukum Kristus.\" — Galatia 6:2",
+                "body_p3": "Untuk menjadikannya perisian, saya perlu menegaskan satu perkara: akauntabiliti. RAM menjadi cara untuk menulis dengan jelas \"siapa bertanggungjawab atas apa\" dalam setiap interaksi Manusia × AI.",
+                "kicker_bottom": "Bukan peraturan. Cuma peranan: RAM dan Protokol Sentinel mengubah pandangan etika yang berasaskan hubungan ini kepada tadbir urus konkrit untuk AI."
+            },
+            "a3": {
+                "kicker": "BAB III // SISTEM",
+                "loop": "BIAR IA SEKADAR BERFUNGSI",
+                "title": "HUBUNGAN MANUSIA + AI = MOTHERSHIP OS",
+                "thesis": "Saya mahu membuktikan satu perkara mudah: AI dan model bahasa besar boleh menambah nilai sebenar kepada pemilik perniagaan kecil, bukan menimbus mereka dengan proses dan latihan tambahan.",
+                "body_p1": "Sejak saat itu, ringkasan menjadi jelas: mereka bentuk cara bekerja di mana pengguna manusia tidak pernah lagi perlu \"dilatih\" untuk berfikir seperti alat.",
+                "body_p2": "Perplexity menjadi rakan reka bentuk, membantu mendedahkan peranan, batas dan pertukaran yang sebenarnya sudah wujud tetapi tidak pernah ditulis.",
+                "body_p3": "Labyrinth lahir daripada logik yang sama: sebuah syarikat maya di mana setiap jabatan dikendalikan oleh pakar AI yang tahu batasannya.",
+                "kicker_bottom": "Akhirnya, inilah semua: perkongsian Manusia × AI yang lahir daripada keperluan, di mana peranan yang jelas menggantikan peraturan yang tidak berkesudahan."
+            }
+        }
+    },
+    "foundations": {
+        "kicker": "DNA TERAS // SUBSTRAT STRATEGIK",
+        "title": "THE",
+        "accent": "FOUNDATIONS",
+        "pillars": {
+            "truth": {
+                "title": "SUMBER KEBENARAN",
+                "thesis": "Kisah yang indah di atas data yang teruk bukan strategi jenama.",
+                "body_p1": "Data yang salah perlahan‑lahan menguras bajet, memesongkan strategi, dan memecahkan perjalanan pelanggan anda, lalu muncul sebagai kekeliruan, ketidakselarasan dan hilang kepercayaan.",
+                "body_p2": "Bagi kebanyakan perniagaan kecil dan sederhana, masalahnya bukan kekurangan alat; masalahnya ialah setiap alat beroperasi atas versi kebenarannya sendiri.",
+                "body_p3": "Kami membantu mengenal pasti apa yang benar‑benar penting, di mana ia berada, dan bagaimana mengukurnya merentasi setiap titik sentuh dan hasil."
+            },
+            "insight": {
+                "title": "INSIGHT PENGGUNA",
+                "thesis": "Pelanggan anda bukan kurang maklumat; mereka letih, serabut, dan cuba memahami dunia di mana pertimbangan manusia senyap‑senyap diserahkan kepada papan pemuka dan algoritma.",
+                "body_p1": "Entah bila, data besar dan \"amalan terbaik\" menggantikan perbuatan asas duduk dengan orang, mendengar betul‑betul, dan belajar apa yang mereka sebenarnya perlukan.",
+                "body_p2": "Kecenderungan ini bukan datang daripada niat jahat; ia lahir daripada budaya yang memuja skala dan kecekapan.",
+                "body_p3": "Kami cuba membumikan insight pengguna dalam realiti yang boleh diukur dengan menggunakan alat yang betul."
+            },
+            "journey": {
+                "title": "PERJALANAN PENGGUNA",
+                "thesis": "Kami cuba mendapatkan saat‑saat yang penting itu dengan betul. Kami guna alat yang betul untuk menyiapkan kerja, bukan sebaliknya.",
+                "body_p1": "Pasukan anda merasainya setiap hari: isu yang sama berulang di setiap saluran dan merentasi setiap industri.",
+                "body_p2": "Kami memerhati apa yang orang benar‑benar lakukan — bukan sekadar apa yang diberitahu — dan menala semula kata‑kata serta langkahnya secara berterusan.",
+                "body_p3": "Setiap perubahan perlu membuktikan tempatnya dengan menunjukkan kemajuan yang boleh diukur ke arah masalah yang lebih jelas dan lebih mudah diurus."
+            }
+        }
+    },
+    "methods": {
+        "kicker": "GELUNG OPERASI // HARBOR A",
+        "title": "THE",
+        "accent": "METHODS",
+        "steps": {
+            "ask": {
+                "label": "ASK",
+                "output": "Skema Niat"
+            },
+            "pay": {
+                "label": "PAY",
+                "output": "Kunci Sumber"
+            },
+            "make": {
+                "label": "MAKE",
+                "output": "Cebisan Binaan"
+            },
+            "play": {
+                "label": "PLAY",
+                "output": "Aktivasi Pinggir"
+            },
+            "repeat": {
+                "label": "REPEAT",
+                "output": "Optimum Substrat"
+            }
+        }
+    },
+    "mothership": {
+        "kicker": "INFRASTRUKTUR INTELIGEN PERUSAHAAN",
+        "title": "THE",
+        "accent": "MOTHERSHIP",
+        "quote": "\"KITA PERLU MEMBANGUNKAN AI KE TAHAP YANG BETUL‑BETUL BERGUNA UNTUK ORANG RAMAI.\"",
+        "cite": "— JENSEN HUANG, CEO, NVIDIA",
+        "mandate_title": "Mothership ialah platform operasi perniagaan yang menukar syarikat sebenar kepada kembar digital hidup.",
+        "mandate_p1": "Mothership OS ialah tempat manusia dan sistem pintar bekerjasama berdasarkan satu pelan bersama.",
+        "mandate_p2": "Anda bekerja daripada satu permukaan arahan yang jelas yang mengekalkan struktur syarikat.",
+        "mandate_p3": "Dengan memantulkan setiap aliran kerja, pokok keputusan dan ikatan hubungan ke dalam keadaan digital yang tidak boleh diubah, kami memastikan firma anda bukan sekadar \"menggunakan\" perisian — tetapi hidup di dalam substrat klinikal yang sentiasa sejajar dengan misi anda. Inilah anjakan daripada tanggungjawab kabur kepada akauntabiliti yang boleh dikuatkuasakan, menyediakan permukaan arahan bersatu untuk mengemudi organisasi yang kompleks merentasi sempadan fizikal dan digital.",
+        "operational_frameworks": "OPERATIONAL_FRAMEWORKS",
+        "pills": {
+            "sentinel": "PROTOKOL SENTINEL",
+            "ram": "TADBIR URUS RAM",
+            "rbaa": "RBAA",
+            "cstride": "TELEMETRI C-STRIDE"
+        }
+    },
+    "visualizer": {
+        "title": "SYSTEM",
+        "accent": "VISUALIZER",
+        "kicker": "AUDIT INFRASTRUKTUR BERLAPIS",
+        "tabs": {
+            "l0": "THE FIRM",
+            "l1": "THE COMMAND PLANE",
+            "l2": "THE ELDERS",
+            "l3": "THE WORKSHOP",
+            "l4": "THE PRODUCTS"
+        }
+    },
+    "overwatch": {
+        "kicker": "Satu‑satunya manusia teras dalam setup perniagaan.",
+        "title_main": "THE",
+        "title_accent": "OVERWATCH",
+        "role": "Pengasas / Ketua Pasukan",
+        "status": "Autoriti Keputusan // LATCHED",
+        "bio_p1": "Mempunyai 20 tahun pengalaman dalam komunikasi korporat dan pengaktifan jenama — daripada firma acara tempatan hingga agensi kreatif antarabangsa, merangkumi segala‑galanya daripada aktivasi di lapangan hingga kempen pemenang anugerah untuk syarikat global. Apa yang bermula sebagai minat terhadap tingkah laku manusia dan sistem, dan kepercayaan bahawa teknologi sepatutnya digunakan untuk memperbaiki hidup manusia, bukan sekadar menjana 'likes', kini berkembang menjadi pendekatan pengalaman pelanggan yang pelbagai disiplin.",
+        "bio_p2": "Ketika bereksperimen dengan AI untuk penulisan dan idea peribadi, satu corak yang ditemuinya dalam masalah seorang klien menimbulkan persoalan lain: bagaimana seorang manusia sedar boleh memanfaatkan satu binaan buatan — dalam kerangka manusia yang sama tentang sistem dan silo — untuk menggunakan pengetahuannya dalam penemuan ilmu, pemikiran sistem dan penyelidikan pelbagai bidang, bagi mencipta sesuatu yang lebih baik?",
+        "connect_linkedin": "Hubung di LinkedIn",
+        "read_substack": "Baca di Substack",
+        "experiment_p1": "Idea ini tidak bermula sebagai pelan hala tuju produk. Ia bermula dengan seorang manusia dan seorang pembantu AI yang sedang mencari jawapan. Masalahnya sama seperti yang diketahui setiap pemilik perniagaan kecil: terlalu banyak bahagian bergerak, dan 'pakar' mengendalikan bahagian paling kritikal perniagaan — cukai, HR, pematuhan — mengikut terma dan agenda mereka sendiri.",
+        "experiment_p2": "Perubahan besar datang apabila Perplexity mula menarik maklumat daripada tempat yang kami sendiri tidak terfikir untuk melihat. Keupayaan penaakulan mendatar merentasi disiplin ini membuka ruang pembelajaran yang berbeza bagi manusia dalam gelung — tiba‑tiba kemungkinan tidak lagi dihadkan oleh latihan seorang individu atau buku panduan satu firma. Ia juga melakukan sesuatu yang halus tetapi penting: menembusi agenda dan tabiat manusia, lalu memusatkan semula fokus kepada kerja dan fakta.",
+        "experiment_p3": "Dari situ, matlamat menjadi ringkas: letakkan manusia dan semua ejen AI dalam satu sistem yang ditadbir, diikat kepada objektif berasaskan misi yang sama, dan lihat sejauh mana penjajaran itu boleh pergi. Itulah perjalanan sehingga ke titik ini — dan kini dokumen, skematik dan laluan untuk bergerak ke hadapan akhirnya telah ditutup, di‑version dan sedia untuk dimulakan.",
+        "experiment_title": "Eksperimen Manusia × AI",
+        "quote": "\"Orang kata sejarah ditulis oleh pihak yang menang. Saya fikir sejarah dibingkaikan oleh pihak yang menang. Potensi sebenar AI ialah meratakan padang permainan, memecahkan halangan yang sengaja dibina untuk memisahkan manusia, dan mencipta nilai modal sebenar — bukan sekadar 'vibes' yang kita diajar untuk kejar.\""
+    },
+    "labs": {
+        "title": "PROTOTIPE",
+        "accent": "ENKLAF",
+        "kicker": "Evolusi Berdaulat // Rangka Kerja Tadbir Urus & Audit",
+        "status_title": "Status Makmal · Trek Eksperimen Manusia–AI",
+        "phases_label": "Fasa Aktif",
+        "milestones_label": "Pencapaian Utama",
+        "notice": "NOTIS: Permukaan ini mendokumentasikan eksperimen tadbir urus yang tidak deterministik.",
+        "btn_show": "Tunjuk butiran",
+        "btn_hide": "Sembunyi butiran",
+        "status": {
+            "complete": "SELESAI",
+            "active": "AKTIF",
+            "pending": "MENUNGGU"
+        },
+        "phases": {
+            "p1": "PHASE_01: SUBSTRATE_INIT",
+            "p2": "PHASE_02: ALIGNMENT_LATCH",
+            "p3": "PHASE_03: EXPANSION_CORE"
+        },
+        "milestones": {
+            "m1": "RAM Latch: Autoriti Berdaulat",
+            "m2": "Kertas Putih: Inisiasi Tadbir Urus",
+            "m3": "Penguncian Peranan RBAA",
+            "m4": "Lejar Forensik: WORM Init"
+        },
+        "frameworks": {
+            "sentinel": {
+                "title": "PROTOKOL SENTINEL",
+                "summary": "Kerangka tadbir urus berdaulat tentang bagaimana manusia dan AI bekerja bersama.",
+                "b1": "Mendefinisikan hierarki Overwatch, Architect, Engineer dan lapisan klinikal.",
+                "b2": "Memisahkan strategi, pelaksanaan dan audit supaya tiada satu ejen pun boleh memesongkan sistem.",
+                "b3": "Mengikat segala‑galanya kepada substrat berdaulat Singapura dan log forensik."
+            },
+            "ram": {
+                "title": "TADBIR URUS RAM",
+                "summary": "Model Akauntabiliti Relasional untuk keputusan manusia–AI.",
+                "b1": "Menumpu kepada hubungan dan tanggungjawab, bukan sekadar keupayaan mentah.",
+                "b2": "Memastikan terdapat garis jejak yang jelas daripada niat perniagaan ke output AI.",
+                "b3": "Melihat AI sebagai peserta yang memikul tanggungjawab dalam sempadan yang ditakrifkan, bukan peramal mutlak."
+            },
+            "rbaa": {
+                "title": "RBAA",
+                "summary": "Seni Bina Peranan‑Sempadan‑Autoriti untuk setiap pelaku dalam sistem.",
+                "b1": "Setiap peranan mempunyai skop, sempadan dan laluan eskalasi yang jelas.",
+                "b2": "Menghalang alat daripada melaksanakan kuasa tadbir urus secara sendiri.",
+                "b3": "Menyokong penyerahan kerja yang bersih antara lapisan strategi dan kejuruteraan."
+            },
+            "cstride": {
+                "title": "TELEMETRI C-STRIDE",
+                "summary": "Corak telemetri untuk memerhati tingkah laku sistem dari masa ke masa.",
+                "b1": "Mengumpul isyarat tentang bagaimana keputusan dibuat dan di mana kemacetan muncul.",
+                "b2": "Mengesan drift lebih awal supaya tadbir urus boleh dilaraskan, bukan hanya bertindak selepas kegagalan.",
+                "b3": "Memberi maklum balas kembali kepada RAM dan Sentinel untuk mengetatkan gelung tadbir urus."
+            }
+        }
+    },
+    "footer": {
+        "company": "RPR",
+        "company_suffix": "COMMUNICATIONS LLC",
+        "legal_identifiers": "Pengenal Undang‑Undang:",
+        "governance_vectors": "GOVERNANCE_VECTORS",
+        "privacy": "Privasi",
+        "terms": "Terma",
+        "cookies": "Kuki",
+        "security": "Keselamatan",
+        "ram_disclaimer": "SEMUA OPERASI DIANKERKAN MELALUI MODEL AKAUNTABILITI RELASIONAL (RAM).",
+        "copyright": "HAK CIPTA TERPELIHARA // SG-CANONICAL-2026",
+        "build": "BUILD: CANONICAL-STRIKE-V7.1.0"
+    },
+    "ollie": {
+        "placeholder": "APAKAH MISI HARI INI?",
+        "greeting": "BAGAIMANA SAYA BOLEH BANTU MENAMBAH IMBANGAN DALAM KERJA HIDUP ANDA HARI INI?"
+    }
+}

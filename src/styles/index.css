@@ -1,0 +1,189 @@
+/**
+ * TS-Λ3 // GLOBAL SUBSTRATE STYLES [v4.7.8]
+ * Path: src/styles/index.css
+ * Mission: Tailwind Pipeline + Font Stack Alignment
+ * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // PIPELINE_RESTORED
+ */
+
+/* 🧬 TAILWIND LAYER DIRECTIVES */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0df2f2;
+  --background-dark: #050505;
+  --background-light: #f5f8f8;
+  --rpr-brand-purple: #8B5CFF;
+  --rpr-brand-slate: #64748B;
+  --rpr-brand-white: #FFFFFF;
+  --rpr-brand-glow: rgba(0, 224, 255, 0.3);
+}
+
+/* 🧬 TACTICAL VISUALS */
+.grid-glow {
+  box-shadow: 0 0 15px rgba(13, 242, 242, 0.15);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 15px 2px rgba(13, 242, 242, 0.5);
+}
+
+.text-gradient {
+  background: linear-gradient(to bottom, #ffffff 0%, #888888 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.winning-line {
+  background: #0df2f2;
+  box-shadow: 0 0 20px #0df2f2;
+}
+
+@layer base {
+  body {
+    background-color: var(--background-dark);
+    color: #f1f5f9;
+
+    /* 🧬 BRAND FONT STACK: prioritize Space Grotesk, fall back to system UI */
+    font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(13, 242, 242, 0.3);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .squircle,
+  .rpr-squircle {
+    mask-image: paint(squircle);
+    -webkit-mask-image: paint(squircle);
+    --squircle-radius: 22.5%;
+    --squircle-smooth: 1;
+  }
+
+  @supports not (mask-image: paint(squircle)) {
+    .squircle,
+    .rpr-squircle {
+      border-radius: 22.5%;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+}
+
+/* 🔡 MATERIAL SYMBOLS HUD */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.grid-bg {
+  background-image: radial-gradient(circle at 1px 1px, #1A1A1A 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* 🛰️ ARCHITECT SCAN ANIMATION */
+@keyframes architectScan {
+  0%,
+  100% {
+    background: transparent;
+    opacity: 0.1;
+  }
+
+  5% {
+    background: rgba(0, 224, 255, 0.4);
+    box-shadow: inset 0 0 15px #00E0FF;
+    opacity: 1;
+  }
+
+  10% {
+    background: transparent;
+    opacity: 0.1;
+  }
+}
+
+.grid-square-anim {
+  animation: architectScan 10s infinite ease-in-out;
+}
+
+/* ⚙️ ENGINEER PROCESSOR ANIMATIONS */
+@keyframes drawX {
+  0%,
+  80% {
+    opacity: 0;
+  }
+
+  20%,
+  70% {
+    opacity: 1;
+  }
+}
+
+@keyframes drawO {
+  0%,
+  80% {
+    opacity: 0;
+  }
+
+  20%,
+  70% {
+    opacity: 1;
+  }
+}
+
+.oxo-anim-x {
+  animation: drawX 6s infinite;
+}
+
+.oxo-anim-o {
+  animation: drawO 6s infinite 1s;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.ollie-pulse {
+  animation: pulse-ring 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}

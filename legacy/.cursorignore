@@ -1,0 +1,79 @@
+# Cursor AI Indexing Configuration
+# This file tells Cursor which files to exclude from indexing
+# Optimizes performance and protects sensitive information
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+dist-ssr/
+out-tsc/
+tmp/
+.angular/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.local
+*.key
+*.pem
+*.cert
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+
+# OS files
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Large assets (images, videos)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+*.ico
+*.mp4
+*.mov
+*.avi
+
+# Deployment
+.vercel/
+.vercel.json
+
+# Cache
+.cache/
+.parcel-cache/
+.npm/
+.yarn/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+
+# Angular specific
+.angular/
+*.ngfactory.ts
+*.ngsummary.json

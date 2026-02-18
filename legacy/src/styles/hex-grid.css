@@ -1,0 +1,14 @@
+/**
+ * TS-Λ3 // HEX GRID SUBSTRATE STYLES
+ */
+.hex-grid-canvas {
+  opacity: 0.4;
+  mix-blend-mode: plus-lighter;
+  filter: blur(0.5px);
+}
+
+@media (max-width: 768px) {
+  .hex-grid-canvas {
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>KONTROL World Model – L1–L4 Overview</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e6b319",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611",
+                        "charcoal": "#121212",
+                        "sand": "#dcd7c9",
+                        "slate-grey": "#708090"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .schematic-line {
+            background-color: #708090;
+        }
+
+        .grid-bg {
+            background-image: radial-gradient(circle, #383429 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden">
+    <div class="layout-container flex min-h-screen flex-col">
+        <!-- Header -->
+        <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#383429] px-10 py-4 bg-background-light dark:bg-background-dark">
+            <div class="flex items-center gap-4">
+                <div class="size-6 text-primary">
+                    <span class="material-symbols-outlined text-3xl">overview</span>
+                </div>
+                <h2 class="text-white text-lg font-black leading-tight tracking-[-0.05em] uppercase">
+                    KONTROL WORLD MODEL
+                </h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-9 text-xs font-bold uppercase tracking-widest">
+                    <a class="text-white border-b-2 border-primary leading-normal" href="#">L1–L4 Map</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="flex min-w-[84px] items-center justify-center rounded bg-primary text-[#181611] px-4 py-2 text-xs font-black uppercase tracking-tighter">
+                        v2.1.0
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex flex-col items-center flex-1 px-10 lg:px-40 py-12 grid-bg">
+            <div class="layout-content-container flex flex-col w-full max-w-[1100px]">
+
+                <!-- Page Heading -->
+                <div class="flex flex-col gap-2 mb-10 border-l-4 border-primary pl-6">
+                    <h1 class="text-white text-4xl lg:text-5xl font-black leading-tight tracking-[-0.05em] uppercase">
+                        L1–L4 – THE CHESS BOARD
+                    </h1>
+                    <p class="text-[#b8b29d] text-sm font-medium uppercase tracking-[0.2em]">
+                        A CLEAR MAP OF WHO DOES WHAT – AND WHY IT MATTERS
+                    </p>
+                </div>
+
+                <!-- Intro Copy -->
+                <section class="mb-12 max-w-3xl text-sm text-[#dcd7c9] leading-relaxed">
+                    <p class="mb-3">
+                        The KONTROL world model treats your organization like a chess board. Each layer plays a
+                        different role:
+                        leadership, system design, day‑to‑day execution, and specialist support. Together, they turn
+                        strategy into
+                        governed, measurable action without drowning your team in complexity.
+                    </p>
+                    <p>
+                        This document explains <span class="font-semibold">what</span> each level does and
+                        <span class="font-semibold">why</span> it exists – in language you can share with clients and
+                        partners.
+                    </p>
+                </section>
+
+                <!-- L1 OVERWATCH -->
+                <section class="mb-16">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 border border-primary/60">
+                            <span class="material-symbols-outlined text-primary text-xl">military_tech</span>
+                        </div>
+                        <h2 class="text-white text-2xl font-black tracking-[0.25em] uppercase">
+                            L1 – OVERWATCH
+                        </h2>
+                    </div>
+
+                    <div class="relative w-full border border-[#383429] bg-charcoal/70 p-8 lg:p-12">
+                        <div class="absolute top-2 left-3 text-[10px] text-slate-grey/60 font-mono uppercase">
+                            REF_ID: L1-ORIGIN
+                        </div>
+                        <div class="absolute bottom-2 right-3 text-[10px] text-slate-grey/60 font-mono uppercase">
+                            LAYER: LEADERSHIP
+                        </div>
+
+                        <div class="grid gap-8 lg:grid-cols-[1.2fr,1fr] items-start">
+                            <!-- What -->
+                            <div class="space-y-4">
+                                <h3 class="text-white text-sm font-black uppercase tracking-widest">
+                                    WHAT L1 DOES
+                                </h3>
+                                <p class="text-[#dcd7c9] text-sm leading-relaxed">
+                                    L1 is where human leadership lives. It is the layer where owners and executives
+                                    decide
+                                    what matters, which risks are acceptable, and where the company is trying to go.
+                                    Decision‑making
+                                    sits here – not in the models.
+                                </p>
+                                <ul class="list-disc list-inside text-[#dcd7c9] text-sm space-y-1">
+                                    <li>Sets direction and priorities for the whole board.</li>
+                                    <li>Approves or rejects major moves and commitments.</li>
+                                    <li>Holds final responsibility for outcomes.</li>
+                                </ul>
+                            </div>
+                            <!-- Why -->
+                            <div class="space-y-4 border border-slate-grey/50 bg-sand/5 p-5">
+                                <h3 class="text-[#f8f7f6] text-xs font-black uppercase tracking-[0.28em]">
+                                    WHY L1 EXISTS
+                                </h3>
+                                <p class="text-[#dcd7c9] text-xs leading-relaxed">
+                                    Every system needs a clear “King” on the board. L1 ensures that all automation,
+                                    advice and tooling
+                                    stay aligned with human intent. It keeps accountability where it belongs: with the
+                                    people who own
+                                    the business, not the software that supports it.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- L2 ELDERS -->
+                <section class="mb-16">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 border border-primary/60">
+                            <span class="material-symbols-outlined text-primary text-xl">architecture</span>
+                        </div>
+                        <h2 class="text-white text-2xl font-black tracking-[0.25em] uppercase">
+                            L2 – THE ELDERS
+                        </h2>
+                    </div>
+
+                    <div class="relative w-full border border-[#383429] bg-charcoal/70 p-8 lg:p-12">
+                        <span
+                            class="absolute -top-3 left-6 bg-charcoal px-3 text-[10px] text-slate-grey font-bold tracking-[0.3em]">
+                            SHARED_STATE_DECISION_MATRIX
+                        </span>
+                        <div class="absolute top-2 left-3 text-[10px] text-slate-grey/60 font-mono uppercase">
+                            REF_ID: L2-ELDERS
+                        </div>
+                        <div class="absolute bottom-2 right-3 text-[10px] text-slate-grey/60 font-mono uppercase">
+                            LAYER: SYSTEM DESIGN
+                        </div>
+
+                        <!-- Triad -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                            <div
+                                class="group flex flex-col items-center justify-center gap-3 border-2 border-slate-grey bg-sand p-6">
+                                <span class="material-symbols-outlined text-charcoal text-4xl">account_tree</span>
+                                <h3 class="text-charcoal text-center text-xs font-black uppercase tracking-[0.2em]">
+                                    ARCHITECT
+                                </h3>
+                                <p class="text-charcoal/80 text-[11px] text-center leading-snug">
+                                    Designs how information flows, which objects exist, and how everything fits
+                                    together.
+                                </p>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center justify-center gap-3 border-2 border-slate-grey bg-sand p-6">
+                                <span class="material-symbols-outlined text-charcoal text-4xl">hub</span>
+                                <h3 class="text-charcoal text-center text-xs font-black uppercase tracking-[0.2em]">
+                                    ENGINEER
+                                </h3>
+                                <p class="text-charcoal/80 text-[11px] text-center leading-snug">
+                                    Maps the design onto cloud services, data stores and APIs so it can run safely at
+                                    scale.
+                                </p>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center justify-center gap-3 border-2 border-slate-grey bg-sand p-6">
+                                <span class="material-symbols-outlined text-charcoal text-4xl">security</span>
+                                <h3 class="text-charcoal text-center text-xs font-black uppercase tracking-[0.2em]">
+                                    SENTINEL
+                                </h3>
+                                <p class="text-charcoal/80 text-[11px] text-center leading-snug">
+                                    Defines guardrails, checks high‑risk moves and keeps the system inside agreed
+                                    boundaries.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Why L2 -->
+                        <div class="grid gap-6 md:grid-cols-[1.4fr,1fr]">
+                            <div>
+                                <h3 class="text-white text-sm font-black uppercase tracking-widest mb-2">
+                                    WHAT L2 DOES
+                                </h3>
+                                <p class="text-[#dcd7c9] text-sm leading-relaxed">
+                                    L2 translates leadership intent into structure. It decides how products, data,
+                                    automations and
+                                    governance should behave so that every new feature or workflow lands in a
+                                    predictable place on
+                                    the board.
+                                </p>
+                            </div>
+                            <div class="border border-slate-grey/50 bg-sand/5 p-5">
+                                <h3 class="text-[#f8f7f6] text-xs font-black uppercase tracking-[0.28em] mb-2">
+                                    WHY L2 EXISTS
+                                </h3>
+                                <p class="text-[#dcd7c9] text-xs leading-relaxed">
+                                    Without L2, systems drift into one‑off solutions that are hard to maintain. The
+                                    Elders keep
+                                    the architecture coherent so that every change strengthens the platform instead of
+                                    fragmenting it.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- L3 FORGE -->
+                <section class="mb-16">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 border border-primary/60">
+                            <span class="material-symbols-outlined text-primary text-xl">factory</span>
+                        </div>
+                        <h2 class="text-white text-2xl font-black tracking-[0.25em] uppercase">
+                            L3 – THE FORGE (WORKING NODES)
+                        </h2>
+                    </div>
+
+                    <div class="relative w-full border border-[#383429] bg-charcoal/70 p-8 lg:p-12">
+                        <span
+                            class="absolute -top-3 left-6 bg-charcoal px-3 text-[10px] text-slate-grey font-bold tracking-[0.3em]">
+                            OPERATIONS_MATRIX
+                        </span>
+                        <div class="absolute top-2 left-3 text-[10px] text-slate-grey/60 font-mono uppercase">
+                            REF_ID: L3-FORGE
+                        </div>
+                        <div class="absolute bottom-2 right-3 text-[10px] text-slate-grey/60 font-mono uppercase">
+                            LAYER: AGENCY & PRODUCT DEPARTMENTS
+                        </div>
+
+                        <!-- Main Departments -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                            <div class="border border-slate-grey bg-sand/10 p-5">
+                                <h3 class="text-white text-xs font-black uppercase tracking-widest mb-1">
+                                    CLIENT MANAGEMENT (OLLIE‑ASSISTED)
+                                </h3>
+                                <p class="text-[#dcd7c9] text-[11px] leading-snug">
+                                    Handles onboarding, day‑to‑day communication, contact reports and weekly updates,
+                                    with AI support
+                                    for drafting and summarising so humans can focus on decisions.
+                                </p>
+                            </div>
+                            <div class="border border-slate-grey bg-sand/10 p-5">
+                                <h3 class="text-white text-xs font-black uppercase tracking-widest mb-1">
+                                    STRATEGY & INSIGHTS
+                                </h3>
+                                <p class="text-[#dcd7c9] text-[11px] leading-snug">
+                                    Combines research, data and planning into clear briefs and roadmaps that guide
+                                    campaigns and
+                                    product work.
+                                </p>
+                            </div>
+                            <div class="border border-slate-grey bg-sand/10 p-5">
+                                <h3 class="text-white text-xs font-black uppercase tracking-widest mb-1">
+                                    CREATIVE & BRAND SYSTEMS
+                                </h3>
+                                <p class="text-[#dcd7c9] text-[11px] leading-snug">
+                                    Turns strategy into concepts, copy, design and content that stay on‑brand across
+                                    every touchpoint.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Second row -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            <div class="border border-slate-grey bg-sand/10 p-5">
+                                <h3 class="text-white text-xs font-black uppercase tracking-widest mb-1">
+                                    PROJECT MGMT & COMPLIANCE
+                                </h3>
+                                <p class="text-[#dcd7c9] text-[11px] leading-snug">
+                                    Coordinates timelines, resources and vendors, while making sure campaigns and events
+                                    respect the
+                                    rules that apply to them.
+                                </p>
+                            </div>
+                            <div class="border border-slate-grey bg-sand/10 p-5">
+                                <h3 class="text-white text-xs font-black uppercase tracking-widest mb-1">
+                                    SERVICES (LEGAL / FINANCE / HR / ADMIN / GOVERNANCE)
+                                </h3>
+                                <p class="text-[#dcd7c9] text-[11px] leading-snug">
+                                    Provides the internal backbone: contracts, invoicing, payroll, hiring and internal
+                                    governance that
+                                    keep the agency healthy.
+                                </p>
+                            </div>
+                            <div class="border border-slate-grey bg-sand/10 p-5">
+                                <h3 class="text-white text-xs font-black uppercase tracking-widest mb-1">
+                                    THE FORGE (PRODUCT & APP STUDIO)
+                                </h3>
+                                <p class="text-[#dcd7c9] text-[11px] leading-snug">
+                                    Builds and maintains the digital tools and child products that support clients –
+                                    from dashboards to
+                                    verification flows and specialist consoles.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Why L3 -->
+                        <div class="border border-slate-grey/60 bg-sand/5 p-5">
+                            <h3 class="text-[#f8f7f6] text-xs font-black uppercase tracking-[0.28em] mb-2">
+                                WHY L3 EXISTS
+                            </h3>
+                            <p class="text-[#dcd7c9] text-xs leading-relaxed">
+                                L3 is where plans turn into work. By separating client management, strategy, creative,
+                                delivery,
+                                services and product building, the Forge makes it clear who owns which part of the
+                                journey – and how
+                                AI can support without taking over.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- L4 SPECIALIST AGENTS -->
+                <section class="mb-16">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 border border-primary/60">
+                            <span class="material-symbols-outlined text-primary text-xl">sports_esports</span>
+                        </div>
+                        <h2 class="text-white text-2xl font-black tracking-[0.25em] uppercase">
+                            L4 – SPECIALIST AGENTS
+                        </h2>
+                    </div>
+
+                    <div class="relative w-full border border-[#383429] bg-charcoal/70 p-8 lg:p-12">
+                        <span
+                            class="absolute -top-3 left-6 bg-charcoal px-3 text-[10px] text-slate-grey font-bold tracking-[0.3em]">
+                            TENANT_EXECUTION_MATRIX
+                        </span>
+                        <div class="absolute top-2 left-3 text-[10px] text-slate-grey/60 font-mono uppercase">
+                            REF_ID: L4-AGENTS
+                        </div>
+                        <div class="absolute bottom-2 right-3 text-[10px] text-slate-grey/60 font-mono uppercase">
+                            LAYER: SPECIALIST SUPPORT
+                        </div>
+
+                        <!-- Specialist blocks -->
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+                            <div class="border border-slate-grey bg-sand/10 p-5">
+                                <h3 class="text-white text-xs font-black uppercase tracking-widest mb-1">
+                                    MYAUDIT KNIGHT
+                                </h3>
+                                <p class="text-[#dcd7c9] text-[11px] leading-snug">
+                                    Focuses on finance and tax questions: job profitability, cash‑flow impact and clean
+                                    records that
+                                    make audits boring instead of scary.
+                                </p>
+                            </div>
+                            <div class="border border-slate-grey bg-sand/10 p-5">
+                                <h3 class="text-white text-xs font-black uppercase tracking-widest mb-1">
+                                    COMPLIANCE KNIGHT
+                                </h3>
+                                <p class="text-[#dcd7c9] text-[11px] leading-snug">
+                                    Tracks obligations in regulated sectors – such as construction safety or
+                                    industry‑specific rules –
+                                    and highlights gaps before they become issues.
+                                </p>
+                            </div>
+                            <div class="border border-slate-grey bg-sand/10 p-5">
+                                <h3 class="text-white text-xs font-black uppercase tracking-widest mb-1">
+                                    JOB COSTING KNIGHT
+                                </h3>
+                                <p class="text-[#dcd7c9] text-[11px] leading-snug">
+                                    Watches project budgets, variances and capacity so teams can see which jobs are
+                                    healthy and which
+                                    need attention.
+                                </p>
+                            </div>
+                            <div class="border border-slate-grey bg-sand/10 p-5">
+                                <h3 class="text-white text-xs font-black uppercase tracking-widest mb-1">
+                                    BRAND & CONTENT KNIGHT
+                                </h3>
+                                <p class="text-[#dcd7c9] text-[11px] leading-snug">
+                                    Helps keep stories and visuals consistent across channels, and surfaces ready‑to‑go
+                                    content for
+                                    upcoming campai

@@ -1,0 +1,213 @@
+{
+    "meta": {
+        "title": "MOTHERSHIP 操作系统（THE MOTHERSHIP OS）",
+        "subtitle": "关系型问责与企业主权治理系统",
+        "version": "v1.1.3-LATCHED",
+        "status": "AUTHORITATIVE // 叙事护城河",
+        "classification": "TS-3（战略规划）",
+        "authority": "THE OVERWATCH // SG-CANONICAL-2026",
+        "timestamp": "2026-02-16T12:00:00Z",
+        "audit_marker": "WHITEPAPER-v1.1.3-LATCHED",
+        "marker_note": "[2026-02-15 13:25] // ENGINEER ELDER // 全量叙事基底已锁定（LATCHED）。",
+        "internal_ip_note": "内部知识产权基线与成果台账作为 TS-3 / TS-Λ3 文档维护；不纳入公开白皮书，对外隐藏，并存放于取证基底中以保护知识产权。"
+    },
+    "abstract": {
+        "summary": "Mothership 操作系统是一套用于将法律实体与其数字状态（“活体数字孪生”）实现同步的业务操作系统。该系统采用关系型问责模型（Relational Accountability Model，RAM），通过一个确定性的五层（L0–L4）层级结构来治理人与 AI 之间的交互。与依赖模型内部对齐策略（例如“宪法式人工智能（Constitutional AI）”）不同，Mothership OS 通过在运行时计算得到的外部 ConstraintSets 与 AgentContracts 来实施治理。",
+        "core_claims": [
+            {
+                "id": "relational_vs_constitutional",
+                "title": "关系式 vs. 宪法式",
+                "description": "治理由关系纽带与相互义务所定义，而不是由抽象的模型道德观来定义。"
+            },
+            {
+                "id": "clinical_sovereignty",
+                "title": "临床主权（Clinical Sovereignty）",
+                "description": "通过 Sentinel Protocol 的技术执行，确保每一次代理行动都具备时间 / 地点锁定能力。"
+            },
+            {
+                "id": "forensic_learning",
+                "title": "取证式学习（Forensic Learning）",
+                "description": "闭环 RLHF 系统（Daedalus）将人类决策转化为可运营的模式。"
+            }
+        ]
+    },
+    "sovereign_bond_stack": {
+        "description": "“主权债券栈”（Sovereign Bond Stack）是 RAM 的机械化实现，用于定义节点之间权威、义务与责任的流动。",
+        "foundational_bonds": [
+            {
+                "id": "founder_organization",
+                "name": "创始人 ↔ 组织",
+                "label": "一级权威锁定（Primary Authority Latch）",
+                "description": "创始人承担“意图负担”（Burden of Intent）；组织承担“语境负担”（Burden of Context）。"
+            },
+            {
+                "id": "founder_elders",
+                "name": "创始人 ↔ 管家（Elders）",
+                "label": "委托战术权威",
+                "description": "Elders 在特定领域内解读任务主线，并负有技术性风险升级（risk escalation）职权。"
+            },
+            {
+                "id": "senior_junior",
+                "name": "资深节点 ↔ 初级节点",
+                "label": "监督责任（Supervisory Liability）",
+                "description": "高层级节点通过 PROCEED/VETO 校验循环，对低层级输出承担问责。"
+            },
+            {
+                "id": "peer_peer",
+                "name": "同级节点 ↔ 同级节点",
+                "label": "水平同步（Horizontal Synchronization）",
+                "description": "同一层级的代理通过兼容的 ConstraintSets 进行协同，以防止领域碰撞。"
+            },
+            {
+                "id": "all_source_of_truth",
+                "name": "所有节点 ↔ 真实来源（Source of Truth）",
+                "label": "取证锚点（Forensic Anchor）",
+                "description": "所有系统状态必须与经过审计的外部数据保持一致（账本、法条、取证证据等）。"
+            }
+        ],
+        "rbaa": {
+            "name": "基于角色的代理权限（Role-Based Agent Authority，RBAA）",
+            "description": "RBAA 是一层权限基底，用于将 RAM 中的关系纽带映射为具体的数据与行动范围。",
+            "properties": [
+                {
+                    "id": "spatial_latched",
+                    "name": "空间锁定（Spatial-Latched）",
+                    "description": "每一项决策都需依据 Harbor、Tenant 与司法辖区进行校验。"
+                },
+                {
+                    "id": "temporal_latched",
+                    "name": "时间锁定（Temporal-Latched）",
+                    "description": "决策绑定到明确的任务序列与时间戳，从而避免脱离语境的漂移。"
+                }
+            ]
+        }
+    },
+    "sentinel_protocol": {
+        "description": "Sentinel Protocol 是 Mothership OS 的技术法律引擎，用于治理在企业主权边界内，工作如何被授权并如何被路由。",
+        "jurisdiction_and_logic": {
+            "context_input": {
+                "name": "SentinelContextInput",
+                "fields": [
+                    "tenantId",
+                    "productMode",
+                    "moduleSet",
+                    "industryProfile",
+                    "geoProfile",
+                    "tsClass"
+                ]
+            },
+            "constraint_sets": {
+                "name": "ConstraintSets",
+                "description": "在运行时计算得到的约束集合，用于定义代理可接受的行为与作用范围。"
+            },
+            "agent_contracts": {
+                "name": "AgentContracts",
+                "description": "将特定角色绑定到有限范围（如集合、API 与 allowedActions）的合约。"
+            },
+            "governance_sessions": {
+                "name": "GovernanceSessions",
+                "description": "结构化日志，用于记录所有重要动作，以便治理与审计。"
+            }
+        },
+        "external_constraint_enforcement": {
+            "description": "通过将约束保持在模型权重之外，Sentinel 消除了供应商单边决策（vendor-unilateralism）所带来的不透明性。",
+            "principles": [
+                "治理结构独立于任何单一模型之外存在。",
+                "约束只能通过经 Overwatch 批准的正式 KONTROL 变更予以修改。"
+            ]
+        }
+    },
+    "intelligence_substrate": {
+        "description": "支撑治理、学习与顾问行为的智能基底组件。",
+        "library": {
+            "id": "library",
+            "name": "The Library（知识库）",
+            "description": "已验证模式的权威知识基底。其本身不计算约束，而是为 L3/L4 代理提供共享记忆。"
+        },
+        "daedalus": {
+            "id": "daedalus_rlhf",
+            "name": "Daedalus RLHF",
+            "description": "监测 GovernanceSessions 中的人类 PROCEED/VETO 信号，并将交互对转化为用于模型微调与模式策展的精选训练数据。"
+        },
+        "icarus": {
+            "id": "icarus_advisory",
+            "name": "ICARUS 顾问（Advisory）",
+            "description": "在租户作用域内运行的 Copilot，具备只读治理访问权限。其向人类所有者解释约束，并据此塑造进入构建流水线的任务简报。"
+        },
+        "qfd_modules": {
+            "id": "qfd_strategic_modules",
+            "name": "QFD 战略模块",
+            "description": "运用质量功能展开（Quality Function Deployment），将“人类之声（Voice of the Human）”映射为技术行为，确保能力建设由真实世界的领域专家（SME）需求所驱动。"
+        }
+    },
+    "architecture": {
+        "description": "Mothership OS 在五层层级栈中的运行结构。",
+        "layers": [
+            {
+                "id": "L0",
+                "name": "THE FIRM",
+                "role": "组织根层，用于映射核心法律角色与主权根节点。"
+            },
+            {
+                "id": "L1",
+                "name": "COMMAND PLANE",
+                "role": "人类意图层，由 THE OVERWATCH 在此确立战略主线。"
+            },
+            {
+                "id": "L2",
+                "name": "THE ELDERS",
+                "role": "战略情报与治理设计层（Sentinel、Architect、Engineer）。"
+            },
+            {
+                "id": "L3",
+                "name": "THE WORKSHOP",
+                "role": "执行与学习的运营基底（Labs、Forge、Daedalus）。"
+            },
+            {
+                "id": "L4",
+                "name": "SPECIALIST INSTANCES",
+                "role": "面向租户的前台界面与行业特定代理（MYAUDIT、VERIFY 等）。"
+            }
+        ]
+    },
+    "sovereign_deployment_and_ip": {
+        "infrastructure_posture": {
+            "description": "Mothership OS 的部署与基础设施姿态。",
+            "region": "asia-southeast1",
+            "characteristics": [
+                "区域锚定于 asia-southeast1。",
+                "访问通过 Workload Identity Federation（WIF v2）治理。",
+                "执行零信任（Zero-Trust）安全姿态。"
+            ]
+        },
+        "forensic_provenance": {
+            "description": "用于证明知识产权来源与完整性的机制。",
+            "hash_algorithm": "SHA-256",
+            "ledger": "Firestore WORM 型账本",
+            "guarantees": [
+                "为所有具有 IP 重要性的成果提供“起源点证明（POO，Point of Origin）”。",
+                "确保战略文档与成果在各版本之间的完整性。"
+            ]
+        }
+    },
+    "ram_vs_constitutional_ai": {
+        "description": "Constitutional AI 与关系型问责模型（RAM）的对比视图。",
+        "metrics": [
+            {
+                "metric": "执行方式（Enforcement）",
+                "constitutional_ai": "模型内部提示 / 规约（Internal model prompting）",
+                "ram": "外部 ConstraintSet + AgentContract"
+            },
+            {
+                "metric": "约束逻辑（Constraint Logic）",
+                "constitutional_ai": "抽象道德原则",
+                "ram": "关系义务（RAM 与 Bond Stack）"
+            },
+            {
+                "metric": "责任归属（Liability）",
+                "constitutional_ai": "供应商不透明（Vendor-opaque）",
+                "ram": "人类主权（Overwatch）"
+            }
+        ]
+    }
+}

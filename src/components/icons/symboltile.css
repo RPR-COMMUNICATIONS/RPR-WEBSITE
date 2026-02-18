@@ -1,0 +1,92 @@
+/**
+ * TS-Λ3 // SYMBOL TILE SUBSTRATE [v3.3.0]
+ * Path: src/components/icons/symboltile.css
+ * Mission: Clinical interaction and glow dynamics for Material Symbols.
+ * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Fix: Synchronized with Authoritative Symbol Tile [v3.3.0] logic.
+ */
+
+.symbol-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+/* 💡 GLOW SUBSTRATE */
+.symbol-glow {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle,
+      rgba(34, 211, 238, 0.15) 0%,
+      transparent 70%);
+  filter: blur(12px);
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 0;
+}
+
+/* 🧬 MATERIAL GLYPH LATCH */
+.symbol-glyph {
+  font-variation-settings: 'FILL' 0, 'wght' 450, 'GRAD' 0, 'opsz' 48;
+  color: #94a3b8;
+  /* slate-400 default */
+  z-index: 2;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🖱️ TACTICAL INTERACTION (LATCHED TO GROUP OR SELF) */
+.group:hover .symbol-container,
+.symbol-container:hover {
+  background: rgba(34, 211, 238, 0.06);
+  border-color: rgba(34, 211, 238, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.7);
+}
+
+.group:hover .symbol-glyph,
+.symbol-container:hover .symbol-glyph {
+  color: #ffffff;
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.group:hover .symbol-glow,
+.symbol-container:hover .symbol-glow {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* 🛡️ VARIANT RECTIFICATION */
+.rounded-inherit {
+  border-radius: inherit;
+}
+
+/* 🧬 ACTIVE TELEMETRY: Animation for active pulse states if glow is enabled */
+.symbol-container:has(.symbol-glow) .symbol-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}

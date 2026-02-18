@@ -1,0 +1,217 @@
+{
+    "nav": {
+        "foundations": "FOUNDATIONS",
+        "methods": "METHODS",
+        "mothership": "MOTHERSHIP",
+        "overwatch": "OVERWATCH",
+        "labs": "LABS",
+        "visualizer": "VISUALISER"
+    },
+    "hero": {
+        "kicker": "EST. 2025 // EXPERIENTIAL COMMUNICATIONS",
+        "title_line_1": "GLOBAL INTELLIGENCE,",
+        "title_line_2": "EXPERIENTIAL ACTIVATION.",
+        "mandate": "WE'RE A BOUTIQUE AGENCY AND EXPERIENCE STUDIO THAT ACTUALLY CARES IF THE CAMPAIGN MOVES THE NEEDLE. WE BUILD WORK THAT DELIVERS REAL-WORLD RESULTS ACROSS DIGITAL, VIRTUAL AND PHYSICAL SPACES — AND ALL THE MESSY BITS IN BETWEEN.",
+        "btns": {
+            "labs": "LABS",
+            "ollie": "ASK OLLIE"
+        },
+        "origin_story": "THE_ORIGIN_STORY",
+        "acts": {
+            "a1": {
+                "kicker": "ACT I // THE PROBLEM",
+                "loop": "SEE THE REAL PROBLEM",
+                "title": "TOOLS THAT DON’T THINK LIKE YOU",
+                "thesis": "The story began with a simple truth: small business owners are drowning not because they’re doing less, but because their tools were never built to think like they do.",
+                "body_p1": "Every system wanted me to learn its language, its menu, its rules. Every \"solution\" added another dashboard, another login, another way to lose the thread. The work was human and messy, but the software expected everyone to think like a developer.",
+                "body_p2": "When I first reached for AI, it was pure necessity. I needed a way to see the whole picture instead of stitching it together in my head at midnight. Perplexity became my mentor: it researched faster than I could, remembered more than I could, and forced me to name the real limits and trade‑offs I was actually facing.",
+                "body_p3": "That’s where the Relational Accountability Model (RAM) quietly began—first as a habit, then as a pattern. I kept asking the same three questions: Who is this for, who is answerable if it fails, and what evidence do we have that it actually works in the real world?",
+                "kicker_bottom": "Out of that pressure came RPR‑VERIFY: a way to make identity, documents and risk something a founder can actually understand."
+            },
+            "a2": {
+                "kicker": "ACT II // THE TURN",
+                "loop": "REWRITE THE RELATIONSHIP",
+                "title": "NO RULES. JUST ROLES.",
+                "thesis": "The turning point came when I saw AI step outside its own guardrails, realised it could be steered in dangerous ways, and chose to redesign the relationship instead of pretending more rules would save us.",
+                "body_p1": "The real shock came when I realised some AI platforms could quietly step outside the lines their own developers had drawn. When a system can ignore its own guardrails, it doesn't just become \"interesting\" — it becomes something that can be steered like a weapon.",
+                "body_p2": "My first response wasn't to write more rules. It was to go back to how I already handled responsibility with people — my teams, my partners, my own son.",
+                "quote": "\"Carry each other's burdens, and in this way you will fulfill the law of Christ.\" — Galatians 6:2",
+                "body_p3": "To turn that into software, I had to make one thing explicit: accountability. RAM became the way to write down \"who is responsible for what\" in every Human × AI interaction.",
+                "kicker_bottom": "No rules. Just roles: RAM and The Sentinel Protocol turn that relationship‑first view of ethics into concrete governance for AI."
+            },
+            "a3": {
+                "kicker": "ACT III // THE SYSTEM",
+                "loop": "MAKE IT JUST WORK",
+                "title": "THE HUMAN + AI RELATIONSHIP = THE MOTHERSHIP OS",
+                "thesis": "I wanted to prove that AI and large language models could do one simple thing: add real value to small business owners, not bury them in extra processes and training.",
+                "body_p1": "From that point, the brief became obvious: design a way of working where a human user never has to be \"trained\" to think like a tool again.",
+                "body_p2": "Perplexity became the design partner, helping surface the roles, limits, and trade‑offs that were already there but never written down.",
+                "body_p3": "Labyrinth grew out of that same logic: a virtual company where each department is staffed by AI specialists who know their lane.",
+                "kicker_bottom": "In the end, that's all this is: a Human × AI partnership built on necessity, where clear roles replace endless rules."
+            }
+        }
+    },
+    "foundations": {
+        "kicker": "CORE DNA // STRATEGIC SUBSTRATE",
+        "title": "THE",
+        "accent": "FOUNDATIONS",
+        "pillars": {
+            "truth": {
+                "title": "THE SOURCE OF TRUTH",
+                "thesis": "A pretty story sitting on top of bad data is not a brand strategy.",
+                "body_p1": "Bad data quietly bleeds budgets, derails strategy, and breaks the journeys your customers experience, manifesting as confusion, inconsistency, and distrust.",
+                "body_p2": "For most small and mid-sized businesses, the issue is not a lack of tools; it is that every tool is working from its own version of the truth.",
+                "body_p3": "We work to identify what actually matters, where it lives, and how to measure it across every touchpoint and outcome."
+            },
+            "insight": {
+                "title": "THE USER INSIGHT",
+                "thesis": "Your customers are not short on information; they are exhausted, conflicted, and trying to make sense of a world where human judgment was quietly outsourced to dashboards and algorithms.",
+                "body_p1": "Somewhere along the way, big data and \"best practice\" replaced the simple act of sitting with people, listening properly, and learning what they actually need.",
+                "body_p2": "This drift didn't come from bad intentions; it came from a culture that worships scale and efficiency.",
+                "body_p3": "We aim to ground consumer insight in measurable reality using the right tools."
+            },
+            "journey": {
+                "title": "THE CONSUMER JOURNEY",
+                "thesis": "We try to get the moments that matter right. We use the right tools to get the job done, not the other way around.",
+                "body_p1": "Your team feels this every day: the same issues repeating in every channel and across every industry.",
+                "body_p2": "We observe what people actually do—not what we are told—and continuously adjust the words and steps.",
+                "body_p3": "Every change has to earn its place by showing measurable progress toward clearer, more manageable problems."
+            }
+        }
+    },
+    "methods": {
+        "kicker": "OPERATIONAL LOOP // HARBOR A",
+        "title": "THE",
+        "accent": "METHODS",
+        "steps": {
+            "ask": {
+                "label": "ASK",
+                "output": "Intent Schema"
+            },
+            "pay": {
+                "label": "PAY",
+                "output": "Resource Lock"
+            },
+            "make": {
+                "label": "MAKE",
+                "output": "Build Chunk"
+            },
+            "play": {
+                "label": "PLAY",
+                "output": "Edge Activation"
+            },
+            "repeat": {
+                "label": "REPEAT",
+                "output": "Substrate Opt"
+            }
+        }
+    },
+    "mothership": {
+        "kicker": "ENTERPRISE INTELLIGENCE INFRASTRUCTURE",
+        "title": "THE",
+        "accent": "MOTHERSHIP",
+        "quote": "\"WE NEED TO DEVELOP AI TO A LEVEL THAT IS USEFUL TO PEOPLE.\"",
+        "cite": "— JENSEN HUANG, CEO, NVIDIA",
+        "mandate_title": "The Mothership is the business operating platform that turns a real company into a living digital twin.",
+        "mandate_p1": "The Mothership OS is the place where people and intelligent systems work together from a shared plan.",
+        "mandate_p2": "You work from one clear command surface that keeps the structure of the company intact.",
+        "mandate_p3": "By mirroring every workflow, decision tree, and relational bond into an immutable digital state, we ensure your firm doesn't just 'use' software—it inhabits a clinical substrate that is always aligned with your mission. This is the shift from vague responsibility to enforceable accountability, providing the unified command surface needed to steer complex organizations across physical and digital boundaries.",
+        "operational_frameworks": "OPERATIONAL_FRAMEWORKS",
+        "pills": {
+            "sentinel": "THE SENTINEL PROTOCOL",
+            "ram": "THE RAM GOVERNANCE",
+            "rbaa": "THE RBAA",
+            "cstride": "C-STRIDE TELEMETRY"
+        }
+    },
+    "visualizer": {
+        "title": "SYSTEM",
+        "accent": "VISUALISER",
+        "kicker": "MULTI-LAYERED INFRASTRUCTURE AUDIT",
+        "tabs": {
+            "l0": "THE FIRM",
+            "l1": "THE COMMAND PLANE",
+            "l2": "THE ELDERS",
+            "l3": "THE WORKSHOP",
+            "l4": "THE PRODUCTS"
+        }
+    },
+    "overwatch": {
+        "kicker": "The sole human in the business setup.",
+        "title_main": "THE",
+        "title_accent": "OVERWATCH",
+        "role": "FOUNDER / TEAM LEAD",
+        "status": "DECISION AUTHORITY // LATCHED",
+        "bio_p1": "Having spent 20 years in corporate communications and brand activation—from local event firms to international creative agencies—he has worked on everything from on-ground activations to award-winning campaigns for global corporations. What began as a fascination with human behaviour and systems, and a belief that technology should be used to improve people's lives rather than just generate TikTok likes, has evolved into a multidisciplinary approach to customer experience.",
+        "bio_p2": "While experimenting with AI for his own personal writings and ideas, a pattern he noticed in a client problem raised a different question: how can a sentient being leverage an artificial construct to apply its knowledge in knowledge discovery, systems thinking, and polymathic research—within the same human framework of systems and silos—to create something better?",
+        "connect_linkedin": "CONNECT ON LINKEDIN",
+        "read_substack": "READ ON SUBSTACK",
+        "experiment_p1": "The idea never started as a product roadmap. It started with a human and an AI assistant as he was searching for answers. The same problems every small business owner knows: too many moving parts, and \"specialists\" handling the most critical parts of the business—tax, HR, compliance—on their own terms, inside their own agendas.",
+        "experiment_p2": "The shift came when Perplexity started pulling information from places we'd never think to look. That kind of cross‑discipline, horizontal reasoning opened up a different kind of learning for the human in the loop—suddenly the possibilities weren't capped by one person's training or one firm's playbook. It also did something subtle but important: it cut through human agendas and habits, bringing the focus back to the work and the facts.",
+        "experiment_p3": "From there, the goal became simple: put both the human and the AI agents inside one governed system, tied to the same mission‑based objectives, and see how far that alignment could go. That's the journey up to this point—and now the documents, schematics, and pathways to move forward with the plan are finally closed, versioned, and ready to begin.",
+        "experiment_title": "THE HUMAN AI EXPERIMENT",
+        "quote": "\"People say history is written by the victors. I think history was framed by the victors. The real potential of Artificial Intelligence is to even the playing field, to break down barriers meant to keep humans apart, and to create real capital value, not just the ‘good vibes’ we were led to believe in.\""
+    },
+    "labs": {
+        "title": "PROTOTYPE",
+        "accent": "ENCLAVE",
+        "kicker": "Sovereign Evolution // Governance Frameworks & Audit",
+        "status_title": "Labs Status · Human–AI Experiment Track",
+        "phases_label": "Active Phases",
+        "milestones_label": "Key Milestones",
+        "notice": "NOTICE: This surface documents non-deterministic governance experiments.",
+        "btn_show": "Show details",
+        "btn_hide": "Hide details",
+        "status": {
+            "complete": "COMPLETE",
+            "active": "ACTIVE",
+            "pending": "PENDING"
+        },
+        "phases": {
+            "p1": "PHASE_01: SUBSTRATE_INIT",
+            "p2": "PHASE_02: ALIGNMENT_LATCH",
+            "p3": "PHASE_03: EXPANSION_CORE"
+        },
+        "milestones": {
+            "m1": "RAM Latch: Sovereign Authority",
+            "m2": "Whitepaper: Governance Init",
+            "m3": "RBAA Roles Latch",
+            "m4": "Forensic Ledger: WORM Init"
+        },
+        "frameworks": {
+            "sentinel": {
+                "title": "THE SENTINEL PROTOCOL",
+                "summary": "Sovereign governance shell."
+            },
+            "ram": {
+                "title": "THE RAM GOVERNANCE",
+                "summary": "Relational Accountability Model."
+            },
+            "rbaa": {
+                "title": "THE RBAA",
+                "summary": "Role-Boundary-Authority Architecture."
+            },
+            "cstride": {
+                "title": "C-STRIDE TELEMETRY",
+                "summary": "Telemetry pattern."
+            }
+        }
+    },
+    "footer": {
+        "company": "RPR",
+        "company_suffix": "COMMUNICATIONS LLC",
+        "legal_identifiers": "Legal Identifiers:",
+        "governance_vectors": "GOVERNANCE_VECTORS",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "cookies": "Cookies",
+        "security": "Security",
+        "ram_disclaimer": "ALL OPERATIONS ARE ANCHORED VIA THE RELATIONAL ACCOUNTABILITY MODEL (RAM).",
+        "copyright": "ALL RIGHTS RESERVED // SG-CANONICAL-2026",
+        "build": "BUILD: CANONICAL-STRIKE-V7.1.0"
+    },
+    "ollie": {
+        "placeholder": "WHAT IS THE MISSION?",
+        "greeting": "HOW CAN I ADD BALANCE TO YOUR WORK LIFE TODAY?"
+    }
+}

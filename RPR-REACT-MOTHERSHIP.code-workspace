@@ -1,0 +1,28 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "MOTHERSHIP_ROOT"
+        }
+    ],
+    "settings": {
+        "css.lint.unknownAtRules": "ignore",
+        "tailwindCSS.includeLanguages": {
+            "plaintext": "ts"
+        },
+        "files.associations": {
+            "*.css": "tailwindcss",
+            "*.json": "jsonc"
+        },
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        },
+        "explorer.autoReveal": true,
+        "typescript.preferences.importModuleSpecifier": "relative",
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/dist": true,
+            "**/.vite": true
+        }
+    }
+}

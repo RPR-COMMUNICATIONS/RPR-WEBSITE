@@ -1,0 +1,80 @@
+# TS-Λ3 // MASTER ARCHITECTURAL MANIFEST [v5.0.0]
+
+**Mission:** Authoritative Mapping of Mothership OS Digital Surface  
+**Authority:** THE OVERWATCH // SG-CANONICAL-2026  
+**Status:** LATCHED // SG-NODE-12.4  
+
+---
+
+## 🏛️ 1. GLOBAL ROUTING ARCHITECTURE
+
+### A. Mothership Root (Internal)
+
+- **URL:** `rprcomms.com`  
+- **Entry:** `src/main.tsx → src/App.tsx`  
+
+**Primary Nodes:**
+
+- `/` : Command Surface (Hero, Foundations, Methods, Visualizer, Overwatch)  
+- `/labs` : R&D Hub (Categorized Instances)  
+- `/labs/verify` : RPR VERIFY Forensic Landing Page  
+- `/labs/myaudit` : MYΛUDIT Lab Environment  
+
+### B. Sovereign Subdomains (External Latch)
+
+- `kontrol.rprcomms.com` // Operational Interface  
+- `verify.rprcomms.com` // Canonical Compliance Entry (Points to `/labs/verify`)  
+- `myaudit.rprcomms.com` // Canonical Accounting Entry (Points to `/labs/myaudit`)  
+
+---
+
+## 🧬 2. COMPONENT HIERARCHY [FORENSIC STACK]
+
+1. **Hero Substrate (v7.0.0)**  
+   - Mission: Static Agency Intro + 3-Act Origin Story.  
+   - Feature: Accordion-style “Drop Cards” (Foundations-logic).  
+   - Anchors: DYNAMO Blueprint, RAM + Sentinel Protocol, Veritas Compliance.  
+
+2. **Strategic Foundations**  
+   - Mission: Core DNA definitions.  
+   - Nodes: Source of Truth, User Insight, Consumer Journey.  
+
+3. **Operational Methods**  
+   - Mission: Five-stage loop (ASK, PAY, MAKE, PLAY, REPEAT).  
+   - Visual: MethodGlowIcon engine with white-edge glow substrates.  
+
+4. **Mothership Visualizer (v8.45.7)**  
+   - Mission: Narrative Interception Engine for L0–L4 Audit.  
+   - L0: The Firm (Organizational Role Mapping).  
+   - L1: Command Plane (Orchestration Triad).  
+   - L2: The Elders (Design & Governance Council).  
+
+---
+
+## 🛡️ 3. GOVERNANCE AXES [LABS ALIGNMENT]
+
+All nodes within `src/components/labs.tsx` are categorized by the following governance relationships:
+
+- **ORG_GOV (Organizational Governance):**  
+  RAM Governance, The Library, Bond Stack Docs.
+
+- **KONTROL_GOV (Technical Enforcement):**  
+  Sentinel Protocol, KONTROL Substrate, C-STRIDE Telemetry.
+
+- **TRAINING_METHOD (Intelligence Learning):**  
+  Daedalus Engine, ICARUS Navigator, Knowledge Grid Playbooks.
+
+---
+
+## 🛰️ 4. SITEMAP XML LATCH
+
+The canonical sitemap is maintained in `sitemap.xml`.  
+Routes: `/`, `/labs`, `/labs/verify`, `/labs/myaudit`, plus product subdomains.
+
+---
+
+## 🛠️ 5. PATH-LOCK REGISTRY
+
+- **Icons:** `src/components/icons/symboltile.tsx` (Mandatory Ligature Protection).  
+- **UI Primitives:** `src/components/ui/` (SovereignGlass, SectionHeading, GlobalGlowDefs).  
+- **Type Latch:** `src/types/index.ts` (Authoritative `NodeData` / ledger interfaces).  

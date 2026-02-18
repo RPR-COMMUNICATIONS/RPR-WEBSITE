@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/rpr-logo-icon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ⚓ TS-Λ3 // SOVEREIGN IDENTITY LATCH [v3.5.3] -->
+  <title>RPR COMMUNICATIONS // Sovereign Identity</title>
+  <meta name="theme-color" content="#0df2f2" />
+
+  <!-- 🧬 AUTHORITATIVE SYMBOLS LATCH -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_balance,account_tree,all_inclusive,apk_install,architecture,arrow_back,assistant_device,auto_awesome_motion,autorenew,bar_chart,biotech,build,business,chess_bishop,chess_knight,chess_rook,compass_calibration,construction,conversion_path,dynamic_form,explore,fingerprint,g_mobiledata,help,hub,input_circle,insights,layers,lock_clock,monitoring,near_me,palette,payments,person,precision_manufacturing,quiz,robot,rocket,rocket_launch,schedule,science,security,self_improvement,settings_input_component,shield,shop,skull,smart_toy,subscriptions,support_agent,terminal,token,verified,verified_user,workspaces" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- 📐 GLOBAL SVG DEFINITIONS (Geometric Authority) -->
+  <svg style="position:absolute; width:0; height:0" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- 💡 WHITE EDGE GLOW -->
+      <filter id="white-edge-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feFlood flood-color="#FFFFFF" floodOpacity="0.8" result="flood" />
+        <feComposite in="flood" in2="SourceAlpha" operator="in" result="mask" />
+        <feGaussianBlur in="mask" stdDeviation="4" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <!-- 💡 CYAN GLOW -->
+      <filter id="cyan-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feFlood flood-color="#00D9FF" floodOpacity="0.8" result="flood" />
+        <feComposite in="flood" in2="SourceAlpha" operator="in" result="mask" />
+        <feGaussianBlur in="mask" stdDeviation="6" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <!-- 💡 ACTIVE NODAL GLOW -->
+      <filter id="active-white-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feFlood flood-color="#FFFFFF" floodOpacity="0.9" result="flood" />
+        <feComposite in="flood" in2="SourceAlpha" operator="in" result="mask" />
+        <feGaussianBlur in="mask" stdDeviation="8" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+  </svg>
+</head>
+
+<body class="bg-black text-white antialiased selection:bg-cyan-500/30 overflow-x-hidden">
+  <!-- ⚓ THE MOUNT POINT: SPA ENTRY AXIS -->
+  <div id="root"></div>
+
+  <!-- 🚀 MODULE ENTRY: Mothership Orchestration -->
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

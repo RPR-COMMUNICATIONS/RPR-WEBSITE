@@ -1,0 +1,213 @@
+{
+    "meta": {
+        "title": "THE MOTHERSHIP OS",
+        "subtitle": "Relational Accountability and Corporate Sovereign Governance Systems",
+        "version": "v1.1.3-LATCHED",
+        "status": "AUTHORITATIVE // NARRATIVE MOAT",
+        "classification": "TS-3 (Strategic Planning)",
+        "authority": "THE OVERWATCH // SG-CANONICAL-2026",
+        "timestamp": "2026-02-16T12:00:00Z",
+        "audit_marker": "WHITEPAPER-v1.1.3-LATCHED",
+        "marker_note": "[2026-02-15 13:25] // ENGINEER ELDER // FULL NARRATIVE SUBSTRATE LATCHED.",
+        "internal_ip_note": "Internal IP baseline and artifact ledger maintained as TS-3 / TS-Λ3 documents; excluded from public whitepaper and stored in forensic substrate for IP protection."
+    },
+    "abstract": {
+        "summary": "The Mothership OS is a business operating system designed to synchronize a legal entity with its digital state (Living Digital Twin). The system utilizes the Relational Accountability Model (RAM) to govern Human-AI interactions through a deterministic, five-layer (L0–L4) hierarchy. Unlike internal model alignment strategies (Constitutional AI), the Mothership OS enforces governance through external ConstraintSets and AgentContracts computed at runtime.",
+        "core_claims": [
+            {
+                "id": "relational_vs_constitutional",
+                "title": "Relational vs. Constitutional",
+                "description": "Governance is defined by relational bonds and mutual obligations rather than abstract model moralities."
+            },
+            {
+                "id": "clinical_sovereignty",
+                "title": "Clinical Sovereignty",
+                "description": "Technical enforcement via the Sentinel Protocol ensures time/place latching for every agent action."
+            },
+            {
+                "id": "forensic_learning",
+                "title": "Forensic Learning",
+                "description": "A closed-loop RLHF system (Daedalus) transforms human decisions into operational patterns."
+            }
+        ]
+    },
+    "sovereign_bond_stack": {
+        "description": "The Sovereign Bond Stack is the mechanical implementation of RAM, defining the flow of authority, obligation, and liability between nodes.",
+        "foundational_bonds": [
+            {
+                "id": "founder_organization",
+                "name": "Founder ↔ Organization",
+                "label": "Primary Authority Latch",
+                "description": "The Founder retains the Burden of Intent; the Organization carries the Burden of Context."
+            },
+            {
+                "id": "founder_elders",
+                "name": "Founder ↔ Stewards (Elders)",
+                "label": "Delegated Tactical Authority",
+                "description": "Elders interpret mission lines within specific domains with a technical mandate for risk escalation."
+            },
+            {
+                "id": "senior_junior",
+                "name": "Senior ↔ Junior",
+                "label": "Supervisory Liability",
+                "description": "Higher-tier nodes are accountable for lower-tier outputs via PROCEED/VETO validation loops."
+            },
+            {
+                "id": "peer_peer",
+                "name": "Peer ↔ Peer",
+                "label": "Horizontal Synchronization",
+                "description": "Agents of the same tier coordinate via compatible ConstraintSets to prevent domain collision."
+            },
+            {
+                "id": "all_source_of_truth",
+                "name": "All ↔ Source of Truth",
+                "label": "Forensic Anchor",
+                "description": "All system states must align with audited external data (Ledgers, Statutes, Forensic Evidence)."
+            }
+        ],
+        "rbaa": {
+            "name": "Role-Based Agent Authority (RBAA)",
+            "description": "RBAA is the permissions substrate that translates RAM bonds into concrete data and action scopes.",
+            "properties": [
+                {
+                    "id": "spatial_latched",
+                    "name": "Spatial-Latched",
+                    "description": "Every decision is validated against Harbor, Tenant, and Jurisdiction."
+                },
+                {
+                    "id": "temporal_latched",
+                    "name": "Temporal-Latched",
+                    "description": "Decisions are tied to a mission sequence and timestamp, preventing context-blind drift."
+                }
+            ]
+        }
+    },
+    "sentinel_protocol": {
+        "description": "The Sentinel Protocol is the technical law engine of the Mothership OS. It governs how work is authorized and routed within the corporate sovereign.",
+        "jurisdiction_and_logic": {
+            "context_input": {
+                "name": "SentinelContextInput",
+                "fields": [
+                    "tenantId",
+                    "productMode",
+                    "moduleSet",
+                    "industryProfile",
+                    "geoProfile",
+                    "tsClass"
+                ]
+            },
+            "constraint_sets": {
+                "name": "ConstraintSets",
+                "description": "Computed constraints that define permissible behavior and scope for agents at runtime."
+            },
+            "agent_contracts": {
+                "name": "AgentContracts",
+                "description": "Contracts that bind specific roles to finite scopes such as collections, APIs, and allowedActions."
+            },
+            "governance_sessions": {
+                "name": "GovernanceSessions",
+                "description": "Structured logs where every significant action is recorded for governance and audit."
+            }
+        },
+        "external_constraint_enforcement": {
+            "description": "By keeping constraints external to model weights, Sentinel eliminates the opacity of vendor-unilateralism.",
+            "principles": [
+                "Governance structure lives outside any single model.",
+                "Constraints are only amendable via formal KONTROL changes approved by Overwatch."
+            ]
+        }
+    },
+    "intelligence_substrate": {
+        "description": "Intelligence substrate components that support governance, learning, and advisory behavior.",
+        "library": {
+            "id": "library",
+            "name": "The Library",
+            "description": "Authoritative knowledgebase substrate for proven patterns. It does not compute constraints but provides shared memory for L3/L4 agents."
+        },
+        "daedalus": {
+            "id": "daedalus_rlhf",
+            "name": "Daedalus RLHF",
+            "description": "Monitors GovernanceSessions for human PROCEED/VETO signals and converts interaction pairs into curated training data for model fine-tuning and pattern curation."
+        },
+        "icarus": {
+            "id": "icarus_advisory",
+            "name": "ICARUS Advisory",
+            "description": "Tenant-scoped copilot with read-only governance access. Explains constraints to the human owner and shapes mission briefs for the build pipelines."
+        },
+        "qfd_modules": {
+            "id": "qfd_strategic_modules",
+            "name": "QFD Strategic Modules",
+            "description": "Utilizes Quality Function Deployment to map the \"Voice of the Human\" to technical behavior, ensuring capabilities are driven by real-world SME requirements."
+        }
+    },
+    "architecture": {
+        "description": "Operational structure of the Mothership OS across a five-layer hierarchical stack.",
+        "layers": [
+            {
+                "id": "L0",
+                "name": "THE FIRM",
+                "role": "Organizational root mapping core legal roles and the sovereign root."
+            },
+            {
+                "id": "L1",
+                "name": "COMMAND PLANE",
+                "role": "Human intent layer where THE OVERWATCH establishes strategic lines."
+            },
+            {
+                "id": "L2",
+                "name": "THE ELDERS",
+                "role": "Strategic intelligence and governance design (Sentinel, Architect, Engineer)."
+            },
+            {
+                "id": "L3",
+                "name": "THE WORKSHOP",
+                "role": "Operational substrate for execution and learning (Labs, Forge, Daedalus)."
+            },
+            {
+                "id": "L4",
+                "name": "SPECIALIST INSTANCES",
+                "role": "Tenant-facing surfaces and industry-specific agents (MYAUDIT, VERIFY)."
+            }
+        ]
+    },
+    "sovereign_deployment_and_ip": {
+        "infrastructure_posture": {
+            "description": "Deployment and infrastructure stance for Mothership OS.",
+            "region": "asia-southeast1",
+            "characteristics": [
+                "Point-locked to the asia-southeast1 region.",
+                "Access governed via Workload Identity Federation (WIF v2).",
+                "Zero-trust posture enforced."
+            ]
+        },
+        "forensic_provenance": {
+            "description": "Mechanisms for proving origin and integrity of IP.",
+            "hash_algorithm": "SHA-256",
+            "ledger": "Firestore WORM Ledger",
+            "guarantees": [
+                "Point of Origin (POO) proof for IP-significant artifacts.",
+                "Version integrity across strategic documents and artifacts."
+            ]
+        }
+    },
+    "ram_vs_constitutional_ai": {
+        "description": "Comparative view of Constitutional AI vs Relational Accountability Model (RAM).",
+        "metrics": [
+            {
+                "metric": "Enforcement",
+                "constitutional_ai": "Internal model prompting",
+                "ram": "External ConstraintSet + AgentContract"
+            },
+            {
+                "metric": "Constraint Logic",
+                "constitutional_ai": "Abstract moral principles",
+                "ram": "Relational duty (RAM and Bond Stack)"
+            },
+            {
+                "metric": "Liability",
+                "constitutional_ai": "Vendor-opaque",
+                "ram": "Human-sovereign (Overwatch)"
+            }
+        ]
+    }
+}
