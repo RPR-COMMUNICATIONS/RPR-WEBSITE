@@ -1,0 +1,39 @@
+# ⚓ TS-Λ3 // WEBSITE SMOKE TEST & DEPLOY [v1.1.0]
+# Path: .github/workflows/deploy.yml
+# Mission: Automated Production Strike via GitHub Actions
+# Authority: THE OVERWATCH // SG-CANONICAL-2026
+
+name: Website Smoke Test & Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧬 Checkout Substrate
+        uses: actions/checkout@v4
+
+      - name: 🛠️ Setup Node.js (LTS 20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 Install Dependencies
+        # Using 'ci' for faster, immutable dependency resolution in runners
+        run: npm ci
+
+      - name: 🛡️ Substrate Build
+        # Triggers safe-smallcaps-latch.sh and tsc automatically per package.json
+        run: npm run build
+
+      - name: 🚀 Authoritative Production Strike
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          projectId: rpr-corporate-site
+          channelId: live
