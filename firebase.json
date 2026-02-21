@@ -1,0 +1,76 @@
+{
+    "hosting": [
+        {
+            "target": "main",
+            "public": "dist",
+            "ignore": [
+                "firebase.json",
+                "**/.*",
+                "**/node_modules/**"
+            ],
+            "cleanUrls": true,
+            "trailingSlash": false,
+            "redirects": [
+                {
+                    "source": "/products",
+                    "destination": "/labs",
+                    "type": 301
+                }
+            ],
+            "headers": [
+                {
+                    "source": "/legal/**",
+                    "headers": [
+                        {
+                            "key": "Cache-Control",
+                            "value": "public, max-age=3600"
+                        },
+                        {
+                            "key": "X-Content-Type-Options",
+                            "value": "nosniff"
+                        }
+                    ]
+                },
+                {
+                    "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)",
+                    "headers": [
+                        {
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        }
+                    ]
+                }
+            ],
+            "rewrites": [
+                /**
+         * 🧬 SOVEREIGN PROXY LATCH
+         * Path: /api/ollieChat
+         * Target: api (Cloud Function running server.js)
+         * Mission: Proxy requests to Cloud Run using Service Account identity
+         * to bypass Org Policy iam.allowedPolicyMemberDomains.
+         */
+                {
+                    "source": "/api/ollieChat",
+                    "function": "api"
+                },
+                {
+                    "source": "**",
+                    "destination": "/index.html"
+                }
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "source": "backend/functions",
+            "codebase": "default",
+            "ignore": [
+                "node_modules",
+                ".git",
+                "firebase-debug.log",
+                "firestore-debug.log",
+                "pubsub-debug.log"
+            ]
+        }
+    ]
+}

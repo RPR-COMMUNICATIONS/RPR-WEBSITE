@@ -1,40 +1,45 @@
 {
   "name": "2026-001-rpr-website",
   "private": true,
-  "version": "13.5.0",
+  "version": "13.5.2",
   "type": "module",
   "authoritative_metadata": {
     "protocol": "TS-Λ3",
     "authority": "THE OVERWATCH // SG-CANONICAL-2026",
-    "status": "LATCHED // SCRIPT_TOPOLOGY_CLEANUP_V1.0.0"
+    "status": "LATCHED // SCRIPT_TOPOLOGY_V1.5.3"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "bash scripts/devops/safe-smallcaps-latch.sh && tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint \"src/**/*.{ts,tsx}\" --report-unused-disable-directives --max-warnings 0",
-    "test": "echo \"[SENTINEL] Test suite currently PENDING implementation.\" && exit 0",
-    "verify": "npm run lint && npx tsc --noEmit && npm run build",
-    "deploy": "bash scripts/deploy/deploy-strike.sh",
-    "deploy:test": "bash scripts/deploy/deploy-strike.sh",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "verify": "bash scripts/ci/ci-firebase-preflight.sh main && npm run build",
+    "deploy": "bash scripts/deploy/ip-ledger-strike.sh",
+    "recover": "bash scripts/maintenance/module-recovery-strike.sh",
     "clean": "bash scripts/maintenance/sovereign-cleanse.sh",
-    "server": "npx vite preview --port 4173"
+    "branding": "node scripts/tools/generate-rpr-branding.js",
+    "inventory": "node scripts/inventory/generate-inventory-csv.js",
+    "server": "node server.js"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "firebase": "^10.14.1",
+    "framer-motion": "^11.3.30",
     "i18next": "^25.8.4",
     "i18next-browser-languagedetector": "^8.2.0",
-    "lucide-react": "^0.394.0",
+    "lucide-react": "^0.436.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-i18next": "^16.5.4",
     "react-router-dom": "^6.26.1",
-    "stripe": "^20.3.1"
+    "stripe": "^20.3.1",
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.0",
+    "@eslint/js": "^9.15.0",
+    "@tailwindcss/postcss": "^4.2.0",
     "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^20.11.0",
     "@types/react": "^18.3.3",
@@ -46,10 +51,14 @@
     "eslint": "^9.15.0",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.12.0",
+    "google-auth-library": "^9.15.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.0.0",
     "tsx": "^4.7.1",
     "typescript": "^5.5.3",
+    "typescript-eslint": "^8.15.0",
     "vite": "^5.4.1"
   }
 }

@@ -1,14 +1,14 @@
 /**
- * TS-Λ3 // POSTCSS CONFIGURATION [v4.7.8]
+ * TS-Λ3 // POSTCSS CONFIGURATION [v4.9.0]
  * Path: postcss.config.js
- * Mission: Reactivate Tailwind Pipeline // Visual Shell Restoration
+ * Mission: Tailwind v4 Deconfliction // Vite-Only Engine
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
  * Status: AUTHORITATIVE // PIPELINE_RESTORED
  */
 
 export default {
   plugins: {
-    tailwindcss: {},
+    // Tailwind is handled by @tailwindcss/vite; no Tailwind plugin here.
     autoprefixer: {},
   },
 };

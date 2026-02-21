@@ -22,6 +22,10 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
+      /**
+       * 🧬 CLINICAL ALIAS LATCH
+       * Maps the '@' token to the 'src/' hierarchy for relative path liquidation.
+       */
       "@/*": [
         "src/*"
       ]

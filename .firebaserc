@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "rpr-corporate-site"
+  },
+  "targets": {
+    "rpr-corporate-site": {
+      "hosting": {
+        "main": [
+          "rpr-corporate-site"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
