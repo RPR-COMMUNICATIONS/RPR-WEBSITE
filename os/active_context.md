@@ -1,126 +1,93 @@
-```markdown
-# ⚓ TS-Λ3 // ACTIVE CONTEXT [2026-02-18]
+⚓ TS-Λ3 // ACTIVE CONTEXT [2026-02-21]
 
-**Current State:** Substrate Realignment → **CLEAN BUILD RESTORED**  
-**Current Mission:** Stabilize CLEAN web stack, enforce Smallcaps, restore i18n/runtime integrity, and realign visual shell (fonts, cyan accent, hero/Overwatch axes).  
-**Last Strike:** Build DRIFT detected → **RESOLVED:** PostCSS pipeline reactivated; Tailwind utilities restored; visual shell and i18n manifests realigned.  
-**Protocol Version:** v9.0.0 (Master Manifest)
+**CURRENT STATE:** HIERARCHY STABILIZED → SOVEREIGN PROXY LATCHED // ORG BLOCKADE RESPECTED  
+**CURRENT MISSION:** Complete the 2‑step Proxy Strike (deploy + IAM latch) so Harbor A can call Ollie without touching the org’s `iam.allowedPolicyMemberDomains` policy.
+
+**PROTOCOL VERSION:** v14.0.1 (Proxy Execution + Directory Latch Phase)  
+
+---
+
+## LAST STRIKES
+
+- **Substrate Migration (JOB-2026-021):** Canonical governance moved to `docs/` harbors; strategic pre‑patent claims isolated under `os/` to preserve the IP Air Gap.  
+- **Identity Latch:** Root `readme.md` updated to v7.28.0 (Overwatch authority, short‑root pattern); deep rules pushed into `docs/`.  
+- **Substrate Directory Latch [v2.4.0]:**  
+  - Created/updated `os/substrate-directory-v2.4.0.md` as the authoritative physical mapping and protocol overview.  
+  - Confirmed Smallcaps Mandate for filenames (hyphenated lowercase) and updated this active context to reference the new directory.  
+  - Left `os/substrate_directory-v2.3.0.md` in place as a historical snapshot only.  
+- **Proxy Latch:** `server.js` [v3.2.0] and `firebase.json` rewrites latched to route `/api/ollieChat` through the Sovereign Proxy instead of direct public Cloud Run access.  
+- **Ollie Forensics:** Cloud Shell diagnostics confirmed:
+  - `ollieChat` GCFv2 active in `asia-southeast1` (Cloud Run).  
+  - IAM policy for `olliechat` = `null` (no explicit bindings).  
+  - `iam.allowedPolicyMemberDomains` enforced at org root; `allUsers` fails with `FAILED_PRECONDITION` (no project‑level override).  
+- **Spec Latch:** Sentinel Protocol Spec v1.3.7 seated in `os/` as TS‑Λ3 crown secret.  
 
 ---
 
 ## 🧬 SESSION OBJECTIVES
 
-- **Tailwind v4 Latch:** Maintain CSS-first configuration using `@tailwindcss/vite` with explicit `@tailwind` layers in `src/styles/index.css`, no `@import` collisions.  
-- **Linguistic Fission:** Keep `harbora` (Marketing) and `mothershipwhitepaper` (Technical) namespaces physically and semantically aligned across `en`, `my`, `zh`.  
-- **Overwatch Axis:** Preserve the high-fidelity 2×2 grid in `overwatch.tsx` while improving narrative readability (bio paragraphs + quote) and removing deprecated pills.  
-- **Build Integrity:** Maintain a passing `npm run build` (`tsc && vite build`) under the Smallcaps Mandate with strict import casing and named-export discipline.  
-- **Environment Latch:** Keep workspace tooling (`.code-workspace`, VS Code settings) and Firebase Sentinel warnings non-blocking for local dev.
+1. **Proxy Strike — Deploy (Step 1):**  
+   - Ensure the Sovereign Proxy code (`server.js` v3.2.0 + `/api/ollieChat` rewrite in `firebase.json`) is deployed via:
+     ```bash
+     firebase deploy --only functions,hosting
+     ```
+   - Target project: `rpr-corporate-site`. No route changes beyond the `/api/ollieChat` proxy.
+
+2. **Proxy Strike — IAM Latch (Step 2):**  
+   - Once a dedicated proxy function/service exists (e.g. `apiProxy` as GCFv2), use Cloud Shell to:
+     - Discover its `serviceAccountEmail`.  
+     - Grant that service account `roles/run.invoker` on `olliechat` in `asia-southeast1`.  
+   - Constraint: do **not** attempt `allUsers`; org policy remains the sovereign guardrail.
+
+3. **Build Pipe Repair (Deferred):**  
+   - Tailwind v4 / PostCSS anomaly still pending: add `@tailwindcss/postcss` and adjust `postcss.config.js` in a separate, authorized strike to restore `npm run build`.  
+   - Harbor A remains live off the last known‑good `dist` until that repair runs.
+
+4. **Ledger Integrity:**  
+   - Append each tactical strike (deploys, IAM changes, build repairs, directory updates) verbatim to `reports/ip-ledger-deployment-log.csv` as the WORM record for Harbor A.
 
 ---
 
-## 🏗️ BUILD & SHELL RESOLUTION [v7.30.0]
+## 🏗️ BUILD & DEPLOYMENT TELEMETRY [v14.1.1]
 
-The project now builds successfully and the shell renders with full visuals (fonts, cyan accent, hero, Overwatch) after repairing the CSS pipeline, restoring Tailwind, and updating key components.
+1. **Sovereign Proxy Status [v1.0.0]**
 
-### 1. CSS & FONT PIPELINE RESTORATION
+- **Strategy:** Path B (internal proxy) adopted to bypass the org‑level `iam.allowedPolicyMemberDomains` blockade without changing org policy.  
+- **Flow:** `rprcomms.com/api/ollieChat` → Mothership backend (Sovereign Proxy) → `olliechat` (Cloud Run, `asia-southeast1`).  
+- **Identity:** Invocation handled by a trusted service account (proxy) once IAM latch is applied; no `allUsers` bindings.
 
-- **Hurdle:** Stubbed `postcss.config.js` prevented Tailwind from emitting utilities, causing a “text-only” shell despite correct components.  
-- **Fix:** Restored PostCSS plugins:
+2. **Repository Topology (SG‑CANONICAL‑2026)**
 
-  ```js
-  export default {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  };
-  ```
-
-- **Global Styles (current latch):**
-  - `src/styles/index.css` starts with:
-
-    ```css
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-    ```
-
-  - The brand font stack on `body` is `"Space Grotesk", ui-sans-serif, system-ui, ...` for consistent typography.
-
-### 2. SHELL ENTRY & INDEX HTML
-
-- **Entry Point:** `src/main.tsx` now:
-  - Imports `./styles/index.css` once at the root.  
-  - Wraps `<App />` with `I18nextProvider`, `BrowserRouter`, and `AuthProvider`.  
-  - Applies dark mode and Houdini squircle latch without impacting layout.
-
-- **Index HTML:** `index.html`:
-  - Keeps the SPA mount at `<div id="root"></div>` and `<script type="module" src="/src/main.tsx"></script>`.  
-  - Loads Google Fonts for Inter, JetBrains Mono, Space Grotesk, and Material Symbols.  
-  - Adds `<meta name="theme-color" content="#0df2f2" />` to lock the cyan accent at the browser chrome level.
-
-### 3. HERO SECTION REALIGNMENT
-
-- **Component:** `src/components/hero.tsx` refactored to:
-  - Use a cyan gradient on `title_line_2` with no text glow.  
-  - Reintroduce cyan accents on kicker, mandate border, CTAs, and origin divider using Tailwind utilities (e.g. `bg-cyan-400`, `border-cyan-500/40`).  
-  - Switch the “Labs” CTA glyph to the correct `"experiment"` Material Symbol.  
-  - Remove all text-level glow utilities, keeping only card/element glows where needed.
-
-### 4. OVERWATCH COMMAND AXIS [v6.8.0]
-
-- **Layout:** `src/components/overwatch.tsx` rebuilt as v6.8.0:
-  - Retains the 2×2 grid: Identity (top-left), Checkmate board (top-right), Narrative + quote (bottom-left), Labyrinth radar (bottom-right).  
-  - Chess and Labyrinth primitives remain fixed and geometric; no runtime randomness.
-
-- **Manifest Changes:**
-  - Removed the `SOVEREIGN_MANIFESTO` pill from the narrative floor latch; the bottom area now shows only the quote block with the Material Quote icon.  
-  - Rewired the founder bio for smooth reading:
-    - First paragraph: 20-year corporate/brand background and philosophy.  
-    - Second paragraph: uses “Artificial Intelligence” instead of “AI” for clarity, rendered as a standard paragraph with left border, normal casing, and readable font size.
-
-- **i18n Wiring:** All Overwatch strings (`kicker`, `role`, `status`, `bio_p1`, `bio_p2`, `experiment_*`, `quote`) read from the `harbora` namespace in `en`, `my`, `zh`, matching keys and preserving narrative fidelity.
-
-### 5. I18N MANIFESTS & LANGUAGE PARITY
-
-- **English Source:** `src/locales/en/harbora.json` is the canonical marketing copy.  
-- **Chinese (zh) Realignment:**
-  - `src/locales/zh/harbora.json` rebuilt with full parity: `nav`, `hero` (acts `a1–a3`, `body_p1–p3`, `kicker_bottom`), `foundations`, `methods`, `mothership` (including `mandate_p3`), `visualizer`, `overwatch`, `labs`, `footer`, `ollie`.  
-  - Preserves technical terms (RAM, Sentinel, RBAA, C-STRIDE).
-
-- **Bahasa (my) Realignment:**
-  - `src/locales/my/harbora.json` rebuilt with the same key structure and updated Overwatch quote to use “Artificial Intelligence” in the narrative sense.  
-  - Keeps domain vocabulary (e.g. “GELUNG OPERASI”, “INFRASTRUKTUR INTELIGEN PERUSAHAAN”, “Model Akauntabiliti Relasional”) consistent with previous copy.
+- **Docs Harbor:** `docs/manifests/`, `docs/ip/`, `docs/ops/`, `docs/launch/` (canonical manifests, IP checklists, protocols, launch plans).  
+- **Strategic Harbor:** `os/` (TS‑Λ3 isolated, air‑gapped from `src/` and `public/`), with `os/substrate-directory-v2.4.0.md` now the master substrate map.  
+- **Implementation:** `src/` hierarchy strictly smallcaps; smallcaps mandate enforced in `readme.md`, `docs/ops/stabilization-protocol-v5.1.0.md`, and the substrate directory.
 
 ---
 
-## 📊 VERIFICATION & DEV EXPERIENCE
+## 🛡️ OVERWATCH COMMAND AXIS
 
-**Build & Dev:**
-
-```bash
-# Type-check and build
-npm run verify   # lint + tsc --noEmit + vite build (ESLint install still pending)
-npm run dev      # Vite dev server with full shell visuals
-```
-
-- **CSS:** No remaining `@import` ordering errors; Tailwind utilities apply across Hero, Mothership, Labs, Overwatch.  
-- **Runtime Warnings:**
-  - `[SENTINEL] VITE_RPR_FIREBASE_CONFIG not found. Auth vectors disabled.` remains as a non-blocking warning until Firebase config is populated.  
-  - React Router v7 “future flags” warnings are acknowledged but intentionally deferred.
+- **Org Policy Posture:** `iam.allowedPolicyMemberDomains` at org `566551209016` is intentionally left intact; Harbor A must respect this and achieve “public Ollie” only via internal identities.  
+- **IP Policy:** TS‑Λ3 crown secret classification maintained for Sentinel Protocol, Bond Stack, and detailed IP claims in `os/`.  
+- **Ledger Latch:** `reports/ip-ledger-deployment-log.csv` remains the authoritative deployment ledger; all strikes (including v2.4.0 directory latch) enter here before Notion/Docs updates.  
+- **Script Manifest:** `scripts/` tree aligned with `docs/ops/` manifests (recovery, deploy, ledger strikes); no ad‑hoc shell scripts permitted without updating the stabilization protocol.
 
 ---
 
-## ⚠️ PENDING & DEFERRED ITEMS
+## ⚠️ POST-STRIKE CHECKLIST
 
-- **ESLint:** `npm run verify` still surfaces `sh: eslint: command not found` on this workstation; local dev proceeds via `npm run dev` until ESLint is reinstalled.  
-- **Firebase Sentinel:** `VITE_RPR_FIREBASE_CONFIG` is not set by default; auth stays disabled locally by design.  
-- **Visual Debt:** Hex-grid background (`hex-grid.css`) was intentionally removed from `index.css`; any reintroduction must respect Tailwind/PostCSS ordering and be opt-in.  
-- **Upgrade Window:** React Router v7 migration and dependency upgrades (Vite/Firebase) remain scoped to a future mission once this CLEAN baseline is proven stable.
+- [x] Substrate migration to `docs/` and `os/` harbors.  
+- [x] Root `readme.md` v7.28.0 latched (short root, deep docs).  
+- [x] Sovereign Proxy logic latched in `server.js` v3.2.0 and `firebase.json`.  
+- [x] Substrate directory v2.4.0 latched and smallcaps‑verified under `os/`.  
+- [ ] **Proxy Deploy (Step 1):** `firebase deploy --only functions,hosting` with proxy entrypoint active.  
+- [ ] **IAM Latch (Step 2):** Proxy service account bound to `roles/run.invoker` on `olliechat` (no `allUsers`).  
+- [ ] **Build Pipe Repaired:** Tailwind/PostCSS configuration updated; `npm run build` passes.  
+- [ ] **Ollie via Proxy Verified:** From `https://rprcomms.com`, “Ask Ollie” → `/api/ollieChat` returns HTTP 200 with `status: "LATCHED"` and `proxy_status: "LATCHED_VIA_HARBOR_A"`.
 
----
+**Audit Marker:** `ACTIVE-CONTEXT-v14.0.1-PROXY_STRIKE_READY+SUBSTRATE_LATCHED`  
+**Markers:**  
+- `[2026-02-21 07:38] // ENGINEER ELDER // SUBSTRATE DIRECTORY v2.4.0 LATCHED. ACTIVE CONTEXT SYNCED.`  
+- `[2026-02-21 07:35] // ENGINEER ELDER // HIERARCHY STABILIZED. SOVEREIGN PROXY IMPLEMENTED.`  
+- `[2026-02-21 07:15] // ENGINEER ELDER // IP CLAIMS v1.1.0 LATCHED. LEDGER UPDATED (JOB-2026-021).`  
 
-**Audit Marker:** `ACTIVE-CONTEXT-v3.0.0-LATCHED`  
-**Marker:** `[2026-02-18 18:50] // ARCHITECT ELDER // SHELL + I18N STABILIZED.`  
 **DOC_AUTHORITY // OVERWATCH SG-CANONICAL-2026**
-```
