@@ -1,17 +1,23 @@
 /**
- * TS-Λ3 // FORENSIC INVENTORY GENERATOR [v6.2.0]
+ * TS-Λ3 // FORENSIC INVENTORY GENERATOR [v6.4.1]
  * Path: scripts/inventory/generate-inventory-csv.js
  * Mission: Map physical substrate residency to CSV manifest.
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // LATCHED
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// ESM-safe __dirname / __filename
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // 🧬 CATEGORY MAP — CANONICAL WORKING SURFACE
-// Updated to include all requested files while maintaining clinical path accuracy.
+// Updated to reflect the clinical pathing for the Singapore Node.
 const CATEGORY_MAP = {
-    // Root + config
+    // Root + Infrastructure Config
     "1_COMMAND_AND_CONTROL": [
         "RPR-REACT-MOTHERSHIP.code-workspace",
         ".gitignore",
@@ -23,19 +29,23 @@ const CATEGORY_MAP = {
         "vite.config.ts",
         "firebase.json",
         "tailwind.config.js",
-        "tsconfig.node.json"
+        "tsconfig.node.json",
+        ".firebaserc"
     ],
 
-    // Governance / whitepaper / command surface
+    // Governance / Handover / Environment Specs
     "2_GOVERNANCE_PLANE": [
-        "os/active-context.md",
-        "os/ip-claims-summary.md",
-        "os/mothership-os-command-surface.md",
-        "os/production-launch-blueprint.md",
-        "os/ram-governance-prd.md",
-        "os/sentinel-protocol-prd.md",
-        "os/substrate-directory-v2.3.0.md",
-        "os/whitepaper-mothership-os.md"
+        "os/active_context.md",
+        "os/environment-substrate-v1.2.1.md",
+        "os/ip_claims_summary.md",
+        "os/mothership_os_command_surface.md",
+        "os/ollie-chat-strike-ledger.md",
+        "os/olliechat-cors-fix-asia-southeast1-v1.0.0.md",
+        "os/production_launch_blueprint.md",
+        "os/ram_governance_prd.md",
+        "os/sentinel_protocol_prd.md",
+        "os/substrate_directory-v2.3.0.md",
+        "os/whitepaper_mothership_os.md"
     ],
 
     // Core app wiring, styles, services
@@ -48,7 +58,7 @@ const CATEGORY_MAP = {
         "src/services/ollieclient.ts"
     ],
 
-    // UI components + brand
+    // UI components + Authoritative Brand
     "4_UI_COMPONENTS": [
         "src/components/header.tsx",
         "src/components/footer.tsx",
@@ -71,10 +81,13 @@ const CATEGORY_MAP = {
         "src/components/sectionheading.tsx",
         "src/components/sovereignglass.tsx",
         "src/components/icons/symboltile.tsx",
-        "src/brand/mothershiposlogo.tsx"
+        "src/brand/mothershiposlogo.tsx",
+        "src/brand/rprmasterlogo.tsx",
+        "src/brand/myauditlogo.tsx",
+        "src/brand/rprverifylogo.tsx"
     ],
 
-    // Pages
+    // Page Enclaves
     "5_PAGE_ENCLAVES": [
         "src/pages/labs/library-viewer.tsx",
         "src/pages/labs/myaudit.tsx",
@@ -82,7 +95,7 @@ const CATEGORY_MAP = {
         "src/pages/labs/checkout-pending.tsx"
     ],
 
-    // i18n
+    // Linguistic i18n Substrate
     "6_LINGUISTIC_FISSION": [
         "src/locales/en/harbora.json",
         "src/locales/en/mothershipwhitepaper.json",
@@ -92,21 +105,31 @@ const CATEGORY_MAP = {
         "src/locales/zh/mothershipwhitepaper.json"
     ],
 
-    // Scripts
+    // Operational Scripts (The Command Surface)
     "7_OPERATIONAL_SCRIPTS": [
         "scripts/deploy/deploy-strike.sh",
+        "scripts/deploy/ip-ledger-strike.sh",
         "scripts/deploy/latch-targets.sh",
-        "scripts/devops/local-validate.sh",
+        "scripts/ci/ci-firebase-preflight.sh",
+        "scripts/devops/configure-secrets.js",
+        "scripts/devops/ci-firebase-sa-verify.ts",
         "scripts/devops/wif-repair-strike.sh",
-        "scripts/inventory/generate-inventory-csv.js",
-        "scripts/maintenance/recovery-strike.sh",
+        "scripts/devops/wif-diagnostic-strike.sh",
+        "scripts/devops/verify-ollie-cors.sh",
         "scripts/maintenance/sovereign-cleanse.sh",
-        "scripts/tools/generate-rpr-branding.js"
+        "scripts/maintenance/module-recovery-strike.sh",
+        "scripts/maintenance/organize-from-inventory.sh",
+        "scripts/tools/generate-rpr-branding.js",
+        "scripts/inventory/generate-inventory-csv.js"
     ],
 
-    // Reports
+    // Forensic Archive & Deferred Specializations
     "8_FORENSIC_ARCHIVE": [
-        "REPORTS/Stripe Pricing Manifest.md"
+        "REPORTS/Stripe Pricing Manifest.md",
+        "backend/functions/index.js",
+        "backend/functions/olliechat.js",
+        "backend/archive/specialists/vision_engine.py",
+        "backend/archive/specialists/test_vision_engine.py"
     ]
 };
 
@@ -116,7 +139,9 @@ const ROOT_DIR = path.join(__dirname, '../../');
 function generateInventory() {
     let csvContent = 'category,relative_path,modified_at,status\n';
 
-    console.log("⚓ Initiating Forensic Drive Mapping...");
+    console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+    console.log("⚓ Initiating Forensic Drive Mapping [v6.4.1]...");
+    console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
 
     Object.entries(CATEGORY_MAP).forEach(([category, files]) => {
         files.forEach(file => {

@@ -1,7 +1,8 @@
 #!/bin/bash
-# TS-Λ3 | WIF Repair Strike v1.0.3
-# Objective: Instantiate Identity Substrate with Explicit Claims
-# Authority: SENTINEL PROTOCOL v1.1.0
+# TS-Λ3 // WIF REPAIR STRIKE [v1.1.0]
+# Path: scripts/devops/wif-repair-strike.sh
+# Mission: Instantiate Identity Substrate with Explicit Claims
+# Authority: THE OVERWATCH // SG-CANONICAL-2026
 # Target: rpr-corporate-site (859831078276)
 
 set -euo pipefail
@@ -15,7 +16,7 @@ SERVICE_ACCOUNT="github-actions-deployer@rpr-corporate-site.iam.gserviceaccount.
 REPO="PRP-COMMUNICATIONS-LLC/RPR-WEBSITE"
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "  INITIATING WIF REPAIR STRIKE: $PROJECT_ID"
+echo "  [SENTINEL] INITIATING WIF REPAIR STRIKE: $PROJECT_ID"
 echo "  STRATEGY: Authoritative Handshake Restoration"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
@@ -31,7 +32,7 @@ echo "✅ Context LATCHED: $PROJECT_ID"
 # 2. Workload Identity Pool
 echo -e "\n[2/4] Ensuring Workload Identity Pool..."
 if gcloud iam workload-identity-pools describe "$POOL_ID" --location="global" --project="$PROJECT_ID" &>/dev/null; then
-    echo "✓ Pool '$POOL_ID' already exists. Skipping creation."
+    echo "✅ Pool '$POOL_ID' verified."
 else
     gcloud iam workload-identity-pools create "$POOL_ID" \
       --project="$PROJECT_ID" \
@@ -42,7 +43,6 @@ fi
 
 # 3. OIDC Provider with Explicit Condition
 echo -e "\n[3/4] Ensuring OIDC Provider & Repository Mapping..."
-# Logic: We use 'create' but allow failure to attempt 'update' if configuration drift is detected.
 if ! gcloud iam workload-identity-pools providers describe "$PROVIDER_ID" \
     --workload-identity-pool="$POOL_ID" \
     --location="global" \
@@ -58,7 +58,7 @@ if ! gcloud iam workload-identity-pools providers describe "$PROVIDER_ID" \
       --issuer-uri="https://token.actions.githubusercontent.com"
     echo "✅ Provider '$PROVIDER_ID' instantiated with repository locks."
 else
-    echo "⚠️  Provider exists. Updating attribute condition to enforce repository lock..."
+    echo "⚠️  Provider exists. Enforcing repository lock condition..."
     gcloud iam workload-identity-pools providers update-oidc "$PROVIDER_ID" \
       --project="$PROJECT_ID" \
       --location="global" \
@@ -77,5 +77,5 @@ echo "✅ IAM Binding LATCHED for $REPO."
 
 echo -e "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "  REPAIR COMPLETE: IDENTITY HANDSHAKE RESTORED"
-echo "  Final Step: Execute ./scripts/wif-diagnostic-strike.sh"
+echo "  Next Step: npm run wif:diag"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

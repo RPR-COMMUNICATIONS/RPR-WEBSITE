@@ -1,6 +1,8 @@
 #!/bin/bash
 # TS-Λ3 | Target Latching Strike v1.2.0 [AUS-Standard]
 # Objective: Latch main -> rpr-corporate-site (Harbor A only)
+# Path: scripts/deploy/latch-targets.sh
+# Authority: THE OVERWATCH // SG-CANONICAL-2026
 
 PROJECT_ID="rpr-corporate-site"
 

@@ -1,82 +1,170 @@
-#!/usr/bin/env node
 /**
- * RPR-KONTROL | SOVEREIGN BRANDING GENERATOR (v1.3.1)
- * Role: THE ENGINEER
- * Purpose: Programmatic generation of canonical SVG assets.
- * Target: RPR MOTHERSHIP V4 (Header / Footer / Kontrol Latch)
- * Authority: TS-Λ3
- * Path Safety: Absolute path resolution for cross-directory execution.
+ * TS-Λ3 // FORENSIC INVENTORY GENERATOR [v6.4.1]
+ * Path: scripts/inventory/generate-inventory-csv.js
+ * Mission: Map physical substrate residency to CSV manifest.
+ * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // LATCHED
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Absolute path resolution logic
-const SCRIPT_DIR = __dirname;
-const JOB_ROOT = path.resolve(SCRIPT_DIR, '..');
-const REACT_MOTHERSHIP = path.join(JOB_ROOT, 'RPR-REACT-MOTHERSHIP');
-const OUTPUT_DIR = path.join(REACT_MOTHERSHIP, 'src', 'assets', 'branding');
+// ESM-safe __dirname / __filename
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const LOGOS = {
-  'rpr-communications-white.svg': `
-    <svg width="260" height="40" viewBox="0 0 260 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="32" height="32" rx="4" fill="white" fill-opacity="0.08" />
-      <path
-        d="M16 4L6 9V16C6 22.14 10.27 27.85 16 30C21.73 27.85 26 22.14 26 16V9L16 4Z"
-        stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        fill="none"
-      />
-      <text
-        x="44"
-        y="24"
-        fill="white"
-        font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
-        font-weight="900"
-        font-size="16"
-        letter-spacing="0.18em"
-      >
-        RPR COMMUNICATIONS, LLC
-      </text>
-    </svg>`,
-  'google-auth-black.svg': `
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="40" height="40" rx="4" fill="black"/>
-      <path d="M28.64 20.2045C28.64 19.5318 28.5832 18.9136 28.4695 18.3182H20.4091V21.8818H25.0441C24.8423 23.0045 24.2361 23.9545 23.327 24.5773V26.8864H26.0964C27.717 25.3727 28.64 23.0045 28.64 20.2045Z" fill="white"/>
-      <path d="M20.4091 28.6364C22.6841 28.6364 24.5909 27.8682 25.96 26.5409L23.1907 24.2318C22.4216 24.7636 21.4625 25.1045 20.4091 25.1045C18.2125 25.1045 16.3507 23.6182 15.6823 21.6182H12.8225V23.8636C14.2361 26.6909 17.1136 28.6364 20.4091 28.6364Z" fill="white"/>
-      <path d="M15.6823 21.6182C15.5118 21.1045 15.4109 20.5545 15.4109 20C15.4109 19.4455 15.5118 18.8955 15.6823 18.3818V16.1364H12.8225C12.2477 17.2955 11.9148 18.6091 11.9148 20C11.9148 21.3909 12.2477 22.7045 12.8225 23.8636L15.6823 21.6182Z" fill="white"/>
-      <path d="M20.4091 14.8955C21.6455 14.8955 22.7561 15.3318 23.6305 16.1818L26.248 13.5636C24.6414 12.0682 22.7409 11.1364 20.4091 11.1364C17.1136 11.1364 14.2361 13.0818 12.8225 15.9091L15.6823 18.1545C16.3507 16.1545 18.2125 14.8955 20.4091 14.8955Z" fill="white"/>
-    </svg>`
+// 🧬 CATEGORY MAP — CANONICAL WORKING SURFACE
+// Updated to reflect the clinical pathing for the Singapore Node.
+const CATEGORY_MAP = {
+  // Root + Infrastructure Config
+  "1_COMMAND_AND_CONTROL": [
+    "RPR-REACT-MOTHERSHIP.code-workspace",
+    ".gitignore",
+    "README.md",
+    "index.html",
+    "package.json",
+    "postcss.config.js",
+    "tsconfig.json",
+    "vite.config.ts",
+    "firebase.json",
+    "tailwind.config.js",
+    "tsconfig.node.json",
+    ".firebaserc"
+  ],
+
+  // Governance / Handover / Environment Specs
+  "2_GOVERNANCE_PLANE": [
+    "os/active_context.md",
+    "os/environment-substrate-v1.2.1.md",
+    "os/ip_claims_summary.md",
+    "os/mothership_os_command_surface.md",
+    "os/ollie-chat-strike-ledger.md",
+    "os/olliechat-cors-fix-asia-southeast1-v1.0.0.md",
+    "os/production_launch_blueprint.md",
+    "os/ram_governance_prd.md",
+    "os/sentinel_protocol_prd.md",
+    "os/substrate_directory-v2.3.0.md",
+    "os/whitepaper_mothership_os.md"
+  ],
+
+  // Core app wiring, styles, services
+  "3_CORE_ORCHESTRATION": [
+    "src/main.tsx",
+    "src/app.tsx",
+    "src/i18n/i18n.ts",
+    "src/vite-env.d.ts",
+    "src/styles/index.css",
+    "src/services/ollieclient.ts"
+  ],
+
+  // UI components + Authoritative Brand
+  "4_UI_COMPONENTS": [
+    "src/components/header.tsx",
+    "src/components/footer.tsx",
+    "src/components/hero.tsx",
+    "src/components/foundations.tsx",
+    "src/components/methods.tsx",
+    "src/components/mothershipsection.tsx",
+    "src/components/mothershipvisualizer.tsx",
+    "src/components/overwatch.tsx",
+    "src/components/home.tsx",
+    "src/components/overwatchlabyrinth.tsx",
+    "src/components/labyrinth.tsx",
+    "src/components/labyrinthvariantboard.tsx",
+    "src/components/chessboard.tsx",
+    "src/components/labs.tsx",
+    "src/components/askollie.tsx",
+    "src/components/askollielauncher.tsx",
+    "src/components/legalstub.tsx",
+    "src/components/audit-sidebar.tsx",
+    "src/components/sectionheading.tsx",
+    "src/components/sovereignglass.tsx",
+    "src/components/icons/symboltile.tsx",
+    "src/brand/mothershiposlogo.tsx",
+    "src/brand/rprmasterlogo.tsx",
+    "src/brand/myauditlogo.tsx",
+    "src/brand/rprverifylogo.tsx"
+  ],
+
+  // Page Enclaves
+  "5_PAGE_ENCLAVES": [
+    "src/pages/labs/library-viewer.tsx",
+    "src/pages/labs/myaudit.tsx",
+    "src/pages/labs/verify.tsx",
+    "src/pages/labs/checkout-pending.tsx"
+  ],
+
+  // Linguistic i18n Substrate
+  "6_LINGUISTIC_FISSION": [
+    "src/locales/en/harbora.json",
+    "src/locales/en/mothershipwhitepaper.json",
+    "src/locales/my/harbora.json",
+    "src/locales/my/mothershipwhitepaper.json",
+    "src/locales/zh/harbora.json",
+    "src/locales/zh/mothershipwhitepaper.json"
+  ],
+
+  // Operational Scripts (The Command Surface)
+  "7_OPERATIONAL_SCRIPTS": [
+    "scripts/deploy/deploy-strike.sh",
+    "scripts/deploy/ip-ledger-strike.sh",
+    "scripts/deploy/latch-targets.sh",
+    "scripts/ci/ci-firebase-preflight.sh",
+    "scripts/devops/configure-secrets.js",
+    "scripts/devops/ci-firebase-sa-verify.ts",
+    "scripts/devops/wif-repair-strike.sh",
+    "scripts/devops/wif-diagnostic-strike.sh",
+    "scripts/devops/verify-ollie-cors.sh",
+    "scripts/maintenance/sovereign-cleanse.sh",
+    "scripts/maintenance/module-recovery-strike.sh",
+    "scripts/maintenance/organize-from-inventory.sh",
+    "scripts/tools/generate-rpr-branding.js",
+    "scripts/inventory/generate-inventory-csv.js"
+  ],
+
+  // Forensic Archive & Deferred Specializations
+  "8_FORENSIC_ARCHIVE": [
+    "REPORTS/Stripe Pricing Manifest.md",
+    "backend/functions/index.js",
+    "backend/functions/olliechat.js"
+  ]
 };
 
-const generate = () => {
-  console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-  console.log("[SENTINEL] RPR BRANDING GENERATOR | v1.3.1");
-  console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-  
-  if (!fs.existsSync(REACT_MOTHERSHIP)) {
-    console.error(`❌ ERROR: React Mothership path not found: ${REACT_MOTHERSHIP}`);
-    process.exit(1);
-  }
+const OUTPUT_FILE = 'rpr-mothership-inventory-dates.csv';
+const ROOT_DIR = path.join(__dirname, '../../');
 
-  if (!fs.existsSync(OUTPUT_DIR)) {
-    console.log(`Creating directory: ${OUTPUT_DIR}`);
-    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-  }
+function generateInventory() {
+  let csvContent = 'category,relative_path,modified_at,status\n';
 
-  Object.entries(LOGOS).forEach(([filename, content]) => {
-    const filePath = path.join(OUTPUT_DIR, filename);
-    try {
-      fs.writeFileSync(filePath, content.trim());
-      console.log(`✅ GENERATED: ${filename}`);
-    } catch (err) {
-      console.error(`❌ FAILED: ${filename} - ${err.message}`);
-      process.exit(1);
-    }
+  console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+  console.log("⚓ Initiating Forensic Drive Mapping [v6.4.1]...");
+  console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+
+  Object.entries(CATEGORY_MAP).forEach(([category, files]) => {
+    files.forEach(file => {
+      const fullPath = path.join(ROOT_DIR, file);
+      let status = 'LATCHED';
+      let modifiedAt = '0000-00-00 00:00:00';
+
+      if (fs.existsSync(fullPath)) {
+        const stats = fs.statSync(fullPath);
+        modifiedAt = stats.mtime.toISOString().replace('T', ' ').split('.')[0];
+      } else {
+        status = 'RESIDENCY_VOID';
+        console.warn(`⚠️  VOID DETECTED: ${file}`);
+      }
+
+      csvContent += `${category},${file},${modifiedAt},${status}\n`;
+    });
   });
-  console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-};
 
-generate();
+  try {
+    fs.writeFileSync(path.join(ROOT_DIR, OUTPUT_FILE), csvContent);
+    console.log(`✅ Inventory Latched: ${OUTPUT_FILE}`);
+  } catch (error) {
+    console.error(`❌ Strike Failed: ${error.message}`);
+  }
+}
+
+generateInventory();

@@ -1,7 +1,8 @@
 #!/bin/bash
 # TS-Λ3 // MODULE RESOLUTION RECOVERY STRIKE [v1.0.0]
 # OBJECTIVE: Liquidate stale locks and reinstall dependency substrate.
-# TARGET: 2026-001-RPR-WEBSITE
+# PATH: scripts/maintenance/module-recovery-strike.sh
+# Authority: THE OVERWATCH // SG-CANONICAL-2026
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "  INITIATING RECOVERY STRIKE: SUBSTRATE SYNCHRONIZATION"
