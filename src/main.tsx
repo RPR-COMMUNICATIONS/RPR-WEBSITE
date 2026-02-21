@@ -5,16 +5,19 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n/i18n.ts';
 
 /**
- * TS-Λ3 // MAIN ENTRY SUBSTRATE [v4.2.4]
+ * TS-Λ3 // MAIN ENTRY SUBSTRATE [v4.2.6]
  * Path: src/main.tsx
- * Mission: Physical Drive Alignment // Resolve TS1261
+ * Mission: Console Hygiene // Workflow State Orchestration
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
  * Status: AUTHORITATIVE // LATCHED
+ * Fix: Opted into v7 future flags to liquidate router deprecation warnings.
+ * Fix: Integrated WorkflowProvider for Ollie interaction governance.
  */
 
 // 🧬 SMALLCAPS MANDATE LATCH
 import App from './app.tsx';
 import { AuthProvider } from './contexts/authcontext.tsx';
+import { WorkflowProvider } from './contexts/workflowcontext.tsx';
 import './styles/index.css';
 
 // 1. IDENTITY LATCH: Initialize Dark Mode
@@ -38,9 +41,18 @@ if (!rootElement) {
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <I18nextProvider i18n={i18n}>
-      <BrowserRouter>
+      {/* 🛡️ FUTURE-PROOF LATCH: Liquidating v7 warnings */}
+      <BrowserRouter
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true
+        }}
+      >
         <AuthProvider>
-          <App />
+          {/* 🤖 WORKFLOW LATCH: FSM for Ollie & Visualizer telemetry */}
+          <WorkflowProvider>
+            <App />
+          </WorkflowProvider>
         </AuthProvider>
       </BrowserRouter>
     </I18nextProvider>

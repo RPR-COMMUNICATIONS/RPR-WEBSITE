@@ -1,0 +1,28 @@
+{
+    "nav": {
+        "labs": "实验室",
+        "methods": "方法",
+        "verify": "验证",
+        "myaudit": "MyAudit"
+    },
+    "labs": {
+        "kicker": "沙盒环境",
+        "title": "金融底座",
+        "pricing_tba": "价格：即将公布（TBA）。早期合作伙伴可登记意向；正式价格将稍后公开发布。",
+        "btns": {
+            "interest": "登记意向",
+            "waitlist": "加入等候名单",
+            "storefront": "打开 Stripe 店面（测试版）"
+        }
+    },
+    "verification": {
+        "title": "取证验证",
+        "subtitle": "主权宪章 v12.4",
+        "description": "自动化的取证源文档摄取与实时风险评估引擎。",
+        "cta": "启动扫描",
+        "nodes": {
+            "singapore": "asia-southeast1",
+            "status": "运行中"
+        }
+    }
+}

@@ -5,9 +5,18 @@ import {
   signInWithPopup,
   signInWithRedirect,
   getRedirectResult,
-  signOut as firebaseSignOut
+  signOut as firebaseSignOut,
+  Auth
 } from 'firebase/auth';
-import { getFirebaseAuth, googleAuthProvider } from '../lib/firebase';
+import { getFirebaseAuth, googleAuthProvider } from '../lib/firebase.ts';
+
+/**
+ * TS-Λ3 // IDENTITY PERSISTENCE LAYER [v2.8.8]
+ * Path: src/contexts/authcontext.tsx
+ * Mission: Google Redirect/Popup Handshake Orchestration
+ * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // LATCHED
+ */
 
 interface AuthContextType {
   user: User | null;
@@ -19,23 +28,22 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-/**
- * TS-Λ3 // IDENTITY PERSISTENCE LAYER [v2.1.2]
- * Purpose: Ensures user state is maintained across SPA route transitions.
- * Authority: SG-CANONICAL-2026
- */
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const auth = getFirebaseAuth();
+    const auth = getFirebaseAuth() as Auth;
     if (!auth) {
+      console.warn('[SENTINEL_AUTH] Auth substrate not detected. Bypassing persistence.');
       setLoading(false);
       return;
     }
 
-    // Handle Redirect Results (Post-OAuth return)
+    /**
+     * 🚥 REDIRECT HANDSHAKE LATCH
+     * Handles returning from Google OAuth redirect flow.
+     */
     getRedirectResult(auth)
       .then((result) => {
         if (result) {
@@ -46,19 +54,27 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         console.error('[SENTINEL_AUTH] Redirect Strike Failed:', error);
       });
 
+    /**
+     * 🛰️ STATE OBSERVER
+     * Synchronizes local user state with the Firebase Auth substrate.
+     */
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
       if (currentUser) {
-        console.log('[SENTINEL_AUTH] Session Persisted:', currentUser.email);
+        console.log('[SENTINEL_AUTH] Identity Verified:', currentUser.email);
       }
     });
 
     return () => unsubscribe();
   }, []);
 
+  /**
+   * 🚥 POPUP STRIKE
+   * Primary entry for desktop/high-bandwidth nodes.
+   */
   const signIn = async () => {
-    const auth = getFirebaseAuth();
+    const auth = getFirebaseAuth() as Auth;
     if (!auth) return;
     try {
       await signInWithPopup(auth, googleAuthProvider);
@@ -67,24 +83,32 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  /**
+   * 🚥 REDIRECT STRIKE
+   * Fallback entry for mobile/sandboxed environments.
+   */
   const signInWithGoogleRedirect = async () => {
-    const auth = getFirebaseAuth();
+    const auth = getFirebaseAuth() as Auth;
     if (!auth) return;
     try {
       await signInWithRedirect(auth, googleAuthProvider);
     } catch (error) {
-      console.error('[SENTINEL_AUTH] Redirect strike failed:', error);
+      console.error('[SENTINEL_AUTH] Redirect sequence initiated.');
     }
   };
 
+  /**
+   * 🧹 IDENTITY DISCONNECT
+   * Liquidates the current session and clears state.
+   */
   const signOut = async () => {
-    const auth = getFirebaseAuth();
+    const auth = getFirebaseAuth() as Auth;
     if (!auth) return;
     try {
       await firebaseSignOut(auth);
       console.log('[SENTINEL_AUTH] Identity Disconnected');
     } catch (error) {
-      console.error('[SENTINEL_AUTH] Sign-out failed:', error);
+      console.error('[SENTINEL_AUTH] Sign-out failure:', error);
     }
   };
 
@@ -95,10 +119,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   );
 };
 
+/**
+ * 🛰️ IDENTITY HOOK
+ * Authoritative access for consumer components.
+ */
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error('[SENTINEL] useAuth must be used within an AuthProvider.');
   }
   return context;
 };
+
+export default AuthContext;

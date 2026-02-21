@@ -3,22 +3,27 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 /**
- * TS-Λ3 // i18n MASTER ORCHESTRATOR [v6.3.4]
+ * TS-Λ3 // i18n MASTER ORCHESTRATOR [v6.5.1]
  * Path: src/i18n/i18n.ts
- * Mission: Absolute Bundling Latch // Smallcaps Mandate
+ * Mission: Absolute Triple-Substrate Bundling // Smallcaps Mandate
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Fix: Point-locked all imports to src/locales/ to ensure bundling.
- * Fix: Synchronized namespaces with component useTranslation('harbora') calls.
+ * Status: AUTHORITATIVE // LATCHED
+ * Fix: Consolidated harborA, labs, and whitepaper substrates for EN/MY/ZH.
+ * Fix: Point-locked all imports to src/locales/ for reliable production bundling.
+ * Fix: Maintained 'lng: en' latch for initial visual stability (Anti-Void).
  */
 
 // 🧬 01. MARKETING SUBSTRATE (harbora)
-// Latched to 237-line manifest residency
 import enHarbora from '../locales/en/harbora.json';
 import myHarbora from '../locales/my/harbora.json';
 import zhHarbora from '../locales/zh/harbora.json';
 
-// 📑 02. TECHNICAL SUBSTRATE (mothershipwhitepaper)
-// Latched to 213-line technical whitepaper residency
+// 🧪 02. LABS ENCLAVE SUBSTRATE (labs)
+import enLabs from '../locales/en/labs.json';
+import myLabs from '../locales/my/labs.json';
+import zhLabs from '../locales/zh/labs.json';
+
+// 📑 03. TECHNICAL SUBSTRATE (mothershipwhitepaper)
 import enWhitepaper from '../locales/en/mothershipwhitepaper.json';
 import myWhitepaper from '../locales/my/mothershipwhitepaper.json';
 import zhWhitepaper from '../locales/zh/mothershipwhitepaper.json';
@@ -26,14 +31,17 @@ import zhWhitepaper from '../locales/zh/mothershipwhitepaper.json';
 const resources = {
     en: {
         harbora: enHarbora,
+        labs: enLabs,
         mothershipwhitepaper: enWhitepaper,
     },
     my: {
         harbora: myHarbora,
+        labs: myLabs,
         mothershipwhitepaper: myWhitepaper,
     },
     zh: {
         harbora: zhHarbora,
+        labs: zhLabs,
         mothershipwhitepaper: zhWhitepaper,
     },
 };
@@ -43,14 +51,20 @@ i18n
     .use(initReactI18next)
     .init({
         resources,
+        // 🔐 EN-PRIMARY LATCH: Force initial language to English.
+        // Prevents "Black Void" anomalies if auto-detection lands on incomplete locales.
+        lng: 'en',
         fallbackLng: 'en',
-        // 🔡 SMALLCAPS MANDATE: Namespaces must match lowercase keys
-        ns: ['harbora', 'mothershipwhitepaper'],
+
+        // 🔡 SMALLCAPS MANDATE: Namespaces must match lowercase keys used in useTranslation()
+        ns: ['harbora', 'labs', 'mothershipwhitepaper'],
         defaultNS: 'harbora',
         fallbackNS: 'harbora',
+
         interpolation: {
-            escapeValue: false, // React already escapes
+            escapeValue: false, // React already handles XSS mitigation
         },
+
         detection: {
             order: ['querystring', 'localStorage', 'navigator', 'htmlTag'],
             lookupQuerystring: 'lng',

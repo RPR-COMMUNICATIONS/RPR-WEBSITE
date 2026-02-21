@@ -1,14 +1,21 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FileText, ShieldCheck, Lock, Globe } from 'lucide-react';
+import {
+  FileText,
+  ShieldCheck,
+  Lock,
+  Zap
+} from 'lucide-react';
 
 /**
- * TS-Λ3 // MOTHERSHIP SECTION [v3.38.1]
+ * TS-Λ3 // MOTHERSHIP SECTION [v7.7.6]
  * Path: src/components/mothershipsection.tsx
- * Mission: Lint Resolution // Liquidate TS6133
+ * Mission: Architectural Alignment // Left-Aligned Heading
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Fix: Removed unused 'SymbolTile' import to satisfy strict compiler checks.
+ * Fix: Re-aligned SectionHeading to the left to match global UI standards.
+ * Fix: Maintained centered logo stage for architectural prominence.
+ * Fix: Preserved Jensen Huang Quote and Mothership Mandate descriptions.
  * Status: LATCHED // CLEAN_BUILD
  */
 
@@ -18,10 +25,9 @@ import { MothershipOSLogo } from '../brand/mothershiposlogo.tsx';
 import { SovereignGlass } from './sovereignglass.tsx';
 
 export const MothershipSection: React.FC = () => {
-  const { t } = useTranslation('harborA');
+  const { t } = useTranslation('harbora');
   const navigate = useNavigate();
 
-  // 🧬 TECHNOLOGY PILLS: Ingested from localized manifest
   const pills = [
     t('mothership.pills.sentinel', 'SENTINEL PROTOCOL'),
     t('mothership.pills.ram', 'RAM GOVERNANCE'),
@@ -31,10 +37,13 @@ export const MothershipSection: React.FC = () => {
 
   return (
     <section id="mothership" className="py-48 bg-black overflow-hidden border-t border-white/5 relative">
+      {/* 🌌 AMBIENT DEPTH */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,217,255,0.03)_0%,transparent_70%)] pointer-events-none" />
+
       <div className="max-w-screen-2xl mx-auto px-6 relative z-10 flex flex-col items-center">
 
-        {/* 🏛️ 01. HEADING */}
-        <div className="mb-48 w-full">
+        {/* 🏛️ 01. HEADING: LEFT-ALIGNED LATCH */}
+        <div className="mb-48 w-full text-left">
           <SectionHeading
             kicker={t('mothership.kicker', 'ENTERPRISE INTELLIGENCE INFRASTRUCTURE')}
             title={t('mothership.title', 'THE')}
@@ -42,15 +51,16 @@ export const MothershipSection: React.FC = () => {
           />
         </div>
 
-        {/* 📋 02. PLATFORM LOGO STAGE */}
+        {/* 📋 02. PLATFORM LOGO STAGE: CENTERED LATCH */}
         <div className="mb-64 flex justify-center w-full relative">
           <div className="absolute inset-0 bg-cyan-500/5 blur-[120px] rounded-full scale-150 opacity-20 pointer-events-none" />
-          <MothershipOSLogo size={256} className="opacity-100 relative z-10" />
+          {/* 🧬 v1.3.9 Scaled Desktop Presence (650px) */}
+          <MothershipOSLogo className="opacity-100 relative z-10" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-48 w-full items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-64 w-full items-center">
 
-          {/* 💬 03. THE QUOTE AXIS [REFINED] */}
+          {/* 💬 03. THE QUOTE AXIS */}
           <div className="flex flex-col justify-center text-center lg:text-left text-white">
             <div className="inline-flex items-center gap-3 mb-6 justify-center lg:justify-start">
               <span className="h-px w-8 bg-cyan-500/60 hidden lg:block" />
@@ -106,22 +116,19 @@ export const MothershipSection: React.FC = () => {
               >
                 <FileText size={14} /> {t('mothership.btns.whitepaper', 'VIEW PUBLIC WHITEPAPER')}
               </button>
-
-              <div className="mt-8 pt-6 border-t border-white/5 flex justify-between items-center opacity-30 relative z-10">
-                <span className="text-[8px] font-mono uppercase tracking-[0.3em] text-white">Registry: TS-Λ3 CLASSIFIED</span>
-                <Globe size={12} className="text-white" />
-              </div>
             </SovereignGlass>
           </div>
         </div>
 
-        {/* 📜 05. THE MANDATE */}
-        <div className="max-w-5xl mx-auto mb-48 space-y-12 text-center">
-          <h3 className="text-white text-xl md:text-4xl leading-tight font-black uppercase italic tracking-tighter max-w-4xl mx-auto">
+        {/* 📜 05. THE MANDATE (MOTHERSHIP DESCRIPTION) */}
+        <div className="max-w-5xl mx-auto mb-48 space-y-12 text-center relative pt-24 border-t border-white/5">
+          <div className="flex justify-center mb-8 relative z-10">
+            <Zap className="text-cyan-500 w-8 h-8 opacity-40 animate-pulse" />
+          </div>
+          <h3 className="text-white text-xl md:text-5xl leading-tight font-black uppercase italic tracking-tighter max-w-4xl mx-auto relative z-10">
             {t('mothership.mandate_title', 'The Mothership is the business operating platform that turns a real company into a living digital twin.')}
           </h3>
-
-          <div className="space-y-8 max-w-3xl mx-auto text-zinc-300 text-lg md:text-xl leading-relaxed font-light italic">
+          <div className="space-y-8 max-w-3xl mx-auto text-zinc-300 text-lg md:text-xl leading-relaxed font-light italic opacity-80 border-t border-white/5 pt-12 relative z-10">
             <p>{t('mothership.mandate_p1')}</p>
             <p>{t('mothership.mandate_p2') || t('mothership.mandate_p3')}</p>
           </div>
@@ -137,10 +144,7 @@ export const MothershipSection: React.FC = () => {
 
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
             {pills.map((pill) => (
-              <span
-                key={pill}
-                className="bg-black border border-white/10 text-white/40 text-[10px] px-8 py-3 rounded-full font-mono uppercase tracking-[0.2em] hover:border-cyan-500/50 hover:text-white transition-all duration-700 cursor-default"
-              >
+              <span key={pill} className="bg-black border border-white/10 text-white/40 text-[10px] px-8 py-3 rounded-full font-mono uppercase tracking-[0.2em] hover:border-cyan-500/50 hover:text-white transition-all duration-700 cursor-default">
                 {pill}
               </span>
             ))}

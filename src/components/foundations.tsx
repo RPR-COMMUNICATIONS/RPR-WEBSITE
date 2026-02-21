@@ -3,14 +3,14 @@ import { ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 /**
- * TS-Λ3 // FOUNDATIONS [v9.9.5]
+ * TS-Λ3 // FOUNDATIONS [v9.9.6]
  * Path: src/components/foundations.tsx
- * Mission: Font Alignment & Vertical Rhythm Latch
+ * Mission: Font Alignment & Linguistic Latch
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // LATCHED
  * Fix: Standardized "highlighted" Thesis to text-[17px] to prevent wrap drift.
  * Fix: Forced h-full and items-stretch to ensure physical alignment of the 3 pillars.
- * Fix: Liquidated deprecated glowColor prop per SymbolTile v5.4.2 signature.
- * Status: CLINICAL // ALIGNED
+ * Fix: Liquidated legacy 'harborA' namespace to resolve content ingestion failure.
  */
 
 // 🧬 AUTHORITATIVE UI LATCHES
@@ -25,11 +25,16 @@ const GLYPHS = {
 } as const;
 
 export const Foundations: React.FC = () => {
-  const { t } = useTranslation('harborA');
+  // 🛰️ i18n LATCH: Targeting authoritative lowercase namespace
+  const { t } = useTranslation('harbora');
+
   const [openId, setOpenId] = useState<string | null>(null);
   const [iconSize, setIconSize] = useState(64);
 
-  // 📐 RESPONSIVE ICON CALIBRATION
+  /**
+   * 📐 RESPONSIVE ICON CALIBRATION
+   * Dynamically adjusts SymbolTile geometry based on viewport telemetry.
+   */
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 768px)');
     const update = () => setIconSize(mq.matches ? 64 : 36);
@@ -40,8 +45,7 @@ export const Foundations: React.FC = () => {
 
   /**
    * 📐 PILLAR BODY RENDERING
-   * Maps localized keys to the visual stage. 
-   * Font sizes standardized to text-sm to ensure 1:1 vertical rhythm across types.
+   * Font sizes standardized to text-sm to ensure 1:1 vertical rhythm.
    */
   const renderPillarBody = (pId: 'truth' | 'insight' | 'journey') => {
     const base = `foundations.pillars.${pId}`;
@@ -76,9 +80,9 @@ export const Foundations: React.FC = () => {
     <section id="foundations" className="relative bg-black py-24 px-6 md:px-12 border-t border-white/10">
       <div className="max-w-screen-2xl mx-auto">
         <SectionHeading
-          kicker={t('foundations.kicker')}
-          title={t('foundations.title')}
-          accent={t('foundations.accent')}
+          kicker={t('foundations.kicker', 'CORE DNA // STRATEGIC SUBSTRATE')}
+          title={t('foundations.title', 'THE')}
+          accent={t('foundations.accent', 'FOUNDATIONS')}
           className="mb-20"
         />
 
@@ -87,7 +91,6 @@ export const Foundations: React.FC = () => {
           {PILLAR_IDS.map((pId) => (
             <div
               key={pId}
-              /* 🧬 LATCH: h-full flex flex-col for internal child distribution */
               className={`
                 group bg-[#0a0a0a] border transition-all duration-500 rounded-[2.5rem] overflow-hidden flex flex-col h-full
                 ${openId === pId ? 'border-cyan-500/40 shadow-[0_0_40px_rgba(34,211,238,0.05)]' : 'border-white/10'}
@@ -115,9 +118,8 @@ export const Foundations: React.FC = () => {
                 />
               </button>
 
-              {/* CARD CONTENT SUBSTRATE: flex-1 allows this area to grow to the bottom */}
+              {/* CARD CONTENT SUBSTRATE */}
               <div className="px-8 md:px-10 pb-8 flex-1 flex flex-col">
-                {/* 🔡 FONT ADJUSTED: text-[17px] ensures balanced line-wrapping for alignment */}
                 <p className="font-bold text-white uppercase italic tracking-tighter text-[17px] leading-snug">
                   {t(`foundations.pillars.${pId}.thesis`)}
                 </p>

@@ -1,0 +1,28 @@
+{
+    "nav": {
+        "labs": "labs",
+        "methods": "kaedah",
+        "verify": "verifikasi",
+        "myaudit": "myaudit"
+    },
+    "labs": {
+        "kicker": "persekitaran sandbox",
+        "title": "substrat kewangan",
+        "pricing_tba": "Harga: Akan Diumumkan (TBA). Rakan kongsi awal boleh mendaftar minat; harga langsung akan diterbitkan tidak lama lagi.",
+        "btns": {
+            "interest": "daftar minat",
+            "waitlist": "sertai senarai menunggu",
+            "storefront": "buka kedai Stripe (beta)"
+        }
+    },
+    "verification": {
+        "title": "verifikasi forensik",
+        "subtitle": "perlembagaan berdaulat v12.4",
+        "description": "enjin pengingesan dokumen sumber forensik automatik dan penilaian risiko masa nyata.",
+        "cta": "mulakan imbasan",
+        "nodes": {
+            "singapore": "asia-southeast1",
+            "status": "operasi"
+        }
+    }
+}

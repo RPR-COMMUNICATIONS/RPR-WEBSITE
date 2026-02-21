@@ -2,13 +2,12 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 /**
- * TS-Λ3 // ASK OLLIE LAUNCHER [v2.9.2]
+ * TS-Λ3 // ASK OLLIE LAUNCHER [v2.9.4]
  * Path: src/components/askollielauncher.tsx
  * Mission: Physical Image Restoration // Old Black Pill Latch
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Reference: image_e35bc8.png (Black Substrate / White Italic Text / Cyan Icon)
+ * Fix: Re-latched useTranslation with lowercase 'harbora' namespace for stability.
  * Status: AUTHORITATIVE // LATCHED
- * Fix: React camelCase SVG attribute alignment.
  */
 
 interface AskOllieLauncherProps {
@@ -16,14 +15,18 @@ interface AskOllieLauncherProps {
 }
 
 export const AskOllieLauncher: React.FC<AskOllieLauncherProps> = ({ onClick }) => {
-  const { t } = useTranslation('harborA');
+  /**
+   * 🛰️ i18n LATCH
+   * Namespace: 'harbora' (Authoritative lowercase manifest)
+   */
+  const { t } = useTranslation('harbora');
 
   return (
     <button
       onClick={onClick}
       className="fixed bottom-10 right-8 z-[150] flex items-center gap-4 bg-black border border-white/20 py-3 px-8 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all hover:scale-105 active:scale-95 group ring-1 ring-cyan-500/10"
     >
-      {/* 🤖 AUTHENTIC OLD ICON: Cyan Robot Signature */}
+      {/* 🤖 AUTHENTIC ICON: Cyan Robot Signature */}
       <div className="text-cyan-400 flex items-center justify-center">
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2C13.1046 2 14 2.89543 14 4V5H10V4C10 2.89543 10.8954 2 12 2Z" fill="currentColor"></path>
@@ -43,8 +46,8 @@ export const AskOllieLauncher: React.FC<AskOllieLauncherProps> = ({ onClick }) =
         </svg>
       </div>
 
-      {/* 🔡 AUTHENTIC OLD TEXT: White Italic Bold */}
-      <span className="text-[11px] font-black italic uppercase tracking-[0.2em] text-white group-hover:text-cyan-400 transition-colors">
+      {/* 🔡 AUTHENTIC TEXT: White Italic Bold // Smallcaps Compliant */}
+      <span className="text-[11px] font-black italic uppercase tracking-[0.2em] text-white group-hover:text-cyan-400 transition-colors clinical-smallcaps">
         {t('hero.btns.ollie', 'ASK OLLIE')}
       </span>
 

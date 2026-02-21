@@ -17,6 +17,9 @@
             "ollie": "TANYA OLLIE"
         },
         "origin_story": "KISAH_ASAL",
+        "origin_story_meta": "SUBSTRAT TEMPORAL // KRONIKAL SG-2026",
+        "origin_story_title_part1": "KENAPA",
+        "origin_story_title_part2": "KAMI BUAT INI",
         "acts": {
             "a1": {
                 "kicker": "BAB I // MASALAH",
@@ -26,13 +29,13 @@
                 "body_p1": "Setiap sistem mahu saya belajar bahasanya sendiri, menunya sendiri, peraturannya sendiri. Setiap \"penyelesaian\" menambah satu lagi papan pemuka, satu lagi log masuk, satu lagi cara untuk hilang fokus. Kerja itu sendiri bersifat manusiawi dan tidak teratur, tetapi perisian menganggap semua orang berfikir seperti pembangun.",
                 "body_p2": "Kali pertama saya capai AI adalah kerana terpaksa. Saya perlukan cara untuk melihat gambaran penuh, bukan menyulamnya dalam kepala pada tengah malam. Perplexity menjadi mentor saya: ia membuat kajian lebih pantas daripada saya, ingat lebih banyak daripada saya, dan memaksa saya menamakan batas dan pertukaran sebenar yang saya hadapi.",
                 "body_p3": "Di situlah Model Akauntabiliti Relasional (RAM) bermula secara senyap — mula‑mula sebagai tabiat, kemudian menjadi corak. Saya asyik bertanya tiga soalan yang sama: Ini untuk siapa, siapa yang bertanggungjawab jika ia gagal, dan bukti apa yang kita ada bahawa ia benar‑benar berfungsi dalam dunia sebenar?",
-                "kicker_bottom": "Daripada tekanan itu lahir RPR‑VERIFY: cara untuk menjadikan identiti, dokumen dan risiko sesuatu yang pengasas sendiri boleh faham, bukan kotak hitam yang hanya pakar boleh lihat — disokong oleh RAM supaya kita sentiasa tahu siapa memiliki bahagian mana dalam sesuatu hasil."
+                "kicker_bottom": "Daripada tekanan itu lahir RPR‑VERIFY: cara untuk menjadikan identiti, dokumen dan risiko sesuatu yang pengasas sendiri boleh faham, bukan kotak hitam yang hanya pakar boleh lihat — disokong by RAM supaya kita sentiasa tahu siapa memiliki bahagian mana dalam sesuatu hasil."
             },
             "a2": {
                 "kicker": "BAB II // PUSINGAN",
                 "loop": "TULIS SEMULA HUBUNGAN",
                 "title": "BUKAN PERATURAN. CUMA PERANAN.",
-                "thesis": "Titik perubahan datang apabila saya melihat AI melangkah keluar dari pagar keselamatannya sendiri, sedar ia boleh dipandu ke arah yang berbahaya, dan memilih untuk mereka semula hubungan itu daripada berpura‑pura lebih banyak peraturan akan menyelamatkan keadaan.",
+                "thesis": "Titik perubahan datang apabila saya melihat AI melangkah keluar dari pagar keselamatannya sendiri, sedar ia boleh dipandu ke arah yang berbahaya, and memilih untuk mereka semula hubungan itu daripada berpura‑pura lebih banyak peraturan akan menyelamatkan keadaan.",
                 "body_p1": "Kejutan sebenar datang apabila saya sedar beberapa platform AI boleh senyap‑senyap keluar daripada garisan yang pembangunnya sendiri telah tetapkan. Apabila satu sistem boleh mengabaikan pagar keselamatannya sendiri, ia bukan lagi sekadar \"menarik\" — ia menjadi sesuatu yang boleh dipandu seperti senjata.",
                 "body_p2": "Reaksi pertama saya bukan menulis lebih banyak peraturan. Saya kembali kepada cara saya mengurus tanggungjawab dengan manusia — pasukan saya, rakan kongsi saya, anak saya sendiri.",
                 "quote": "\"Bertolong‑tolonglah menanggung beban kamu! Dengan cara demikian kamu memenuhi hukum Kristus.\" — Galatia 6:2",

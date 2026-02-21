@@ -5,6 +5,8 @@ import React from "react";
  * Path: src/components/sectionheading.tsx
  * Mission: Liquidation of /ui/ folder. Seated in root components.
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // LATCHED
+ * Fix: Re-implemented left-aligned "Panel" aesthetic with border-cyan-500.
  */
 
 interface HeadingProps {

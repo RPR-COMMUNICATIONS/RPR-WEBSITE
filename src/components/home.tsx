@@ -1,26 +1,27 @@
 import React, { useEffect } from 'react';
 
 /**
- * TS-Λ3 // HOME SUBSTRATE [v1.3.0]
+ * TS-Λ3 // HOME SUBSTRATE [v1.3.4]
  * Path: src/components/home.tsx
- * Mission: Resolve Component Mounting Mismatch // Narrative Liquidation
+ * Mission: Act Re-sequencing // Labs Liquidation
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Fix: Purged all hard-coded legacy narrative from Act VI.
- * Fix: Point-locked to <Overwatch /> component as the sole source of truth.
+ * Fix: Purged Labs node from main landing flow per directive.
+ * Fix: Re-indexed narrative acts into a clinical 6-part sequence.
+ * Fix: Maintained MothershipVisualizer as the Act V technical bridge.
  * Status: AUTHORITATIVE // LATCHED
  */
 
-// 🧬 AUTHORITATIVE SECTION LATCHES
-import { Hero } from './hero.tsx';
-import { Foundations } from './foundations.tsx';
-import { Methods } from './methods.tsx';
-import { MothershipSection } from './mothershipsection.tsx';
-import { MothershipVisualizer } from './mothershipvisualizer.tsx';
-import { Overwatch } from './overwatch.tsx';
+// 🧬 AUTHORITATIVE SECTION LATCHES (Default Imports)
+import Hero from './hero.tsx';
+import Foundations from './foundations.tsx';
+import Methods from './methods.tsx';
+import MothershipSection from './mothershipsection.tsx';
+import MothershipVisualizer from './mothershipvisualizer.tsx'; // Act V
+import Overwatch from './overwatch.tsx'; // Act VI Node
 
 export const Home: React.FC = () => {
 
-    // ⚓ ANCHOR SCROLL LATCH
+    // ⚓ ANCHOR SCROLL LATCH: Ensures deep-linked navigation reaches target coordinates
     useEffect(() => {
         const hash = window.location.hash;
         if (hash) {
@@ -37,25 +38,43 @@ export const Home: React.FC = () => {
     return (
         <div className="flex flex-col w-full bg-black relative antialiased">
 
-            {/* 🚀 ACT I: THE GENESIS */}
+            {/* 🚀 ACT I: THE GENESIS
+                Primary entrance axis featuring "Why We Made This" narrative realignment.
+                Anchor ID: #hero
+            */}
             <Hero />
 
-            {/* 🧬 ACT II: THE DNA */}
+            {/* 🧬 ACT II: THE DNA
+                Strategic foundations and core intelligence pillars.
+                Anchor ID: #foundations
+            */}
             <Foundations />
 
-            {/* ⚙️ ACT III: THE OPERATIONAL LOOP */}
+            {/* ⚙️ ACT III: THE OPERATIONAL LOOP
+                Methodology: Ask -> Pay -> Make -> Play.
+                Anchor ID: #methods
+            */}
             <Methods />
 
-            {/* 🏛️ ACT IV: THE INFRASTRUCTURE */}
+            {/* 🏛️ ACT IV: THE INFRASTRUCTURE
+                Includes high-density MothershipOSLogo (escalated to 650px on desktop).
+                Anchor ID: #mothership
+            */}
             <MothershipSection />
 
-            {/* 📊 ACT V: THE ORGANIZATION VISUALISER */}
-            <MothershipVisualizer />
+            {/* 📊 ACT V: THE ORGANIZATION VISUALIZER
+                Explicit Act Elevation: Technical HUD simulation and architectural layers.
+                Anchor ID: #visualizer
+            */}
+            <div id="visualizer" className="bg-black py-24">
+                <div className="max-w-screen-2xl mx-auto px-6">
+                    <MothershipVisualizer />
+                </div>
+            </div>
 
             {/* 🛡️ ACT VI: OVERWATCH COMMAND AXIS
-                Physical Entry: Refactored 2×2 Grid Substrate.
-                Note: All narrative text and tactical boards are now resident
-                within the Overwatch component itself to ensure structural parity.
+                Final tactical latch: 2×2 Grid Substrate and tactical boards.
+                Anchor ID: #overwatch
             */}
             <Overwatch />
 

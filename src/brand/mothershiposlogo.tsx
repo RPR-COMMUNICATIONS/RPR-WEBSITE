@@ -1,48 +1,50 @@
 import React from 'react';
 
 /**
- * TS-Λ3 // MOTHERSHIP OS LOGO [v1.3.2]
+ * TS-Λ3 // MOTHERSHIP OS LOGO [v1.3.8]
  * Path: src/brand/mothershiposlogo.tsx
- * Mission: Scale Normalization // 35px Gap Calibration
+ * Mission: Desktop Geometry Escalation // Architectural Presence
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Fix: Reduced ViewBox and Font dimensions by 20%.
- * Fix: Tightened horizontal gap to 35px (CX +/- 35).
- * Fix: Recalibrated icon scale (0.15) and Y-translate (46.9) for inline parity.
- * Status: AUTHORITATIVE // GEOMETRY_LOCKED
+ * Fix: Escalated desktop max-width to 550px for high-fidelity rendering.
+ * Fix: Maintained mobile-only hover scaling (Suppress on Desktop).
+ * Status: AUTHORITATIVE // LATCHED
  */
 
 interface MothershipOSLogoProps {
-    size?: number; // Prop drives the vertical height
     className?: string;
 }
 
 export const MothershipOSLogo: React.FC<MothershipOSLogoProps> = ({
-    size = 170, // Default reduced by 20% from 213
     className = ''
 }) => {
-    // 📐 RECALIBRATED PLANE (v1.3.1 * 0.8): 552 x 170.61
+    // 📐 RECALIBRATED PLANE: 552 x 170.61
     const VIEWBOX_HEIGHT = 170.61;
     const VIEWBOX_WIDTH = 552;
-    const aspectRatio = VIEWBOX_WIDTH / VIEWBOX_HEIGHT;
-    const width = size * aspectRatio;
 
     // ⚓ ABSOLUTE CENTER (276)
     const CX = VIEWBOX_WIDTH / 2;
     const CY = VIEWBOX_HEIGHT / 2;
 
     return (
-        <div className={`overflow-visible select-none inline-flex items-center justify-center ${className} group/mslogo`}>
+        /**
+         * 🧬 ESCALATED WRAPPER
+         * Mobile: max-w-[220px]
+         * Desktop: md:max-w-[550px] (Recalibrated for Presence)
+         */
+        <div className={`select-none inline-flex items-center justify-center w-full max-w-[220px] md:max-w-[550px] ${className} group/mslogo`}>
             <svg
-                width={width}
-                height={size}
                 viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
                 xmlns="http://www.w3.org/2000/svg"
-                className="overflow-visible transition-transform duration-700"
+                /**
+                 * 🧬 INTERACTION LATCH
+                 * Mobile (<768px): group-hover:scale-[1.02]
+                 * Desktop (>=768px): md:group-hover:scale-100 (Suppression for Rigidity)
+                 */
+                className="w-full h-auto overflow-visible transition-transform duration-700 group-hover/mslogo:scale-[1.02] md:group-hover/mslogo:scale-100"
             >
                 <defs>
                     <style type="text/css">
                         {`
-              @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
               .ms-logo-text {
                 font-family: 'Inter', sans-serif;
                 font-weight: 900;
@@ -55,14 +57,12 @@ export const MothershipOSLogo: React.FC<MothershipOSLogoProps> = ({
                 </defs>
 
                 <g>
-                    {/* 🔡 OBJECT A: MOTHER (White Axis)
-                        ⚓ LATCH: CX - 35 (Requested 35px Gap)
-                    */}
+                    {/* 🔡 OBJECT A: MOTHER (White Axis) */}
                     <text
                         x={CX - 35}
                         y={CY}
                         className="ms-logo-text"
-                        fontSize="58.8" /* 73.5 * 0.8 */
+                        fontSize="58.8"
                         dominantBaseline="central"
                         textAnchor="end"
                         fill="#FFFFFF"
@@ -70,10 +70,7 @@ export const MothershipOSLogo: React.FC<MothershipOSLogoProps> = ({
                         MOTHER
                     </text>
 
-                    {/* 🛡️ OBJECT B: THE SHIELD ICON (The Absolute Pivot)
-                        📐 SCALE LATCH: 0.15 * 512px = 76.8px Height
-                        📐 Y-ALIGNMENT: CY - 38.4 = 46.9 (Inline center at 0.8x scale)
-                    */}
+                    {/* 🛡️ OBJECT B: THE SHIELD ICON */}
                     <g transform={`translate(${CX - 38.4}, 46.9)`}>
                         <g transform="scale(0.15)">
                             <path
@@ -91,9 +88,7 @@ export const MothershipOSLogo: React.FC<MothershipOSLogoProps> = ({
                         </g>
                     </g>
 
-                    {/* 🔡 OBJECT C: SHIP (Cyan Axis)
-                        ⚓ LATCH: CX + 35
-                    */}
+                    {/* 🔡 OBJECT C: SHIP (Cyan Axis) */}
                     <text
                         x={CX + 35}
                         y={CY}

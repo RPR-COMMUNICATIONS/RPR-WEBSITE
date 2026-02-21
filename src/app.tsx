@@ -1,81 +1,104 @@
-import { useState, useEffect } from 'react';
+import { useState, Suspense, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import './styles/index.css'; // ⬅️ add this line
-
-/* 🧬 MOBILE DIAGNOSTIC HUD - Set true for width verification */
-const SHOW_VIEWPORT_HUD = false;
 
 /**
- * TS-Λ3 // MOTHERSHIP ORCHESTRATOR [v7.29.0]
+ * ⚓ TS-Λ3 // MOTHERSHIP ORCHESTRATOR [v7.52.1]
  * Path: src/app.tsx
- * Mission: Named Import Synchronization // ESM Path Normalization
+ * Mission: Resolve TS2614 Import Mismatch // Page Node Alignment
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Status: AUTHORITATIVE // LATCHED
+ * Status: PRODUCTION_STABLE // LATCHED
+ * Fix: Transitioned MyAudit and Verify to Default Imports to match physical substrate.
+ * Fix: Maintained Named Exports for Shell Components (Home, Labs, Header, Footer).
  */
 
-// 🧬 LAYOUT & NAVIGATION
-import { Header } from './components/header';
-import { Footer } from './components/footer';
+import "./styles/index.css";
 
-// 🏛️ STRATEGIC LANDING SUBSTRATE
-import { Home } from './components/home';
+// 🧬 LAYOUT & NAVIGATION (Named Exports)
+import { Header } from './components/header.tsx';
+import { Footer } from './components/footer.tsx';
 
-// 🧪 LAB NODES & ENCLAVES
-import { Labs as LabsSection } from './components/labs';
-import { LegalStub } from './components/legalstub';
-import { CheckoutPending } from './pages/labs/checkout-pending';
-import { LibraryViewer } from './pages/labs/library-viewer';
-import { MyAudit } from './pages/labs/myaudit';
-import { Verify as RprVerify } from './pages/labs/verify';
+// 🏛️ PAGE ENCLAVES (Named Exports)
+import { Home } from './components/home.tsx';
+import { Labs } from './components/labs.tsx';
+
+// 🧪 LAB NODES & ENCLAVES (Default Imports to Resolve TS2614)
+import MyAudit from './pages/labs/myaudit.tsx';
+import Verify from './pages/labs/verify.tsx';
+import CheckoutPending from './pages/labs/checkout-pending.tsx';
+import LibraryViewer from './pages/labs/library-viewer.tsx';
+import { LegalStub } from './components/legalstub.tsx';
 
 // 🤖 TACTICAL INTERFACE
-import { AskOllie } from './components/askollie';
-import { AskOllieLauncher } from './components/askollielauncher';
+import { AskOllie } from './components/askollie.tsx';
+import AskOllieLauncher from './components/askollielauncher.tsx';
 
 export default function App() {
   const [showOllie, setShowOllie] = useState(false);
-  const [viewportWidth, setViewportWidth] = useState(
-    typeof window !== 'undefined' ? window.innerWidth : 0,
-  );
+  const [isLive, setIsLive] = useState(false);
 
+  // 🛰️ PRODUCTION HEARTBEAT
   useEffect(() => {
-    const updateWidth = () => setViewportWidth(window.innerWidth);
-    updateWidth();
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
+    setIsLive(true);
+    console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+    console.log("⚓ MOTHERSHIP OS // HARBOR A OPERATIONAL");
+    console.log("VERSION: v7.52.1 // NODE: ASIA-SOUTHEAST1");
+    console.log("STATUS: TS2614_LIQUIDATED // IMPORT_SYNC_COMPLETE");
+    console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
   }, []);
 
   return (
     <div className="bg-black text-white min-h-screen font-sans selection:bg-cyan-500 antialiased overflow-x-hidden relative flex flex-col">
+      {/* 🔡 MATERIAL SYMBOLS HUD */}
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
       />
 
-      <Header />
+      {/* 🧬 GLOBAL SUSPENSE LATCH */}
+      <Suspense
+        fallback={
+          <div className="bg-black min-h-screen flex items-center justify-center">
+            <div className="flex flex-col items-center gap-6">
+              <div className="w-12 h-12 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin"></div>
+              <span className="text-[10px] font-mono text-cyan-400 uppercase tracking-[0.4em] animate-pulse">
+                INGESTING_SUBSTRATE...
+              </span>
+            </div>
+          </div>
+        }
+      >
+        <Header />
 
-      <main className="flex-1 pt-16 lg:pt-[108px] flex flex-col relative z-10 transition-all duration-500">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/labs" element={<LabsSection />} />
-          <Route path="/labs/library" element={<LibraryViewer />} />
-          <Route path="/labs/myaudit" element={<MyAudit />} />
-          <Route path="/labs/verify" element={<RprVerify />} />
-          <Route path="/legal/:docId" element={<LegalStub />} />
-          <Route path="/checkout-pending" element={<CheckoutPending />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </main>
+        <main className="flex-1 pt-16 lg:pt-[108px] flex flex-col relative z-10 transition-all duration-500">
+          <Routes>
+            {/* 🏠 AUTHORITATIVE 6-ACT HOME FLOW */}
+            <Route path="/" element={<Home />} />
 
-      <Footer />
+            {/* 🧪 INTERNAL LAB ENCLAVES */}
+            <Route path="/labs" element={<Labs />} />
+            <Route path="/labs/library" element={<LibraryViewer />} />
+            <Route path="/labs/myaudit" element={<MyAudit />} />
+            <Route path="/labs/verify" element={<Verify />} />
+            <Route path="/labs/checkout-pending" element={<CheckoutPending />} />
 
-      {showOllie && <AskOllie onClose={() => setShowOllie(false)} />}
-      <AskOllieLauncher onClick={() => setShowOllie(!showOllie)} />
+            <Route path="/legal/:docId" element={<LegalStub />} />
 
-      {SHOW_VIEWPORT_HUD && (
-        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-[9999] font-mono text-[10px] px-4 py-2 bg-black/90 border border-cyan-500/50 rounded-full text-cyan-400 pointer-events-none shadow-[0_0_30px_rgba(34,211,238,0.4)] flex items-center gap-3">
-          <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-ping"></span>
-          VIEWPORT_AXIS: <span className="font-black">{viewportWidth}PX</span>
+            {/* 🚥 404 REDIRECT LATCH */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+
+        <Footer />
+
+        {/* 🤖 OLLIE INTERFACE LATCH */}
+        {showOllie && <AskOllie onClose={() => setShowOllie(false)} />}
+        <AskOllieLauncher onClick={() => setShowOllie(!showOllie)} />
+      </Suspense>
+
+      {/* 🏙️ PRODUCTION STATUS INDICATOR */}
+      {isLive && (
+        <div className="fixed bottom-4 left-4 z-[200] opacity-10 pointer-events-none select-none">
+          <span className="text-[10px] font-mono text-cyan-400">HARBOR_A_LIVE_v7.52.1</span>
         </div>
       )}
     </div>

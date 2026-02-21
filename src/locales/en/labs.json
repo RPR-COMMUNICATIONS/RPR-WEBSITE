@@ -1,0 +1,28 @@
+{
+    "nav": {
+        "labs": "labs",
+        "methods": "methods",
+        "verify": "verify",
+        "myaudit": "myaudit"
+    },
+    "labs": {
+        "kicker": "sandbox environment",
+        "title": "financial substrate",
+        "pricing_tba": "Pricing: To Be Announced (TBA). Early partners can register interest; live pricing will be published soon.",
+        "btns": {
+            "interest": "register interest",
+            "waitlist": "join waitlist",
+            "storefront": "open stripe storefront (beta)"
+        }
+    },
+    "verification": {
+        "title": "forensic verification",
+        "subtitle": "sovereign constitution v12.4",
+        "description": "automated forensic source document ingestion and real-time risk evaluation engine.",
+        "cta": "initiate scan",
+        "nodes": {
+            "singapore": "asia-southeast1",
+            "status": "operative"
+        }
+    }
+}

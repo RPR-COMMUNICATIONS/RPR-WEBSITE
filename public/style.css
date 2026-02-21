@@ -1,0 +1,176 @@
+/**
+ * TS-Λ3 // STRIPE COMPONENT STYLES [v1.5.0]
+ * Path: public/style.css
+ * Mission: Monochrome Calibration // High-Fidelity Handshake
+ * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ */
+
+:root {
+  --cyan: #00d9ff;
+  --white: #ffffff;
+  --black: #000000;
+  --slate: #94a3b8;
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  color: var(--white);
+  overflow: hidden;
+}
+
+/* 🧬 CHECKOUT CONTAINER SUBSTRATE */
+.checkout-container {
+  background: var(--glass-bg);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  margin: 20px;
+}
+
+.product-metadata {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* 🛡️ GLYPH AXIS */
+.glyph-container {
+  width: 64px;
+  height: 64px;
+  background: rgba(0, 217, 255, 0.05);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.shield-icon {
+  width: 24px;
+  height: 28px;
+  background: var(--cyan);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+}
+
+.description .kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  color: var(--cyan);
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+}
+
+.description h3 {
+  font-size: 22px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1;
+}
+
+.description h5 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--slate);
+  text-transform: uppercase;
+  margin: 8px 0 0 0;
+  opacity: 0.6;
+}
+
+/* 🚥 INTERACTION VECTOR */
+#checkout-button {
+  width: 100%;
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+#checkout-button:hover {
+  background: var(--cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 217, 255, 0.3);
+}
+
+#checkout-button:active {
+  transform: translateY(0);
+}
+
+/* 📊 TELEMETRY FOOTER */
+.status-footer {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  opacity: 0.25;
+}
+
+.status-footer p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.pulse {
+  width: 6px;
+  height: 6px;
+  background: var(--cyan);
+  border-radius: 50%;
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(0, 217, 255, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 217, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 217, 255, 0); }
+}
+
+/* 📐 MOBILE RESPONSIVITY LATCH */
+@media (max-width: 480px) {
+  .checkout-container {
+    padding: 30px;
+    margin: 15px;
+  }
+  
+  .description h3 {
+    font-size: 18px;
+  }
+}

@@ -14,9 +14,12 @@
         "mandate": "WE'RE A BOUTIQUE AGENCY AND EXPERIENCE STUDIO THAT ACTUALLY CARES IF THE CAMPAIGN MOVES THE NEEDLE. WE BUILD WORK THAT DELIVERS REAL-WORLD RESULTS ACROSS DIGITAL, VIRTUAL AND PHYSICAL SPACES — AND ALL THE MESSY BITS IN BETWEEN.",
         "btns": {
             "labs": "LABS",
-            "ollie": "ASK OLLIE"
+            "ollie": "ASK OLLIE",
+            "whitepaper": "WHITEPAPER"
         },
-        "origin_story": "THE_ORIGIN_STORY",
+        "origin_story_meta": "TEMPORAL SUBSTRATE // CHRONICLE SG-2026",
+        "origin_story_title_part1": "WHY",
+        "origin_story_title_part2": "WE MADE THIS",
         "acts": {
             "a1": {
                 "kicker": "ACT I // THE PROBLEM",
@@ -115,7 +118,10 @@
         "mandate_title": "The Mothership is the business operating platform that turns a real company into a living digital twin.",
         "mandate_p1": "The Mothership OS is the place where people and intelligent systems work together from a shared plan.",
         "mandate_p2": "You work from one clear command surface that keeps the structure of the company intact.",
-        "mandate_p3": "By mirroring every workflow, decision tree, and relational bond into an immutable digital state, we ensure your firm doesn't just 'use' software—it inhabits a clinical substrate that is always aligned with your mission. This is the shift from vague responsibility to enforceable accountability, providing the unified command surface needed to steer complex organizations across physical and digital boundaries.",
+        "mandate_p3": "By mirroring every workflow, decision tree, and relational bond into an immutable digital state, we ensure your firm doesn't just 'use' software—it inhabits a clinical substrate that is always aligned with your mission.",
+        "btns": {
+            "whitepaper": "VIEW PUBLIC WHITEPAPER"
+        },
         "operational_frameworks": "OPERATIONAL_FRAMEWORKS",
         "pills": {
             "sentinel": "THE SENTINEL PROTOCOL",
@@ -142,15 +148,15 @@
         "title_accent": "OVERWATCH",
         "role": "FOUNDER / TEAM LEAD",
         "status": "DECISION AUTHORITY // LATCHED",
-        "bio_p1": "Having spent 20 years in corporate communications and brand activation—from local event firms to international creative agencies—he has worked on everything from on-ground activations to award-winning campaigns for global corporations. What began as a fascination with human behaviour and systems, and a belief that technology should be used to improve people's lives rather than just generate TikTok likes, has evolved into a multidisciplinary approach to customer experience.",
-        "bio_p2": "While experimenting with AI for his own personal writings and ideas, a pattern he noticed in a client problem raised a different question: how can a sentient being leverage an artificial construct to apply its knowledge in knowledge discovery, systems thinking, and polymathic research—within the same human framework of systems and silos—to create something better?",
+        "bio_p1": "Having spent 20 years in corporate communications and brand activation—from local event firms to international creative agencies—he has worked on everything from on-ground activations to award-winning campaigns for global corporations.",
+        "bio_p2": "While experimenting with AI for his own personal writings and ideas, a pattern he noticed in a client problem raised a different question: how can a sentient being leverage an artificial construct?",
         "connect_linkedin": "CONNECT ON LINKEDIN",
         "read_substack": "READ ON SUBSTACK",
-        "experiment_p1": "The idea never started as a product roadmap. It started with a human and an AI assistant as he was searching for answers. The same problems every small business owner knows: too many moving parts, and \"specialists\" handling the most critical parts of the business—tax, HR, compliance—on their own terms, inside their own agendas.",
-        "experiment_p2": "The shift came when Perplexity started pulling information from places we'd never think to look. That kind of cross‑discipline, horizontal reasoning opened up a different kind of learning for the human in the loop—suddenly the possibilities weren't capped by one person's training or one firm's playbook. It also did something subtle but important: it cut through human agendas and habits, bringing the focus back to the work and the facts.",
-        "experiment_p3": "From there, the goal became simple: put both the human and the AI agents inside one governed system, tied to the same mission‑based objectives, and see how far that alignment could go. That's the journey up to this point—and now the documents, schematics, and pathways to move forward with the plan are finally closed, versioned, and ready to begin.",
+        "experiment_p1": "The idea never started as a product roadmap. It started with a human and an AI assistant as he was searching for answers.",
+        "experiment_p2": "The shift came when Perplexity started pulling information from places we'd never think to look.",
+        "experiment_p3": "From there, the goal became simple: put both the human and the AI agents inside one governed system.",
         "experiment_title": "THE HUMAN AI EXPERIMENT",
-        "quote": "\"People say history is written by the victors. I think history was framed by the victors. The real potential of Artificial Intelligence is to even the playing field, to break down barriers meant to keep humans apart, and to create real capital value, not just the ‘good vibes’ we were led to believe in.\""
+        "quote": "\"People say history is written by the victors. I think history was framed by the victors.\""
     },
     "labs": {
         "title": "PROTOTYPE",
