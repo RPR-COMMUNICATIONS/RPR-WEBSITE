@@ -42,16 +42,12 @@
                 }
             ],
             "rewrites": [
-                /**
-         * 🧬 SOVEREIGN PROXY LATCH
-         * Path: /api/ollieChat
-         * Target: api (Cloud Function running server.js)
-         * Mission: Proxy requests to Cloud Run using Service Account identity
-         * to bypass Org Policy iam.allowedPolicyMemberDomains.
-         */
                 {
                     "source": "/api/ollieChat",
-                    "function": "api"
+                    "run": {
+                        "serviceId": "olliechat",
+                        "region": "asia-southeast1"
+                    }
                 },
                 {
                     "source": "**",
@@ -60,17 +56,5 @@
             ]
         }
     ],
-    "functions": [
-        {
-            "source": "backend/functions",
-            "codebase": "default",
-            "ignore": [
-                "node_modules",
-                ".git",
-                "firebase-debug.log",
-                "firestore-debug.log",
-                "pubsub-debug.log"
-            ]
-        }
-    ]
+    "functions": []
 }

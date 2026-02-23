@@ -1,56 +1,52 @@
 #!/bin/bash
-# TS-Λ3 // OLLIE CORS REGRESSION HARNESS [v1.1.0]
+# TS-Λ3 // OLLIE PROXY REGRESSION HARNESS [v2.0.0]
+# Path: scripts/devops/verify-ollie-cors.sh
+# Mission: Verify the Sovereign Proxy Handshake (Harbor A -> Specialist)
 # Authority: THE OVERWATCH // SG-CANONICAL-2026
-# Target: https://asia-southeast1-rpr-corporate-site.cloudfunctions.net/ollieChat
-# Status: AUTHORITATIVE // LATCHED
+# Status: AUTHORITATIVE // PROXY_ALIGNED
 
-URL="https://asia-southeast1-rpr-corporate-site.cloudfunctions.net/ollieChat"
+# 🚥 TARGET CONFIGURATION
+# We now target the Proxy Endpoint, not the direct Cloud Run URL.
+URL="https://rprcomms.com/api/ollieChat"
+LOCAL_URL="http://localhost:4242/api/ollieChat"
 ORIGIN="https://rprcomms.com"
-MARKER="SG-CANONICAL-2026"
-CLIENT_ID="harbor-a-client-001"
+MARKER="PROXY-AUDIT-2026"
+CLIENT_ID="forensic-tester-001"
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "  INITIATING OLLIE CORS REGRESSION CHECK [v1.1.0]"
-echo "  Target: $URL"
+echo "  INITIATING OLLIE PROXY REGRESSION CHECK [v2.0.0]"
+echo "  Target Endpoint: $URL"
+echo "  Strategy: Path B (Sovereign Proxy)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# 1. PROBE OPTIONS (Preflight)
-echo -n "[1/2] Probing OPTIONS handshake... "
-OPT_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X OPTIONS "$URL" \
-  -H "Origin: $ORIGIN" \
-  -H "Access-Control-Request-Method: POST" \
-  -H "Access-Control-Request-Headers: X-Forensic-Marker, x-rpr-client-id")
-
-if [ "$OPT_STATUS" == "204" ] || [ "$OPT_STATUS" == "200" ]; then
-    echo "✅ [HTTP $OPT_STATUS]"
-else
-    echo "❌ [FAIL: HTTP $OPT_STATUS]"
-    exit 1
+# 1. LOCAL CONNECTIVITY CHECK (IF RUNNING LOCALLY)
+if [[ "$1" == "--local" ]]; then
+    URL=$LOCAL_URL
+    echo "[INFO] Redirecting probe to Local Substrate: $URL"
 fi
 
-# 2. PROBE POST (Payload)
-echo -n "[2/2] Probing POST payload ingestion... "
+# 2. PROBE POST (Payload through Proxy)
+echo -n "[1/1] Probing Proxied POST ingestion... "
 POST_RESPONSE=$(curl -s -X POST "$URL" \
   -H "Origin: $ORIGIN" \
   -H "Content-Type: application/json" \
   -H "X-Forensic-Marker: $MARKER" \
   -H "x-rpr-client-id: $CLIENT_ID" \
-  -d '{"prompt": "Forensic Ping", "locale": "en"}')
+  -d '{"prompt": "Forensic Proxy Ping", "locale": "en"}')
 
-if echo "$POST_RESPONSE" | grep -q "\"text\":"; then
+# 🛡️ SIGNATURE CHECK
+# Verified against proxy_metadata.status emitted by backend/functions/index.js v2.3.1
+if echo "$POST_RESPONSE" | grep -q "LATCHED_VIA_HARBOR_A"; then
     echo "✅ [SUCCESS]"
     echo "  Response Trace: $POST_RESPONSE"
-    
-    # Forensic Check: Verify Interaction_ID presence
-    if echo "$POST_RESPONSE" | grep -q "Interaction_ID"; then
-        echo "  [SENTINEL] Interaction_ID verified in payload."
-    fi
+    echo "  Status: Interaction Authorized via Sovereign Identity."
 else
-    echo "❌ [FAIL: Invalid Response Shape]"
-    echo "  Raw Output: $POST_RESPONSE"
+    echo "❌ [FAIL]"
+    echo "  Raw Response: $POST_RESPONSE"
+    echo "  Reason: Proxy Latch signature missing or 403 Forbidden persists."
     exit 1
 fi
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "  REGRESSION CHECK COMPLETE: SUBSTRATE IS LATCHED"
+echo "  AUDIT COMPLETE // SOVEREIGN BRIDGE VERIFIED"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

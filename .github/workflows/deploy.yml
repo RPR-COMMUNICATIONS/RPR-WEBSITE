@@ -1,4 +1,4 @@
-# ⚓ TS-Λ3 // WEBSITE SMOKE TEST & DEPLOY [v1.1.0]
+# ⚓ TS-Λ3 // WEBSITE SMOKE TEST & DEPLOY [v1.1.2]
 # Path: .github/workflows/deploy.yml
 # Mission: Automated Production Strike via GitHub Actions
 # Authority: THE OVERWATCH // SG-CANONICAL-2026
@@ -26,14 +26,15 @@ jobs:
         # Using 'ci' for faster, immutable dependency resolution in runners
         run: npm ci
 
-      - name: 🛡️ Substrate Build
-        # Triggers safe-smallcaps-latch.sh and tsc automatically per package.json
-        run: npm run build
+      - name: 🛡️ Substrate Verify & Build
+        # Triggers local-validate, safe-smallcaps-latch, and tsc automatically
+        run: npm run verify
 
       - name: 🚀 Authoritative Production Strike
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          # Parity Latch: Matches the naming convention in the merge/PR workflows
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_RPR_CORPORATE_SITE }}
           projectId: rpr-corporate-site
           channelId: live

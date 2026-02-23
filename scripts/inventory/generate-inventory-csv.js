@@ -1,23 +1,21 @@
 /**
- * TS-Λ3 // FORENSIC INVENTORY GENERATOR [v6.4.1]
+ * TS-Λ3 // FORENSIC INVENTORY GENERATOR [v6.9.0]
  * Path: scripts/inventory/generate-inventory-csv.js
  * Mission: Map physical substrate residency to CSV manifest.
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Status: AUTHORITATIVE // LATCHED
+ * Status: AUTHORITATIVE // RECONCILED
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-// ESM-safe __dirname / __filename
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // 🧬 CATEGORY MAP — CANONICAL WORKING SURFACE
-// Updated to reflect the clinical pathing for the Singapore Node.
+// Reconciled with README v7.28.0 and Active Context v15.1.0
 const CATEGORY_MAP = {
-    // Root + Infrastructure Config
     "1_COMMAND_AND_CONTROL": [
         "RPR-REACT-MOTHERSHIP.code-workspace",
         ".gitignore",
@@ -30,35 +28,51 @@ const CATEGORY_MAP = {
         "firebase.json",
         "tailwind.config.js",
         "tsconfig.node.json",
-        ".firebaserc"
+        ".firebaserc",
+        "eslint.config.js",
+        "server.js",
+        "strike.sh",
+        "test-strike.sh"
     ],
 
-    // Governance / Handover / Environment Specs
     "2_GOVERNANCE_PLANE": [
-        "os/active_context.md",
-        "os/environment-substrate-v1.2.1.md",
-        "os/ip_claims_summary.md",
-        "os/mothership_os_command_surface.md",
-        "os/ollie-chat-strike-ledger.md",
-        "os/olliechat-cors-fix-asia-southeast1-v1.0.0.md",
-        "os/production_launch_blueprint.md",
-        "os/ram_governance_prd.md",
-        "os/sentinel_protocol_prd.md",
-        "os/substrate_directory-v2.3.0.md",
-        "os/whitepaper_mothership_os.md"
+        "docs/manifests/mothership-os-website-readme-v7.28.0.md",
+        "docs/manifests/harbor-a-master-architectural-manifest-v8.0.0.md",
+        "docs/manifests/ram-framework-prd-v1.2.0.md",
+        "docs/manifests/sentinel-protocol-prd-v1.3.7.md",
+        "docs/manifests/mothership-whitepaper-v1.1.3.md",
+        "docs/ip/master-ip-submission-checklist-v3.2.0.md",
+        "docs/ip/ip-claims-summary-v1.0.0.md",
+        "docs/ip/ip-artifact-index-v1.2.0.md",
+        "docs/ops/master-script-manifest-v3.0.0.md",
+        "docs/ops/stabilization-protocol-v5.1.0.md",
+        "docs/ops/tactical-script-audit-v1.0.0.md",
+        "docs/ops/final-bridge-latch-analysis-v1.1.0.md",
+        "docs/ops/sentinel-ledger-protocol-snippet.md",
+        "docs/launch/production-launch-blueprint-v1.1.0.md",
+        "os/active-context.md",
+        "os/ip-claims-summary-v1.1.0.md",
+        "os/sentinel-protocol-prd-v1.3.7.md",
+        "os/substrate-directory-v2.4.0.md",
+        "os/future-bridge-repair.md",
+        "src/brand/stripe-pricing-todo.md",
+        "src/brand/deployment-checklist.md"
     ],
 
-    // Core app wiring, styles, services
     "3_CORE_ORCHESTRATION": [
         "src/main.tsx",
         "src/app.tsx",
         "src/i18n/i18n.ts",
         "src/vite-env.d.ts",
         "src/styles/index.css",
-        "src/services/ollieclient.ts"
+        "src/services/ollieclient.ts",
+        "src/types/index.ts",
+        "src/types/sentinel-diagrams.ts",
+        "src/lib/firebase.ts",
+        "src/contexts/authcontext.tsx",
+        "src/contexts/workflowcontext.tsx"
     ],
 
-    // UI components + Authoritative Brand
     "4_UI_COMPONENTS": [
         "src/components/header.tsx",
         "src/components/footer.tsx",
@@ -69,13 +83,8 @@ const CATEGORY_MAP = {
         "src/components/mothershipvisualizer.tsx",
         "src/components/overwatch.tsx",
         "src/components/home.tsx",
-        "src/components/overwatchlabyrinth.tsx",
-        "src/components/labyrinth.tsx",
-        "src/components/labyrinthvariantboard.tsx",
-        "src/components/chessboard.tsx",
         "src/components/labs.tsx",
         "src/components/askollie.tsx",
-        "src/components/askollielauncher.tsx",
         "src/components/legalstub.tsx",
         "src/components/audit-sidebar.tsx",
         "src/components/sectionheading.tsx",
@@ -87,15 +96,11 @@ const CATEGORY_MAP = {
         "src/brand/rprverifylogo.tsx"
     ],
 
-    // Page Enclaves
     "5_PAGE_ENCLAVES": [
         "src/pages/labs/library-viewer.tsx",
-        "src/pages/labs/myaudit.tsx",
-        "src/pages/labs/verify.tsx",
         "src/pages/labs/checkout-pending.tsx"
     ],
 
-    // Linguistic i18n Substrate
     "6_LINGUISTIC_FISSION": [
         "src/locales/en/harbora.json",
         "src/locales/en/mothershipwhitepaper.json",
@@ -105,31 +110,36 @@ const CATEGORY_MAP = {
         "src/locales/zh/mothershipwhitepaper.json"
     ],
 
-    // Operational Scripts (The Command Surface)
     "7_OPERATIONAL_SCRIPTS": [
-        "scripts/deploy/deploy-strike.sh",
-        "scripts/deploy/ip-ledger-strike.sh",
-        "scripts/deploy/latch-targets.sh",
-        "scripts/ci/ci-firebase-preflight.sh",
-        "scripts/devops/configure-secrets.js",
-        "scripts/devops/ci-firebase-sa-verify.ts",
+        "scripts/ip-ledger-strike.sh",
+        "scripts/devops/final-bridge-latch.sh",
+        "scripts/devops/local-validate.sh",
+        "scripts/devops/verify-ollie-cors.sh",
         "scripts/devops/wif-repair-strike.sh",
         "scripts/devops/wif-diagnostic-strike.sh",
-        "scripts/devops/verify-ollie-cors.sh",
+        "scripts/devops/sentinel-full-strike.sh",
+        "scripts/devops/ci-firebase-sa-verify.ts",
+        "scripts/maintenance/emergency-repair-strike.sh",
+        "scripts/maintenance/safe-smallcaps-latch.sh",
         "scripts/maintenance/sovereign-cleanse.sh",
-        "scripts/maintenance/module-recovery-strike.sh",
+        "scripts/maintenance/workspace-cleanup.sh",
+        "scripts/maintenance/migrate-to-legacy.sh",
         "scripts/maintenance/organize-from-inventory.sh",
-        "scripts/tools/generate-rpr-branding.js",
-        "scripts/inventory/generate-inventory-csv.js"
+        "scripts/telemetry/sovereign-health-probe.sh",
+        "scripts/telemetry/sovereign-telemetry-check.ts",
+        "scripts/security/validate-env.js",
+        "scripts/security/configure-secrets.js"
     ],
 
-    // Forensic Archive & Deferred Specializations
     "8_FORENSIC_ARCHIVE": [
-        "REPORTS/Stripe Pricing Manifest.md",
+        "reports/ip-ledger-deployment-log.csv",
+        "reports/cleanup-diagnostic-v1.0.0.md",
+        "reports/cleanup-mission-analysis-v1.1.0.md",
+        "audit/forensic-diagnostic-v1.0.0.md",
+        "audit/org-policy-blockade-diagnostic.md",
         "backend/functions/index.js",
         "backend/functions/olliechat.js",
-        "backend/archive/specialists/vision_engine.py",
-        "backend/archive/specialists/test_vision_engine.py"
+        "backend/functions/package.json"
     ]
 };
 
@@ -140,7 +150,7 @@ function generateInventory() {
     let csvContent = 'category,relative_path,modified_at,status\n';
 
     console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-    console.log("⚓ Initiating Forensic Drive Mapping [v6.4.1]...");
+    console.log("⚓ Initiating Forensic Drive Mapping [v6.9.0]...");
     console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
 
     Object.entries(CATEGORY_MAP).forEach(([category, files]) => {
