@@ -1,12 +1,9 @@
 /**
- * TS-Λ3 // OLLIE PROXY LIQUIDATION [v2.7.1]
+ * TS-Λ3 // OLLIE FUNCTIONS ENTRYPOINT [v1.0.0]
  * Path: backend/functions/index.js
- * Mission: Neutralize Cloud Functions Axis to satisfy Org Policy.
- * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Status: DEPRECATED // ARCHIVAL
- * * Note: Cloud Functions have been liquidated from the production path.
- * Routing is now handled directly by Firebase Hosting -> Cloud Run.
+ * Mission: Export Ollie Chat specialist for Firebase Functions runtime.
  */
 
-// No exports provided to prevent CLI-driven IAM failures.
-module.exports = {};
+const { ollieChat } = require('./olliechat.js');
+
+exports.ollieChat = ollieChat;

@@ -49,5 +49,9 @@
             ]
         }
     ],
-    "functions": []
+    "functions": {
+        "source": "backend/functions",
+        "runtime": "nodejs20",
+        "region": "asia-southeast1"
+    }
 }
