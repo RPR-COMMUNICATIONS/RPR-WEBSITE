@@ -1,4 +1,4 @@
-# ⚓ TS-Λ3 // WEBSITE SMOKE TEST & DEPLOY [v2.0.0-WIF]
+# ⚓ TS-Λ3 // WEBSITE SMOKE TEST & DEPLOY [v2.0.1-WIF]
 # Path: .github/workflows/deploy.yml
 # Mission: Automated Production Strike via GitHub Actions (WIF-only)
 # Authority: THE OVERWATCH // SG-CANONICAL-2026
@@ -45,4 +45,4 @@ jobs:
 
       - name: 🚀 Authoritative Production Strike (firebase-tools)
         run: |
-          firebase deploy --only hosting:rpr-corporate-site --project rpr-corporate-site
+          firebase deploy --only hosting:main --project rpr-corporate-site
