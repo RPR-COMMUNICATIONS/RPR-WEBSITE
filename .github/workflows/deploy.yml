@@ -1,6 +1,6 @@
-# ⚓ TS-Λ3 // WEBSITE SMOKE TEST & DEPLOY [v1.1.3]
+# ⚓ TS-Λ3 // WEBSITE SMOKE TEST & DEPLOY [v2.0.0-WIF]
 # Path: .github/workflows/deploy.yml
-# Mission: Automated Production Strike via GitHub Actions
+# Mission: Automated Production Strike via GitHub Actions (WIF-only)
 # Authority: THE OVERWATCH // SG-CANONICAL-2026
 
 name: Website Smoke Test & Deploy
@@ -12,6 +12,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
+
     steps:
       - name: 🧬 Checkout Substrate
         uses: actions/checkout@v4
@@ -23,16 +28,21 @@ jobs:
           cache: 'npm'
 
       - name: 📦 Install Dependencies
-        # Using 'ci' for faster, immutable dependency resolution in runners
         run: npm ci
 
       - name: 🛡️ Substrate Verify & Build
-        # Triggers local-validate, safe-smallcaps-latch, and tsc automatically
         run: npm run verify
 
-      - name: 🚀 Authoritative Production Strike
-        uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: 🔐 Authenticate to Google Cloud (WIF)
+        uses: google-github-actions/auth@v2
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          projectId: rpr-corporate-site
-          channelId: live
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_WIF_SERVICE_ACCOUNT }}
+          token_format: access_token
+
+      - name: ⚙️ Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: 🚀 Authoritative Production Strike (firebase-tools)
+        run: |
+          firebase deploy --only hosting:rpr-corporate-site --project rpr-corporate-site
