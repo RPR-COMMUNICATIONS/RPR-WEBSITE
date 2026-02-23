@@ -1,23 +1,23 @@
 {
   "name": "2026-001-rpr-website",
   "private": true,
-  "version": "13.5.2",
+  "version": "13.5.7",
   "type": "module",
   "authoritative_metadata": {
     "protocol": "TS-Λ3",
     "authority": "THE OVERWATCH // SG-CANONICAL-2026",
-    "status": "LATCHED // SCRIPT_TOPOLOGY_V1.5.3"
+    "status": "LATCHED // JSON_SYNTAX_LIQUIDATED"
   },
   "scripts": {
     "dev": "vite",
-    "build": "bash scripts/devops/safe-smallcaps-latch.sh && tsc && vite build",
+    "build": "bash scripts/maintenance/safe-smallcaps-latch.sh && tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "verify": "bash scripts/ci/ci-firebase-preflight.sh main && npm run build",
     "deploy": "bash scripts/deploy/ip-ledger-strike.sh",
     "recover": "bash scripts/maintenance/module-recovery-strike.sh",
     "clean": "bash scripts/maintenance/sovereign-cleanse.sh",
-    "branding": "node scripts/tools/generate-rpr-branding.js",
+    "branding": "node scripts/tools/branding-generator.js",
     "inventory": "node scripts/inventory/generate-inventory-csv.js",
     "server": "node server.js"
   },
@@ -60,5 +60,8 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.15.0",
     "vite": "^5.4.1"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.20.0"
   }
 }
