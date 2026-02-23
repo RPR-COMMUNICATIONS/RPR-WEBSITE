@@ -43,13 +43,6 @@
             ],
             "rewrites": [
                 {
-                    "source": "/api/ollieChat",
-                    "run": {
-                        "serviceId": "olliechat",
-                        "region": "asia-southeast1"
-                    }
-                },
-                {
                     "source": "**",
                     "destination": "/index.html"
                 }
