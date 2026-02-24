@@ -61,17 +61,18 @@ export const MothershipVisualizer: React.FC = () => {
    * ⚙️ LAYER ROUTER
    */
   const renderActiveLayer = () => {
+    const props = { onNodeClick: setSelectedNode };
     switch (activeTab) {
       case 'l0_firm':
-        return <L0TheFirm onNodeClick={setSelectedNode} onClose={() => setSelectedNode(null)} />;
+        return <L0TheFirm {...props} onClose={() => setSelectedNode(null)} />;
       case 'l1_command':
-        return <L1OverwatchCommand onNodeClick={setSelectedNode} />;
+        return <L1OverwatchCommand {...props} />;
       case 'l2_elders':
-        return <L2TheElders onNodeClick={setSelectedNode} />;
+        return <L2TheElders {...props} />;
       case 'l3_workshop':
-        return <L3Workspace onNodeClick={setSelectedNode} />;
+        return <L3Workspace {...props} />;
       case 'l4_products':
-        return <L4Products onNodeClick={setSelectedNode} />;
+        return <L4Products {...props} />;
       default:
         return null;
     }
@@ -168,7 +169,7 @@ export const MothershipVisualizer: React.FC = () => {
 
                 <div className="flex-1 overflow-y-auto">
                   <AuditSidebar
-                    node={selectedNode as any}
+                    node={selectedNode}
                     onClose={() => setSelectedNode(null)}
                   />
                 </div>

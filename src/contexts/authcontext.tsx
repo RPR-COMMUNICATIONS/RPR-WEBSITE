@@ -16,6 +16,8 @@ import { getFirebaseAuth, googleAuthProvider } from '../lib/firebase.ts';
  * Mission: Google Redirect/Popup Handshake Orchestration
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
  * Status: AUTHORITATIVE // LATCHED
+ * Fix: Integrated getRedirectResult for mobile/sandboxed environment persistence.
+ * Fix: Centralized Firebase Auth retrieval via ../lib/firebase.ts.
  */
 
 interface AuthContextType {

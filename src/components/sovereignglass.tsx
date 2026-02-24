@@ -5,6 +5,7 @@ import React from 'react';
  * Path: src/components/sovereignglass.tsx
  * Mission: Authoritative backdrop substrate for visualizer layers.
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // LATCHED
  * Fix: Seated in root components directory to resolve module resolution errors.
  */
 

@@ -36,15 +36,15 @@ export const LanguageSwitcher: React.FC = () => {
                         key={lang}
                         onClick={() => setLanguage(lang)}
                         className={`
-              rounded-full font-black tracking-widest transition-all duration-500
-              /* 📐 RESPONSIVE GEOMETRY LATCH */
-              px-3 py-1.5 sm:px-2 sm:py-1 
-              text-[10px] sm:text-[8px]
-              ${isActive
+                            rounded-full font-black tracking-widest transition-all duration-500
+                            /* 📐 RESPONSIVE GEOMETRY LATCH */
+                            px-3 py-1.5 sm:px-2 sm:py-1 
+                            text-[10px] sm:text-[8px]
+                            ${isActive
                                 ? 'bg-cyan-500 text-black shadow-[0_0_20px_rgba(34,211,238,0.3)] scale-105'
                                 : 'text-slate-500 hover:text-slate-200 hover:bg-white/5'
                             }
-            `}
+                        `}
                         aria-label={`SET_INTERFACE_${lang}`}
                     >
                         {lang}
@@ -56,10 +56,10 @@ export const LanguageSwitcher: React.FC = () => {
             <div className="px-2 border-l border-white/10 ml-1 flex items-center">
                 <Globe
                     className={`
-            w-4 h-4 sm:w-3 sm:h-3 transition-all duration-700 
-            ${currentLang.startsWith('ZH') ? 'rotate-180' : 'rotate-0'}
-            text-slate-600 group-hover/switcher:text-cyan-500/50
-          `}
+                        w-4 h-4 sm:w-3 sm:h-3 transition-all duration-700 
+                        ${currentLang.startsWith('ZH') ? 'rotate-180' : 'rotate-0'}
+                        text-slate-600 group-hover/switcher:text-cyan-500/50
+                    `}
                 />
             </div>
         </div>

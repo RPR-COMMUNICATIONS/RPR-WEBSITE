@@ -16,12 +16,21 @@ import SymbolTile from './icons/symboltile.tsx';
  */
 
 // ⚓ AUTHORITATIVE TYPE LATCH
-import type { NodeData, AuditTrail } from '../types/index.ts';
+import type { NodeData } from '../types/index.ts';
+
+// 🧬 AUDIT TRAIL INTERFACE
+interface AuditTrail {
+  timestamp: string;
+  action: string;
+  user: string;
+  details?: string;
+}
 
 // 🧬 EXTENDED NODE DATA INTERFACE
 interface ExtendedNodeData extends NodeData {
   iconFill?: number;
   desc?: string;
+  auditTrail?: AuditTrail[];
 }
 
 interface AuditSidebarProps {
@@ -80,7 +89,6 @@ export const AuditSidebar: React.FC<AuditSidebarProps> = ({ node, onClose }) => 
                 size={36}
                 variant="none"
                 iconFill={node.iconFill}
-                glowColor="white"
                 active={true}
                 className="border-transparent"
               />

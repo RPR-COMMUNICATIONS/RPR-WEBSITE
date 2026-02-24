@@ -9,6 +9,7 @@ import SymbolTile from './icons/symboltile.tsx';
  * Path: src/components/l0thefirm.tsx
  * Mission: Clinical Node Scaling // HUD Density Optimization
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // LATCHED
  * Fix: Reduced SystemBox scale (p-5, min-h-[85px]) for tighter UI fit.
  */
 
@@ -24,7 +25,7 @@ const L0GlowIcon: React.FC<{
   iconFill?: number
 }> = ({
   name = "help",
-  size = 24, // Reduced from 32
+  size = 24,
   className = "",
   iconFill = 0
 }) => {
@@ -79,7 +80,6 @@ const L0SystemBox: React.FC<{
   return (
     <div
       onClick={(e) => { e.stopPropagation(); if (onClick) onClick(); }}
-      /* 📐 SCALED: p-8 -> p-5 | min-h-110 -> min-h-85 | rounded-2.5rem -> rounded-2xl */
       className={`group p-5 border bg-black/40 backdrop-blur-md rounded-2xl cursor-pointer transition-all duration-500 hover:scale-[1.01] flex flex-col justify-center min-h-[85px] ${isSovereign ? 'border-2 border-cyan-500 shadow-[0_0_30px_rgba(34,211,238,0.15)] bg-cyan-950/10' : colorBorders[color]} ${className}`}
     >
       <div className={`flex items-center gap-4 w-full ${centered ? 'justify-center' : 'justify-between'}`}>
@@ -111,7 +111,7 @@ export const L0TheFirm: React.FC<{ onNodeClick: (node: NodeData) => void; onClos
   };
 
   return (
-    <div className="h-full p-8 flex flex-col items-center overflow-y-auto custom-scrollbar bg-black/20 rounded-3xl">
+    <div className="h-full p-8 flex flex-col items-center overflow-y-auto custom-scrollbar bg-black/20 rounded-3xl" onClick={(e) => e.stopPropagation()}>
       <header className="mb-10 border-l-2 border-cyan-500 pl-6 self-start w-full max-w-4xl">
         <h2 className="text-xl font-black text-white italic uppercase tracking-tighter mb-1">
           {t('visualizer.tabs.l0', 'THE FIRM')}
@@ -122,7 +122,6 @@ export const L0TheFirm: React.FC<{ onNodeClick: (node: NodeData) => void; onClos
       </header>
 
       <div className="w-full max-w-4xl flex flex-col items-center gap-10 select-none">
-        {/* TIER 01: SOVEREIGN AUTHORITY */}
         <div className="flex flex-col items-center gap-4 w-full">
           <SectionDivider label="L0 · SOVEREIGN AUTHORITY" />
           <L0SystemBox
@@ -135,7 +134,6 @@ export const L0TheFirm: React.FC<{ onNodeClick: (node: NodeData) => void; onClos
           />
         </div>
 
-        {/* TIER 02: GOVERNANCE & KNOWLEDGE */}
         <div className="flex flex-col items-center gap-4 w-full">
           <SectionDivider label="L2 · GOVERNANCE & KNOWLEDGE" />
           <ConnectionLine vertical dashed className="h-12" />
@@ -163,7 +161,6 @@ export const L0TheFirm: React.FC<{ onNodeClick: (node: NodeData) => void; onClos
           </div>
         </div>
 
-        {/* TIER 03: BUILD SUBSTRATE */}
         <div className="flex flex-col items-center gap-4 w-full">
           <SectionDivider label="L3 · THE WORKSHOP" />
           <ConnectionLine vertical={true} dashed={true} className="h-12" />
@@ -177,38 +174,13 @@ export const L0TheFirm: React.FC<{ onNodeClick: (node: NodeData) => void; onClos
           />
         </div>
 
-        {/* TIER 04: EXECUTION UNITS */}
         <div className="flex flex-col items-center gap-4 w-full">
           <SectionDivider label="L4 · SPECIALIST INSTANCES" />
           <ConnectionLine vertical={true} dashed={true} className="h-12" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full items-stretch">
-            <L0SystemBox
-              title={nodes.campaigns.name}
-              description={nodes.campaigns.type}
-              glyph={nodes.campaigns.glyph}
-              color="orange"
-              centered={true}
-              onClick={() => onNodeClick(nodes.campaigns)}
-              className="w-full"
-            />
-            <L0SystemBox
-              title={nodes.products.name}
-              description={nodes.products.type}
-              glyph={nodes.products.glyph}
-              color="purple"
-              centered={true}
-              onClick={() => onNodeClick(nodes.products)}
-              className="w-full"
-            />
-            <L0SystemBox
-              title={nodes.solutions.name}
-              description={nodes.solutions.type}
-              glyph={nodes.solutions.glyph}
-              color="red"
-              centered={true}
-              onClick={() => onNodeClick(nodes.solutions)}
-              className="w-full"
-            />
+            <L0SystemBox title={nodes.campaigns.name} description={nodes.campaigns.type} glyph={nodes.campaigns.glyph} color="orange" centered={true} onClick={() => onNodeClick(nodes.campaigns)} className="w-full" />
+            <L0SystemBox title={nodes.products.name} description={nodes.products.type} glyph={nodes.products.glyph} color="purple" centered={true} onClick={() => onNodeClick(nodes.products)} className="w-full" />
+            <L0SystemBox title={nodes.solutions.name} description={nodes.solutions.type} glyph={nodes.solutions.glyph} color="red" centered={true} onClick={() => onNodeClick(nodes.solutions)} className="w-full" />
           </div>
         </div>
       </div>

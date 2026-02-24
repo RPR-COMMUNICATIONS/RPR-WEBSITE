@@ -1,12 +1,13 @@
 import React from "react";
 
 /**
- * TS-Λ3 // MASTER HEADING SUBSTRATE [v2.0.1]
+ * TS-Λ3 // MASTER HEADING SUBSTRATE [v2.2.0]
  * Path: src/components/sectionheading.tsx
- * Mission: Liquidation of /ui/ folder. Seated in root components.
+ * Mission: Liquidation of /ui/ folder // Panel Aesthetic Latch
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
  * Status: AUTHORITATIVE // LATCHED
  * Fix: Re-implemented left-aligned "Panel" aesthetic with border-cyan-500.
+ * Fix: Aligned with L0-L4 internal header standards.
  */
 
 interface HeadingProps {
@@ -32,7 +33,7 @@ export const SectionHeading: React.FC<HeadingProps> = ({
 
     {/* 🏛️ PRIMARY TITLE: High-Density "Methods" Truth */}
     <h2 className="text-4xl md:text-6xl font-black text-white uppercase italic tracking-tighter leading-[0.9]">
-      {title} {accent && <span className="text-cyan-400">{accent}</span>}
+      {title} {accent && <span className="text-cyan-400 ml-2">{accent}</span>}
     </h2>
   </header>
 );

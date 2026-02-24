@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown, ArrowRight } from 'lucide-react';
+import SymbolTile from './icons/symboltile.tsx';
+import { SectionHeading } from './sectionheading.tsx';
 
 /**
  * TS-Λ3 // HERO SECTION [v9.8.6]
@@ -12,9 +14,6 @@ import { ChevronDown, ArrowRight } from 'lucide-react';
  * Fix: Moving key-value mapping into a single scope to resolve ReferenceError on 'n'.
  * Fix: Strict equality check (value === key) for safe i18n failure detection.
  */
-
-import SymbolTile from './icons/symboltile.tsx';
-import { SectionHeading } from './sectionheading.tsx';
 
 export const Hero: React.FC = () => {
   /**
@@ -29,7 +28,7 @@ export const Hero: React.FC = () => {
 
   /**
    * 🧬 RENDER BODY
-   * Forensic extraction of act paragraphs.
+   * Forensic extraction of act paragraphs from the locale substrate.
    * Treats value === key as a "missing translation" state.
    */
   const renderBody = (actId: string) => {
@@ -127,8 +126,16 @@ export const Hero: React.FC = () => {
             onClick={() => navigate('/labs')}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-6 bg-cyan-500 text-black pr-12 pl-6 py-5 rounded-2xl hover:bg-cyan-400 transition-all duration-500 font-black text-[11px] tracking-[0.2em] uppercase shadow-[0_20px_60px_rgba(6,182,212,0.15)] group"
           >
-            <SymbolTile glyph="experiment" size={28} variant="square" color="#000000" className="bg-black/5 border-transparent" glow={true} />
-            {t('hero.btns.labs', 'access labs')} <ArrowRight size={16} className="ml-2 group-hover:translate-x-2 transition-transform" />
+            <SymbolTile
+              glyph="experiment"
+              size={28}
+              variant="square"
+              color="#000000"
+              className="bg-black/5 border-transparent"
+              glow={true}
+            />
+            {t('hero.btns.labs', 'access labs')}
+            <ArrowRight size={16} className="ml-2 group-hover:translate-x-2 transition-transform" />
           </button>
 
           <Link

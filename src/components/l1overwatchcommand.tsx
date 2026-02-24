@@ -9,6 +9,7 @@ import type { NodeData } from '../types/index.ts';
  * Path: src/components/l1overwatchcommand.tsx
  * Mission: Clinical Node Scaling // Forensic Narrative Restoration
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // LATCHED
  * Fix: Maintained compact SystemBox scale (p-5, min-h-[85px]).
  * Fix: Restored full-length forensic descriptions for orchestration nodes.
  * Fix: Synchronized with L1Props interface and Master NodeData substrate.
@@ -189,7 +190,7 @@ export const L1OverwatchCommand: React.FC<L1Props> = ({ onNodeClick }) => {
   };
 
   return (
-    <div className="h-full p-8 flex flex-col items-center overflow-y-auto custom-scrollbar bg-black/20 rounded-3xl">
+    <div className="h-full p-8 flex flex-col items-center overflow-y-auto custom-scrollbar bg-black/20 rounded-3xl" onClick={(e) => e.stopPropagation()}>
 
       <header className="mb-10 border-l-2 border-cyan-500 pl-6 w-full max-w-4xl self-start">
         <h2 className="text-xl font-black text-white italic uppercase tracking-tighter mb-1">

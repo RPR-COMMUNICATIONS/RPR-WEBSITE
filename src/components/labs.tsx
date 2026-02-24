@@ -17,6 +17,7 @@ import {
  * Mission: Substrate Expansion // Content Depth Escalation
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
  * Fix: Added "Research Vectors", "Node Infrastructure", and "Terminal Stream" sections.
+ * Status: AUTHORITATIVE // LATCHED
  */
 
 // 🧬 AUTHORITATIVE UI LATCHES
@@ -58,7 +59,7 @@ const RESEARCH_VECTORS = [
 ];
 
 export const Labs: React.FC = () => {
-  const { t } = useTranslation('harborA');
+  const { t } = useTranslation('harbora');
   const [openId, setOpenId] = useState<string | null>(null);
   const [logs, setLogs] = useState<string[]>([]);
 
@@ -94,9 +95,9 @@ export const Labs: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <SectionHeading
-          title={t('labs.title')}
-          accent={t('labs.accent')}
-          kicker={t('labs.kicker')}
+          title={t('labs.title', 'THE')}
+          accent={t('labs.accent', 'LABS')}
+          kicker={t('labs.kicker', 'L3 // THE WORKSHOP')}
         />
 
         {/* 🧬 01. OPERATIONAL FRAMEWORKS */}
@@ -128,7 +129,7 @@ export const Labs: React.FC = () => {
                   onClick={() => setOpenId(open ? null : id)}
                   className="mt-auto text-[10px] font-mono text-cyan-400 uppercase tracking-[0.2em] flex items-center justify-center gap-2 hover:text-white transition-colors"
                 >
-                  {open ? t('labs.btn_hide') : t('labs.btn_show')}
+                  {open ? t('labs.btn_hide', 'CLOSE_DATA') : t('labs.btn_show', 'EXPAND_INTEL')}
                   <span className={`transition-transform duration-300 ${open ? 'rotate-180' : ''}`}>▾</span>
                 </button>
 
@@ -258,54 +259,53 @@ export const Labs: React.FC = () => {
         {/* 📊 05. LIVE STATUS AUDIT */}
         <div className="mt-24">
           <h3 className="text-xs font-mono text-slate-500 uppercase tracking-[0.35em] mb-8 font-black">
-            {t('labs.status_title')}
+            {t('labs.status_title', 'SYSTEM_STATUS_AUDIT')}
           </h3>
 
           <div className="p-10 mb-12 bg-zinc-950 border border-white/5 rounded-[2rem] text-center max-w-2xl mx-auto shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
             <p className="text-slate-400 text-sm leading-relaxed mb-8">
-              {t('labs.pricing_tba')}
+              {t('labs.pricing_tba', 'Access to specialist instances is strictly governed. Public storefront and pricing models are currently being calculated within the workshop.')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="px-6 py-3 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition-all flex items-center gap-2">
                 <Zap className="w-3 h-3 text-cyan-400" />
-                {t('labs.btns.interest')}
+                {t('labs.btns.interest', 'SIGNAL_INTEREST')}
               </button>
               <button className="px-6 py-3 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition-all">
-                {t('labs.btns.waitlist')}
+                {t('labs.btns.waitlist', 'JOIN_WAITLIST')}
               </button>
-              {/* 🚥 FINANCIAL HIBERNATION LATCH: Redirecting to internal holding page */}
               <Link to="/labs/checkout-pending" className="px-6 py-3 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-[10px] font-black uppercase tracking-widest text-cyan-400 hover:bg-cyan-500/20 transition-all shadow-lg shadow-cyan-500/10">
-                {t('labs.btns.storefront')}
+                {t('labs.btns.storefront', 'ACCESS_STOREFRONT')}
               </Link>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-[11px] text-slate-300 font-mono mb-24">
             <div className="space-y-4">
-              <p className="text-slate-500 uppercase tracking-[0.2em] border-b border-white/5 pb-2 font-bold">{t('labs.phases_label')}</p>
+              <p className="text-slate-500 uppercase tracking-[0.2em] border-b border-white/5 pb-2 font-bold">{t('labs.phases_label', 'DEPLOYMENT_PHASES')}</p>
               <ul className="space-y-3">
                 <li className="flex justify-between items-center">
-                  <span className="text-slate-400">{t('labs.phases.p1')}</span>
-                  <span className="text-slate-600 font-black">{t('labs.status.complete')}</span>
+                  <span className="text-slate-400">{t('labs.phases.p1', 'PHASE_01: ARCHITECTURAL_LATCH')}</span>
+                  <span className="text-slate-600 font-black">{t('labs.status.complete', 'COMPLETE')}</span>
                 </li>
                 <li className="flex justify-between items-center text-white">
-                  <span className="animate-pulse">{t('labs.phases.p2')}</span>
-                  <span className="text-cyan-400 font-black">{t('labs.status.active')}</span>
+                  <span className="animate-pulse">{t('labs.phases.p2', 'PHASE_02: FORENSIC_INGESTION')}</span>
+                  <span className="text-cyan-400 font-black">{t('labs.status.active', 'ACTIVE')}</span>
                 </li>
                 <li className="flex justify-between items-center opacity-30">
-                  <span>{t('labs.phases.p3')}</span>
-                  <span>{t('labs.status.pending')}</span>
+                  <span>{t('labs.phases.p3', 'PHASE_03: PUBLIC_STRIKE')}</span>
+                  <span>{t('labs.status.pending', 'PENDING')}</span>
                 </li>
               </ul>
             </div>
             <div className="space-y-4">
-              <p className="text-slate-500 uppercase tracking-[0.2em] border-b border-white/5 pb-2 font-bold">{t('labs.milestones_label')}</p>
+              <p className="text-slate-500 uppercase tracking-[0.2em] border-b border-white/5 pb-2 font-bold">{t('labs.milestones_label', 'OPERATIONAL_MILESTONES')}</p>
               <ul className="space-y-3">
                 {[1, 2, 3, 4].map(num => (
                   <li key={num} className="flex justify-between items-center">
-                    <span className={num === 2 ? "text-white" : "text-slate-400"}>{t(`labs.milestones.m${num}`)}</span>
+                    <span className={num === 2 ? "text-white" : "text-slate-400"}>{t(`labs.milestones.m${num}`, `MILESTONE_0${num}`)}</span>
                     <span className={`font-black ${num === 2 ? "text-cyan-400" : "text-cyan-500/40"}`}>
-                      {num === 2 ? t('labs.status.active') : t('labs.status.complete')}
+                      {num === 2 ? t('labs.status.active', 'ACTIVE') : t('labs.status.complete', 'COMPLETE')}
                     </span>
                   </li>
                 ))}
@@ -336,7 +336,7 @@ export const Labs: React.FC = () => {
 
         <div className="mt-16 p-6">
           <p className="text-[9px] text-slate-600 font-mono italic leading-relaxed text-center opacity-50 uppercase tracking-widest">
-            {t('labs.notice')}
+            {t('labs.notice', 'NOTICE: ALL RESEARCH VECTORS OPERATE UNDER THE SENTINEL PROTOCOL. UNAUTHORIZED ACCESS TO DATA SUBSTRATES IS LOGGED.')}
           </p>
         </div>
       </div>

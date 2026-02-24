@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import SymbolTile from './icons/symboltile.tsx';
 
 // 🛡️ BRAND ASSETS (NAMED EXPORTS)
@@ -12,10 +13,11 @@ import type { NodeData } from '../types/index.ts';
  * Path: src/components/l4products.tsx
  * Mission: Clinical Node Scaling // HUD Density Optimization
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Fix: Reduced SystemBox scale (p-5, min-h-[85px]) for vertical economy.
- * Fix: Standardized typography (text-xs/text-[9px]) for component parity.
- * Fix: Scaled L4GlowIcon containers to match L0-L3 (w-6 h-6).
- * // TS-Λ3: MECHANICAL MODE ONLY – DO NOT CHANGE COPY, ONLY WIRE t('…') KEYS.
+ * Updates:
+ * 1. SCALE: Reduced SystemBox scale (p-5, min-h-[85px]) for vertical economy.
+ * 2. TYPO: Standardized typography (text-xs/text-[9px]) for component parity.
+ * 3. GLYPH: Scaled L4GlowIcon containers to match L0-L3 (w-6 h-6).
+ * 4. i18n: Wired t('...') keys for authoritative content localization.
  */
 
 type L4Color = 'cyan' | 'orange' | 'purple' | 'red';
@@ -41,7 +43,7 @@ interface L4GlowIconProps {
 const L4GlowIcon: React.FC<L4GlowIconProps> = ({
   name,
   logo,
-  size = 24, // Reduced from 32 for compact fit
+  size = 24,
   className = "",
   noContainer = false,
   color = 'cyan',
@@ -57,7 +59,6 @@ const L4GlowIcon: React.FC<L4GlowIconProps> = ({
   };
 
   return (
-    /* 📐 SCALED: w-8 h-8 -> w-6 h-6 */
     <div className={`relative w-6 h-6 flex items-center justify-center overflow-visible ${className}`}>
       {!noContainer && (
         <svg viewBox="0 0 64 64" className="absolute inset-0 w-full h-full overflow-visible" style={{ transform: 'scale(1.4)' }}>
@@ -119,21 +120,17 @@ const L4SystemBox: React.FC<L4SystemBoxProps> = ({
     red: 'text-red-400',
   };
 
-  // 🛡️ FORENSIC CHECK: Determine if this is a "Pure Asset" card
   const isPureAsset = !title && !description;
 
   return (
     <div
       onClick={onClick}
-      /* 📐 COMPACT SCALE LATCH: p-5 | min-h-85 | rounded-2xl */
       className={`group p-5 border bg-black/40 backdrop-blur-md rounded-2xl cursor-pointer transition-all duration-500 hover:scale-[1.01] flex flex-col justify-center min-h-[85px] ${colorBorders[color]} ${className}`}
     >
       <div className={`flex items-center gap-6 overflow-visible w-full ${isPureAsset ? 'justify-center' : 'justify-between'}`}>
         {!isPureAsset && (
           <div className="flex flex-col gap-1 items-start text-left">
-            {/* 🔡 REDUCED: text-xs font-black italic tracking-[0.15em] */}
             {title && <div className={`text-xs font-black uppercase italic tracking-[0.15em] leading-tight ${textColors[color]}`}>{title}</div>}
-            {/* 🔡 REDUCED: text-[9px] font-mono */}
             {description && <div className="text-[9px] font-mono uppercase tracking-widest text-slate-500 opacity-80 group-hover:opacity-100 transition-opacity line-clamp-1">{description}</div>}
           </div>
         )}
@@ -144,83 +141,79 @@ const L4SystemBox: React.FC<L4SystemBoxProps> = ({
 };
 
 export const L4Products: React.FC<{ onNodeClick: (node: NodeData) => void }> = ({ onNodeClick }) => {
+  const { t } = useTranslation();
+
   const segments: { id: string; title: string; kicker: string; color: L4Color; nodes: L4Node[] }[] = [
     {
       id: 'campaigns',
-      title: 'CAMPAIGNS',
-      kicker: 'AGENCY_CORE',
+      title: t('visualizer.l4.segments.campaigns.title', 'CAMPAIGNS'),
+      kicker: t('visualizer.l4.segments.campaigns.kicker', 'AGENCY_CORE'),
       color: 'orange',
       nodes: [
         {
           id: 'instance-strategic-activation',
-          name: 'STRATEGIC ACTIVATION',
-          type: 'AGENCY SERVICE',
+          name: t('visualizer.l4.nodes.strategic_activation.name', 'STRATEGIC ACTIVATION'),
+          type: t('visualizer.l4.nodes.strategic_activation.type', 'AGENCY SERVICE'),
           layer: 'L4',
           glyph: 'rocket_launch',
-          description: 'Core Strategic, Creative, and Brand Activation services using our AI-led business units to move the needle in the real world.',
-          desc: 'Core Strategic, Creative, and Brand Activation services using our AI-led business units to move the needle in the real world.',
+          description: t('visualizer.l4.nodes.strategic_activation.desc', 'Core Strategic, Creative, and Brand Activation services using our AI-led business units to move the needle in the real world.'),
         }
       ]
     },
     {
       id: 'products',
-      title: 'PRODUCTS',
-      kicker: 'INSTANCES',
+      title: t('visualizer.l4.segments.products.title', 'PRODUCTS'),
+      kicker: t('visualizer.l4.segments.products.kicker', 'INSTANCES'),
       color: 'purple',
       nodes: [
         {
           id: 'instance-myaudit',
           name: 'MYΛUDIT',
-          type: 'AI ACCOUNTING',
+          type: t('visualizer.l4.nodes.myaudit.type', 'AI ACCOUNTING'),
           layer: 'L4',
           logo: <MyAuditLogo />,
-          description: 'MYΛUDIT A CLOUD-BASED AI ACCOUNTING & TAX AUTOMATION SYSTEM.',
-          desc: 'MYΛUDIT A CLOUD-BASED AI ACCOUNTING & TAX AUTOMATION SYSTEM. “Designed for business owners who want clean books and smart tax outcomes without running a traditional finance department or finance cost centre\'s.”',
+          description: t('visualizer.l4.nodes.myaudit.desc', 'MYΛUDIT A CLOUD-BASED AI ACCOUNTING & TAX AUTOMATION SYSTEM.'),
         },
         {
           id: 'instance-verify',
           name: 'RPR VERIFY',
-          type: 'COMPLIANCE ENGINE',
+          type: t('visualizer.l4.nodes.verify.type', 'COMPLIANCE ENGINE'),
           layer: 'L4',
           logo: <RprVerifyLogo />,
-          description: 'Intelligent onboarding solution for Australian businesses.',
-          desc: 'Intelligent onboarding solution for Australian businesses. Specialized in automated compliance checks and dispute resolution protocols.',
+          description: t('visualizer.l4.nodes.verify.desc', 'Intelligent onboarding solution for Australian businesses.'),
         }
       ]
     },
     {
       id: 'solutions',
-      title: 'SOLUTIONS',
-      kicker: 'SUBSCRIPTIONS',
+      title: t('visualizer.l4.segments.solutions.title', 'SOLUTIONS'),
+      kicker: t('visualizer.l4.segments.solutions.kicker', 'SUBSCRIPTIONS'),
       color: 'red',
       nodes: [
         {
           id: 'instance-labyrinth',
-          name: 'THE LABYRINTH',
-          type: 'ARCHITECTURE',
+          name: t('visualizer.l4.nodes.labyrinth.name', 'THE LABYRINTH'),
+          type: t('visualizer.l4.nodes.labyrinth.type', 'ARCHITECTURE'),
           layer: 'L4',
           glyph: 'dashboard_2_gear',
-          description: 'THE LABYRINTH: The definitive industry-specific subscription model.',
-          desc: 'THE LABYRINTH: The definitive industry-specific subscription model. The end-result of Mothership OS specialization where governance, intelligence, and execution converge into a singular tenant-facing experience.',
+          description: t('visualizer.l4.nodes.labyrinth.desc', 'THE LABYRINTH: The definitive industry-specific subscription model.'),
         },
         {
           id: 'instance-daedalus',
-          name: 'DAEDALUS',
-          type: 'LEARNING ENGINE',
+          name: t('visualizer.l4.nodes.daedalus.name', 'DAEDALUS'),
+          type: t('visualizer.l4.nodes.daedalus.type', 'LEARNING ENGINE'),
           layer: 'L4',
           glyph: 'robot',
           iconFill: 1,
-          description: 'The Mothership OS back-end orchestrator that turns real work into lasting intelligence.',
-          desc: 'Daedalus is the Mothership OS back-end orchestrator that turns real work into lasting intelligence. It watches governance logs, user decisions, and ICARUS interactions, then converts those signals into training data, playbooks, and contract refinement proposals—always under Overwatch approval—so both humans and AI agents get smarter over time.',
+          description: t('visualizer.l4.nodes.daedalus.desc', 'The Mothership OS back-end orchestrator that turns real work into lasting intelligence.'),
         },
         {
           id: 'instance-icarus',
-          name: 'ICARUS',
-          type: 'TENANT COPILOT',
+          name: t('visualizer.l4.nodes.icarus.name', 'ICARUS'),
+          type: t('visualizer.l4.nodes.icarus.type', 'TENANT COPILOT'),
           layer: 'L4',
           glyph: 'explore',
-          description: 'ICARUS is each user’s personal copilot, bound to their own Labyrinth (virtual company).',
-          desc: 'ICARUS is each user’s personal copilot, bound to their own Labyrinth (virtual company). Daedalus helps configure the user’s departments and constraints; ICARUS then acts like a persistent companion inside that world—surfacing patterns, playbooks, and next steps drawn from the Knowledge Grid, and sending the user’s corrections back into Daedalus to keep improving the system.',
+          description: t('visualizer.l4.nodes.icarus.desc', 'ICARUS is each user’s personal copilot, bound to their own Labyrinth (virtual company).'),
         }
       ]
     }
@@ -246,7 +239,6 @@ export const L4Products: React.FC<{ onNodeClick: (node: NodeData) => void }> = (
               {segment.nodes.map((node) => (
                 <L4SystemBox
                   key={node.id}
-                  /* 🧬 Suppress labels for nodes containing a logo asset */
                   title={node.logo ? undefined : node.name}
                   description={node.logo ? undefined : node.type}
                   glyph={node.glyph}

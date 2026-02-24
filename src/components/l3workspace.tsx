@@ -9,6 +9,7 @@ import type { NodeData } from '../types/index.ts';
  * Path: src/components/l3workspace.tsx
  * Mission: Clinical Node Scaling // HUD Density Optimization
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // LATCHED
  * Fix: Reduced SystemBox scale (p-5, min-h-[85px]) for tighter UI fit.
  * Fix: Scaled connection vectors to h-12 for better vertical economy.
  * Fix: Standardized typography (text-xs/text-[9px]) for component parity.
@@ -29,7 +30,7 @@ const L3GlowIcon: React.FC<{
   iconFill?: number
 }> = ({
   name = "help",
-  size = 24, // Reduced from 32 for compact fit
+  size = 24, // Optimized for high-density fit
   className = "",
   iconFill = 0
 }) => {
@@ -37,7 +38,6 @@ const L3GlowIcon: React.FC<{
     const filterId = `l3-glow-${glyphName.replace(/\s+/g, '-')}-${Math.random().toString(36).substr(2, 9)}`;
 
     return (
-      /* 📐 SCALED: w-8 h-8 -> w-6 h-6 */
       <div className={`relative w-6 h-6 flex items-center justify-center ${className}`}>
         <svg
           viewBox="0 0 64 64"
@@ -124,11 +124,11 @@ const L3SystemBox: React.FC<{
       >
         <div className={`flex items-center gap-6 overflow-visible w-full ${centered ? 'justify-center' : 'justify-between'}`}>
           <div className={`flex flex-col gap-1 ${centered ? 'items-center text-center' : ''}`}>
-            {/* 🔡 REDUCED: text-sm -> text-xs */}
+            {/* 🔡 CLINICAL TYPO: text-xs */}
             <div className={`text-xs font-black uppercase tracking-[0.15em] italic leading-tight ${isSovereign ? 'text-white' : textColors[color]}`}>
               {title}
             </div>
-            {/* 🔡 REDUCED: text-[10px] -> text-[9px] */}
+            {/* 🔡 METADATA TYPO: text-[9px] */}
             <div className="text-[9px] font-mono uppercase tracking-widest text-slate-500 opacity-80 group-hover:opacity-100 transition-opacity">
               {description}
             </div>
@@ -144,59 +144,54 @@ const L3SystemBox: React.FC<{
   };
 
 export const L3TheWorkspace: React.FC<{ onNodeClick: (node: NodeData) => void }> = ({ onNodeClick }) => {
-  const { t } = useTranslation('harborA');
+  const { t } = useTranslation('harbora');
 
   const nodes: Record<string, ExtendedNodeData> = {
     labs: {
       id: 'ws-labs',
-      name: 'THE LABS',
-      type: 'STRATEGY & CREATIVE PLANNING',
+      name: t('visualizer.l3.nodes.labs.name', 'THE LABS'),
+      type: t('visualizer.l3.nodes.labs.type', 'STRATEGY & CREATIVE PLANNING'),
       layer: 'L3',
       glyph: 'science',
-      description: 'The human strategy and creative team turning briefs into clear stories and visual directions.',
-      desc: 'The human strategy and creative team turning briefs into clear stories and visual directions.'
+      description: t('visualizer.l3.nodes.labs.desc', 'The human strategy and creative team turning briefs into clear stories and visual directions.'),
     },
     forge: {
       id: 'ws-forge',
-      name: 'THE FORGE',
-      type: 'BUILD & LAUNCH WORKSHOP',
+      name: t('visualizer.l3.nodes.forge.name', 'THE FORGE'),
+      type: t('visualizer.l3.nodes.forge.type', 'BUILD & LAUNCH WORKSHOP'),
       layer: 'L3',
       glyph: 'precision_manufacturing',
-      description: 'The build team writing documents, updating code, and shipping changes to the substrate.',
-      desc: 'The build team writing documents, updating code, and shipping changes to the substrate.'
+      description: t('visualizer.l3.nodes.forge.desc', 'The build team writing documents, updating code, and shipping changes to the substrate.'),
     },
     departments: {
       id: 'ws-departments',
-      name: 'DEPARTMENTS',
-      type: 'SUPPORT (LEGAL / FINANCE / HR)',
+      name: t('visualizer.l3.nodes.departments.name', 'DEPARTMENTS'),
+      type: t('visualizer.l3.nodes.departments.type', 'SUPPORT (LEGAL / FINANCE / HR)'),
       layer: 'L3',
       glyph: 'business',
-      description: 'Virtual support teams keeping the business compliant, organised, and ready to scale.',
-      desc: 'Virtual support teams keeping the business compliant, organised, and ready to scale.'
+      description: t('visualizer.l3.nodes.departments.desc', 'Virtual support teams keeping the business compliant, organised, and ready to scale.'),
     },
     daedalus: {
       id: 'ws-daedalus',
-      name: 'DAEDALUS',
-      type: 'PRODUCT ONBOARDING GUIDE',
+      name: t('visualizer.l3.nodes.daedalus.name', 'DAEDALUS'),
+      type: t('visualizer.l3.nodes.daedalus.type', 'PRODUCT ONBOARDING GUIDE'),
       layer: 'L3',
       glyph: 'robot',
       iconFill: 1,
-      description: 'At L3, Daedalus is a backend worker inside THE WORKSHOP. It is the engine that connects what happens in day‑to‑day operations to better agents, better playbooks, and sharper contracts over time.',
-      desc: 'At L3, Daedalus is a backend worker inside THE WORKSHOP. It is the engine that connects what happens in day‑to‑day operations to better agents, better playbooks, and sharper contracts over time.'
+      description: t('visualizer.l3.nodes.daedalus.desc', 'At L3, Daedalus is a backend worker inside THE WORKSHOP. It connects day‑to‑day operations to sharper contracts and agent guardrails over time.'),
     },
     ollie: {
       id: 'ws-ollie',
-      name: 'OLLIE',
-      type: 'AGENCY ONBOARDING ASSISTANT',
+      name: t('visualizer.l3.nodes.ollie.name', 'OLLIE'),
+      type: t('visualizer.l3.nodes.ollie.type', 'AGENCY ONBOARDING ASSISTANT'),
       layer: 'L3',
       glyph: 'smart_toy',
-      description: 'The guide for partner integration standardizing communication across the Forge.',
-      desc: 'The guide for partner integration standardizing communication across the Forge.'
+      description: t('visualizer.l3.nodes.ollie.desc', 'The guide for partner integration standardizing communication across the Forge.'),
     }
   };
 
   return (
-    <div className="h-full p-8 flex flex-col items-center overflow-y-auto custom-scrollbar bg-black/20 rounded-3xl">
+    <div className="h-full p-8 flex flex-col items-center overflow-y-auto custom-scrollbar bg-black/20 rounded-3xl" onClick={(e) => e.stopPropagation()}>
 
       <header className="mb-10 border-l-2 border-cyan-500 pl-6 self-start w-full max-w-4xl">
         <h2 className="text-xl font-black text-white italic uppercase tracking-tighter mb-1">
@@ -234,6 +229,7 @@ export const L3TheWorkspace: React.FC<{ onNodeClick: (node: NodeData) => void }>
           />
         </div>
 
+        {/* 📐 VERTICAL ECONOMY: h-12 */}
         <ConnectionLine label="ONBOARDING & INTEGRATION BRIDGE" vertical={true} dashed={true} className="h-12" />
 
         {/* 🛰️ SPECIALIST SUPPORT TIER */}

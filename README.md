@@ -1,112 +1,110 @@
-Here’s a tightened `readme.md` that applies all those adjustments.
-
 ```markdown
-# RPR COMMUNICATIONS // THE MOTHERSHIP [HARBOR A]
+# rpr communications // the mothership [harbor a]
 
-**URL:** https://rprcomms.com  
-**STATUS:** 🟢 LIVE // SUBSTRATE_STABILIZED  
-**AUTHORITY:** THE OVERWATCH // SG-CANONICAL-2026  
-**VERSION:** 7.28.0  
-
----
-
-## 01. IDENTITY & OBJECTIVE
-
-Harbor A is the primary public activation point for RPR Communications. It is a high‑fidelity React/Vite Mothership designed to move the needle through experiential communications and global intelligence.
-
-### THE NEEDLE MANDATE
-
-"We're a boutique agency and experience studio that actually cares if the campaign moves the needle. We plan campaigns based on real world results through digital, virtual and the physical spaces..with the messy bits in between."
+**url:** https://rprcomms.com  
+**status:** 🟢 live // substrate_stabilized  
+**authority:** the overwatch // sg-canonical-2026  
+**version:** 7.52.4  
 
 ---
 
-## 02. TECHNICAL SUBSTRATE
+## 01. identity & objective
 
-The infrastructure is a hardened, flattened React substrate optimized for speed and cryptographic identity verification.
+harbor a is the primary public activation point for rpr communications. it is a high‑fidelity react/vite mothership designed to move the needle through experiential communications and global intelligence.
 
-- **Framework:** React 18.3.1 (Vite 5.4.1 build engine)  
-- **Authentication:** Dual‑CTA latch (KONTROL + Google OAuth WIF v2)  
-- **Hosting:** Firebase Hosting (project: `rpr-corporate-site`, target: `main`)  
-- **Region:** asia‑southeast1 (Singapore edge)  
-- **Backend:** GCFv2 `ollieChat` (Cloud Run, Node 20)  
-- **Store:** Stripe engine v2 (financial substrate via `npm run server`)  
+### the needle mandate
+
+"we're a boutique agency and experience studio that actually cares if the campaign moves the needle. we plan campaigns based on real world results through digital, virtual and the physical spaces..with the messy bits in between."
 
 ---
 
-## 03. OPERATIONAL COMMANDS
+## 02. technical substrate
 
-From the project root:
+the infrastructure is a hardened, flattened react substrate optimized for speed and cryptographic identity verification.
+
+- **framework:** react 18.3.1 (vite 5.4.21 build engine)  
+- **authentication:** dual‑cta latch (kontrol + google oauth wif v2)  
+- **hosting:** firebase hosting (project: `rpr-corporate-site`, target: `main`)  
+- **region:** asia-southeast1 (singapore edge)  
+- **backend:** gcfv2 `olliechat` (cloud run, node 20)  
+- **store:** stripe engine v2 (financial substrate via `npm run server`)  
+
+---
+
+## 03. operational commands
+
+from the project root:
 
 ```bash
-npm run dev      # Local development (Vite)
-npm run build    # Production build (triggers safe smallcaps latch)
-npm run verify   # Full forensic pre-flight audit
-npm run server   # Financial substrate (Stripe proxy)
+npm run dev      # local development (vite)
+npm run verify   # full forensic pre-flight (preflight + build)
+npm run build    # production build (safe smallcaps latch + vite)
+npm run server   # financial substrate (stripe proxy)
 ```
 
-Legacy strikes (kept for reference):
+legacy strikes (kept for reference only):
 
 ```bash
-./scripts/recovery-strike.sh   # Substrate recovery
-./deploy_strike.sh             # Firebase Hosting deploy
+./scripts/recovery-strike.sh   # substrate recovery
+./deploy_strike.sh             # manual firebase hosting deploy
 ```
 
-Do not add ad‑hoc scripts without updating `docs/ops/stabilization-protocol-v5.1.0.md`.
+do not add ad‑hoc scripts without updating `docs/ops/stabilization-protocol-v5.1.0.md`.
 
 ---
 
-## 04. ARCHITECTURE & CONTENT
+## 04. architecture & content
 
-See `docs/manifests/harbor-a-master-architectural-manifest-v8.0.0.md` for the full routing, component map, and section topology.
+see `docs/manifests/harbor-a-master-architectural-manifest-v8.0.0.md` for the full routing, component map, and section topology.
 
-Key surfaces:
+key surfaces:
 
-- Foundations, Methods, Labs, Overwatch, Mothership section.  
-- Linguistic fission between:
+- foundations, methods, labs, overwatch, mothership section.  
+- linguistic fission between:  
   - `public/locales/{en|my|zh}/harbora.json` (marketing)  
   - `src/locales/{en|my|zh}/mothershipwhitepaper.json` (technical).  
 
 ---
 
-## 05. GOVERNANCE & CANONICAL DOCS
+## 05. governance & canonical docs
 
-All work must align with these canonical TS‑Λ3 documents (do not invent new versions):
+all work must align with these canonical ts-λ3 documents (do not invent new versions):
 
 - `docs/manifests/harbor-a-master-architectural-manifest-v8.0.0.md`  
 - `docs/launch/production-launch-blueprint-v1.1.0.md`  
 - `docs/ip/master-ip-submission-checklist-v3.2.0.md`  
 - `docs/ops/stabilization-protocol-v5.1.0.md`  
 
-Legal routes:
+legal routes:
 
-- Privacy Policy: `/legal/privacy`  
-- Terms of Use: `/legal/terms`  
-- Security & Compliance: `/legal/security`  
-- Responsible AI: `/legal/governance`  
+- privacy policy: `/legal/privacy`  
+- terms of use: `/legal/terms`  
+- security & compliance: `/legal/security`  
+- responsible ai: `/legal/governance`  
 
-Deprecated assets and texture changes are tracked in `docs/ops/deprecated-assets-ledger.md`.
+deprecated assets and texture changes are tracked in `docs/ops/deprecated-assets-ledger.md`.
 
 ---
 
-## 06. SOVEREIGN GUARDRAILS
+## 06. sovereign guardrails
 
 - **smallcaps mandate:** all file paths and imports lowercase (no caps in names).  
 - **linguistic fission:** whitepaper content never lives in `harbora.json`.  
-- **financial hibernation:** `pay_latch_active = false` until live pricing IDs are latched in `server.js`.  
-- **ip air gap:** strategic artifacts remain under `os/`, never imported from `src/`.  
+- **financial hibernation:** `pay_latch_active = false` until live pricing ids are latched in `server.js`.  
+- **ip air gap:** strategic artifacts remain under `docs/governance/os/`, never imported from `src/`.  
 
-See `docs/ops/stabilization-protocol-v5.1.0.md` for the full rule set and local map.
+see `docs/ops/stabilization-protocol-v5.1.0.md` for the full rule set and local map.
 
 ---
 
-## 07. VERSION TRUTH
+## 07. version truth
 
-- **Current frontend version:** 7.28.0  
-- **Current architectural manifest:** v8.0.0  
+- **current frontend version:** 7.52.4  
+- **current architectural manifest:** v8.0.0  
 
-Historical files (v1.0.0, v5.0.0, etc.) are kept for history only and must never be treated as current ground truth.
+historical files (v1.0.0, v5.0.0, etc.) are kept for history only and must never be treated as current ground truth.
 
-**Audit marker:** `readme-v7.28.0-latched`  
-Marker: `[2026-02-21 06:45] // engineer elder // air‑gap & linguistic fission standards latched.`  
-DOC_AUTHORITY // OVERWATCH SG‑CANONICAL‑2026
+**audit marker:** `readme-v7.52.4-latched`  
+marker: `[2026-02-24 09:20] // engineer elder // harbor a production strike consolidated.`  
+doc_authority // overwatch sg-canonical-2026
 ```

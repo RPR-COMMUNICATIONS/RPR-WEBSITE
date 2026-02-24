@@ -2,13 +2,15 @@ import { useState, Suspense, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 /**
- * ⚓ TS-Λ3 // MOTHERSHIP ORCHESTRATOR [v7.52.1]
- * Path: src/app.tsx
- * Mission: Resolve TS2614 Import Mismatch // Page Node Alignment
+ * ⚓ TS-Λ3 // MOTHERSHIP ORCHESTRATOR [v7.52.4]
+ * Path: src/App.tsx
+ * Mission: Authoritative Route Wiring // Test Namespace Segregation
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
  * Status: PRODUCTION_STABLE // LATCHED
- * Fix: Transitioned MyAudit and Verify to Default Imports to match physical substrate.
- * Fix: Maintained Named Exports for Shell Components (Home, Labs, Header, Footer).
+ * Updates:
+ * 1. TESTS: Relocated L4GridTest import and route to /tests/l4-grid.
+ * 2. SYNC: Maintained production heartbeat and index.html font management.
+ * 3. FIX: Resolved TS2307/TS2614 via explicit import mapping.
  */
 
 import "./styles/index.css";
@@ -28,6 +30,9 @@ import CheckoutPending from './pages/labs/checkout-pending.tsx';
 import LibraryViewer from './pages/labs/library-viewer.tsx';
 import { LegalStub } from './components/legalstub.tsx';
 
+// 🚥 TEST HARNESS NODES (Internal Diagnostic Surface)
+import L4GridTest from './pages/tests/l4-grid-test.tsx';
+
 // 🤖 TACTICAL INTERFACE
 import { AskOllie } from './components/askollie.tsx';
 import AskOllieLauncher from './components/askollielauncher.tsx';
@@ -36,31 +41,31 @@ export default function App() {
   const [showOllie, setShowOllie] = useState(false);
   const [isLive, setIsLive] = useState(false);
 
-  // 🛰️ PRODUCTION HEARTBEAT
+  // 🛰️ PRODUCTION HEARTBEAT v2
   useEffect(() => {
-    setIsLive(true);
-    console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-    console.log("⚓ MOTHERSHIP OS // HARBOR A OPERATIONAL");
-    console.log("VERSION: v7.52.1 // NODE: ASIA-SOUTHEAST1");
-    console.log("STATUS: TS2614_LIQUIDATED // IMPORT_SYNC_COMPLETE");
-    console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+    // Check for production environment
+    const isProd = import.meta.env.PROD;
+
+    if (isProd) {
+      setIsLive(true);
+      console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+      console.log("MOTHERSHIP_OS_LATCHED // v7.52.4");
+      console.log("NODE: ASIA-SOUTHEAST1 // STATUS: OPERATIONAL");
+      console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+    }
   }, []);
 
   return (
-    <div className="bg-black text-white min-h-screen font-sans selection:bg-cyan-500 antialiased overflow-x-hidden relative flex flex-col">
-      {/* 🔡 MATERIAL SYMBOLS HUD */}
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-      />
+    <div className="bg-black text-white min-h-screen font-sans selection:bg-cyan-500/30 antialiased overflow-x-hidden relative flex flex-col">
 
       {/* 🧬 GLOBAL SUSPENSE LATCH */}
       <Suspense
         fallback={
           <div className="bg-black min-h-screen flex items-center justify-center">
-            <div className="flex flex-col items-center gap-6">
-              <div className="w-12 h-12 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin"></div>
-              <span className="text-[10px] font-mono text-cyan-400 uppercase tracking-[0.4em] animate-pulse">
+            <div className="flex flex-col items-center gap-8">
+              {/* Refined Spinner Geometry */}
+              <div className="w-16 h-16 border border-white/10 border-t-cyan-500 rounded-full animate-spin"></div>
+              <span className="text-[9px] font-mono text-cyan-400 uppercase tracking-[0.6em] animate-pulse">
                 INGESTING_SUBSTRATE...
               </span>
             </div>
@@ -81,6 +86,9 @@ export default function App() {
             <Route path="/labs/verify" element={<Verify />} />
             <Route path="/labs/checkout-pending" element={<CheckoutPending />} />
 
+            {/* 🚥 ANTIGRAVITY TEST HARNESS ROUTE */}
+            <Route path="/tests/l4-grid" element={<L4GridTest />} />
+
             <Route path="/legal/:docId" element={<LegalStub />} />
 
             {/* 🚥 404 REDIRECT LATCH */}
@@ -95,10 +103,12 @@ export default function App() {
         <AskOllieLauncher onClick={() => setShowOllie(!showOllie)} />
       </Suspense>
 
-      {/* 🏙️ PRODUCTION STATUS INDICATOR */}
+      {/* 🏙️ PRODUCTION STATUS HUD */}
       {isLive && (
         <div className="fixed bottom-4 left-4 z-[200] opacity-10 pointer-events-none select-none">
-          <span className="text-[10px] font-mono text-cyan-400">HARBOR_A_LIVE_v7.52.1</span>
+          <span className="text-[10px] font-mono text-cyan-400 tracking-widest">
+            HARBOR_A_LIVE_v7.52.4
+          </span>
         </div>
       )}
     </div>

@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
  * 1. STRIPE LATCH: Point-locked the PAY node to the permanent Stripe vector.
  * 2. PROP ALIGNMENT: Liquidated deprecated glowColor from SymbolTile instances.
  * 3. GEOMETRY: Calibrated p-6 to p-12 scaling for high-density touch targets.
+ * 4. i18n SYNC: Normalized to lowercase 'harbora' namespace for substrate parity.
  */
 
 // 🧬 AUTHORITATIVE UI LATCHES
@@ -87,7 +88,7 @@ const STEP_CONFIG: Record<typeof STEP_IDS[number], { id: string; icon: string }>
 };
 
 export const Methods: React.FC = () => {
-  const { t } = useTranslation('harborA');
+  const { t } = useTranslation('harbora');
 
   return (
     <section id="methods" className="bg-black py-32 px-6 md:px-12 border-t border-white/5 relative overflow-hidden">
@@ -113,7 +114,7 @@ export const Methods: React.FC = () => {
                 href={cfg.id}
                 target={isExternal ? '_blank' : '_self'}
                 rel={isExternal ? 'noopener noreferrer' : ''}
-                className="flex flex-col items-center text-center gap-12 p-8 md:p-12 bg-black/40 backdrop-blur-md border border-white/10 rounded-[2.5rem] group hover:border-white/40 hover:bg-white/[0.02] transition-all duration-700 hover:-translate-y-2 shadow-2xl"
+                className="flex flex-col items-center text-center gap-12 p-8 md:p-12 bg-black/40 backdrop-blur-md border border-white/10 rounded-[2.5rem] group hover:border-white/40 hover:bg-white/[0.02] transition-all duration-700 hover:-translate-y-2 shadow-2xl relative"
               >
                 <MethodGlowIcon
                   name={cfg.icon}

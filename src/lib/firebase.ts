@@ -8,6 +8,7 @@ import { getFirestore, Firestore } from 'firebase/firestore';
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
  * Mission: Identity and Ledger Gateway // Singleton Initialization
  * Status: AUTHORITATIVE // LATCHED
+ * Fix: Transitioned to VITE_RPR_FIREBASE_CONFIG environment string resolution.
  */
 
 let app: FirebaseApp | undefined;
