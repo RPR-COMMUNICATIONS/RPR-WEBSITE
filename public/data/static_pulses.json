@@ -1,0 +1,278 @@
+[
+  {
+    "id": 14,
+    "timestamp_l1": "2026-04-07T01:56:24.042Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831870",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831870",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:50:11.304Z"
+    }
+  },
+  {
+    "id": 13,
+    "timestamp_l1": "2026-04-07T01:56:24.042Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831870",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831870",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:50:11.303Z"
+    }
+  },
+  {
+    "id": 12,
+    "timestamp_l1": "2026-04-07T01:56:24.041Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831810",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831810",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:50:09.773Z"
+    }
+  },
+  {
+    "id": 11,
+    "timestamp_l1": "2026-04-07T01:56:24.040Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831810",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831810",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:50:09.771Z"
+    }
+  },
+  {
+    "id": 10,
+    "timestamp_l1": "2026-04-07T01:56:24.039Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831810",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831810",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:49:53.013Z"
+    }
+  },
+  {
+    "id": 9,
+    "timestamp_l1": "2026-04-07T01:56:24.035Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831810",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831810",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:49:53.010Z"
+    }
+  },
+  {
+    "id": 8,
+    "timestamp_l1": "2026-04-07T01:53:43.103Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831870",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831870",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:50:11.304Z"
+    }
+  },
+  {
+    "id": 7,
+    "timestamp_l1": "2026-04-07T01:53:43.102Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831870",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831870",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:50:11.303Z"
+    }
+  },
+  {
+    "id": 6,
+    "timestamp_l1": "2026-04-07T01:53:43.101Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831810",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831810",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:50:09.773Z"
+    }
+  },
+  {
+    "id": 5,
+    "timestamp_l1": "2026-04-07T01:53:43.101Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831810",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831810",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:50:09.771Z"
+    }
+  },
+  {
+    "id": 4,
+    "timestamp_l1": "2026-04-07T01:53:43.100Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831810",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831810",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:49:53.013Z"
+    }
+  },
+  {
+    "id": 3,
+    "timestamp_l1": "2026-04-07T01:53:43.096Z",
+    "severity": "INFO",
+    "message": "Pulse Ingest: SBX-PROMO-1774831810",
+    "sovereign_memory_layer": "CYBERNETIC",
+    "latency_drift_ms": 0,
+    "requires_follow_up": false,
+    "job_id": "JOB-1773450404403",
+    "origin": "GEMINI_INGRESS",
+    "context": {
+      "id": "SBX-PROMO-1774831810",
+      "origin": "NATIVE_INGRESS_v12.7.0",
+      "context": {
+        "url": "https://gemini.google.com/gem/ddf7a2015e6d/01f0472b51c2eb1c",
+        "title": "UNTITLED_SIGNAL",
+        "ingested_via": "BUFFER_STREAM"
+      },
+      "message": "Ingress payload.",
+      "severity": "INFO",
+      "timestamp": "2026-03-30T00:49:53.010Z"
+    }
+  }
+]

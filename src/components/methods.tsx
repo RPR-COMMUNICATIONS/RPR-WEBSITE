@@ -1,24 +1,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-
-/**
- * TS-Λ3 // THE METHODS [v5.2.1]
- * Path: src/components/methods.tsx
- * Mission: Operational Loop Implementation // Permanent Financial Latch
- * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Status: AUTHORITATIVE // LATCHED
- * * FIX LOG:
- * 1. STRIPE LATCH: Point-locked the PAY node to the permanent Stripe vector.
- * 2. PROP ALIGNMENT: Liquidated deprecated glowColor from SymbolTile instances.
- * 3. GEOMETRY: Calibrated p-6 to p-12 scaling for high-density touch targets.
- * 4. i18n SYNC: Normalized to lowercase 'harbora' namespace for substrate parity.
- */
-
-// 🧬 AUTHORITATIVE UI LATCHES
 import { SectionHeading } from './sectionheading.tsx';
 import SymbolTile from './icons/symboltile.tsx';
 
-// 🧬 MECHANICAL GLOW CONTAINER (SOVEREIGN ENGINE LATCH)
+/**
+ * TS-Λ3 // THE METHODS [v5.3.1]
+ * Path: src/components/methods.tsx
+ * Mission: Internal Routing Latch // Lab & Checkout Alignment
+ * Authority: THE OVERWATCH // SG-CANONICAL-2026
+ * Status: AUTHORITATIVE // LATCHED
+ */
+
 const MethodGlowIcon: React.FC<{ name: string; size?: number; className?: string }> = ({
   name,
   size = 32,
@@ -35,7 +27,6 @@ const MethodGlowIcon: React.FC<{ name: string; size?: number; className?: string
       >
         <defs>
           <filter id={filterId} x="-50%" y="-50%" width="200%" height="200%">
-            {/* 🛡️ CHROMATIC LATCH: Authoritative White Glow */}
             <feFlood floodColor="white" floodOpacity="0.8" result="flood" />
             <feComposite in="flood" in2="SourceAlpha" operator="in" result="mask" />
             <feGaussianBlur in="mask" stdDeviation="4" result="blur" />
@@ -74,12 +65,17 @@ const STEP_IDS = ['ask', 'pay', 'make', 'play', 'repeat'] as const;
 
 /**
  * 🚥 STEP CONFIGURATION
- * Maps internal logic to external vectors and canonical icons.
+ * Realignment: 'ASK' maps to Babble Standard; 'PAY' maps to Checkout Pending.
  */
 const STEP_CONFIG: Record<typeof STEP_IDS[number], { id: string; icon: string }> = {
-  ask: { id: '/labs', icon: 'help' },
+  ask: {
+    // 🛰️ BABBLE PERCEPTION LATCH: Internal SPA Route
+    id: '/labs/babble',
+    icon: 'help'
+  },
   pay: {
-    id: 'https://buy.stripe.com/test_placeholder_financial_vector_latch',
+    // 💳 CHECKOUT STAGING LATCH: Internal Staging Node
+    id: '/labs/checkout-pending',
     icon: 'payments'
   },
   make: { id: '#visualizer', icon: 'construction' },
@@ -92,21 +88,20 @@ export const Methods: React.FC = () => {
 
   return (
     <section id="methods" className="bg-black py-32 px-6 md:px-12 border-t border-white/5 relative overflow-hidden">
-      {/* 🌌 AMBIENT SUBSTRATE */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl bg-white/[0.01] blur-[160px] pointer-events-none" />
 
       <div className="max-w-screen-2xl mx-auto relative z-10">
         <SectionHeading
-          kicker={t('methods.kicker', 'OPERATIONAL LOOP // HARBOR A')}
+          kicker={t('methods.kicker', 'OPERATIONAL LOOP // BABBLE PERCEPTION')}
           title={t('methods.title', 'THE')}
           accent={t('methods.accent', 'METHODS')}
         />
 
-        {/* 📐 GRID: Responsive distribution for the 5-stage loop */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-24">
           {STEP_IDS.map((stepId) => {
             const cfg = STEP_CONFIG[stepId];
             const isExternal = cfg.id.startsWith('http');
+            const isInternalPage = cfg.id.startsWith('/');
 
             return (
               <a
@@ -134,10 +129,14 @@ export const Methods: React.FC = () => {
                   </p>
                 </div>
 
-                {/* 🛰️ EXTERNAL VECTOR INDICATOR */}
-                {isExternal && (
+                {(isExternal || isInternalPage) && (
                   <div className="absolute top-6 right-6 opacity-20 group-hover:opacity-100 transition-opacity">
-                    <SymbolTile glyph="open_in_new" size={16} variant="none" glow={false} />
+                    <SymbolTile
+                      glyph={isExternal ? "open_in_new" : "arrow_forward"}
+                      size={16}
+                      variant="none"
+                      glow={false}
+                    />
                   </div>
                 )}
               </a>

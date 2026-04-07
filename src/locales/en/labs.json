@@ -1,28 +1,28 @@
 {
     "nav": {
-        "labs": "labs",
-        "methods": "methods",
-        "verify": "verify",
-        "myaudit": "myaudit"
+        "labs": "LABS",
+        "methods": "METHODS",
+        "verify": "VERIFY",
+        "myaudit": "MYAUDIT"
     },
     "labs": {
-        "kicker": "sandbox environment",
-        "title": "financial substrate",
-        "pricing_tba": "Pricing: To Be Announced (TBA). Early partners can register interest; live pricing will be published soon.",
+        "kicker": "SANDBOX ENVIRONMENT",
+        "title": "FINANCIAL SUBSTRATE",
+        "pricing_tba": "PRICING: TO BE ANNOUNCED (TBA). EARLY PARTNERS CAN REGISTER INTEREST; LIVE PRICING WILL BE PUBLISHED SOON.",
         "btns": {
-            "interest": "register interest",
-            "waitlist": "join waitlist",
-            "storefront": "open stripe storefront (beta)"
+            "interest": "REGISTER INTEREST",
+            "waitlist": "JOIN WAITLIST",
+            "storefront": "OPEN STRIPE STOREFRONT (BETA)"
         }
     },
     "verification": {
-        "title": "forensic verification",
-        "subtitle": "sovereign constitution v12.4",
-        "description": "automated forensic source document ingestion and real-time risk evaluation engine.",
-        "cta": "initiate scan",
+        "title": "FORENSIC VERIFICATION",
+        "subtitle": "SOVEREIGN CONSTITUTION V12.4",
+        "description": "AUTOMATED FORENSIC SOURCE DOCUMENT INGESTION AND REAL-TIME RISK EVALUATION ENGINE.",
+        "cta": "INITIATE SCAN",
         "nodes": {
-            "singapore": "asia-southeast1",
-            "status": "operative"
+            "singapore": "ASIA-SOUTHEAST1",
+            "status": "OPERATIVE"
         }
     }
 }

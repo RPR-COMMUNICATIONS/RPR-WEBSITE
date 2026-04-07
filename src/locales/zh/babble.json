@@ -1,0 +1,87 @@
+{
+    "header": {
+        "phase": "TS-Λ3 // 第 9 阶段治理 // 视觉_听觉_机器",
+        "title_line_1": "主权身份",
+        "title_line_2": "感知框架",
+        "version": "v3.2.2_已锁定",
+        "ssrn": "SSRN_ID: 6307238",
+        "timestamp": "时间戳: 2026.04.07.1815_Z",
+        "classification": "分类: BABBLE 框架"
+    },
+    "identity": {
+        "pivot_title": "个人身份验证",
+        "pivot_body": "Babble 将标准移动传感器转化为高保证身份验证的取证轨道。通过建立物理“真实锁定”，我们为现代金融和政务奠定了不可抵赖的基础。"
+    },
+    "big_idea": {
+        "label": "框架编排器_01",
+        "title": "0. 证据，而非媒介",
+        "body": "The Babble Framework 提供了一套必要的治理协议（监管规则）与取证工具（取证仪器），用于跨高信任领域的身份验证。它通过桥接硬件传感器与安全数字飞地，消除了城市复杂性与区域现实之间的鸿沟。",
+        "subtext": "通过桥接物理传感器硬件与安全数字飞地，Babble 为实体经济创建了“真实锚点”——消除了城市精细化与区域现实之间的逻辑断层。",
+        "cta_latch": "锁定协议",
+        "cta_view": "查看架构",
+        "status": "治理同步: 活跃",
+        "resonance": "共鸣: 第 9 阶段"
+    },
+    "rails": {
+        "section_title": "取证轨道 (工具组)",
+        "vision_title": "Babble 视觉 (Vision)",
+        "vision_body": "检测物理光线反弹和像素几何结构。通过验证光学物理而非仅图像内容来消除深度伪造（Deepfakes）。",
+        "vision_flag_1": "光学取证: 已启用",
+        "vision_flag_2": "物理矢量: 活跃",
+        "audio_title": "Babble 音频 (Audio)",
+        "audio_body": "取证级别均衡分析。将语音与房间声学分离，以保留环境真相和位置元数据。",
+        "audio_flag_1": "声学指纹: 已优化",
+        "audio_flag_2": "环境元数据: 已锁定",
+        "machine_title": "Babble 机器 (Machine)",
+        "machine_body": "直接摄取机器原生状态码（OBD-II/CAN-bus）。将车辆遥测数据视为第一证人。",
+        "machine_flag_1": "二进制摄取: 4ms",
+        "machine_flag_2": "资产同步: 1:1",
+        "nav_section_title": "取证导航与 IoT 摄取",
+        "nav_main_title": "多传感器验证",
+        "nav_main_body": "Babble 拒绝消费级“单点”定位数据。通过四层堆栈（GNSS、Wi-Fi BSSID、蜂窝多边定位和惯性 PDR）建立导航事件，以防止取证检查期间的 GPS 欺骗。",
+        "nav_tags": {
+            "agps": "AGPS_修正锁定",
+            "bssid": "BSSID_交叉参考"
+        },
+        "nav_access_title": "通讯接入平面",
+        "nav_access_body": "通过 WhatsApp、微信和 Telegram API 进行编排。通讯界面触发实时传感器摄取提示，同时将所有二进制数据（OBD-II/CAN-bus）锁定在 WORM 账本中，以实现监管不可抵赖性。"
+    },
+    "triple_anchor": {
+        "title_main": "三位",
+        "title_accent": "锚定",
+        "title_tail": "锁定",
+        "label": "执行协议完整性",
+        "space_title": "空间 (SPACE)",
+        "space_body": "验证证据打击（Evidence Strike）的物理轨迹。",
+        "space_badge": "司法管辖: MY_ONSHORE",
+        "identity_title": "身份 (IDENTITY)",
+        "identity_body": "通过硬件金库（Hardware Vault）将人/机与数据绑定。",
+        "identity_badge": "密封: 来源已锁定",
+        "time_title": "时间 (TIME)",
+        "time_body": "通过漂移校正的主权时钟，保证时间维度的真实性。",
+        "time_badge": "时钟: ASIA_SE_CLOCK"
+    },
+    "loop": {
+        "label": "不容协商的治理循环",
+        "step_1_title": "协议触发",
+        "step_1_body": "根据 eIDAS/FATF 标准启动取证工具链。",
+        "step_2_title": "取证提取",
+        "step_2_body": "将原始传感器位流归一化为具有法律效力的结构化制品。",
+        "step_3_title": "跨维度验证",
+        "step_3_body": "执行三位锚定锁定检查，确保证据的不可篡改性。",
+        "step_4_title": "主权存证",
+        "step_4_body": "提交至主权金库（WORM 存储），实现 7 年以上证据保全。"
+    },
+    "ip": {
+        "label": "治理申明",
+        "quote": "The Babble Framework 构成了治理协议与取证工具的主权编排，确保身份验证、金融交易、保险事件和未成年人保护流程可以锚定在全球公认的标准上，同时保持租户主权。",
+        "badge_authority": "授权方: RPR COMMUNICATIONS LLC",
+        "badge_ref": "参考: MY-NAV-IOT-LATCH"
+    },
+    "footer": {
+        "copyright": "© 2026 BABBLE 框架 // 主权飞地 // 新加坡",
+        "system_status": "系统状态",
+        "ssrn": "审核就绪",
+        "vault": "金库访问"
+    }
+}

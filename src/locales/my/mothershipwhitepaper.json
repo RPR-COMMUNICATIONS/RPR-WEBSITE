@@ -1,152 +1,156 @@
 {
     "meta": {
-        "title": "MOTHERSHIP OS",
-        "subtitle": "Sistem Tadbir Urus Berdaulat Korporat dan Akauntabiliti Relasional",
-        "version": "v1.1.3-LATCHED",
-        "status": "AUTHORITATIVE // NARRATIVE MOAT",
-        "classification": "TS-3 (Perancangan Strategik)",
-        "authority": "THE OVERWATCH // SG-CANONICAL-2026",
-        "timestamp": "2026-02-16T12:00:00Z",
-        "audit_marker": "WHITEPAPER-v1.1.3-LATCHED",
-        "marker_note": "[2026-02-15 13:25] // ENGINEER ELDER // SUBSTRAT NARATIF PENUH TELAH DILATCH.",
-        "internal_ip_note": "Garis dasar harta intelek dalaman dan lejar artifak diselenggara sebagai dokumen TS-3 / TS-Λ3; dikecualikan daripada whitepaper awam dan disimpan dalam substrat forensik bagi tujuan perlindungan IP."
+        "title": "Mothership OS: Akuntabiliti Relasi dan Tadbir Urus untuk Sistem Keputusan Manusia–AI",
+        "subtitle": "Substrat tadbir urus yang menukar aktiviti perniagaan dunia sebenar kepada bukti sedia mesin.",
+        "version": "v3.1.10-FINAL-BM",
+        "status": "AUTORITATIF // SME_ALIGNED",
+        "classification": "TS-Λ3 // CROWN_SECRET",
+        "authority": "RPR COMMUNICATIONS LLC // KES #00260103",
+        "timestamp": "2026-04-06T17:00:00Z",
+        "audit_marker": "KES-00260103-REKONSTITUSI-BAHASA-MELAYU",
+        "marker_note": "[2026-04-06 17:00] // JURUTERA ELDER // DESKRIPSI RAM VS CONSTITUTIONAL AI DITAMBAH SEMULA.",
+        "internal_ip_note": "Garis asas IP dalaman dan lejar artifak dikekalkan sebagai dokumen TS-Λ3; Logik RAM dikunci pada Nod Singapura asia-southeast1."
     },
     "abstract": {
-        "summary": "Mothership OS ialah sistem operasi perniagaan yang direka untuk menyegerakkan entiti perundangan dengan keadaan digitalnya (Living Digital Twin). Sistem ini menggunakan Relational Accountability Model (RAM) untuk mentadbir interaksi Manusia–AI melalui hierarki deterministik lima lapis (L0–L4). Tidak seperti strategi penjajaran model dalaman (Constitutional AI), Mothership OS menguatkuasakan tadbir urus melalui ConstraintSet dan AgentContract luaran yang dikira pada masa larian.",
+        "summary": "MOTHERSHIP OS adalah sistem pengendalian perniagaan yang dibina untuk pemilik perniagaan kecil di mana akuntabiliti AI berpaksikan substrat misi klinikal. Ia memastikan pemilik Manusia dan Instans Pakar (AI) terikat secara simetri kepada objektif firma. Menggunakan Rangka Kerja BABBLE, ia menukar tindakan perniagaan harian menjadi bukti sedia mesin yang kukuh untuk audit, semakan bank, dan cabaran undang-undang.",
         "core_claims": [
             {
+                "id": "mission_first_intent",
+                "title": "Tuntutan 01: Matlamat Misi Diutamakan",
+                "description": "Semua operasi bermula dengan objektif firma yang diisytiharkan; misi menyediakan sempadan mutlak untuk tindakan Manusia dan AI."
+            },
+            {
                 "id": "relational_vs_constitutional",
-                "title": "Relasional vs. Konstitusional",
-                "description": "Tadbir urus ditakrifkan oleh ikatan relasi dan obligasi bersama, bukan oleh moraliti model yang abstrak."
+                "title": "Tuntutan 02: Manusia Dahulu, AI Kemudian",
+                "description": "Tadbir urus ditakrifkan oleh ikatan relasi dan kewajipan bersama terhadap misi, bukannya moraliti model yang tidak telus."
             },
             {
-                "id": "clinical_sovereignty",
-                "title": "Kedaulatan Klinikal (Clinical Sovereignty)",
-                "description": "Penguatkuasaan teknikal melalui Sentinel Protocol memastikan setiap tindakan agen dilatch kepada masa dan lokasi."
+                "id": "labyrinth_governance_shell",
+                "title": "Tuntutan 03: Kerangka Keselamatan Universal",
+                "description": "Perimeter tiga lapisan: (1) Perundangan Tempatan, (2) Sistem Pengurusan ISO, dan (3) Piawaian Pelaporan Kewangan."
             },
             {
-                "id": "forensic_learning",
-                "title": "Pembelajaran Forensik (Forensic Learning)",
-                "description": "Sistem RLHF gelung tertutup (Daedalus) menukar keputusan manusia kepada corak operasi."
+                "id": "national_overengineering_pattern",
+                "title": "Tuntutan 04: Kejuruteraan Melampau Berdaulat",
+                "description": "Sistem mengikut corak kejuruteraan melampau negara: Piawaian Asas Kebangsaan → Lapisan Khusus Sektor → Piawaian Teknikal Penyewa."
             }
         ]
     },
+    "governance_shell": {
+        "description": "Labyrinth Governance Shell adalah seni bina tiga slot yang kekal malar tanpa mengira bidang kuasa.",
+        "slots": [
+            {
+                "id": "layer_1_legal",
+                "name": "Perimeter Undang-undang Tempatan",
+                "description": "Pengawal selia kebangsaan dan undang-undang statutori (cth. BNM, MAS, NAIC) serta peraturan perlindungan data tempatan.",
+                "enforcement": "Dikunci pada keperluan statutori bidang kuasa."
+            },
+            {
+                "id": "layer_2_iso",
+                "name": "Sistem Pengurusan ISO",
+                "description": "Piawaian antarabangsa untuk Kualiti (ISO 9001), Keselamatan (ISO 45001), dan Keselamatan Maklumat (ISO 27001/27701).",
+                "enforcement": "Peta proses sedia audit dan pengawal risiko."
+            },
+            {
+                "id": "layer_3_financial",
+                "name": "Pelaporan Kewangan & Pendedahan",
+                "description": "Pematuhan penyata kewangan mandatori melalui IFRS atau GAAP tempatan.",
+                "enforcement": "Integriti fiduciari dalam penyesuaian autonomi."
+            }
+        ]
+    },
+    "sentinel_protocol": {
+        "description": "Protokol Sentinel adalah enjin undang-undang teknikal yang mentadbir kebenaran dan penghalaan dalam kedaulatan korporat.",
+        "jurisdiction_and_logic": {
+            "constraint_sets": {
+                "name": "Mission Guardrails",
+                "description": "Kekangan komputer yang mentakrifkan tingkah laku yang dibenarkan berdasarkan niat misi.",
+                "type": "Dasar Tingkah Laku Runtime"
+            },
+            "agent_contracts": {
+                "name": "Deskripsi Tugas",
+                "description": "Kontrak yang mengikat peranan khusus kepada skop misi dan API yang terhad.",
+                "type": "Sampul Kebenaran Logik"
+            }
+        },
+        "external_constraint_enforcement": {
+            "description": "Sentinel menghapuskan ketidaktelusan unilateral vendor dengan mengekalkan kekangan di luar berat model.",
+            "principles": [
+                "Struktur tadbir urus berada di luar mana-mana substrat model tunggal.",
+                "Kekangan hanya boleh dipinda melalui perubahan KONTROL rasmi.",
+                "Pencatatan masa/tempat 14ms untuk setiap tindakan ejen."
+            ]
+        }
+    },
+    "perception_engine": {
+        "name": "RANGKA KERJA BABBLE",
+        "kicker": "PIAWAIAN PERSEPSI BERDAULAT SERANTAU",
+        "description": "Seni bina tiga landasan untuk membaiki lapisan penukaran antara realiti fizikal dan bukti sedia mesin.",
+        "rails": [
+            {
+                "id": "vision",
+                "name": "Landasan Visi",
+                "description": "Merakam imej lapangan sebagai pemerhatian geometri dan bukannya input OCR.",
+                "standard": "ISO-9001:2015 / BABBLE-V"
+            },
+            {
+                "id": "audio",
+                "name": "Landasan Audio",
+                "description": "Mengekalkan nada bilik dan kebenaran tonal sebagai lapisan bukti forensik.",
+                "standard": "BABBLE-A"
+            },
+            {
+                "id": "machine",
+                "name": "Landasan Mesin",
+                "description": "Menerima isyarat telematik dan IoT sebagai pemerhatian utama yang sauh.",
+                "standard": "BABBLE-M"
+            }
+        ],
+        "anchors": {
+            "space": "Konteks spatial GNSS dan WiFi yang dirakam serentak dengan pemerhatian.",
+            "identity": "Tandatangan asimetri melalui Google Cloud KMS di bawah kawalan penyewa.",
+            "time": "Urutan acara deterministik serantau untuk pembinaan semula undang-undang."
+        }
+    },
     "sovereign_bond_stack": {
-        "description": "Sovereign Bond Stack ialah pelaksanaan mekanikal RAM yang mentakrif aliran autoriti, obligasi dan liabiliti antara nod.",
+        "description": "Mentakrifkan aliran simetri kuasa dan liabiliti antara Manusia dan AI.",
         "foundational_bonds": [
             {
                 "id": "founder_organization",
                 "name": "Pengasas ↔ Organisasi",
-                "label": "Kunci Autoriti Utama (Primary Authority Latch)",
-                "description": "Pengasas memegang Burden of Intent; Organisasi memegang Burden of Context."
-            },
-            {
-                "id": "founder_elders",
-                "name": "Pengasas ↔ Steward (Elders)",
-                "label": "Autoriti Taktikal Diwakilkan",
-                "description": "Elders mentafsir garis misi dalam domain khusus dengan mandat teknikal untuk eskalasi risiko."
-            },
-            {
-                "id": "senior_junior",
-                "name": "Senior ↔ Junior",
-                "label": "Liabiliti Penyeliaan (Supervisory Liability)",
-                "description": "Nod peringkat lebih tinggi bertanggungjawab atas keluaran peringkat lebih rendah melalui gelung validasi PROCEED/VETO."
-            },
-            {
-                "id": "peer_peer",
-                "name": "Rakan Setara ↔ Rakan Setara",
-                "label": "Penyegerakan Mendatar (Horizontal Synchronization)",
-                "description": "Agen dalam lapisan yang sama berkoordinasi melalui ConstraintSet yang serasi untuk mencegah pertembungan domain."
+                "label": "Sauh Kuasa Utama",
+                "description": "Pengasas memegang Beban Niat; Organisasi memegang Beban Konteks."
             },
             {
                 "id": "all_source_of_truth",
-                "name": "Semua Nod ↔ Sumber Kebenaran (Source of Truth)",
-                "label": "Sauh Forensik (Forensic Anchor)",
-                "description": "Semua keadaan sistem mesti sejajar dengan data luaran yang diaudit (Lejar, Undang-undang, Bukti Forensik)."
+                "name": "Semua ↔ Sumber Kebenaran",
+                "label": "Sauh Forensik",
+                "description": "Syarikat adalah orang undang-undang yang berasingan; individu memikul tugas undang-undang peribadi atas cara entiti itu diarahkan."
             }
-        ],
-        "rbaa": {
-            "name": "Autoriti Agen Berasaskan Peranan (Role-Based Agent Authority, RBAA)",
-            "description": "RBAA ialah substrat kebenaran akses yang menterjemah ikatan RAM kepada skop data dan tindakan yang konkrit.",
-            "properties": [
-                {
-                    "id": "spatial_latched",
-                    "name": "Terkunci Ruang (Spatial-Latched)",
-                    "description": "Setiap keputusan disahkan terhadap Harbor, Tenant dan Bidang Kuasa."
-                },
-                {
-                    "id": "temporal_latched",
-                    "name": "Terkunci Masa (Temporal-Latched)",
-                    "description": "Keputusan diikat kepada jujukan misi dan cap masa, mengelakkan hanyutan tanpa konteks."
-                }
-            ]
-        }
-    },
-    "sentinel_protocol": {
-        "description": "Sentinel Protocol ialah enjin undang-undang teknikal bagi Mothership OS. Ia mentadbir bagaimana kerja diberi kuasa dan dirutekan dalam kerangka kedaulatan korporat.",
-        "jurisdiction_and_logic": {
-            "context_input": {
-                "name": "SentinelContextInput",
-                "fields": [
-                    "tenantId",
-                    "productMode",
-                    "moduleSet",
-                    "industryProfile",
-                    "geoProfile",
-                    "tsClass"
-                ]
-            },
-            "constraint_sets": {
-                "name": "ConstraintSets",
-                "description": "Set kekangan yang dikira pada masa larian untuk mentakrif tingkah laku dan skop yang dibenarkan bagi agen."
-            },
-            "agent_contracts": {
-                "name": "AgentContracts",
-                "description": "Kontrak yang mengikat peranan tertentu kepada skop terhad seperti koleksi, API dan allowedActions."
-            },
-            "governance_sessions": {
-                "name": "GovernanceSessions",
-                "description": "Log berstruktur di mana setiap tindakan signifikan direkodkan bagi tujuan tadbir urus dan audit."
-            }
-        },
-        "external_constraint_enforcement": {
-            "description": "Dengan mengekalkan kekangan di luar weight model, Sentinel menghapuskan unsur ketidak telusan akibat unilateralism pembekal.",
-            "principles": [
-                "Struktur tadbir urus wujud di luar mana-mana model tunggal.",
-                "Kekangan hanya boleh diubah melalui perubahan KONTROL formal yang diluluskan oleh Overwatch."
-            ]
-        }
+        ]
     },
     "intelligence_substrate": {
-        "description": "Komponen substrat kecerdasan yang menyokong tadbir urus, pembelajaran dan tingkah laku penasihat.",
-        "library": {
-            "id": "library",
-            "name": "The Library",
-            "description": "Substrat pangkalan ilmu berautoriti untuk corak yang telah terbukti. Ia tidak mengira kekangan, tetapi menyediakan memori bersama untuk agen L3/L4."
+        "description": "Komponen yang menyokong tadbir urus, pembelajaran, dan khidmat nasihat.",
+        "cstride_drift": {
+            "id": "cstride_drift",
+            "name": "Pengesanan Hanyutan",
+            "description": "Meramal anomali operasi menggunakan rangka kerja pengurusan risiko ISO 31000.",
+            "focus": "Integriti Operasi Ramalan"
         },
-        "daedalus": {
-            "id": "daedalus_rlhf",
-            "name": "Daedalus RLHF",
-            "description": "Memantau GovernanceSessions untuk isyarat PROCEED/VETO manusia dan menukar pasangan interaksi kepada data latihan terpilih bagi penalaan model dan kurasi corak."
-        },
-        "icarus": {
-            "id": "icarus_advisory",
-            "name": "ICARUS Advisory",
-            "description": "Copilot berskala tenant dengan akses tadbir urus baca-sahaja. Menerangkan kekangan kepada pemilik manusia dan membentuk ringkasan misi untuk saluran binaan."
-        },
-        "qfd_modules": {
-            "id": "qfd_strategic_modules",
-            "name": "Modul Strategik QFD",
-            "description": "Menggunakan Quality Function Deployment untuk memetakan “Suara Manusia” (Voice of the Human) kepada tingkah laku teknikal, memastikan keupayaan dibina daripada keperluan sebenar pakar subjek (SME)."
+        "vault": {
+            "id": "vault",
+            "name": "The Sovereign Vault",
+            "description": "Substrat pangkalan pengetahuan autoritatif untuk corak terbukti; memori forensik dikongsi.",
+            "focus": "Penyimpanan Bukti Tidak Berubah"
         }
     },
     "architecture": {
-        "description": "Struktur operasi Mothership OS merentasi timbunan hierarki lima lapis.",
+        "description": "Hierarki lima lapisan yang berasal dari pengalaman rantaian nilai dunia sebenar.",
         "layers": [
             {
                 "id": "L0",
                 "name": "THE FIRM",
-                "role": "Akar organisasi yang memetakan peranan perundangan teras dan akar kedaulatan."
+                "role": "Akar Berdaulat. Entiti undang-undang berasingan yang memetakan tadbir urus."
             },
             {
                 "id": "L1",
@@ -155,59 +159,48 @@
             },
             {
                 "id": "L2",
-                "name": "THE ELDERS",
-                "role": "Kecerdasan strategik dan reka bentuk tadbir urus (Sentinel, Architect, Engineer)."
+                "name": "THE COUNCIL (ELDERS)",
+                "role": "Steward taktikal yang mentafsir garis misi dan mengurus risiko."
             },
             {
                 "id": "L3",
                 "name": "THE WORKSHOP",
-                "role": "Substrat operasi untuk pelaksanaan dan pembelajaran (Labs, Forge, Daedalus)."
+                "role": "Substrat operasi untuk pelaksanaan, disauhkan oleh Sovereign Vault."
             },
             {
                 "id": "L4",
                 "name": "SPECIALIST INSTANCES",
-                "role": "Permukaan berhadapan tenant dan agen khusus industri (MYAUDIT, VERIFY)."
+                "role": "Ejen AI yang terikat kepada personaliti undang-undang dan landasan persepsi."
             }
         ]
     },
-    "sovereign_deployment_and_ip": {
-        "infrastructure_posture": {
-            "description": "Pendekatan pelaksanaan dan infrastruktur untuk Mothership OS.",
-            "region": "asia-southeast1",
-            "characteristics": [
-                "Terkunci kepada rantau asia-southeast1.",
-                "Akses ditadbir melalui Workload Identity Federation (WIF v2).",
-                "Pendekatan zero-trust dikuatkuasakan."
-            ]
-        },
-        "forensic_provenance": {
-            "description": "Mekanisme untuk membuktikan asal-usul dan integriti IP.",
-            "hash_algorithm": "SHA-256",
-            "ledger": "Lejar Firestore jenis WORM",
-            "guarantees": [
-                "Bukti Point of Origin (POO) untuk artifak yang signifikan kepada IP.",
-                "Integriti versi merentas dokumen strategik dan artifak."
-            ]
-        }
-    },
-    "ram_vs_constitutional_ai": {
+    "appendix_comparison": {
+        "title": "Lampiran: RAM vs. Constitutional AI",
         "description": "Pandangan perbandingan antara Constitutional AI dan Relational Accountability Model (RAM).",
         "metrics": [
             {
-                "metric": "Penguatkuasaan (Enforcement)",
-                "constitutional_ai": "Pemakluman dalaman model (internal model prompting)",
+                "metric": "Penguatkuasaan",
+                "constitutional_ai": "Pemakluman dalaman model",
                 "ram": "ConstraintSet luaran + AgentContract"
             },
             {
-                "metric": "Logik Kekangan (Constraint Logic)",
-                "constitutional_ai": "Prinsip moral abstrak",
-                "ram": "Tanggungjawab relasional (RAM dan Bond Stack)"
+                "metric": "Liabiliti",
+                "constitutional_ai": "Tidak telus di peringkat vendor",
+                "ram": "Kedaulatan manusia (RPR Overwatch)"
             },
             {
-                "metric": "Liabiliti (Liability)",
-                "constitutional_ai": "Tidak telus di peringkat vendor (vendor-opaque)",
-                "ram": "Kedaulatan manusia (Overwatch)"
+                "metric": "Pengurusan Hanyutan",
+                "constitutional_ai": "Penapis keselamatan reaktif",
+                "ram": "Telemetri C-STRIDE Ramalan"
             }
         ]
+    },
+    "footer": {
+        "ram_disclaimer": "SEMUA OPERASI DISAUHKAN MELALUI RELATIONAL ACCOUNTABILITY MODEL (RAM).",
+        "copyright": "HAK CIPTA TERPELIHARA // SG-CANONICAL-2026.",
+        "build": "BUILD: CANONICAL-STRIKE-V3.1.10"
+    },
+    "ui": {
+        "return_to_labs": "Kembali ke Komando"
     }
 }

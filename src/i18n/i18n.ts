@@ -3,14 +3,11 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 /**
- * TS-Λ3 // i18n MASTER ORCHESTRATOR [v6.5.1]
+ * TS-Λ3 // i18n MASTER ORCHESTRATOR [v6.5.3]
  * Path: src/i18n/i18n.ts
- * Mission: Absolute Triple-Substrate Bundling // Smallcaps Mandate
- * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Status: AUTHORITATIVE // LATCHED
- * Fix: Consolidated harborA, labs, and whitepaper substrates for EN/MY/ZH.
- * Fix: Point-locked all imports to src/locales/ for reliable production bundling.
- * Fix: Maintained 'lng: en' latch for initial visual stability (Anti-Void).
+ * Mission: Dynamic Triple-Substrate Manifestation
+ * Status: AUTHORITATIVE // LATCH_RELEASED
+ * Fix: Removed hardcoded 'lng' to enable automatic ZH/MY detection.
  */
 
 // 🧬 01. MARKETING SUBSTRATE (harbora)
@@ -51,24 +48,26 @@ i18n
     .use(initReactI18next)
     .init({
         resources,
-        // 🔐 EN-PRIMARY LATCH: Force initial language to English.
-        // Prevents "Black Void" anomalies if auto-detection lands on incomplete locales.
-        lng: 'en',
+        // 🔐 DYNAMIC LATCH: 'lng' removed to allow Detector to manage state.
+
         fallbackLng: 'en',
 
-        // 🔡 SMALLCAPS MANDATE: Namespaces must match lowercase keys used in useTranslation()
+        // 🔡 SMALLCAPS MANDATE: Namespaces point-locked to hook logic.
         ns: ['harbora', 'labs', 'mothershipwhitepaper'],
         defaultNS: 'harbora',
         fallbackNS: 'harbora',
 
         interpolation: {
-            escapeValue: false, // React already handles XSS mitigation
+            escapeValue: false,
         },
 
         detection: {
+            // Priority: URL Query -> LocalStorage -> Browser Settings
             order: ['querystring', 'localStorage', 'navigator', 'htmlTag'],
             lookupQuerystring: 'lng',
             caches: ['localStorage'],
+            // Ensures the detected language is persisted for the next session
+            convertDetectedLanguage: (lng) => lng.replace('_', '-'),
         },
     });
 

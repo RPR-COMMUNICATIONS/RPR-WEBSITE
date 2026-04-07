@@ -1,161 +1,190 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import {
-  FileText,
-  ShieldCheck,
-  Lock,
-  Zap
-} from 'lucide-react';
+import { SectionHeading } from './sectionheading.tsx';
+import { FileText, Zap, ExternalLink } from 'lucide-react';
 
 /**
- * TS-Λ3 // MOTHERSHIP SECTION [v7.7.6]
+ * TS-Λ3 // MOTHERSHIP SECTION [v20.4.3]
  * Path: src/components/mothershipsection.tsx
- * Mission: Architectural Alignment // Left-Aligned Heading
- * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Status: AUTHORITATIVE // LATCHED
- * Fix: Re-aligned SectionHeading to the left to match global UI standards.
- * Fix: Maintained centered logo stage for architectural prominence.
- * Fix: Preserved Jensen Huang Quote and Mothership Mandate descriptions.
+ * Mission: Strategic Positioning // Singapore Benchmark Latch
+ * Status: AUTHORITATIVE
+ * Update: Replaced placeholder with "THE BRIGHT LIGHTS // WITH EMPTY SHELLS
  */
-
-// 🧬 AUTHORITATIVE UI LATCHES
-import { SectionHeading } from './sectionheading.tsx';
-import { MothershipOSLogo } from '../brand/mothershiposlogo.tsx';
-import { SovereignGlass } from './sovereignglass.tsx';
 
 export const MothershipSection: React.FC = () => {
   const { t } = useTranslation('harbora');
-  const navigate = useNavigate();
 
   const pills = [
-    t('mothership.pills.sentinel', 'SENTINEL PROTOCOL'),
-    t('mothership.pills.ram', 'RAM GOVERNANCE'),
-    t('mothership.pills.rbaa', 'RBAA ROLES'),
-    t('mothership.pills.cstride', 'C-STRIDE TELEMETRY')
+    t('mothership.pills.sentinel'),
+    t('mothership.pills.ram'),
+    t('mothership.pills.rbaa'),
+    t('mothership.pills.cstride'),
   ];
 
+  const intro = t('mothership.intro');
+
+  // 🛰️ NARRATIVE RESIDENCY: Linked to i18n for future-proofing
+  const singaporeParagraphs = [
+    t('mothership.singapore_p1'),
+    t('mothership.singapore_p2'),
+    t('mothership.singapore_p3'),
+  ];
+
+  const standardsParagraphs = [
+    t('mothership.standards_p1'),
+    t('mothership.standards_p2'),
+  ];
+
+  const dataAvailability = t('mothership.data_availability', '');
+
   return (
-    <section id="mothership" className="py-48 bg-black overflow-hidden border-t border-white/5 relative">
-      {/* 🌌 AMBIENT DEPTH */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,217,255,0.03)_0%,transparent_70%)] pointer-events-none" />
-
-      <div className="max-w-screen-2xl mx-auto px-6 relative z-10 flex flex-col items-center">
-
-        {/* 🏛️ 01. HEADING: LEFT-ALIGNED LATCH */}
-        <div className="mb-48 w-full text-left">
+    <section id="mothership" className="relative bg-black py-12 md:py-24">
+      <div className="relative z-10 w-full px-4 md:px-20">
+        <div className="mb-10 md:mb-22">
           <SectionHeading
-            kicker={t('mothership.kicker', 'ENTERPRISE INTELLIGENCE INFRASTRUCTURE')}
-            title={t('mothership.title', 'THE')}
-            accent={t('mothership.accent', 'MOTHERSHIP')}
+            kicker={t('mothership.kicker')}
+            title={t('mothership.title')}
+            accent={t('mothership.accent')}
           />
         </div>
 
-        {/* 📋 02. PLATFORM LOGO STAGE: CENTERED LATCH */}
-        <div className="mb-64 flex justify-center w-full relative">
-          <div className="absolute inset-0 bg-cyan-500/5 blur-[120px] rounded-full scale-150 opacity-20 pointer-events-none" />
-          {/* 🧬 v1.3.9 Scaled Desktop Presence (650px) */}
-          <MothershipOSLogo className="opacity-100 relative z-10" />
-        </div>
+        <div className="border-t border-white/10 pt-10 md:pt-18">
+          <div className="mx-auto max-w-5xl space-y-8 md:space-y-12">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-64 w-full items-center">
-
-          {/* 💬 03. THE QUOTE AXIS */}
-          <div className="flex flex-col justify-center text-center lg:text-left text-white">
-            <div className="inline-flex items-center gap-3 mb-6 justify-center lg:justify-start">
-              <span className="h-px w-8 bg-cyan-500/60 hidden lg:block" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.35em] text-cyan-500/80 font-black">
-                SIGNAL_FROM_THE_FIELD
+            {/* 🛰️ SOVEREIGN IP LATCH: Singapore Positioning Title */}
+            <div className="max-w-4xl border-l-4 border-cyan-400 pl-5 md:pl-7">
+              <span className="mb-2 block font-mono text-[9px] uppercase tracking-[0.4em] text-cyan-400">
+                {t('mothership.singapore_kicker', 'SOVEREIGN_REFERENCE')}
               </span>
+              <h3 className="mb-4 text-xl font-black uppercase tracking-[-0.04em] text-white md:text-3xl">
+                {t('mothership.singapore_title', 'THE BRIGHT LIGHTS // WITH EMPTY SHELLS')}
+              </h3>
             </div>
 
-            <blockquote className="text-3xl md:text-5xl font-black tracking-tight leading-tight mb-6 max-w-3xl mx-auto lg:mx-0 uppercase font-sans not-italic">
-              {t('mothership.quote', 'WE NEED TO DEVELOP AI TO A LEVEL THAT IS USEFUL TO PEOPLE.')}
-            </blockquote>
-
-            <div className="flex items-center gap-3 justify-center lg:justify-start pt-4 border-t border-white/10 max-w-md mx-auto lg:mx-0">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse shadow-[0_0_8px_#00D9FF]" />
-              <cite className="text-xs md:text-sm font-mono text-cyan-400/80 uppercase tracking-[0.35em] not-italic font-bold">
-                {t('mothership.cite', '— JENSEN HUANG, CEO, NVIDIA')}
-              </cite>
+            <div className="max-w-4xl">
+              <p className="text-sm leading-relaxed text-zinc-200 md:text-lg">
+                {intro}
+              </p>
             </div>
-          </div>
 
-          {/* 🛡️ 04. THE ENIGMA CARD */}
-          <div className="w-full">
-            <SovereignGlass className="bg-white/[0.02] border-white/10 p-12 h-full flex flex-col group hover:border-cyan-500/30 transition-all duration-700 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none group-hover:opacity-[0.06] transition-opacity">
-                <ShieldCheck size={200} className="text-white" />
+            {/* Singapore Narrative Block */}
+            <div className="border-l border-white/10 pl-4 md:pl-7">
+              <div className="max-w-4xl space-y-4 md:space-y-5">
+                {singaporeParagraphs.map((paragraph, idx) => (
+                  <p
+                    key={`sg-p-${idx}`}
+                    className="text-sm leading-relaxed text-zinc-300 md:text-lg"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
               </div>
+            </div>
 
-              <header className="relative z-10 mb-10">
-                <div className="flex items-center gap-3 mb-4">
-                  <Lock size={14} className="text-cyan-500" />
-                  <span className="font-mono text-[10px] text-cyan-500 tracking-[0.4em] font-black uppercase">
-                    SOVEREIGN_IP_LATCH
-                  </span>
-                </div>
-                <h4 className="text-2xl font-black italic uppercase tracking-tighter text-white mb-2">
-                  IP & PRIOR ART LEDGER
-                </h4>
-                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest leading-relaxed">
-                  <p>ECC-KMS-256 PROVENANCE // ASIA-SOUTHEAST1</p>
-                  <p>STATUS: <span className="text-cyan-400 font-black">🟢 LATCHED</span></p>
-                </div>
-              </header>
-
-              <div className="space-y-6 text-zinc-400 text-sm leading-relaxed mb-12 font-mono uppercase tracking-tighter relative z-10">
-                <p>
-                  Every core protocol and system component—including the Sentinel Protocol and Bond Stack relational mathematics—is cryptographically versioned and anchored to prove Point of Origin (POO) and defend trade secrets.
-                </p>
-              </div>
-
-              <button
-                onClick={() => navigate('/labs/library')}
-                className="relative z-10 w-full bg-white text-black font-black uppercase tracking-widest py-4 text-[10px] hover:bg-cyan-500 transition-all flex items-center justify-center gap-3 group/btn"
+            {/* Jensen Huang Quote Enclave */}
+            <figure className="rounded-[1.5rem] md:rounded-[2rem] border border-white/10 bg-white/[0.015] px-5 py-8 md:px-10 md:py-14">
+              <blockquote
+                cite="https://singjupost.com/transcript-jensen-huangs-interview-cisco-ai-summit-2026/"
+                className="relative max-w-4xl text-xl font-semibold italic leading-tight tracking-tight text-white md:text-5xl lg:text-6xl"
               >
-                <FileText size={14} /> {t('mothership.btns.whitepaper', 'VIEW PUBLIC WHITEPAPER')}
-              </button>
-            </SovereignGlass>
+                <span className="pointer-events-none absolute -left-2 -top-4 select-none text-4xl leading-none text-cyan-400/85 md:-left-3 md:-top-7 md:text-7xl">
+                  “
+                </span>
+                <p className="pl-4 md:pl-7">
+                  {t(
+                    'mothership.quote',
+                    'We need to develop AI to a level that is useful to people.'
+                  )}
+                </p>
+              </blockquote>
+
+              <figcaption className="mt-6 flex items-center gap-3 pl-4 md:pl-7">
+                <div className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.45)]" />
+                <cite className="not-italic font-mono text-[9px] font-bold uppercase tracking-widest text-zinc-500 md:text-xs">
+                  {t(
+                    'mothership.cite',
+                    'Jensen Huang — NVIDIA CEO — 2026'
+                  )}
+                </cite>
+              </figcaption>
+            </figure>
+
+            {/* Standards Block */}
+            <div className="border-l border-cyan-400/30 pl-4 md:pl-7">
+              <div className="max-w-4xl space-y-4 md:space-y-5">
+                {standardsParagraphs.map((paragraph, idx) => (
+                  <p
+                    key={`std-p-${idx}`}
+                    className="text-sm leading-relaxed text-zinc-200 md:text-lg"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+
+            {dataAvailability && (
+              <p className="max-w-4xl text-[10px] leading-relaxed text-zinc-500 md:text-xs">
+                {dataAvailability}
+              </p>
+            )}
+
+            {/* Whitepaper & Babble CTA Enclave */}
+            <div className="pt-2">
+              <div className="rounded-[1.5rem] md:rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 md:p-10">
+                <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+                  <div className="max-w-2xl text-left">
+                    <h4 className="mb-2 text-lg font-black uppercase tracking-tight text-white md:text-2xl">
+                      {t('mothership.card_title', 'MOTHERSHIP WHITEPAPER')}
+                    </h4>
+                    <p className="text-xs leading-relaxed text-zinc-500 md:text-base">
+                      {t('mothership.card_body', 'Read the academic paper outlining the Relational Accountability Model (RAM) behind MOTHERSHIP OS.')}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col gap-3 w-full md:w-auto md:min-w-[320px]">
+                    <button
+                      onClick={() => window.open('https://ssrn.com/abstract=6307238', '_blank')}
+                      className="flex w-full items-center justify-center gap-3 bg-white px-6 py-4 text-[9px] font-black uppercase tracking-[0.2em] text-black transition-all hover:bg-cyan-400"
+                    >
+                      <FileText size={16} />
+                      {t('mothership.btns.whitepaper', 'READ ON SSRN')}
+                    </button>
+
+                    <button
+                      onClick={() => window.location.href = '/labs/babble'}
+                      className="flex w-full items-center justify-center gap-3 border border-white/10 bg-white/5 px-6 py-3 text-[9px] font-black uppercase tracking-[0.2em] text-zinc-400 transition-all hover:border-cyan-400/50 hover:text-white"
+                    >
+                      <ExternalLink size={14} />
+                      {t('mothership.btns.babble', 'BABBLE_FRAMEWORK')}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* 📜 05. THE MANDATE (MOTHERSHIP DESCRIPTION) */}
-        <div className="max-w-5xl mx-auto mb-48 space-y-12 text-center relative pt-24 border-t border-white/5">
-          <div className="flex justify-center mb-8 relative z-10">
-            <Zap className="text-cyan-500 w-8 h-8 opacity-40 animate-pulse" />
-          </div>
-          <h3 className="text-white text-xl md:text-5xl leading-tight font-black uppercase italic tracking-tighter max-w-4xl mx-auto relative z-10">
-            {t('mothership.mandate_title', 'The Mothership is the business operating platform that turns a real company into a living digital twin.')}
-          </h3>
-          <div className="space-y-8 max-w-3xl mx-auto text-zinc-300 text-lg md:text-xl leading-relaxed font-light italic opacity-80 border-t border-white/5 pt-12 relative z-10">
-            <p>{t('mothership.mandate_p1')}</p>
-            <p>{t('mothership.mandate_p2') || t('mothership.mandate_p3')}</p>
-          </div>
-        </div>
-
-        {/* 🧬 06. TECHNOLOGY PILLS */}
-        <div className="flex flex-col items-center w-full">
-          <div className="mb-12 text-center">
-            <span className="text-[9px] font-mono text-cyan-500/60 uppercase tracking-[0.5em] font-black bg-cyan-500/5 px-4 py-2 rounded-full border border-cyan-500/10">
+        {/* Operational Frameworks Pills */}
+        <div className="mt-16 border-t border-white/5 pt-12 md:mt-36 md:pt-24">
+          <div className="mb-6 flex items-center gap-4">
+            <Zap className="h-4 w-4 text-cyan-400 md:h-6 md:w-6" />
+            <span className="font-mono text-[9px] font-black uppercase tracking-[0.5em] text-cyan-400">
               {t('mothership.operational_frameworks', 'OPERATIONAL_FRAMEWORKS')}
             </span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
+          <div className="flex flex-wrap gap-3 md:gap-5">
             {pills.map((pill) => (
-              <span key={pill} className="bg-black border border-white/10 text-white/40 text-[10px] px-8 py-3 rounded-full font-mono uppercase tracking-[0.2em] hover:border-cyan-500/50 hover:text-white transition-all duration-700 cursor-default">
+              <span
+                key={pill}
+                className="cursor-default border border-white/10 bg-white/[0.02] px-6 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-zinc-500 transition-all hover:border-cyan-400 hover:text-white md:px-10"
+              >
                 {pill}
               </span>
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 opacity-[0.01] pointer-events-none select-none text-white">
-        <span className="text-[25rem] font-black italic tracking-tighter uppercase">
-          MOTHERSHIP
-        </span>
       </div>
     </section>
   );

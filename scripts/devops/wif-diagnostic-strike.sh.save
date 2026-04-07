@@ -1,4 +1,8 @@
-#!/bin/bash
+
+# (Paste the code above, then Ctrl+O, Enter, Ctrl+X)
+
+# 🛰️ EXECUTE_IDENTITY_VERIFICATION
+bash /Users/puvansivanasan/perplexity/jobs/active/2026-001-RPR-WEBSITE/scripts/devops/wif-diagnostic-strike.sh#!/bin/bash
 # TS-Λ3 // WIF DIAGNOSTIC STRIKE [v1.2.1]
 # Path: scripts/devops/wif-diagnostic-strike.sh
 # Mission: Verify Harbor A (rpr-corporate-site) Identity Handshake

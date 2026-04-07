@@ -4,39 +4,38 @@ import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 
 /**
- * TS-Λ3 // BUILD ENGINE CONFIGURATION [v5.5.1]
+ * TS-Λ3 // BUILD ENGINE CONFIGURATION [v5.5.2]
  * Path: vite.config.ts
- * Mission: Orchestrate Production Compilation & Asset Fission.
+ * Mission: Linguistic Chunking & Asset Fission.
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Status: AUTHORITATIVE // v13.5.3_ALIGNED
- * Fix: Added local server proxy for /api to resolve Ollie 404 in dev mode.
+ * Fix: Isolated i18n chunk to optimize multi-language payload.
  */
 
 export default defineConfig({
   plugins: [
     react(),
-    // 🧬 TAILWIND V4 ENGINE: Governing the CSS substrate via a single-pass build.
+    // 🧬 TAILWIND V4 ENGINE
     tailwindcss(),
   ],
   resolve: {
     alias: {
-      // 🧬 Clinical Alias: Map '@' to 'src' for cleaner relative imports
       '@': path.resolve(__dirname, './src'),
     },
   },
   build: {
     outDir: 'dist',
-    sourcemap: false, // Forensic security: Disable maps in production
+    sourcemap: false,
     emptyOutDir: true,
     rollupOptions: {
       output: {
         /**
-         * 📦 MANUAL CHUNKING STRATEGY
-         * Liquidates the 'Large Bundle' warning by splitting logic axis.
+         * 📦 AUTHORITATIVE CHUNKING
+         * Separates core logic from heavy linguistic & cloud substrates.
          */
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom', 'framer-motion'],
           firebase: ['firebase/app', 'firebase/auth', 'firebase/firestore'],
+          i18n: ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
           ui: ['lucide-react'],
         },
       },
@@ -46,11 +45,6 @@ export default defineConfig({
     port: 5173,
     strictPort: true,
     host: true,
-    /**
-     * 🛰️ DEVELOPMENT PROXY LATCH
-     * Maps local /api calls to the server.js Express substrate (Port 4242).
-     * This liquidates the '404 Not Found' anomaly when calling Ollie locally.
-     */
     proxy: {
       '/api': {
         target: 'http://localhost:4242',

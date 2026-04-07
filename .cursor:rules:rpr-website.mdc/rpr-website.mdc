@@ -1,0 +1,33 @@
+# RPR Website – Mothership Visualiser Constraints
+
+## Scope
+
+Project root:
+- /Users/puvansivanasan/perplexity/jobs/active/2026-001-RPR-WEBSITE
+
+Key component:
+- src/components/mothershipvisualizer.tsx
+
+## Role of mothershipvisualizer.tsx
+
+- TS-Λ3 // ORGANIZATION VISUALISER HUD [v8.80.0]
+- Purpose: L0–L4 org HUD (THE FIRM, COMMAND PLANE, ELDERS, WORKSHOP, PRODUCTS).
+- Scope: Org visualization only.
+
+## Hard constraints
+
+- Do NOT:
+  - Add latency monitoring, drift charts, system metrics, or audio alarms to `src/components/mothershipvisualizer.tsx`.
+  - Change its architectural role (org visualization HUD for rprcomms.com).
+
+- If system-status or drift UI is needed:
+  - Implement it as a **separate component** under `src/components/`.
+  - Reuse visual patterns if desired, but keep behavior and concerns separate.
+
+## Allowed edits to mothershipvisualizer.tsx
+
+- Mechanical-only:
+  - Fix TypeScript/React typings.
+  - Fix imports.
+  - Adjust minor layout/styling issues.
+- No new concepts, no new data sources, no new responsibilities.

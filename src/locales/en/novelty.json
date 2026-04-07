@@ -1,0 +1,32 @@
+{
+    "motivation": {
+        "kicker": "🧬 MOTIVATION",
+        "body": "Mothership OS is the first governance system to explicitly utilize Role-Based Reasoning Sinks driven by Substrate Telemetry ($St$) and Cognitive Provenance ($Cp$). This creates a closed-loop alignment between planned architectural intent, observed execution, and the human creative cycle, ensuring the AI command plane is anchored to physical reality."
+    },
+    "metrics": {
+        "title": "📊 NOVELTY METRICS (v1.2.0 LATCH)",
+        "tf_title": "Baseline Temporal Fidelity ($Tf$)",
+        "tf_score": "Score: 0.98",
+        "ss_title": "Spatial Sovereignty ($Ss$)",
+        "ss_ver": "Verification: 100% Local Residency Confirmed.",
+        "ga_title": "Governance Authority ($Ga$)",
+        "ga_score": "Score: 0.99",
+        "beu_title": "Bond Efficiency ($B_{eu}$)",
+        "beu_score": "Status: Dynamic Tracking Active",
+        "cp_title": "Cognitive Provenance ($Cp$)",
+        "cp_ver": "Verification: KMS-Signed Chrono-Cognitive Map"
+    },
+    "claims": {
+        "title": "⚓ NOVELTY CLAIMS",
+        "c1": "Isolation of Reasoning: The first system to logically separate Architect, Engineer, and Sentinel into discrete Role-Based Reasoning Sinks.",
+        "c2": "Telemetry-Driven Alignment: The first to utilize real-time Substrate Telemetry ($St$) to inform and refine Elder specialization tracks.",
+        "c3": "Physical Residency Anchor: The first to enforce mandatory physical residency for AI-governed documents to prevent prompt-injection and context-drift.",
+        "c4": "Chrono-Cognitive Ingestion: The first system to utilize Human Temporal Measurement to anchor Intellectual Property to specific human neuro-performance states.",
+        "c5": "Relational Accountability: The first to bind the Sovereign Director to the legal interests of the Business Entity through KMS-signed ethical gates.",
+        "c6": "Spatial Integrity Latch: The first to implement a local-first Mothership Bridge that verifies absolute file paths to prevent Spatial Blindness and Ghost Root hallucinations."
+    },
+    "authority": {
+        "marker": "NOVELTY-STRIKE-v1.2.0-LATCHED",
+        "org": "THE OVERWATCH // SG-CANONICAL-2026"
+    }
+}

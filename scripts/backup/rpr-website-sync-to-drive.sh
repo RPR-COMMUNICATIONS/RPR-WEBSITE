@@ -9,7 +9,7 @@ set -euo pipefail
 
 # 🧬 PATH SUBSTRATE
 LOCAL_ROOT="/Users/puvansivanasan/perplexity/jobs/active/2026-001-RPR-WEBSITE"
-CONTROL_PLANE_CONTEXT="/Users/puvansivanasan/perplexity/jobs/active/RPR-PRIVATE-CONTROL-PLANE/os/active-context.md"
+CONTROL_PLANE_CONTEXT="/Users/puvansivanasan/perplexity/jobs/active/2026-001-RPR-WEBSITE/docs/governance/os/active-context.md"
 
 # 🛰️ REMOTE CONFIGURATION
 # rclone remote name (must already be configured on the node)
@@ -31,10 +31,13 @@ fi
 # 2. AUDIT ALIGNMENT CHECK
 if [ ! -f "${CONTROL_PLANE_CONTEXT}" ]; then
   echo "⚠️  [WARN] Control-plane context file missing: ${CONTROL_PLANE_CONTEXT}"
+else
+  echo "✅ [ALIGN] Control-plane context present."
 fi
 
 # 3. EXECUTION STRIKE
-# Sync website folder to Drive, excluding secrets and build artifacts
+# Sync website folder to Drive, excluding secrets and build artifacts.
+# Includes governance subtree: docs/governance/os/** (control-plane context, manifests, ledgers).
 echo "[1/2] Synchronizing Substrate via rclone..."
 rclone sync "${LOCAL_ROOT}" "${REMOTE}:${REMOTE_ROOT}" \
   --exclude "node_modules/**" \

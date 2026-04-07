@@ -1,0 +1,87 @@
+{
+    "header": {
+        "phase": "TS-Λ3 // FASA_9_TADBIR_URUS // PENGLIHATAN_BUNYI_MESIN",
+        "title_line_1": "IDENTITI BERDAULAT",
+        "title_line_2": "RANGKA KERJA PERSEPSI",
+        "version": "v3.2.2_TERKUNCI",
+        "ssrn": "SSRN_ID: 6307238",
+        "timestamp": "SETEM_MASA: 2026.04.07.1810_Z",
+        "classification": "KLASIFIKASI: RANGKA KERJA BABBLE"
+    },
+    "identity": {
+        "pivot_title": "Verifikasi Identiti Individu",
+        "pivot_body": "Babble menukar sensor mudah alih standard menjadi landasan forensik untuk verifikasi identiti jaminan tinggi. Dengan mewujudkan 'Kunci Kebenaran' fizikal, kami menyediakan asas ketiadaan penafian (non-repudiation) untuk kewangan moden dan tadbir urus negara."
+    },
+    "big_idea": {
+        "label": "ORCHESTRATOR_RANGKA_KERJA_01",
+        "title": "0. Bukti, Bukan Media",
+        "body": "Rangka Kerja Babble menyediakan Protokol (peraturan kawal selia) dan Alat (instrumen forensik) yang diperlukan untuk verifikasi identiti individu merentasi sektor kepercayaan tinggi. Ia merapatkan jurang antara kecanggihan bandar dan realiti serantau dengan menghubungkan perkakasan sensor ke dalam 'enclave' digital yang selamat.",
+        "subtext": "Dengan merapatkan jurang antara perkakasan sensor fizikal dan 'enclave' digital yang selamat, Babble mencipta 'Sauh Kebenaran' untuk Ekonomi Realiti—menghapuskan jurang antara kecanggihan bandar dan realiti serantau.",
+        "cta_latch": "SAUH_PROTOKOL",
+        "cta_view": "LIHAT_RANGKA_KERJA",
+        "status": "SINKRONISASI_TADBIR_URUS: AKTIF",
+        "resonance": "Resonan: Fasa 9"
+    },
+    "rails": {
+        "section_title": "Landasan Forensik (Set Alat)",
+        "vision_title": "Babble Vision (Visi)",
+        "vision_body": "Mengesan pantulan cahaya fizikal dan geometri piksel. Menghapuskan 'deepfake' dengan mengesahkan fizik optik, bukan sekadar kandungan imej.",
+        "vision_flag_1": "FORENSIK_OPTIK: AKTIF",
+        "vision_flag_2": "VEKTOR_FIZIKAL: AKTIF",
+        "audio_title": "Babble Audio (Bunyi)",
+        "audio_body": "Analisis EQ forensik. Mengasingkan pertuturan daripada akustik bilik untuk mengekalkan kebenaran persekitaran dan metadata lokasi.",
+        "audio_flag_1": "CAP_JARI_AKUSTIK: DIOPTIMALKAN",
+        "audio_flag_2": "METADATA_ALAM: DISAUHKAN",
+        "machine_title": "Babble Machine (Mesin)",
+        "machine_body": "Pengingesan terus kod status asli mesin (OBD-II/CAN-bus). Menganggap telemetri kenderaan sebagai saksi utama.",
+        "machine_flag_1": "PENGINGESAN_BINARI: 4ms",
+        "machine_flag_2": "SINK_ASET: 1:1",
+        "nav_section_title": "Navigasi Forensik & Pengingesan IoT",
+        "nav_main_title": "Validasi Multi-Sensor",
+        "nav_main_body": "Babble menolak data lokasi gred-pengguna 'Satu Titik'. Setiap acara navigasi ditetapkan melalui timbunan empat peringkat (GNSS, Wi-Fi BSSID, Multilaterasi Sel, dan PDR Inersia) untuk mengesan dan menghalang pemalsuan (spoofing) GPS semasa pemeriksaan forensik.",
+        "nav_tags": {
+            "agps": "AGPS_FIX_DISAUHKAN",
+            "bssid": "RUJ_SILANG_BSSID"
+        },
+        "nav_access_title": "Satah Akses Mesej",
+        "nav_access_body": "Diorchestrasikan melalui API WhatsApp, WeChat, dan Telegram. Antara muka pesanan mencetuskan pengingesan sensor masa-nyata sambil menyauhkan semua data binari ke lejar WORM untuk ketiadaan penafian kawal selia."
+    },
+    "triple_anchor": {
+        "title_main": "TRIAD",
+        "title_accent": "SAUH",
+        "title_tail": "PENGUNCI",
+        "label": "MENGUATKUASA_INTEGRITI_PROTOKOL",
+        "space_title": "RUANG (SPACE)",
+        "space_body": "Mengesahkan lokus fizikal serangan bukti (evidence strike).",
+        "space_badge": "BIDANG_KUASA: MY_ONSHORE",
+        "identity_title": "IDENTITI (IDENTITY)",
+        "identity_body": "Mengikat manusia/mesin dengan data melalui 'hardware vault'.",
+        "identity_badge": "METERAI: PROVENANS_TERKUNCI",
+        "time_title": "MASA (TIME)",
+        "time_body": "Menjamin penempatan temporal melalui jam berdaulat yang diperbetulkan hanyutan.",
+        "time_badge": "JAM: ASIA_SE_CLOCK"
+    },
+    "loop": {
+        "label": "GELUNG_TADBIR_URUS_MANDATORI",
+        "step_1_title": "Pencetus Protokol",
+        "step_1_body": "Memulakan rantaian alat forensik berdasarkan piawaian eIDAS/FATF.",
+        "step_2_title": "Ekstraksi Forensik",
+        "step_2_body": "Menukarkan aliran bit sensor mentah menjadi artifak berstruktur yang sah di sisi undang-undang.",
+        "step_3_title": "Validasi Silang",
+        "step_3_body": "Melaksanakan semakan kunci sauh triad untuk memastikan bukti tidak boleh diusik.",
+        "step_4_title": "Penyimpanan Berdaulat",
+        "step_4_body": "Komitmen ke Sovereign Vault (simpanan WORM) untuk pemeliharaan bukti melebihi 7 tahun."
+    },
+    "ip": {
+        "label": "AFIRMASI TADBIR URUS",
+        "quote": "Rangka Kerja Babble merupakan orkestrasi berdaulat bagi protokol tadbir urus dan alat forensik, memastikan verifikasi identiti, transaksi kewangan, acara insurans, dan aliran perlindungan kanak-kanak boleh disauhkan pada piawaian global sementara kekal berdaulat-penyewa.",
+        "badge_authority": "AUTORITI: RPR COMMUNICATIONS LLC",
+        "badge_ref": "RUJ: MY-NAV-IOT-LATCH"
+    },
+    "footer": {
+        "copyright": "© 2026 RANGKA KERJA BABBLE // ENCLAVE BERDAULAT // SINGAPURA",
+        "system_status": "STATUS_SISTEM",
+        "ssrn": "SEDIA_AUDIT",
+        "vault": "AKSES_VAULT"
+    }
+}

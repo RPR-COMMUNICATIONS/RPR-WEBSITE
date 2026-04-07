@@ -1,28 +1,28 @@
 {
     "nav": {
-        "labs": "labs",
-        "methods": "kaedah",
-        "verify": "verifikasi",
-        "myaudit": "myaudit"
+        "labs": "MAKMAL",
+        "methods": "METOD",
+        "verify": "VERIFIKASI",
+        "myaudit": "MYAUDIT"
     },
     "labs": {
-        "kicker": "persekitaran sandbox",
-        "title": "substrat kewangan",
-        "pricing_tba": "Harga: Akan Diumumkan (TBA). Rakan kongsi awal boleh mendaftar minat; harga langsung akan diterbitkan tidak lama lagi.",
+        "kicker": "PERSEKITARAN SANDBOX",
+        "title": "SUBSTRAT KEWANGAN",
+        "pricing_tba": "HARGA: AKAN DIUMUMKAN (TBA). RAKAN KONGSI AWAL BOLEH MENDAFTAR MINAT; HARGA LANGSUNG AKAN DITERBITKAN TIDAK LAMA LAGI.",
         "btns": {
-            "interest": "daftar minat",
-            "waitlist": "sertai senarai menunggu",
-            "storefront": "buka kedai Stripe (beta)"
+            "interest": "DAFTAR MINAT",
+            "waitlist": "SERTAI SENARAI MENUNGGU",
+            "storefront": "BUKA KEDAI STRIPE (BETA)"
         }
     },
     "verification": {
-        "title": "verifikasi forensik",
-        "subtitle": "perlembagaan berdaulat v12.4",
-        "description": "enjin pengingesan dokumen sumber forensik automatik dan penilaian risiko masa nyata.",
-        "cta": "mulakan imbasan",
+        "title": "VERIFIKASI FORENSIK",
+        "subtitle": "PERLEMBAGAAN BERDAULAT V12.4",
+        "description": "ENJIN PENGINGESAN DOKUMEN SUMBER FORENSIK AUTOMATIK DAN PENILAIAN RISIKO MASA NYATA.",
+        "cta": "MULAKAN IMBASAN",
         "nodes": {
-            "singapore": "asia-southeast1",
-            "status": "operasi"
+            "singapore": "ASIA-SOUTHEAST1",
+            "status": "OPERASI"
         }
     }
 }

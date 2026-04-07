@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>BABBLE_OS_v3.0 // SOVEREIGN_PERCEPTION_STANDARD</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        body {
+            background-color: #0e0e0e;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .substrate-watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 20vw;
+            font-weight: 900;
+            color: rgba(58, 223, 250, 0.03);
+            pointer-events: none;
+            z-index: 0;
+            white-space: nowrap;
+        }
+
+        .industrial-glow {
+            box-shadow: inset 0 0 10px rgba(58, 223, 250, 0.1);
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#0e0e0e",
+                        "surface-container": "#191919",
+                        "inverse-on-surface": "#555555",
+                        "error-dim": "#d7383b",
+                        "secondary-fixed": "#7fdeff",
+                        "on-surface": "#ffffff",
+                        "surface-container-low": "#131313",
+                        "on-error-container": "#ffa8a3",
+                        "secondary-dim": "#00c3ee",
+                        "inverse-surface": "#f9f9f9",
+                        "surface-container-lowest": "#000000",
+                        "tertiary-dim": "#619efd",
+                        "secondary-container": "#00677f",
+                        "outline-variant": "#484848",
+                        "primary-fixed": "#3adffa",
+                        "on-secondary-fixed": "#003a48",
+                        "on-background": "#ffffff",
+                        "primary-container": "#00cbe6",
+                        "surface-dim": "#0e0e0e",
+                        "tertiary": "#7aacff",
+                        "tertiary-fixed-dim": "#6aa3ff",
+                        "on-primary-container": "#003d46",
+                        "inverse-primary": "#006977",
+                        "surface-container-highest": "#262626",
+                        "outline": "#757575",
+                        "surface-bright": "#2c2c2c",
+                        "on-primary": "#004b56",
+                        "primary-fixed-dim": "#1ad0eb",
+                        "on-tertiary": "#002b5c",
+                        "surface-container-high": "#1f1f1f",
+                        "secondary": "#10d2ff",
+                        "primary": "#3adffa",
+                        "secondary-fixed-dim": "#36d4ff",
+                        "tertiary-fixed": "#84b1ff",
+                        "error": "#ff716c",
+                        "on-tertiary-fixed": "#001737",
+                        "on-error": "#490006",
+                        "tertiary-container": "#619efd",
+                        "on-secondary-container": "#eef9ff",
+                        "on-tertiary-fixed-variant": "#003874",
+                        "on-primary-fixed-variant": "#005561",
+                        "on-surface-variant": "#ababab",
+                        "primary-dim": "#1ad0eb",
+                        "surface-tint": "#3adffa",
+                        "on-secondary-fixed-variant": "#00586d",
+                        "surface-variant": "#262626",
+                        "on-primary-fixed": "#00363e",
+                        "on-secondary": "#004253",
+                        "surface": "#0e0e0e",
+                        "error-container": "#9f0519",
+                        "on-tertiary-container": "#001f46"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background">
+    <div class="substrate-watermark">BABBLE</div>
+    <main class="py-20 px-4 md:px-12 max-w-7xl mx-auto relative z-10">
+        <header class="mb-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-outline-variant pb-6">
+                <div>
+                    <h2 class="mono text-primary text-sm font-bold tracking-widest mb-2">TS-Λ3 // PHASE_7_RESONANCE //
+                        SIGHT_SOUND_LANGUAGE</h2>
+                    <h1 class="font-black text-4xl md:text-6xl tracking-tighter uppercase">SOVEREIGN
+                        PERCEPTION<br />ARCHITECTURE <span class="text-primary">v3.0.0</span></h1>
+                </div>
+                <div class="mt-6 md:mt-0 text-right">
+                    <p class="mono text-[10px] text-on-surface-variant uppercase">SSRN_ID: 6307238</p>
+                    <p class="mono text-[10px] text-on-surface-variant uppercase">TIMESTAMP: 2026.04.05.1613_Z</p>
+                    <div class="flex justify-end gap-1 mt-2">
+                        <div class="w-1 h-1 bg-primary animate-pulse"></div>
+                        <div class="w-1 h-1 bg-primary"></div>
+                        <div class="w-1 h-1 bg-primary opacity-50"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="mb-12">
+            <div
+                class="bg-surface-container-low p-8 border-l-4 border-primary industrial-glow relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 mono text-[8px] text-outline opacity-20 uppercase">
+                    MANDATE_VOICE_01</div>
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="p-2 bg-primary/10">
+                        <span class="material-symbols-outlined text-primary">visibility</span>
+                    </div>
+                    <h3 class="font-bold text-xl tracking-tight uppercase mt-1">0. Evidence, Not Media</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 space-y-4">
+                        <p class="text-on-surface-variant leading-relaxed font-['Inter']">
+                            The BABBLE Framework corrects the broken conversion layer where analog reality becomes lossy
+                            digital data[cite: 5, 280]. By restoring the triad of <span class="text-on-surface">Sight,
+                                Sound, and Language</span>, we ensure that information entering MOTHERSHIP OS is a
+                            faithful, anchored representation of physical reality, carrying enough sensory structure for
+                            agentic reasoning[cite: 14].
+                        </p>
+                        <div class="flex gap-4">
+                            <button
+                                class="bg-primary text-on-primary px-6 py-2 mono text-xs font-bold uppercase hover:shadow-[0_0_15px_rgba(58,223,250,0.4)] transition-all">LATCH_SUBSTRATE</button>
+                            <button
+                                class="border border-primary text-primary px-6 py-2 mono text-xs font-bold uppercase hover:bg-primary/5">VIEW_CANON</button>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 border border-outline-variant/30 relative">
+                        <div class="absolute -top-[1px] -left-[1px] w-4 h-4 border-t-2 border-l-2 border-primary"></div>
+                        <h4 class="mono text-[10px] text-primary mb-4 font-bold tracking-widest">PERCEPTION_SYNC: ACTIVE
+                        </h4>
+                        <div
+                            class="aspect-video bg-neutral-900 flex items-center justify-center border border-white/5 group">
+                            <span
+                                class="material-symbols-outlined text-white/20 group-hover:text-primary transition-colors text-4xl">sensors</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-end">
+                            <span class="mono text-[10px] text-outline uppercase">Resonance: Phase 7</span>
+                            <div class="w-12 h-4 bg-primary/20 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-primary/40 w-5/6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-2 h-2 bg-primary"></div>
+                <h3 class="font-bold text-2xl uppercase tracking-tighter">The Sensory rails</h3>
+                <div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                    class="bg-surface-container-low border-b-4 border-primary/20 hover:border-primary transition-all group">
+                    <div
+                        class="h-32 bg-surface-container-lowest relative overflow-hidden flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-6xl text-white/5 group-hover:text-primary/20 transition-colors">camera_outdoor</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 mono text-primary text-sm font-bold uppercase">Vision
+                            (Sight)</div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+                            Treats the camera as a field instrument[cite: 71]. Preserves spatial structure (angle,
+                            distance) to detect deepfakes and replays[cite: 28, 84].
+                        </p>
+                        <ul class="mono text-[10px] space-y-2">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> TILES_NOT_TEXT:
+                                ENABLED</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span>
+                                SPATIAL_ENVELOPE: ACTIVE</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-container-low border-b-4 border-primary/20 hover:border-primary transition-all group">
+                    <div
+                        class="h-32 bg-surface-container-lowest relative overflow-hidden flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-6xl text-white/5 group-hover:text-primary/20 transition-colors">settings_voice</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 mono text-primary text-sm font-bold uppercase">Audio
+                            (Sound)</div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+                            Bypasses beautification presets[cite: 141]. Preserves "Tonal Truth" and acoustic
+                            environments as forensic evidence[cite: 127, 136].
+                        </p>
+                        <ul class="mono text-[10px] space-y-2">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> FORENSIC_EQ:
+                                OPTIMIZED</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span>
+                                BIOMETRIC_GROUND: LATCHED</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-container-low border-b-4 border-primary/20 hover:border-primary transition-all group">
+                    <div
+                        class="h-32 bg-surface-container-lowest relative overflow-hidden flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-6xl text-white/5 group-hover:text-primary/20 transition-colors">language</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 mono text-primary text-sm font-bold uppercase">Machine
+                            (IoT)</div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+                            Universal language translation[cite: 147]. Direct ingestion of machine-native signals (CAN,
+                            RSSI) into Labyrinth world-models[cite: 174, 185].
+                        </p>
+                        <ul class="mono text-[10px] space-y-2">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> REALTIME_TRANS:
+                                4ms</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> LABYRINTH_SYNC:
+                                1:1</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 bg-surface-container-lowest border border-outline-variant/30 p-1">
+            <div class="grid grid-cols-1 lg:grid-cols-4">
+                <div class="p-8 lg:border-r border-outline-variant/30 bg-surface-container-low">
+                    <h3 class="font-black text-3xl uppercase tracking-tighter leading-none mb-4">TRIPLE<br /><span
+                            class="text-primary">ANCHOR</span><br />LATCH</h3>
+                    <p class="mono text-[10px] text-on-surface-variant uppercase">EVIDENCE_PROVENANCE_v3.0</p>
+                </div>
+                <div
+                    class="p-8 border-b lg:border-b-0 lg:border-r border-outline-variant/30 flex flex-col justify-between">
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">location_searching</span>
+                        <h4 class="font-bold text-lg uppercase mb-2">Space Anchor</h4>
+                        <p class="text-xs text-on-surface-variant">Instantaneous GNSS binding at moment of shutter[cite:
+                            239]. Checked against Harbour Topology[cite: 241].</p>
+                    </div>
+                    <div class="mono text-[10px] text-primary mt-4 uppercase">Jurisdiction: MY_ONSHORE</div>
+                </div>
+                <div
+                    class="p-8 border-b lg:border-b-0 lg:border-r border-outline-variant/30 flex flex-col justify-between">
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">key</span>
+                        <h4 class="font-bold text-lg uppercase mb-2">Identity Anchor</h4>
+                        <p class="text-xs text-on-surface-variant">ECC-KMS-256 asymmetric signing over raw payloads
+                            proving authorised provenance[cite: 244].</p>
+                    </div>
+                    <div class="mono text-[10px] text-primary mt-4 uppercase">Seal: PROVENANCE_SEALED</div>
+                </div>
+                <div class="p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">history_toggle_off</span>
+                        <h4 class="font-bold text-lg uppercase mb-2">Time Anchor</h4>
+                        <p class="text-xs text-on-surface-variant">Sovereign regional clock stamps at capture and latch
+                            to prevent pre-dating fraud[cite: 249, 251].</p>
+                    </div>
+                    <div class="mono text-[10px] text-primary mt-4 uppercase">Clock: ASIA_SE_CLOCK</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h3 class="mono text-xs font-bold text-primary tracking-[0.3em] mb-6 uppercase">
+                NON_NEGOTIABLE_INGESTION_LOOP</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-surface-container-low p-6 border border-outline-variant/20 relative">
+                    <span class="absolute top-2 left-2 mono text-[8px] opacity-30">STEP_01</span>
+                    <h4 class="font-bold text-sm uppercase mb-2">Signal Capture</h4>
+                    <p class="text-[10px] text-on-surface-variant leading-relaxed">Raw hardware bitstream recorded with
+                        full device profile at source[cite: 209].</p>
+                </div>
+                <div class="bg-surface-container-low p-6 border border-outline-variant/20 relative">
+                    <span class="absolute top-2 left-2 mono text-[8px] opacity-30">STEP_02</span>
+                    <h4 class="font-bold text-sm uppercase mb-2">Extraction & Tagging</h4>
+                    <p class="text-[10px] text-on-surface-variant leading-relaxed">Normalisation into structured
+                        artefacts with forensic metadata envelopes[cite: 214].</p>
+                </div>
+                <div class="bg-surface-container-low p-6 border border-outline-variant/20 relative">
+                    <span class="absolute top-2 left-2 mono text-[8px] opacity-30">STEP_03</span>
+                    <h4 class="font-bold text-sm uppercase mb-2">Validation</h4>
+                    <p class="text-[10px] text-on-surface-variant leading-relaxed">RAM bond stack and regional lock
+                        check regardless of content[cite: 223].</p>
+                </div>
+                <div class="bg-surface-container-low p-6 border border-outline-variant/20 relative">
+                    <span class="absolute top-2 left-2 mono text-[8px] opacity-30">STEP_04</span>
+                    <h4 class="font-bold text-sm uppercase mb-2">Latch & Seed</h4>
+                    <p class="text-[10px] text-on-surface-variant leading-relaxed">WORM-stored commitment to Sovereign
+                        Vault and seeding to Labyrinth[cite: 231].</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-surface-container-lowest border-2 border-primary/40 p-10 relative industrial-glow">
+                <div class="absolute top-0 right-0 p-4">
+                    <span class="material-symbols-outlined text-primary text-5xl opacity-20"
+                        style="font-variation-settings: 'FILL' 1;">assured_workload</span>
+                </div>
+                <div class="max-w-3xl">
+                    <h3 class="mono text-primary font-bold tracking-widest text-lg mb-4 uppercase">INTELLECTUAL PROPERTY
+                        NOTICE</h3>
+                    <div class="w-12 h-1 bg-primary mb-6"></div>
+                    <p class="font-['Inter'] text-lg leading-relaxed text-on-surface mb-6 italic">
+                        "The BABBLE Framework establishes the conversion layer for MOTHERSHIP OS. Original sensory
+                        structure—spatial, temporal, and acoustic—is preserved to ensure regulatory non-repudiation."
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="bg-primary/10 border border-primary/30 px-3 py-1 mono text-[9px] text-primary uppercase">Authority:
+                            RPR_COMMUNICATIONS_LLC</span>
+                        <span
+                            class="bg-primary/10 border border-primary/30 px-3 py-1 mono text-[9px] text-primary uppercase">Ref:
+                            TS-3_BABEL_LOGIC</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        class="w-full py-4 px-8 flex flex-col md:flex-row justify-between items-center bg-black border-t border-neutral-800 relative z-50">
+        <div class="font-['JetBrains Mono'] text-[10px] uppercase opacity-50 text-neutral-600 mb-4 md:mb-0">
+            © 2026 BABBLE FRAMEWORK // RPR COMMUNICATIONS LLC // HARBOR_A2_VERIFIED
+        </div>
+        <div class="flex gap-8">
+            <a class="font-['JetBrains Mono'] text-[10px] uppercase opacity-50 text-neutral-600 hover:text-cyan-400 transition-opacity"
+                href="#">SYSTEM_STATUS</a>
+            <a class="font-['JetBrains Mono'] text-[10px] uppercase opacity-50 text-neutral-600 hover:text-cyan-400 transition-opacity"
+                href="#">SSRN_RESONANCE</a>
+            <a class="font-['JetBrains Mono'] text-[10px] uppercase opacity-50 text-neutral-600 hover:text-cyan-400 transition-opacity"
+                href="#">VAULT_ACCESS</a>
+        </div>
+    </footer>
+</body>
+
+</html>

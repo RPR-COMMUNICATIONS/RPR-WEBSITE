@@ -1,27 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { X, Menu, ShieldCheck, Zap, Cpu, Wifi } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../contexts/authcontext.tsx';
 
 /**
- * TS-Λ3 // GLOBAL HEADER [v23.0.5]
+ * TS-Λ3 // GLOBAL HEADER [v23.0.6]
  * Path: src/components/header.tsx
- * Mission: HUD Refinement // Action Liquidation
+ * Mission: Linguistic Persistence // Mobile Bar Recalibration
  * Authority: THE OVERWATCH // SG-CANONICAL-2026
- * Fix: Liquidated "Enter Mothership" button per user directive.
- * Fix: Maintained clinical-smallcaps and architectural telemetry.
- * Status: AUTHORITATIVE // LATCHED
+ * Fix: Dynamic Nav Registry mapping for EN/MY/ZH resonance.
+ * Status: AUTHORITATIVE // i18n_LATCHED
  */
 
-// 🧬 AUTHORITATIVE BRAND & UI LATCHES
 import { RprMasterLogo } from '../brand/rprmasterlogo.tsx';
 import LanguageSwitcher from './languageswitcher.tsx';
 import SymbolTile from './icons/symboltile.tsx';
 
 export const Header: React.FC = () => {
   const { user, signInWithGoogleRedirect, signOut, loading } = useAuth();
-  const { t } = useTranslation('harbora');
+  const { t, i18n } = useTranslation(['harbora', 'labs']);
   const location = useLocation();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +31,6 @@ export const Header: React.FC = () => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     const checkSize = () => setIsMobile(window.innerWidth < 1024);
 
-    // 🛰️ LATENCY SIMULATOR: Point-locked to 12-16ms boundary
     const latencyPulse = setInterval(() => {
       setLatency(Math.floor(Math.random() * (16 - 12 + 1)) + 12);
     }, 5000);
@@ -48,18 +45,17 @@ export const Header: React.FC = () => {
     };
   }, []);
 
-  // 🚥 NAV REGISTRY: Sequence Foundations -> Methods -> Mothership -> Visualizer -> Overwatch
-  const NAV_ITEMS = [
-    { id: 'foundations', label: t('nav.foundations', 'Foundations'), path: '/#foundations' },
-    { id: 'methods', label: t('nav.methods', 'Methods'), path: '/#methods' },
-    { id: 'mothership', label: t('nav.mothership', 'Mothership'), path: '/#mothership' },
-    { id: 'visualizer', label: t('nav.visualizer', 'Visualizer'), path: '/#visualizer' },
-    { id: 'overwatch', label: t('nav.overwatch', 'Overwatch'), path: '/#overwatch' }
-  ];
+  // 🚥 DYNAMIC NAV REGISTRY: Reacts to i18n substrate changes
+  const NAV_ITEMS = useMemo(() => [
+    { id: 'foundations', label: t('nav.foundations'), path: '/#foundations' },
+    { id: 'methods', label: t('nav.methods'), path: '/#methods' },
+    { id: 'mothership', label: t('nav.mothership'), path: '/#mothership' },
+    { id: 'labs', label: t('nav.labs'), path: '/labs' },
+    { id: 'overwatch', label: t('nav.overwatch'), path: '/#overwatch' }
+  ], [t, i18n.language]);
 
   return (
     <>
-      {/* 🧬 GLOBAL STYLE INJECTION: Smallcaps Mandate */}
       <style>{`
         .clinical-smallcaps {
           font-variant-caps: all-small-caps;
@@ -73,8 +69,7 @@ export const Header: React.FC = () => {
       `}</style>
 
       <header className="fixed top-0 left-0 w-full z-[100] transition-all duration-700">
-
-        {/* 🛰️ 01. TOP TELEMETRY BAND (Visible in default state) */}
+        {/* 🛰️ 01. TOP TELEMETRY BAND */}
         <div className={`w-full bg-white/[0.03] border-b border-white/5 py-2 px-6 md:px-12 flex justify-between items-center transition-all duration-700 ${scrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-8 opacity-100'}`}>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
@@ -98,7 +93,6 @@ export const Header: React.FC = () => {
         {/* 🏛️ 02. PRIMARY HUD SUBSTRATE */}
         <div className={`header-glass border-b border-white/5 flex items-center px-6 md:px-12 transition-all duration-500 ${scrolled ? 'h-16 lg:h-20 shadow-2xl' : 'h-16 lg:h-[108px]'}`}>
           <div className="max-w-screen-2xl mx-auto w-full flex items-center justify-between">
-
             <div className="flex items-center gap-8 md:gap-12">
               <Link
                 to="/"
@@ -108,15 +102,13 @@ export const Header: React.FC = () => {
                 }}
                 className="group transition-transform hover:scale-[1.01]"
               >
-                {/* 🧬 LOGO: Scaling logic handled within MothershipOSLogo (Mobile Only) */}
-                <RprMasterLogo size={isMobile ? 24 : 52} />
+                <RprMasterLogo size={isMobile ? 32 : 52} />
               </Link>
             </div>
 
             <div className="flex items-center gap-10">
-              {/* 🖥️ DESKTOP NAVIGATION */}
               <nav className="hidden lg:flex items-center gap-8 font-mono text-slate-500">
-                {NAV_ITEMS.filter(item => item.id !== 'visualizer').map((item) => (
+                {NAV_ITEMS.map((item) => (
                   <a
                     key={item.id}
                     href={item.path}
@@ -135,7 +127,6 @@ export const Header: React.FC = () => {
 
                 {!loading && (
                   <div className="flex items-center gap-4">
-                    {/* 👤 AUTH ENCLAVE */}
                     <button
                       onClick={user ? () => signOut() : signInWithGoogleRedirect}
                       className="group relative transition-all duration-500"
@@ -157,14 +148,10 @@ export const Header: React.FC = () => {
                           className="hover:border-cyan-500/40 group-hover:bg-white/5"
                         />
                       )}
-
-                      {/* 🟢 ONLINE PULSE */}
                       {user && (
                         <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-black animate-pulse" />
                       )}
                     </button>
-
-                    {/* 🛑 ENTER_MOTHERSHIP BUTTON LIQUIDATED PER DIRECTIVE v23.0.5 */}
                   </div>
                 )}
 
@@ -178,15 +165,12 @@ export const Header: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* 🧬 SCROLL PROGRESS SUBSTRATE */}
         <div className={`h-[1px] w-full bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent transition-opacity duration-1000 ${scrolled ? 'opacity-100' : 'opacity-0'}`} />
       </header>
 
       {/* 📱 MOBILE OVERLAY SUBSTRATE */}
       <div className={`fixed inset-0 z-[110] transition-all duration-500 ${isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'}`}>
         <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-2xl" onClick={() => setIsMenuOpen(false)} />
-
         <div className={`absolute top-0 right-0 h-full w-full max-w-sm bg-black border-l border-white/10 transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} flex flex-col p-10`}>
 
           <header className="flex justify-between items-center mb-16">
@@ -209,6 +193,7 @@ export const Header: React.FC = () => {
                 className="group flex items-end justify-between py-4 border-b border-white/5"
               >
                 <div className="flex flex-col">
+                  {/* 🧬 DYNAMIC LABEL: Renders MAKMAL / 实验室 / LABS based on substrate */}
                   <span className="clinical-smallcaps text-[24px] text-white font-black italic uppercase tracking-tighter transition-all group-hover:text-cyan-400 group-hover:pl-4">
                     {item.label}
                   </span>
@@ -222,10 +207,6 @@ export const Header: React.FC = () => {
           </nav>
 
           <div className="mt-auto pt-10 border-t border-white/10 flex flex-col gap-4">
-            <div className="flex justify-between items-center opacity-30">
-              <span className="clinical-smallcaps text-[9px] text-slate-500">Residency_Lock</span>
-              <span className="clinical-smallcaps text-[9px] text-cyan-500">Active</span>
-            </div>
             <button
               onClick={() => {
                 setIsMenuOpen(false);
@@ -233,7 +214,7 @@ export const Header: React.FC = () => {
               }}
               className="w-full py-4 bg-white/5 border border-white/10 rounded-lg clinical-smallcaps text-[11px] font-black text-white hover:bg-white/10 transition-all"
             >
-              {user ? 'Terminate_Session' : 'Establish_Handshake'}
+              {user ? t('auth.sign_out', 'Terminate_Session') : t('auth.sign_in', 'Establish_Handshake')}
             </button>
           </div>
         </div>

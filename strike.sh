@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# TS-Λ3 // CANONICAL PRODUCTION STRIKE [v3.0.0]
+# TS-Λ3 // CANONICAL PRODUCTION STRIKE [v3.0.1]
 # Path: strike.sh
-# Mission: Production Deployment & Sovereign Ledger Latch
+# Mission: Mobile Gutter & Babble Standard Latch
 # Authority: THE OVERWATCH // SG-CANONICAL-2026
 # Environment: Mac Studio // Yarn Substrate
 
@@ -15,7 +15,7 @@ cd "$SCRIPT_DIR"
 
 # 🧬 SENTINEL LEDGER ENFORCEMENT PROTOCOL (v1.0.0)
 LEDGER_PATH="reports/ip-ledger-deployment-log.csv"
-JOB_ID="JOB-2026-023" # Sovereign Proxy & Substrate Realignment
+JOB_ID="JOB-2026-024" # Mobile Gutter & Babble Standard Latch
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "  INITIATING HARBOR A PRODUCTION STRIKE: $JOB_ID"
@@ -61,9 +61,9 @@ if npx firebase-tools deploy --only hosting:main --project rpr-corporate-site -m
     # 📝 6. LEDGER APPEND (Mandatory Forensic Action)
     echo "[4/4] Finalizing Forensic Latch..."
     TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-    MISSION="PRODUCTION_STRIKE_PROXY_READY"
+    MISSION="MOBILE_GUTTER_BABBLE_LATCH_v3.0.1"
     STACK="Gemini-Elder"
-    FILES="strike.sh;server.js;firebase.json"
+    FILES="strike.sh;app.tsx;home.tsx;mothershipsection.tsx;babblestandard.tsx"
     
     # Append record to WORM ledger
     echo "$TIMESTAMP,$JOB_ID,$MISSION,$STACK,$FILES,SUCCESS" >> "$LEDGER_PATH"
