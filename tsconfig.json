@@ -22,31 +22,25 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      /**
-       * 🧬 CLINICAL ALIAS LATCH
-       * Maps the '@' token to the 'src/' hierarchy for relative path liquidation.
-       */
       "@/*": [
         "src/*"
       ]
     },
     "types": [
-      "node",
-      "vite/client"
+      "vite/client",
+      "node"
     ],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src/**/*",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "scripts/**/*",
-    "vite.config.ts"
+    "src",
+    "vite-env.d.ts"
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "scripts"
   ]
 }
